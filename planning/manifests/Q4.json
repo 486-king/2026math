@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "question_id": "Q4",
+  "rigor_profile": "lean",
+  "current_gate": "G2.5",
+  "status": "method_screened_waiting_human_and_missing_inputs",
+  "artifacts": {
+    "problem_parse": "planning/parse/problem_parse.json",
+    "classification": "planning/classification/problem_classification.json",
+    "data_profile": "workspace/data/data_profile.json",
+    "symbol_table": "planning/symbol_table.md",
+    "assumptions": "planning/model_assumptions.md",
+    "mechanism_structure": "planning/mechanism_observation_structure.md",
+    "method_card": "methods/Q4/q4_method_card.md",
+    "decision_ledger": null,
+    "risk_probe": "methods/Q4/probes/risk_probe_summary.json",
+    "latest_run": null
+  },
+  "allowed": {
+    "code_generation": false,
+    "freeze": false,
+    "paper_writing": false,
+    "final_assembly": false
+  },
+  "blockers": [
+    "缺多批次导弹场景表和五机状态。",
+    "缺动态重算周期与 Q1-Q3 服务模板。",
+    "没有威胁权重或误差数据。",
+    "尚无人类 A/B/C 方法选择。"
+  ],
+  "change_impact": "CANONICAL",
+  "next_action": {
+    "owner": "human",
+    "skill": "decision-prompt-builder",
+    "reason": "选择 Q4 的 A/B/C；未补批次数据前只能保留结构和合成恢复测试。"
+  },
+  "updated_at": "2026-07-29T18:40:00+08:00"
+}

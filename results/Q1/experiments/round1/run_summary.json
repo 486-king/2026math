@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "question": "Q1",
+  "round": "round1",
+  "implementation_target": "python",
+  "random_seed": 2026,
+  "approved_decision_id": "q1_method_choice",
+  "methods": [
+    {
+      "method_id": "A",
+      "role": "main_candidate",
+      "script": "code/Q1/q1_event_model.py",
+      "status": "success",
+      "execution_time_seconds": 5.699926987290382e-06,
+      "input_files": [
+        "planning/session_config.json",
+        "methods/Q1/q1_decisions.jsonl",
+        "code/Q1/q1_code_plan.md"
+      ],
+      "output_files": [
+        "results/Q1/experiments/round1/metrics/q1_structural_metrics.json",
+        "results/Q1/experiments/round1/tables/q1_feasibility_bounds.csv"
+      ],
+      "figure_files": [],
+      "warnings": [
+        "Scenario initial states are absent; no unique coordinate/time claim is produced.",
+        "M2 is retained as a robustness reference but cannot run without fixed heading and initial state."
+      ],
+      "errors": [],
+      "metrics_summary": {
+        "strict_full_window_feasible": false,
+        "maximum_continuous_full_cover_seconds": 10.376134889753567,
+        "minimum_naked_seconds_lower_bound": 13.791574365380546,
+        "coordinate_solution_status": "blocked_missing_scenario_inputs"
+      }
+    },
+    {
+      "method_id": "B",
+      "role": "usable_baseline",
+      "script": "code/Q1/q1_analytic_baseline.py",
+      "status": "success",
+      "execution_time_seconds": 4.200031980872154e-06,
+      "input_files": [
+        "planning/session_config.json",
+        "methods/Q1/q1_decisions.jsonl",
+        "code/Q1/q1_code_plan.md"
+      ],
+      "output_files": [
+        "results/Q1/experiments/round1/metrics/q1_structural_metrics.json",
+        "results/Q1/experiments/round1/tables/q1_feasibility_bounds.csv"
+      ],
+      "figure_files": [],
+      "warnings": [
+        "Scenario initial states are absent; no unique coordinate/time claim is produced.",
+        "M2 is retained as a robustness reference but cannot run without fixed heading and initial state."
+      ],
+      "errors": [],
+      "metrics_summary": {
+        "strict_full_window_feasible": false,
+        "maximum_continuous_full_cover_seconds": 10.376134889753567,
+        "minimum_naked_seconds_lower_bound": 13.791574365380546,
+        "coordinate_solution_status": "blocked_missing_scenario_inputs"
+      }
+    }
+  ],
+  "comparison": {
+    "exact_agreement_on_core_outputs": true,
+    "detection_lower_bound_difference_s": 0.0,
+    "naked_lower_bound_difference_s": 0.0,
+    "tolerance": 1e-09,
+    "status": "PASS"
+  },
+  "output_degeneracy": {
+    "strict_feasible_set_empty_under_M1_S1_duration_bound": true,
+    "unique_coordinate_identifiable": false,
+    "interpretation": "A structural infeasibility result, not a numerical failure."
+  },
+  "fallback_trigger": {
+    "fallback_id": "C",
+    "observed": true,
+    "evidence": "A returned strict infeasibility, which is a human-approved C trigger"
+  },
+  "environment": {
+    "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "pandas": "3.0.2"
+  },
+  "generated_at": "2026-07-29T19:00:27.586643+08:00"
+}

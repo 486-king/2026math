@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "question_id": "Q1",
+  "round": "round1",
+  "constants": {
+    "ship_speed_mps": 7.71,
+    "ship_radius_m": 80.0,
+    "missile_speed_mps": 320.0,
+    "detection_distance_m": 8000.0,
+    "fov_half_angle_deg": 15.0,
+    "uav_speed_mps": 28.0,
+    "uav_operation_radius_m": 12000.0,
+    "response_delay_s": 2.0,
+    "bomb_burst_delay_s": 3.5,
+    "smoke_max_radius_m": 120.0,
+    "smoke_constant_duration_s": 18.0,
+    "smoke_decay_duration_s": 5.0
+  },
+  "main": {
+    "method_id": "A",
+    "role": "main_candidate",
+    "strict_full_window_feasible": false,
+    "detection_window_seconds": {
+      "lower_bound": 24.167709255134113,
+      "upper_bound": 25.36104262064107
+    },
+    "maximum_continuous_full_cover_seconds": 10.376134889753567,
+    "minimum_naked_seconds": {
+      "lower_bound": 13.791574365380546
+    },
+    "minimum_cover_margin_m": null,
+    "coordinate_solution_status": "blocked_missing_scenario_inputs",
+    "missing_inputs": [
+      "ship_initial_position_m",
+      "ship_heading_rad",
+      "missile_initial_position_m",
+      "uav_initial_position_m",
+      "task_clock_definition"
+    ],
+    "output_degeneracy": {
+      "strict_feasible_set_empty_under_M1_S1_duration_bound": true,
+      "unique_coordinate_identifiable": false
+    },
+    "assumptions_used": [
+      "M1 pure pursuit",
+      "S1 inherited bomb velocity for 3.5 s",
+      "stationary smoke center after burst",
+      "no wind drift in the nominal model"
+    ],
+    "proof_notes": [
+      "For a fixed smoke center, complete cover implies the ship center stays within R_c-R_s=40 m of that center. A line moving at V_s can remain in this disk for at most 2(R_c-R_s)/V_s.",
+      "Under pure pursuit, range rate is V_s*cos(phi)-V_m and is no smaller in magnitude than V_m-V_s and no larger than V_m+V_s. The shortest possible 8000 m-to-contact window uses V_m+V_s.",
+      "Because the maximum cover upper bound is shorter than the minimum detection window, strict full-window cover is impossible before UAV reachability is considered."
+    ],
+    "runtime_seconds": 5.699926987290382e-06
+  },
+  "baseline": {
+    "method_id": "B",
+    "role": "usable_baseline",
+    "strict_full_window_feasible": false,
+    "detection_window_seconds": {
+      "lower_bound": 24.167709255134113,
+      "upper_bound": 25.36104262064107
+    },
+    "maximum_continuous_full_cover_seconds": 10.376134889753567,
+    "minimum_naked_seconds": {
+      "lower_bound": 13.791574365380546
+    },
+    "minimum_cover_margin_m": null,
+    "coordinate_solution_status": "blocked_missing_scenario_inputs",
+    "missing_inputs": [
+      "ship_initial_position_m",
+      "ship_heading_rad",
+      "uav_initial_position_m",
+      "task_clock_definition"
+    ],
+    "output_degeneracy": {
+      "strict_feasible_set_empty_under_M1_S1_duration_bound": true,
+      "unique_coordinate_identifiable": false
+    },
+    "assumptions_used": [
+      "M1 range-rate bound",
+      "S1 stationary smoke center after burst"
+    ],
+    "analytic_relations": {
+      "fixed_cloud_cover": "2*(R_c-R_s)/V_s",
+      "minimum_detection_window": "(D_max-R_s)/(V_m+V_s)",
+      "minimum_naked_time": "max(0,T_detect_LB-T_cover_UB)"
+    },
+    "proof_notes": [
+      "For a fixed smoke center, complete cover implies the ship center stays within R_c-R_s=40 m of that center. A line moving at V_s can remain in this disk for at most 2(R_c-R_s)/V_s.",
+      "Under pure pursuit, range rate is V_s*cos(phi)-V_m and is no smaller in magnitude than V_m-V_s and no larger than V_m+V_s. The shortest possible 8000 m-to-contact window uses V_m+V_s.",
+      "Because the maximum cover upper bound is shorter than the minimum detection window, strict full-window cover is impossible before UAV reachability is considered."
+    ],
+    "runtime_seconds": 4.200031980872154e-06
+  },
+  "comparison": {
+    "exact_agreement_on_core_outputs": true,
+    "detection_lower_bound_difference_s": 0.0,
+    "naked_lower_bound_difference_s": 0.0,
+    "tolerance": 1e-09,
+    "status": "PASS"
+  },
+  "boundary_checks": {
+    "radius_age_0_m": 120.0,
+    "radius_age_18_m": 120.0,
+    "radius_age_23_m": 0.0,
+    "radius_age_23_plus_m": 0.0
+  },
+  "m2_robustness_reference": {
+    "status": "blocked_missing_fixed_heading_and_initial_state",
+    "feasibility_change_condition": "M2 can change the conclusion only if the distance-and-FOV detection window is no longer than the stationary-smoke complete-cover upper bound.",
+    "threshold_seconds": 10.376134889753567
+  },
+  "fallback_trigger": {
+    "fallback_id": "C",
+    "observed": true,
+    "evidence": "A returned strict infeasibility, which is a human-approved C trigger"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "question_id": "Q1",
+  "round": "round2",
+  "method_id": "C",
+  "role": "conditional_fallback",
+  "trigger": {
+    "condition": "A gives an infeasibility conclusion",
+    "observed": true,
+    "evidence": "results/Q1/experiments/round1/run_summary.json"
+  },
+  "global_bounds": {
+    "fixed_smoke_complete_cover_interval_upper_s": 10.376134889753569,
+    "M1_detection_window_lower_s": 24.16770925513411,
+    "positive_separation_lower_s": 13.791574365380539,
+    "outward_rounding": "IEEE-754 nextafter"
+  },
+  "proof": [
+    "For every fixed cloud center c and burst time, complete cover implies ||s(t)-c|| <= R_c-R_s. Since s(t) is a line at speed V_s, the total time inside this disk is at most 2(R_c-R_s)/V_s.",
+    "For M1 pure pursuit, range rate is s_dot·e_r - V_m. The closing speed cannot exceed V_m+V_s, so travel from D_max to ship-disk contact lasts at least (D_max-R_s)/(V_m+V_s).",
+    "The outward-rounded detection lower bound exceeds the outward-rounded cover upper bound by a strictly positive interval, so no drop position, drop time, burst time or UAV route can satisfy full-window cover."
+  ],
+  "strict_full_window_feasible": false,
+  "certificate_status": "PASS",
+  "coordinate_solution_status": "no_feasible_coordinate_exists_under_M1_S1",
+  "scope": [
+    "M1 pure pursuit",
+    "S1 fixed smoke center after burst",
+    "statement constants",
+    "single smoke bomb"
+  ],
+  "limitations": [
+    "M2 can have a shorter FOV-limited window but lacks initial geometry.",
+    "Nonzero cloud drift changes the relative-speed bound and is not nominal."
+  ],
+  "runtime_seconds": 2.359994687139988e-05
+}

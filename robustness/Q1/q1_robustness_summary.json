@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "question_id": "Q1",
+  "tested_claim": "Under M1/S1 and statement constants, one stationary smoke cannot fully cover the ship for the entire detection window.",
+  "input_sources": [
+    "results/Q1/experiments/round1/metrics/q1_structural_metrics.json",
+    "methods/Q1/q1_decisions.jsonl"
+  ],
+  "result_sources": [
+    "results/Q1/experiments/round1/run_summary.json"
+  ],
+  "checks": [
+    {
+      "name": "nominal_duration_certificate",
+      "perturbation": "none",
+      "metric": "cover upper bound minus detection lower bound",
+      "threshold": "<0 supports strict infeasibility",
+      "observed": {
+        "cover_upper_bound_s": 10.376134889753567,
+        "detection_lower_bound_s": 24.167709255134113,
+        "duration_margin_s": -13.791574365380546,
+        "duration_necessary_condition_feasible": false
+      },
+      "status": "PASS",
+      "limitation": "This is a duration certificate; it does not identify coordinates.",
+      "fallback_trigger_relevance": "A and B agree, so C is not triggered."
+    },
+    {
+      "name": "one_at_a_time_10_percent",
+      "perturbation": "Exploratory ±10% on ship speed, missile speed and smoke radius, one field at a time; no empirical uncertainty distribution is claimed.",
+      "metric": "number of cases satisfying the duration necessary condition",
+      "threshold": "0 for local stability of the infeasibility claim",
+      "observed": {
+        "feasible_case_count": 0,
+        "cases": [
+          {
+            "changed_field": "ship_speed",
+            "factor": 0.9,
+            "ship_speed": 6.939,
+            "missile_speed": 320.0,
+            "smoke_radius": 120.0,
+            "cover_upper_bound_s": 11.529038766392851,
+            "detection_lower_bound_s": 24.22470246743276,
+            "duration_margin_s": -12.695663701039908,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "changed_field": "ship_speed",
+            "factor": 1.1,
+            "ship_speed": 8.481,
+            "missile_speed": 320.0,
+            "smoke_radius": 120.0,
+            "cover_upper_bound_s": 9.43284989977597,
+            "detection_lower_bound_s": 24.110983588091855,
+            "duration_margin_s": -14.678133688315885,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "changed_field": "missile_speed",
+            "factor": 0.9,
+            "ship_speed": 7.71,
+            "missile_speed": 288.0,
+            "smoke_radius": 120.0,
+            "cover_upper_bound_s": 10.376134889753567,
+            "detection_lower_bound_s": 26.782996855026887,
+            "duration_margin_s": -16.406861965273322,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "changed_field": "missile_speed",
+            "factor": 1.1,
+            "ship_speed": 7.71,
+            "missile_speed": 352.0,
+            "smoke_radius": 120.0,
+            "cover_upper_bound_s": 10.376134889753567,
+            "detection_lower_bound_s": 22.017736509966362,
+            "duration_margin_s": -11.641601620212795,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "changed_field": "smoke_radius",
+            "factor": 0.9,
+            "ship_speed": 7.71,
+            "missile_speed": 320.0,
+            "smoke_radius": 108.0,
+            "cover_upper_bound_s": 7.263294422827497,
+            "detection_lower_bound_s": 24.167709255134113,
+            "duration_margin_s": -16.904414832306617,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "changed_field": "smoke_radius",
+            "factor": 1.1,
+            "ship_speed": 7.71,
+            "missile_speed": 320.0,
+            "smoke_radius": 132.0,
+            "cover_upper_bound_s": 13.488975356679637,
+            "detection_lower_bound_s": 24.167709255134113,
+            "duration_margin_s": -10.678733898454476,
+            "duration_necessary_condition_feasible": false
+          }
+        ]
+      },
+      "status": "PASS",
+      "limitation": "One-at-a-time perturbations do not cover joint extremes.",
+      "fallback_trigger_relevance": "No A/B contradiction."
+    },
+    {
+      "name": "joint_20_percent_stress",
+      "perturbation": "Exploratory joint corner stress at ±20% for three physical constants.",
+      "metric": "whether any corner flips the duration necessary condition",
+      "threshold": "Exploratory; no pass/fail threshold was asserted as physical.",
+      "observed": {
+        "any_flip": true,
+        "cases": [
+          {
+            "ship_speed_factor": 0.8,
+            "missile_speed_factor": 0.8,
+            "smoke_radius_factor": 0.8,
+            "cover_upper_bound_s": 5.188067444876784,
+            "detection_lower_bound_s": 30.20963656891764,
+            "duration_margin_s": -25.02156912404086,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "ship_speed_factor": 0.8,
+            "missile_speed_factor": 0.8,
+            "smoke_radius_factor": 1.2,
+            "cover_upper_bound_s": 20.752269779507134,
+            "detection_lower_bound_s": 30.20963656891764,
+            "duration_margin_s": -9.457366789410507,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "ship_speed_factor": 0.8,
+            "missile_speed_factor": 1.2,
+            "smoke_radius_factor": 0.8,
+            "cover_upper_bound_s": 5.188067444876784,
+            "detection_lower_bound_s": 20.298948145414283,
+            "duration_margin_s": -15.1108807005375,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "ship_speed_factor": 0.8,
+            "missile_speed_factor": 1.2,
+            "smoke_radius_factor": 1.2,
+            "cover_upper_bound_s": 20.752269779507134,
+            "detection_lower_bound_s": 20.298948145414283,
+            "duration_margin_s": 0.45332163409285187,
+            "duration_necessary_condition_feasible": true
+          },
+          {
+            "ship_speed_factor": 1.2,
+            "missile_speed_factor": 0.8,
+            "smoke_radius_factor": 0.8,
+            "cover_upper_bound_s": 3.458711629917856,
+            "detection_lower_bound_s": 29.858398805664045,
+            "duration_margin_s": -26.399687175746188,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "ship_speed_factor": 1.2,
+            "missile_speed_factor": 0.8,
+            "smoke_radius_factor": 1.2,
+            "cover_upper_bound_s": 13.834846519671425,
+            "detection_lower_bound_s": 29.858398805664045,
+            "duration_margin_s": -16.023552285992622,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "ship_speed_factor": 1.2,
+            "missile_speed_factor": 1.2,
+            "smoke_radius_factor": 0.8,
+            "cover_upper_bound_s": 3.458711629917856,
+            "detection_lower_bound_s": 20.13975771261176,
+            "duration_margin_s": -16.681046082693904,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "ship_speed_factor": 1.2,
+            "missile_speed_factor": 1.2,
+            "smoke_radius_factor": 1.2,
+            "cover_upper_bound_s": 13.834846519671425,
+            "detection_lower_bound_s": 20.13975771261176,
+            "duration_margin_s": -6.304911192940336,
+            "duration_necessary_condition_feasible": false
+          }
+        ]
+      },
+      "status": "CONDITIONAL",
+      "limitation": "The range is not data-derived and is used only to locate claim boundaries.",
+      "fallback_trigger_relevance": "A supplied physical parameter revision near a flip requires rerunning A and B."
+    },
+    {
+      "name": "M2_detection_window_condition",
+      "perturbation": "Replace M1 by a fixed-heading M2 trajectory.",
+      "metric": "actual distance-and-FOV window length",
+      "threshold": 10.376134889753567,
+      "observed": {
+        "required_for_possible_duration_feasibility": "M2 detection window <= threshold_seconds",
+        "threshold_seconds": 10.376134889753567,
+        "actual_M2_window": null
+      },
+      "status": "CONDITIONAL",
+      "limitation": "M2 initial position and fixed heading are absent.",
+      "fallback_trigger_relevance": "A changed feasibility conclusion under supplied M2 data requires a new result decision."
+    },
+    {
+      "name": "cloud_drift_extension",
+      "perturbation": "Exploratory along-track cloud drift of -5, 0 and +5 m/s.",
+      "metric": "duration necessary condition",
+      "threshold": "cover upper bound >= detection lower bound",
+      "observed": {
+        "any_flip": true,
+        "cases": [
+          {
+            "cloud_drift_along_ship_mps": -5.0,
+            "cover_upper_bound_s": 6.294256490952006,
+            "detection_lower_bound_s": 24.167709255134113,
+            "duration_margin_s": -17.873452764182108,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "cloud_drift_along_ship_mps": 0.0,
+            "cover_upper_bound_s": 10.376134889753567,
+            "detection_lower_bound_s": 24.167709255134113,
+            "duration_margin_s": -13.791574365380546,
+            "duration_necessary_condition_feasible": false
+          },
+          {
+            "cloud_drift_along_ship_mps": 5.0,
+            "cover_upper_bound_s": 29.52029520295203,
+            "detection_lower_bound_s": 24.167709255134113,
+            "duration_margin_s": 5.352585947817918,
+            "duration_necessary_condition_feasible": true
+          }
+        ]
+      },
+      "status": "CONDITIONAL",
+      "limitation": "No wind direction or speed is supplied; this is not a nominal claim.",
+      "fallback_trigger_relevance": "A measured drift near ship speed requires upgrading the nominal model."
+    }
+  ],
+  "critical_boundaries": {
+    "ship_speed_at_duration_equality_mps": 3.2653061224489797,
+    "smoke_radius_at_duration_equality_m": 173.166519178542,
+    "detection_distance_at_duration_equality_m": 3480.3631647211414,
+    "maximum_relative_ship_cloud_speed_for_duration_feasibility_mps": 3.31020202020202
+  },
+  "overall_status": "CONDITIONAL",
+  "interpretation": "The nominal infeasibility conclusion is locally stable to one-at-a-time ±10% checks. It is conditional on M1/S1; a sufficiently short M2 FOV window or strong along-track smoke drift can change the duration condition.",
+  "fallback_C_triggered": true,
+  "generated_at": "2026-07-29T19:00:27.792978+08:00"
+}
