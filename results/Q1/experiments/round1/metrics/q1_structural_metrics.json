@@ -1,120 +1,189 @@
 {
-  "schema_version": 1,
-  "question_id": "Q1",
-  "round": "round1",
-  "constants": {
-    "ship_speed_mps": 7.71,
-    "ship_radius_m": 80.0,
-    "missile_speed_mps": 320.0,
-    "detection_distance_m": 8000.0,
-    "fov_half_angle_deg": 15.0,
-    "uav_speed_mps": 28.0,
-    "uav_operation_radius_m": 12000.0,
-    "response_delay_s": 2.0,
-    "bomb_burst_delay_s": 3.5,
-    "smoke_max_radius_m": 120.0,
-    "smoke_constant_duration_s": 18.0,
-    "smoke_decay_duration_s": 5.0
+  "model_scope": "Q1 nominal G1+S1+O0+U0",
+  "parameters": {
+    "ship_speed_knots": {
+      "value": 15.0,
+      "unit": "kn",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "knot_conversion": {
+      "value": 0.514,
+      "unit": "m/s per kn",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "V_s": {
+      "value": 7.71,
+      "unit": "m/s",
+      "source_type": "derived_quantity",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": "15×0.514"
+    },
+    "R_s": {
+      "value": 80.0,
+      "unit": "m",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "V_u": {
+      "value": 28.0,
+      "unit": "m/s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "R_u_max": {
+      "value": 12000.0,
+      "unit": "m",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "uav_payload_max": {
+      "value": 3,
+      "unit": "round",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "tau_response": {
+      "value": 2.0,
+      "unit": "s",
+      "source_type": "adopted_interpretation",
+      "source_file": "Q1_编程手与论文手分工.docx",
+      "note": "command to actual release"
+    },
+    "minimum_same_uav_release_interval": {
+      "value": 1.0,
+      "unit": "s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "tau_burst": {
+      "value": 3.5,
+      "unit": "s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "R_c": {
+      "value": 120.0,
+      "unit": "m",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "tau_hold": {
+      "value": 18.0,
+      "unit": "s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "tau_decay": {
+      "value": 5.0,
+      "unit": "s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "smoke_lifetime": {
+      "value": 23.0,
+      "unit": "s",
+      "source_type": "derived_quantity",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "V_m": {
+      "value": 320.0,
+      "unit": "m/s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "D_max": {
+      "value": 8000.0,
+      "unit": "m",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "fov_half_angle": {
+      "value": 15.0,
+      "unit": "degree",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "inertial_displacement": {
+      "value": 98.0,
+      "unit": "m",
+      "source_type": "derived_quantity",
+      "source_file": "Q1_编程手与论文手分工.docx",
+      "note": "under S1 inertial-flight assumption: V_u×tau_burst"
+    },
+    "operating_radius_interpretation": {
+      "value": "distance from UAV initial launch reference point",
+      "unit": "text",
+      "source_type": "adopted_interpretation",
+      "source_file": "Q1_编程手与论文手分工.docx",
+      "note": ""
+    },
+    "turning_radius": {
+      "value": "not_provided",
+      "unit": "m",
+      "source_type": "missing_input",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "absolute_initial_states": {
+      "value": "not_provided",
+      "unit": "mixed",
+      "source_type": "missing_input",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    }
   },
-  "main": {
-    "method_id": "A",
-    "role": "main_candidate",
-    "strict_full_window_feasible": false,
-    "detection_window_seconds": {
-      "lower_bound": 24.167709255134113,
-      "upper_bound": 25.36104262064107
-    },
-    "maximum_continuous_full_cover_seconds": 10.376134889753567,
-    "minimum_naked_seconds": {
-      "lower_bound": 13.791574365380546
-    },
-    "minimum_cover_margin_m": null,
-    "coordinate_solution_status": "blocked_missing_scenario_inputs",
-    "missing_inputs": [
-      "ship_initial_position_m",
-      "ship_heading_rad",
-      "missile_initial_position_m",
-      "uav_initial_position_m",
-      "task_clock_definition"
-    ],
-    "output_degeneracy": {
-      "strict_feasible_set_empty_under_M1_S1_duration_bound": true,
-      "unique_coordinate_identifiable": false
-    },
-    "assumptions_used": [
-      "M1 pure pursuit",
-      "S1 inherited bomb velocity for 3.5 s",
-      "stationary smoke center after burst",
-      "no wind drift in the nominal model"
-    ],
-    "proof_notes": [
-      "For a fixed smoke center, complete cover implies the ship center stays within R_c-R_s=40 m of that center. A line moving at V_s can remain in this disk for at most 2(R_c-R_s)/V_s.",
-      "Under pure pursuit, range rate is V_s*cos(phi)-V_m and is no smaller in magnitude than V_m-V_s and no larger than V_m+V_s. The shortest possible 8000 m-to-contact window uses V_m+V_s.",
-      "Because the maximum cover upper bound is shorter than the minimum detection window, strict full-window cover is impossible before UAV reachability is considered."
-    ],
-    "runtime_seconds": 5.699926987290382e-06
+  "units": {
+    "length": "m",
+    "time": "s",
+    "speed": "m/s",
+    "angle": "degree"
   },
-  "baseline": {
-    "method_id": "B",
-    "role": "usable_baseline",
-    "strict_full_window_feasible": false,
-    "detection_window_seconds": {
-      "lower_bound": 24.167709255134113,
-      "upper_bound": 25.36104262064107
-    },
-    "maximum_continuous_full_cover_seconds": 10.376134889753567,
-    "minimum_naked_seconds": {
-      "lower_bound": 13.791574365380546
-    },
-    "minimum_cover_margin_m": null,
-    "coordinate_solution_status": "blocked_missing_scenario_inputs",
-    "missing_inputs": [
-      "ship_initial_position_m",
-      "ship_heading_rad",
-      "uav_initial_position_m",
-      "task_clock_definition"
-    ],
-    "output_degeneracy": {
-      "strict_feasible_set_empty_under_M1_S1_duration_bound": true,
-      "unique_coordinate_identifiable": false
-    },
-    "assumptions_used": [
-      "M1 range-rate bound",
-      "S1 stationary smoke center after burst"
-    ],
-    "analytic_relations": {
-      "fixed_cloud_cover": "2*(R_c-R_s)/V_s",
-      "minimum_detection_window": "(D_max-R_s)/(V_m+V_s)",
-      "minimum_naked_time": "max(0,T_detect_LB-T_cover_UB)"
-    },
-    "proof_notes": [
-      "For a fixed smoke center, complete cover implies the ship center stays within R_c-R_s=40 m of that center. A line moving at V_s can remain in this disk for at most 2(R_c-R_s)/V_s.",
-      "Under pure pursuit, range rate is V_s*cos(phi)-V_m and is no smaller in magnitude than V_m-V_s and no larger than V_m+V_s. The shortest possible 8000 m-to-contact window uses V_m+V_s.",
-      "Because the maximum cover upper bound is shorter than the minimum detection window, strict full-window cover is impossible before UAV reachability is considered."
-    ],
-    "runtime_seconds": 4.200031980872154e-06
+  "assumptions": [
+    "G1 pure pursuit missile",
+    "S1 fixed cloud center after burst",
+    "O0 full two-dimensional ship disk coverage",
+    "U0 no nominal wind drift",
+    "ship moves at constant velocity on a straight line",
+    "locked at 8000 m for the standard lower-bound certificate"
+  ],
+  "h_s": 5.188067444876784,
+  "T_structural_max_s": 10.376134889753567,
+  "T_detect_lower_s": 24.167709255134113,
+  "T_naked_lower_s": 13.791574365380546,
+  "comparison_gap_s": 13.791574365380546,
+  "burst_interval_width_s": 7.623865110246433,
+  "locked_at_8000m": true,
+  "status": {
+    "execution_status": "completed",
+    "input_status": "blocked_missing_scenario",
+    "feasibility_status": "full_window_structurally_infeasible",
+    "certificate_status": "verified",
+    "T_executable_star": "not_evaluated"
   },
-  "comparison": {
-    "exact_agreement_on_core_outputs": true,
-    "detection_lower_bound_difference_s": 0.0,
-    "naked_lower_bound_difference_s": 0.0,
-    "tolerance": 1e-09,
-    "status": "PASS"
-  },
-  "boundary_checks": {
-    "radius_age_0_m": 120.0,
-    "radius_age_18_m": 120.0,
-    "radius_age_23_m": 0.0,
-    "radius_age_23_plus_m": 0.0
-  },
-  "m2_robustness_reference": {
-    "status": "blocked_missing_fixed_heading_and_initial_state",
-    "feasibility_change_condition": "M2 can change the conclusion only if the distance-and-FOV detection window is no longer than the stationary-smoke complete-cover upper bound.",
-    "threshold_seconds": 10.376134889753567
-  },
-  "fallback_trigger": {
-    "fallback_id": "C",
-    "observed": true,
-    "evidence": "A returned strict infeasibility, which is a human-approved C trigger"
+  "floating_point": {
+    "type": "IEEE-754 binary64",
+    "formulae": {
+      "h": "(R_c-R_s)/V_s",
+      "T_structural_max": "2h",
+      "T_detect_lower": "(D_max-R_s)/(V_m+V_s)",
+      "T_naked_lower": "T_detect_lower-T_structural_max"
+    }
   }
 }

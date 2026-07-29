@@ -17,14 +17,14 @@
     "Real absolute initial states are missing; no real absolute coordinate is reported."
   ],
   "fallback_trigger_state": "not_activated",
-  "round": 1,
-  "role": "structural_metrics",
+  "round": 4,
+  "role": "architecture_and_scope_freeze",
   "outputs": [
-    "results/Q1/experiments/round1/metrics/q1_structural_metrics.json"
+    "results/Q1/experiments/round4/metrics/q1_architecture_upgrade.json",
+    "results/Q1/q1_q2_scoped_consistency.json"
   ],
   "metric_summary": {
-    "T_structural_max_s": 10.376134889753567,
-    "T_detect_lower_s": 24.167709255134113,
-    "T_naked_lower_s": 13.791574365380546
+    "scope_status": "verified",
+    "maximum_degeneracy_error_m": 0.0
   }
 }

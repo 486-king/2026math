@@ -1,0 +1,22 @@
+{
+  "scope": "Q1_to_Q2_interface_boundary_only",
+  "Q2_executed": false,
+  "checks": {
+    "Q1_event_fields_complete": true,
+    "Delta_definition_provided": true,
+    "multi_smoke_correctly_rejected": true,
+    "n_times_structural_max_absent": true,
+    "Q2_Q3_Q4_not_implemented_by_Q1": true
+  },
+  "preserved_human_and_workflow_files_not_modified": [
+    "methods/Q1/q1_decisions.jsonl",
+    "methods/Q1/q1_final_method_explanation.md",
+    "handoff/Q1/q1_programmer_checklist.md",
+    "planning/manifests/Q1.json"
+  ],
+  "legacy_reference_follow_up": {
+    "status": "handoff_to_modeler_or_writer",
+    "note": "These preserved records may name superseded Q1 modules. The programmer hand does not rewrite human decisions or global workflow records; the canonical production implementation is code/Q1/q1_run.py and its sibling modules."
+  },
+  "scope_status": "verified"
+}
