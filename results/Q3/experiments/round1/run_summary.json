@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "question": "Q3",
+  "round": "round1",
+  "round_label": "formal_event_feasibility",
+  "implementation_target": "python",
+  "random_seed": 2026,
+  "approved_decision_id": "q3_method_choice",
+  "scenario_decision_id": "q3_parameterized_and_standardized_scenario",
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "scenario_sha256": "bce442aa7bfa8229976b9367b4065dcf91e1ce38005e03119820188ac6602cbb",
+  "methods": [
+    {
+      "method_id": "Q3-A",
+      "role": "main_candidate",
+      "script": "code/Q3/q3_main.py",
+      "status": "executed_infeasible",
+      "metrics_summary": {
+        "feasibility_status": "FAIL",
+        "certificate_status": "PASS",
+        "earliest_burst_s": 5.5,
+        "initial_naked_duration_s": 5.5,
+        "pareto_front_status": "NOT_RUN_STRUCTURAL_INFEASIBILITY"
+      },
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "method_id": "Q3-B",
+      "role": "usable_baseline",
+      "script": "code/Q3/q3_baseline.py",
+      "status": "executed_infeasible",
+      "metrics_summary": {
+        "feasibility_status": "FAIL",
+        "certificate_status": "PASS",
+        "earliest_burst_s": 5.5,
+        "initial_naked_duration_s": 5.5,
+        "construction_status": "NOT_RUN_STRUCTURAL_INFEASIBILITY"
+      },
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "comparison": {
+    "same_hard_constraint": true,
+    "same_infeasibility_cause": true,
+    "path_turn_dsafe_n_minus_one_metrics": "NOT_EVALUATED_NO_FEASIBLE_NORMAL_DEFENSE"
+  },
+  "parameterized_conclusion": {
+    "necessary_availability_condition": "min_i(a_i)<=-5.5 s",
+    "approved_availability_range_s": [
+      0.0,
+      3.0
+    ],
+    "range_verdict": "FAIL_FOR_ALL_APPROVED_VALUES",
+    "position_heading_dsafe_beta_sensitivity": "NO_EFFECT_ON_EVENT_INFEASIBILITY_WITHIN_APPROVED_AVAILABILITY_RANGE",
+    "availability_rows": 13
+  },
+  "continuous_validation": {
+    "label": "VALIDATOR_REGRESSION_ONLY",
+    "source": "Q2 positive-margin two-smoke recovery fixture",
+    "interval_certificate_status": "PASS",
+    "independent_geometry_status": "PASS",
+    "validators_agree": true,
+    "formal_q3_candidate": false
+  },
+  "fallback_trigger": {
+    "fallback_id": "Q3-C",
+    "observed": false,
+    "reason": "Deterministic event-delay infeasibility is not an uncertainty trigger."
+  },
+  "outputs": [
+    "results/Q3/experiments/round1/metrics/q3_event_infeasibility_certificate.json",
+    "results/Q3/experiments/round1/metrics/q3_standard_scenario_status.json",
+    "results/Q3/experiments/round1/metrics/q3_validator_recovery_test.json",
+    "results/Q3/experiments/round1/tables/q3_availability_sensitivity.csv",
+    "results/Q3/experiments/round1/tables/q3_method_comparison.csv",
+    "results/Q3/experiments/round1/figures/q3_event_timeline.png"
+  ],
+  "runtime_seconds": 0.6729527001734823,
+  "environment": {
+    "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.4"
+  }
+}

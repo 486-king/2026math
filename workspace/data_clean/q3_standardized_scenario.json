@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scenario_id": "Q3_STANDARDIZED_001",
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "source_decision_id": "q3_parameterized_and_standardized_scenario",
+  "task_clock_zero_definition": "导弹进入距舰船中心8000 m边界并完成锁定",
+  "coordinate_axis_definition": "x轴沿舰船航向，y轴指向舰船航向左侧，角度从x轴正方向逆时针计算",
+  "ship_initial_position_m": [0.0, 0.0],
+  "ship_heading_rad": 0.0,
+  "g1_lock_time_s": 0.0,
+  "missile_bearing_parameter_rad": [0.0, 3.141592653589793],
+  "uav_initial_positions_m": [
+    [-400.0, 0.0],
+    [-200.0, 300.0],
+    [-200.0, -300.0]
+  ],
+  "uav_initial_headings_rad": [0.0, 0.0, 0.0],
+  "uav_available_times_s": [0.0, 0.0, 0.0],
+  "uav_available_time_optimization_range_s": [-60.0, 0.0],
+  "state_time_definition": "u_i(a_i)=u_i0 and psi_i(a_i)=psi_i0; u_i(0) is a post-predeployment state and is not the initial state",
+  "operation_radius_reference_points_m": [
+    [-400.0, 0.0],
+    [-200.0, 300.0],
+    [-200.0, -300.0]
+  ],
+  "operation_radius_interpretation": "maximum_distance_from_each_takeoff_point",
+  "sensitivity_ranges": {
+    "per_uav_position_offset_m": {
+      "x": [-200.0, 200.0],
+      "y": [-200.0, 200.0]
+    },
+    "per_uav_initial_heading_offset_deg": [-45.0, 45.0],
+    "per_uav_available_time_s": [-60.0, 0.0],
+    "d_safe_m": [0.0, 150.0],
+    "missile_bearing_rad": [0.0, 3.141592653589793]
+  },
+  "formal_use_limit": "该文件用于标准化研究场景，不是题面给出的真实部署。"
+}

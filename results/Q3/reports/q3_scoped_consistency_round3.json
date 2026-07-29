@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "audit_mode": "scoped",
+  "question_id": "Q3",
+  "impact_class": "CANONICAL",
+  "scope": {
+    "changed_identifiers": [
+      "Q3-P2",
+      "a_i",
+      "beta",
+      "d_safe",
+      "rho_-1",
+      "T_-1^min",
+      "eta_2"
+    ],
+    "files_checked": [
+      "methods/Q3/q3_decisions.jsonl",
+      "code/Q3/q3_code_plan.md",
+      "results/Q3/experiments/round3/run_summary.json",
+      "results/Q3/experiments/round3/metrics/q3_p2_formal_plan.json",
+      "results/Q3/experiments/round3/metrics/q3_p2_sensitivity.json",
+      "results/Q3/experiments/round3/metrics/q3_p2_failure_details.json",
+      "results/Q3/experiments/round3/tables/q3_p2_comparison.csv",
+      "code/Q3/reviews/q3_python_review_round3.json",
+      "robustness/Q3/q3_robustness_summary_round3.json",
+      "robustness/Q3/q3_robustness_report_round3.md",
+      "results/Q3/experiments/round3/q3_decision_report.md"
+    ]
+  },
+  "checks": {
+    "human_decision_trace": {
+      "status": "PASS",
+      "evidence": "A-00217 selection and P1/P4/Q3-B retained roles trace to q3_representative_choice_p2."
+    },
+    "event_and_trajectory_values": {
+      "status": "PASS",
+      "evidence": "Availability, command, release, burst, release-point, smoke-centre, path and turn values agree between the formal-plan JSON, events CSV and trajectory CSV."
+    },
+    "minimum_separation": {
+      "status": "PASS",
+      "evidence": "46.38092783617386 m at t=-3.0810741370339283 s for UAVs 1 and 3 agrees across plan, run summary, review and decision report."
+    },
+    "continuous_coverage": {
+      "status": "PASS",
+      "evidence": "Continuous envelope and independent disk-difference validators both pass the full conservative G1 window."
+    },
+    "sensitivity": {
+      "status": "PASS",
+      "evidence": "Bearing, position, heading, combined-perturbation and safety-distance values agree across machine summary, robustness summary and report."
+    },
+    "failure_metric_refinement": {
+      "status": "PASS",
+      "evidence": "Round-3 continuous root refinement replaces round-2 grid approximations with 10.376134889744753 s and 0.40913676322201886 for P2. The ranking supporting the human choice is unchanged."
+    },
+    "claim_scope": {
+      "status": "PASS",
+      "evidence": "All coordinate-bearing outputs retain SYNTHETIC_SCENARIO_ONLY; nominal safety limit, perturbation curve, collinear-family limitation and absence of N-1 impossibility proof are explicit."
+    },
+    "freeze_state": {
+      "status": "PASS",
+      "evidence": "No frozen_numbers.json has been created before human stability and package signoff."
+    }
+  },
+  "divergences": [],
+  "open_human_judgment": "Confirm the parameterized safety claim and authorize Q3 package signoff/freeze.",
+  "verdict": "PASSED_WAITING_HUMAN_FREEZE_SIGNOFF",
+  "audited_at": "2026-07-29T22:31:30+08:00"
+}

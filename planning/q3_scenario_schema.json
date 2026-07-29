@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Q3 formal three-UAV scenario input",
+  "description": "Formal Q3-A/Q3-B execution is blocked until every required field is supplied. Nulls and silent zero defaults are prohibited.",
+  "type": "object",
+  "required": [
+    "task_clock_zero_definition",
+    "coordinate_axis_definition",
+    "ship_initial_position_m",
+    "ship_heading_rad",
+    "g1_lock_time_s",
+    "uav_initial_positions_m",
+    "uav_initial_headings_rad",
+    "uav_available_times_s",
+    "operation_radius_reference_points_m",
+    "operation_radius_interpretation"
+  ],
+  "properties": {
+    "task_clock_zero_definition": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Physical event represented by t=0."
+    },
+    "coordinate_axis_definition": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Positive x/y directions and angle convention."
+    },
+    "ship_initial_position_m": {
+      "$ref": "#/$defs/point2"
+    },
+    "ship_heading_rad": {
+      "type": "number"
+    },
+    "g1_lock_time_s": {
+      "type": "number",
+      "description": "Task-clock time at which G1 lock is active at the 8000 m premise."
+    },
+    "uav_initial_positions_m": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/point2"
+      }
+    },
+    "uav_initial_headings_rad": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      },
+      "description": "Required because total turn angle is a formal Pareto objective."
+    },
+    "uav_available_times_s": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      }
+    },
+    "operation_radius_reference_points_m": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/point2"
+      }
+    },
+    "operation_radius_interpretation": {
+      "enum": [
+        "maximum_distance_from_each_takeoff_point",
+        "total_path_length_sensitivity_only"
+      ],
+      "description": "The canonical primary interpretation is maximum distance from each takeoff point."
+    },
+    "optional_uav_minimum_turn_radius_m": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "If absent, the approved piecewise-linear maneuver model is used and turn angle is only a maneuver-complexity metric."
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "point2": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "number"
+      }
+    }
+  },
+  "additionalProperties": false
+}

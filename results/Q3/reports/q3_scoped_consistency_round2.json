@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "audit_mode": "scoped",
+  "question_id": "Q1-Q2-Q3 timing and Q3 round2",
+  "impact_class": "CANONICAL",
+  "checks": {
+    "task_clock": {
+      "status": "PASS",
+      "evidence": "Q1, Q2 and Q3 now use t=0 at 8000 m lock and the same command-release-burst chain. Negative Q2/Q3 events are explicitly lock-before pre-task events."
+    },
+    "initial_state_definition": {
+      "status": "PASS",
+      "evidence": "Q3-R2 defines u_i(a_i)=u_i0 and psi_i(a_i)=psi_i0; u_i(0) is reserved for the state reached after predeployment."
+    },
+    "lead_metrics": {
+      "status": "PASS",
+      "evidence": "The user-defined -max_i(a_i) and the operational common lead -min_i(a_i) are both recorded and are not conflated."
+    },
+    "numerical_claims": {
+      "status": "PASS",
+      "evidence": "Run summary, main metrics, baseline metrics, review and robustness files agree on 5.5 s, 15.968199098479152 s, 13.720980508784676 s, 182 Pareto candidates, and representative-rule disagreement."
+    },
+    "continuous_validation": {
+      "status": "PASS",
+      "evidence": "All reported A candidates and Q3-B have matching continuous-envelope and independent disk-difference PASS records."
+    },
+    "claim_scope": {
+      "status": "PASS",
+      "evidence": "SYNTHETIC_SCENARIO_ONLY, collinear-family limits, non-global safety thresholds, and search-limited N-1 findings are stated consistently."
+    },
+    "human_decision_trace": {
+      "status": "PASS",
+      "evidence": "Q3-A/B/C roles and pre-task adjustment trace to the append-only Q3 decision ledger."
+    }
+  },
+  "divergences": [],
+  "open_human_judgment": "Choose the representative Q3-A candidate because ideal-point, knee/Chebyshev and layered rules disagree.",
+  "verdict": "PASSED_WAITING_HUMAN_REPRESENTATIVE_CHOICE",
+  "audited_at": "2026-07-29T22:16:55+08:00"
+}

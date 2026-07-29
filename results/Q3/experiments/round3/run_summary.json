@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "question": "Q3",
+  "round": "round3",
+  "round_label": "p2_formal_sensitivity",
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "implementation_target": "python",
+  "random_seed": 2026,
+  "approved_decision_ids": [
+    "q3_method_choice",
+    "q3_result_adjust_pretask",
+    "q3_representative_choice_p2"
+  ],
+  "selected_method": "Q3-A",
+  "selected_candidate": "A-00217",
+  "retained_alternatives": [
+    "A-00017",
+    "A-00033",
+    "Q3-B B-3"
+  ],
+  "metrics_summary": {
+    "common_warning_lead_s": 17.876433988353572,
+    "d_safe_max_m": 46.38092783617386,
+    "minimum_pair_distance": {
+      "distance_m": 46.38092783617386,
+      "time_s": -3.0810741370339283,
+      "uav_pair": [
+        1,
+        3
+      ],
+      "positions_m": [
+        [
+          14.270075836950014,
+          0.0
+        ],
+        [
+          56.07335619860825,
+          20.091695248260308
+        ]
+      ]
+    },
+    "n_minus_one_success_rate": 0.6666666666666666,
+    "worst_failure_continuous_cover_s": 10.376134889744753,
+    "double_cover_time_ratio": 0.40913676322201886,
+    "sensitivity": {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "predeclared_diagnostic_rule": {
+        "bearing_success_rate_min": 1.0,
+        "combined_execution_rate_min": 0.95,
+        "combined_half_nominal_clearance_retention_rate_min": 0.8,
+        "all_one_at_a_time_boundaries_must_execute": true,
+        "role": "fallback diagnostic only; not a problem constant"
+      },
+      "bearing_success_rate": 1.0,
+      "combined_execution_rate": 1.0,
+      "combined_half_nominal_clearance_retention_rate": 0.9605,
+      "all_one_at_a_time_cases_execute": true,
+      "combined_minimum_pair_distance_quantiles_m": {
+        "min": 0.23377203323868967,
+        "p05": 29.51871333273017,
+        "p25": 42.55238637951669,
+        "median": 46.21419709794967,
+        "p75": 48.796664599043716,
+        "p95": 50.64466119277746,
+        "max": 51.30187277544291
+      },
+      "combined_common_lead_quantiles_s": {
+        "min": 10.796078820730422,
+        "median": 21.15021171614822,
+        "p95": 25.098243563374865,
+        "max": 27.324847399017745
+      },
+      "narrow_initial_or_bearing_range_triggered": false,
+      "fallback_p1_recomparison_required": false
+    }
+  },
+  "continuous_validation_pass": true,
+  "fallback_trigger": {
+    "fallback_id": "P1_A-00017_recomparison",
+    "observed": false
+  },
+  "freeze_status": "WAITING_HUMAN_PACKAGE_SIGNOFF",
+  "outputs": [
+    "results/Q3/experiments/round3/metrics/q3_p2_formal_plan.json",
+    "results/Q3/experiments/round3/metrics/q3_p2_sensitivity.json",
+    "results/Q3/experiments/round3/metrics/q3_p2_failure_details.json",
+    "results/Q3/experiments/round3/metrics/q3_p2_combined_perturbations.json",
+    "results/Q3/experiments/round3/tables/q3_p2_events.csv",
+    "results/Q3/experiments/round3/tables/q3_p2_trajectory.csv",
+    "results/Q3/experiments/round3/tables/q3_p2_bearing_sensitivity.csv",
+    "results/Q3/experiments/round3/tables/q3_p2_position_sensitivity.csv",
+    "results/Q3/experiments/round3/tables/q3_p2_heading_sensitivity.csv",
+    "results/Q3/experiments/round3/tables/q3_p2_safety_sensitivity.csv",
+    "results/Q3/experiments/round3/tables/q3_p2_comparison.csv",
+    "results/Q3/experiments/round3/figures/q3_p2_trajectories.png",
+    "results/Q3/experiments/round3/figures/q3_p2_safety_sensitivity.png"
+  ],
+  "claim_limits": [
+    "All coordinates and numerical routes are SYNTHETIC_SCENARIO_ONLY.",
+    "The smoke schedule is the selected canonical-collinear candidate A-00217.",
+    "Initial-position sensitivity preserves the fixed P2 smoke schedule and UAV assignment.",
+    "No minimum turn radius is available; heading perturbations change the reported turn metric but not instantaneous-turn feasibility.",
+    "No N-1 impossibility claim is made."
+  ],
+  "runtime_seconds": 11.405052199959755,
+  "environment": {
+    "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.4"
+  }
+}

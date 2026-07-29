@@ -1,0 +1,332 @@
+{
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "bearing": [
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.0,
+      "beta_deg": 0.0,
+      "g1_detection_window_s": 24.167709255129896,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.08726646259971647,
+      "beta_deg": 5.0,
+      "g1_detection_window_s": 24.169974215304986,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.17453292519943295,
+      "beta_deg": 10.0,
+      "g1_detection_window_s": 24.176752007181037,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.2617993877991494,
+      "beta_deg": 14.999999999999998,
+      "g1_detection_window_s": 24.187991488636943,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.3490658503988659,
+      "beta_deg": 20.0,
+      "g1_detection_window_s": 24.203607836034056,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.4363323129985824,
+      "beta_deg": 25.0,
+      "g1_detection_window_s": 24.223483160502205,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.5235987755982988,
+      "beta_deg": 29.999999999999996,
+      "g1_detection_window_s": 24.247467367698338,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.6108652381980153,
+      "beta_deg": 35.0,
+      "g1_detection_window_s": 24.275379254482548,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.6981317007977318,
+      "beta_deg": 40.0,
+      "g1_detection_window_s": 24.307007837060286,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.7853981633974483,
+      "beta_deg": 45.0,
+      "g1_detection_window_s": 24.342113902196758,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.8726646259971648,
+      "beta_deg": 50.0,
+      "g1_detection_window_s": 24.380431776001377,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 0.9599310885968813,
+      "beta_deg": 55.0,
+      "g1_detection_window_s": 24.421671288532533,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.0471975511965976,
+      "beta_deg": 59.99999999999999,
+      "g1_detection_window_s": 24.465519937705988,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.1344640137963142,
+      "beta_deg": 65.0,
+      "g1_detection_window_s": 24.511645221084684,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.2217304763960306,
+      "beta_deg": 70.0,
+      "g1_detection_window_s": 24.5596971322437,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.3089969389957472,
+      "beta_deg": 75.0,
+      "g1_detection_window_s": 24.6093107952107,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.3962634015954636,
+      "beta_deg": 80.0,
+      "g1_detection_window_s": 24.660109219181248,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.48352986419518,
+      "beta_deg": 84.99999999999999,
+      "g1_detection_window_s": 24.711706162648323,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.5707963267948966,
+      "beta_deg": 90.0,
+      "g1_detection_window_s": 24.76370906214639,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.658062789394613,
+      "beta_deg": 95.0,
+      "g1_detection_window_s": 24.81572203057593,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.7453292519943295,
+      "beta_deg": 100.0,
+      "g1_detection_window_s": 24.867348880655552,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.832595714594046,
+      "beta_deg": 105.0,
+      "g1_detection_window_s": 24.91819615643752,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 1.9198621771937625,
+      "beta_deg": 110.0,
+      "g1_detection_window_s": 24.967876155947035,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.007128639793479,
+      "beta_deg": 115.0,
+      "g1_detection_window_s": 25.01600990442894,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.0943951023931953,
+      "beta_deg": 119.99999999999999,
+      "g1_detection_window_s": 25.06223007184371,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.1816615649929116,
+      "beta_deg": 124.99999999999999,
+      "g1_detection_window_s": 25.106183797991118,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.2689280275926285,
+      "beta_deg": 130.0,
+      "g1_detection_window_s": 25.147535413851536,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.356194490192345,
+      "beta_deg": 135.0,
+      "g1_detection_window_s": 25.185969025867845,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.443460952792061,
+      "beta_deg": 140.0,
+      "g1_detection_window_s": 25.22119095569414,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.5307274153917776,
+      "beta_deg": 145.0,
+      "g1_detection_window_s": 25.252932000840858,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.6179938779914944,
+      "beta_deg": 150.0,
+      "g1_detection_window_s": 25.28094951584402,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.705260340591211,
+      "beta_deg": 155.0,
+      "g1_detection_window_s": 25.305029282590638,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.792526803190927,
+      "beta_deg": 160.0,
+      "g1_detection_window_s": 25.324987163845382,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.8797932657906435,
+      "beta_deg": 165.0,
+      "g1_detection_window_s": 25.34067052429216,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 2.96705972839036,
+      "beta_deg": 169.99999999999997,
+      "g1_detection_window_s": 25.35195940847504,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 3.0543261909900767,
+      "beta_deg": 175.0,
+      "g1_detection_window_s": 25.358767466585203,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "beta_rad": 3.141592653589793,
+      "beta_deg": 180.0,
+      "g1_detection_window_s": 25.361042620642717,
+      "p2_validated_window_s": 25.36104262064107,
+      "complete_defense": true
+    }
+  ],
+  "summary": {
+    "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+    "predeclared_diagnostic_rule": {
+      "bearing_success_rate_min": 1.0,
+      "combined_execution_rate_min": 0.95,
+      "combined_half_nominal_clearance_retention_rate_min": 0.8,
+      "all_one_at_a_time_boundaries_must_execute": true,
+      "role": "fallback diagnostic only; not a problem constant"
+    },
+    "bearing_success_rate": 1.0,
+    "combined_execution_rate": 1.0,
+    "combined_half_nominal_clearance_retention_rate": 0.9605,
+    "all_one_at_a_time_cases_execute": true,
+    "combined_minimum_pair_distance_quantiles_m": {
+      "min": 0.23377203323868967,
+      "p05": 29.51871333273017,
+      "p25": 42.55238637951669,
+      "median": 46.21419709794967,
+      "p75": 48.796664599043716,
+      "p95": 50.64466119277746,
+      "max": 51.30187277544291
+    },
+    "combined_common_lead_quantiles_s": {
+      "min": 10.796078820730422,
+      "median": 21.15021171614822,
+      "p95": 25.098243563374865,
+      "max": 27.324847399017745
+    },
+    "narrow_initial_or_bearing_range_triggered": false,
+    "fallback_p1_recomparison_required": false
+  }
+}

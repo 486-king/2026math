@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "question_id": "Q3",
+  "profile": "lean",
+  "tested_claim": "The approved standardized scenario cannot achieve complete defense from t=0 because no smoke can exist before 5.5 s.",
+  "input_refs": [
+    "workspace/data_clean/q3_standardized_scenario.json",
+    "methods/Q3/q3_decisions.jsonl"
+  ],
+  "result_refs": [
+    "results/Q3/experiments/round1/metrics/q3_event_infeasibility_certificate.json",
+    "results/Q3/experiments/round1/tables/q3_availability_sensitivity.csv"
+  ],
+  "checks": [
+    {
+      "name": "availability_range",
+      "perturbation": "min_i(a_i) over the approved 0 to 3 s range",
+      "metric": "earliest burst minus defense-window start",
+      "threshold": "<=0 s is necessary",
+      "observed": "5.5 to 8.5 s",
+      "status": "PASS",
+      "limitation": "The condition is necessary, not sufficient, outside the approved range.",
+      "fallback_trigger_relevance": "Q3-C not triggered."
+    },
+    {
+      "name": "position_range",
+      "perturbation": "each x/y initial coordinate plus or minus 200 m",
+      "metric": "event-delay certificate",
+      "threshold": "certificate unchanged",
+      "observed": "analytically unchanged",
+      "status": "PASS",
+      "limitation": "Routes are not evaluated after the earlier hard-constraint failure.",
+      "fallback_trigger_relevance": "none"
+    },
+    {
+      "name": "heading_range",
+      "perturbation": "each initial heading plus or minus 45 degrees",
+      "metric": "event-delay certificate",
+      "threshold": "certificate unchanged",
+      "observed": "analytically unchanged",
+      "status": "PASS",
+      "limitation": "Turn objectives are not evaluated without a feasible normal-defense candidate.",
+      "fallback_trigger_relevance": "none"
+    },
+    {
+      "name": "safety_distance_range",
+      "perturbation": "d_safe from 0 to 150 m",
+      "metric": "event-delay certificate",
+      "threshold": "certificate unchanged",
+      "observed": "analytically unchanged",
+      "status": "PASS",
+      "limitation": "No formal d_safe feasibility threshold exists because the feasible set is already empty.",
+      "fallback_trigger_relevance": "none"
+    },
+    {
+      "name": "missile_bearing_range",
+      "perturbation": "beta from 0 to pi",
+      "metric": "event-delay certificate after lock at t=0",
+      "threshold": "certificate unchanged",
+      "observed": "analytically unchanged",
+      "status": "PASS",
+      "limitation": "This relies on the human-approved premise that the full defense window begins at completed lock.",
+      "fallback_trigger_relevance": "none"
+    }
+  ],
+  "overall_status": "PASS",
+  "claim_limit": "Only the approved t=0 and a_i>=0 scenario family is certified infeasible. Allowing pre-tasking at or before -5.5 s removes this particular obstruction but does not prove geometric feasibility.",
+  "generated_at": "2026-07-29T21:56:30+08:00"
+}

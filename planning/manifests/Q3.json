@@ -2,37 +2,44 @@
   "schema_version": 1,
   "question_id": "Q3",
   "rigor_profile": "lean",
-  "current_gate": "G2.5",
-  "status": "method_screened_waiting_human_and_missing_inputs",
+  "current_gate": "G3",
+  "status": "p2_formal_sensitivity_reviewed_waiting_human_freeze_signoff",
   "artifacts": {
     "problem_parse": "planning/parse/problem_parse.json",
     "classification": "planning/classification/problem_classification.json",
     "data_profile": "workspace/data/data_profile.json",
     "symbol_table": "planning/symbol_table.md",
     "assumptions": "planning/model_assumptions.md",
+    "scenario_schema": "planning/q3_scenario_schema.json",
+    "standardized_scenario": "workspace/data_clean/q3_standardized_scenario.json",
     "mechanism_structure": "planning/mechanism_observation_structure.md",
     "method_card": "methods/Q3/q3_method_card.md",
-    "decision_ledger": null,
+    "decision_ledger": "methods/Q3/q3_decisions.jsonl",
     "risk_probe": "methods/Q3/probes/risk_probe_summary.json",
-    "latest_run": null
+    "code_plan": "code/Q3/q3_code_plan.md",
+    "latest_run": "results/Q3/experiments/round3/run_summary.json",
+    "decision_report": "results/Q3/experiments/round3/q3_decision_report.md",
+    "code_review": "code/Q3/reviews/q3_python_review_round3.json",
+    "robustness": "robustness/Q3/q3_robustness_summary_round3.json",
+    "robustness_report": "robustness/Q3/q3_robustness_report_round3.md",
+    "consistency_audit": "results/Q3/reports/q3_scoped_consistency_round3.json"
   },
   "allowed": {
-    "code_generation": false,
+    "code_generation": true,
     "freeze": false,
     "paper_writing": false,
     "final_assembly": false
   },
   "blockers": [
-    "缺三机初始状态。",
-    "缺安全距离、能耗函数与烟幕叠加物理定义。",
-    "继承 Q1 的运动定义缺失。",
-    "尚无人类 A/B/C 方法选择。"
+    "Human stability and package-signoff decision is not yet recorded; frozen_numbers.json must not be generated before that decision.",
+    "The nominal 46.38092783617386 m safety limit is not a robust guarantee: the 2000-case combined sample minimum is 0.23377203323868967 m.",
+    "All coordinates and routes are SYNTHETIC_SCENARIO_ONLY and the smoke schedule remains within the canonical collinear family."
   ],
   "change_impact": "CANONICAL",
   "next_action": {
     "owner": "human",
     "skill": "decision-prompt-builder",
-    "reason": "选择 Q3 的 A/B/C，并确认安全、能耗和叠加口径。"
+    "reason": "Confirm whether to freeze P2 with nominal d_safe in [0,46.38092783617386] m and the safety-distance retention curve as the parameterized sensitivity claim."
   },
-  "updated_at": "2026-07-29T18:40:00+08:00"
+  "updated_at": "2026-07-29T22:31:30+08:00"
 }

@@ -1,0 +1,59 @@
+[
+  {
+    "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+    "failed_uav": 1,
+    "failed_smoke_index": 1,
+    "remaining_smoke_indices": [
+      2,
+      3
+    ],
+    "coverage_intervals_s": [
+      [
+        0.0,
+        25.36104262064107
+      ]
+    ],
+    "full_window_success": true,
+    "longest_continuous_cover_s": 25.36104262064107,
+    "total_covered_time_s": 25.36104262064107,
+    "covered_time_ratio": 1.0
+  },
+  {
+    "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+    "failed_uav": 2,
+    "failed_smoke_index": 2,
+    "remaining_smoke_indices": [
+      1,
+      3
+    ],
+    "coverage_intervals_s": [
+      [
+        0.0,
+        10.376134889744753
+      ]
+    ],
+    "full_window_success": false,
+    "longest_continuous_cover_s": 10.376134889744753,
+    "total_covered_time_s": 10.376134889744753,
+    "covered_time_ratio": 0.40913676322201886
+  },
+  {
+    "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+    "failed_uav": 3,
+    "failed_smoke_index": 3,
+    "remaining_smoke_indices": [
+      1,
+      2
+    ],
+    "coverage_intervals_s": [
+      [
+        0.0,
+        25.36104262064107
+      ]
+    ],
+    "full_window_success": true,
+    "longest_continuous_cover_s": 25.36104262064107,
+    "total_covered_time_s": 25.36104262064107,
+    "covered_time_ratio": 1.0
+  }
+]

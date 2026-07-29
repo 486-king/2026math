@@ -1,0 +1,3 @@
+﻿scenario_label,method_id,minimum_lead_s,user_defined_latest_uav_warning_lead_s,maximum_d_safe_m,pareto_count_dsafe0,n_minus_one_full_candidates_found,representative_status_dsafe0,total_path_length_m,total_turn_angle_rad
+SYNTHETIC_SCENARIO_ONLY,Q3-A,15.968199098479152,0.0,164.6524134588492,182,0,DISAGREE_HUMAN_REQUIRED,,
+SYNTHETIC_SCENARIO_ONLY,Q3-B,13.720980508784676,0.0,189.7529718772099,1,0,CONSTRUCTIVE_BASELINE,1110.187454245971,1.5395564933646284

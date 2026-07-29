@@ -1,0 +1,8 @@
+{
+  "label": "VALIDATOR_REGRESSION_ONLY",
+  "source": "Q2 positive-margin two-smoke recovery fixture",
+  "interval_certificate_status": "PASS",
+  "independent_geometry_status": "PASS",
+  "validators_agree": true,
+  "formal_q3_candidate": false
+}

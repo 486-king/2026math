@@ -81,18 +81,62 @@ previous numerical values.
 
 | Symbol | Plain name | Definition | Type | Domain/range | Unit | Scope | Source / conflict resolution |
 |---|---|---|---|---|---|---|---|
-| `G1` | Pure-pursuit guidance | Missile speed has constant magnitude and points to the ship centre | model label | nominal | 1 | Q1-Q2 | Renamed from M1 to avoid collision with numbered modules |
-| `G2` | Fixed-heading guidance | Missile follows a supplied fixed heading | model label | extension | 1 | Q1-Q2 | Renamed from M2; duration test is necessary only |
+| `G1` | Pure-pursuit guidance | Missile speed has constant magnitude and points to the ship centre | model label | nominal | 1 | Q1-Q3 | Renamed from M1 to avoid collision with numbered modules |
+| `G2` | Fixed-heading guidance | Missile follows a supplied fixed heading | model label | extension | 1 | Q1-Q3 | Renamed from M2; duration test is necessary only |
 | `O0` | Complete-disk coverage | Full 2-D ship disk must be inside the smoke union | model label | nominal | 1 | all | Problem success criterion |
-| `U0` | Nominal deterministic profile | No nominal wind drift | model label | nominal | 1 | Q1-Q2 | Human decision |
+| `U0` | Nominal deterministic profile | No nominal wind drift | model label | nominal | 1 | Q1-Q3 | Human decision |
 | `t_cmd` | Bomb command time | Time at which the UAV receives/issues the drop command | decision/event | task clock | s | all | New canonical symbol |
 | `t_d` | Actual release time | `t_d=t_cmd+2` under the selected timing interpretation | decision/event | task clock | s | all | Replaces ambiguous “drop/response” wording |
 | `t_b` | Burst time | `t_b=t_d+3.5=t_cmd+5.5` | output/event | task clock | s | all | Same physical event as before |
 | `t_m` | Cover-interval midpoint | Midpoint of a selected single-smoke complete-cover interval | decision/intermediate | detection window | s | Q1 | Replaces the old Q1 use of `t_c`; `t_c` is no longer used for this meaning |
-| `Delta(t)` | Unified coverage defect | `max_{x in D_s(t)} min_j(||x-c_j(t)||-r_j(t))` | function/metric | real | m | Q1-Q3 | Complete coverage iff `Delta<=0`; Q1 single-smoke `g=-Delta` |
+| `Delta(t)` | Unified coverage defect | `max_{x in S(t)} min_j(||x-c_j(t)||-r_j(t))` | function/metric | real | m | Q1-Q3 | Complete coverage iff `Delta<=0`; Q1 single-smoke `g=-Delta` |
 | `T_structural_max` | Structural capacity upper bound | Maximum permitted by ship/smoke geometry before reachability | output | nonnegative | s | Q1-Q2 | `10.376134889753567` under fixed single smoke |
 | `T_executable_star` | Executable scenario optimum | Best duration after event, reachability and radius constraints | output | `[0,T_structural_max]` | s | Q1 | Not evaluable until absolute scenario inputs are supplied |
 
 Conflict resolution: `t_c` must not denote both a command time and a
 cover-interval midpoint. New and revised Q1/Q2 artifacts use `t_cmd` and `t_m`
 respectively.
+
+## Q3 Pareto、参数化安全与失效指标（2026-07-29）
+
+以下符号由人工决策 `q3_objective_safety_energy_scope` 确认，供 Q3 方法卡、
+代码计划、实验结果和论文统一使用。
+
+| 符号 | 名称 | 定义 | 类型 | 域/范围 | 单位 | 范围/Qx | 来源与备注 |
+|---|---|---|---|---|---|---|---|
+| `Delta_all(t)` | 正常三机覆盖缺陷 | `max_{x in S(t)} min_i(||x-c_i(t)||-r_i(t))` | function/metric | real | m | Q3 | `Delta_all<=0` 为完整覆盖硬约束 |
+| `Delta_-i(t)` | 单机失效覆盖缺陷 | 移除第 `i` 机及其烟幕后计算的覆盖缺陷 | function/metric | real | m | Q3 | 三个确定性失效情景 |
+| `M_min` | 正常最小覆盖裕度 | `min_{t in W_G1}[-Delta_all(t)]` | objective/metric | real | m | Q3 | 越大越稳健 |
+| `rho_-1` | 单机失效全窗口成功率 | 三个单机失效情景中仍完整防御的比例 | objective/metric | `{0,1/3,2/3,1}` | 1 | Q3 | 不作为当前硬约束 |
+| `T_-1^min` | 最差失效连续遮蔽 | 三个失效情景最长连续遮蔽时长的最小值 | objective/metric | `[0,|W_G1|]` | s | Q3 | 无 N-1 完整解时用于降级排序 |
+| `eta_2` | 双重覆盖时间比例 | 任意一机失效后仍完整覆盖的时刻占 `W_G1` 比例 | objective/metric | `[0,1]` | 1 | Q3 | 等价于每个时刻均可承受任一单机失效的时间比例 |
+| `L_total` | 三机总航程 | `sum_i L_i` | objective/metric | `>=0` | m | Q3 | 与转向量分开最小化 |
+| `Theta_i` | 第 i 机总转向量 | 航向角轨迹的总变差 | intermediate/metric | `>=0` | rad | Q3 | 不是能耗 |
+| `Theta_total` | 三机总转向量 | `sum_i Theta_i` | objective/metric | `>=0` | rad | Q3 | 不与航程加权合成 |
+| `P_Q3(d_safe)` | Q3 参数化 Pareto 集 | 给定安全距离下满足正常完整防御的非支配方案集 | output/set | finite/continuous set | 1 | Q3 | O2 人工选择 |
+| `d_safe^max` | 最大允许安全距离 | 仍存在正常完整防御可执行方案的 `d_safe` 上确界 | output | `>=0` | m | Q3 | 缺真实初态时不得给正式数值 |
+| `a_i` | 第 i 机任务可用时刻 | 第 i 机最早可接收投弹指令的任务时钟时刻 | input/parameter | real | s | Q3 | 标准场景为 0；敏感性范围 0–3 |
+| `a_crit` | 预任务必要阈值 | 在窗口从 0 开始时满足 `min_i(a_i)<=-5.5` 的临界值 | derived threshold | `-5.5` | s | Q3 | 仅为完整防御必要条件，不是充分条件 |
+
+冲突处理：
+
+- Q3 的“冗余”不再用含义模糊的单一 `rho_fail`；正式输出拆成
+  `rho_-1`、`T_-1^min` 和 `eta_2`。
+- `L_total` 与 `Theta_total` 是两个独立 Pareto 目标，不定义无依据的
+  `E=L+lambda*Theta`。
+- Q3 的投弹事件沿用 `t_cmd`、`t_d`、`t_b`，旧表中的
+  `t^d_{ij}` 仅按“实际释放时刻”读取。
+
+## Q3-R2 锁定前预任务时间符号（2026-07-29）
+
+| 符号 | 名称 | 定义 | 类型 | 范围 | 单位 | 备注 |
+|---|---|---|---|---|---|---|
+| `u_i(a_i)` | 预任务开始状态 | 第 `i` 架无人机在自身可用时刻的位置，等于输入 `u_{i,0}` | input/state | `R^2` | m | 不再把 `u_{i,0}` 无条件解释为 `u_i(0)` |
+| `psi_i(a_i)` | 预任务开始航向 | 第 `i` 架无人机在自身可用时刻的航向，等于输入 `psi_{i,0}` | input/state | `[0,2pi)` | rad | 从 `a_i` 开始模拟预部署 |
+| `T_lead^latest` | 最晚可用无人机提前量 | `-max_i a_i` | output/metric | `[0,60]` | s | 严格按建模手给出的公式；表示三机中最晚开始者的提前量 |
+| `T_lead^common` | 全部所选航路共同提前量 | `-min_i a_i` | output/metric | `[0,60]` | s | 使所有所选航路均可执行所需的统一预警提前量 |
+
+说明：`T_lead^latest` 与 `T_lead^common` 不是同一个指标。若某架无人机可在
+`t=0` 才开始而其余无人机已预部署，则前者可为 0，但这不表示系统无需预警。
+因此实际部署可行性以逐机阈值 `a_i` 和 `T_lead^common` 为主，同时保留
+`T_lead^latest` 以忠实回应原定义。

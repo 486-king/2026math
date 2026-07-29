@@ -290,3 +290,16 @@ Required review additions:
 - `exact_cross_section_geometry`
 - `continuous_time_gap_check`
 - `baseline_comparison`
+
+## Q3-R2 timing-consistency addendum
+
+Q2 round-2 numerical schedules are expressed on the common task clock with
+`t=0` at 8000 m lock. Any negative command, release, or burst time is a
+lock-before pre-task event. Therefore:
+
+1. the existing continuous union-coverage certificate remains valid;
+2. a claim of coverage from `t=0` is conditional on pre-warning deployment;
+3. under `a_i>=0`, the 2 s response plus 3.5 s burst delay creates the same
+   initial naked interval as Q3 round 1;
+4. absolute execution still requires per-UAV `u_i(a_i)`, `psi_i(a_i)`, and
+   reachability checks.

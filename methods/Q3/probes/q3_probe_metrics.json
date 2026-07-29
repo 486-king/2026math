@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "question_id": "Q3",
+  "probe_only": true,
+  "synthetic_data_warning": "All UAV starts, route shapes, center/burst grids and d_safe values are synthetic structure tests, not contest-result coordinates.",
+  "seed": 2026,
+  "window_s": [
+    -4.37575009,
+    20.98529253064107
+  ],
+  "candidate_count": 864,
+  "normal_full_defense_candidate_count": 864,
+  "pareto_and_dsafe_sensitivity": [
+    {
+      "d_safe_m": 0.0,
+      "feasible_count": 864,
+      "pareto_count": 45,
+      "representative_candidate_id": "A-0309",
+      "n_minus_one_full_defense_candidates": 0
+    },
+    {
+      "d_safe_m": 20.0,
+      "feasible_count": 672,
+      "pareto_count": 39,
+      "representative_candidate_id": "A-0309",
+      "n_minus_one_full_defense_candidates": 0
+    },
+    {
+      "d_safe_m": 40.0,
+      "feasible_count": 416,
+      "pareto_count": 31,
+      "representative_candidate_id": "A-0309",
+      "n_minus_one_full_defense_candidates": 0
+    },
+    {
+      "d_safe_m": 60.0,
+      "feasible_count": 288,
+      "pareto_count": 24,
+      "representative_candidate_id": "A-0677",
+      "n_minus_one_full_defense_candidates": 0
+    },
+    {
+      "d_safe_m": 80.0,
+      "feasible_count": 192,
+      "pareto_count": 16,
+      "representative_candidate_id": "A-0677",
+      "n_minus_one_full_defense_candidates": 0
+    },
+    {
+      "d_safe_m": 100.0,
+      "feasible_count": 192,
+      "pareto_count": 16,
+      "representative_candidate_id": "A-0677",
+      "n_minus_one_full_defense_candidates": 0
+    },
+    {
+      "d_safe_m": 120.0,
+      "feasible_count": 80,
+      "pareto_count": 8,
+      "representative_candidate_id": "A-0777",
+      "n_minus_one_full_defense_candidates": 0
+    }
+  ],
+  "maximum_supported_dsafe_m_in_synthetic_probe_only": 127.72671817286741,
+  "representative_solution_change_count": 2,
+  "representative_candidate_ids": [
+    "A-0309",
+    "A-0677",
+    "A-0777"
+  ],
+  "perturbation": {
+    "third_center_plus_minus_m": 1.0,
+    "third_burst_plus_minus_s": 0.1,
+    "normal_defense_passes": 9,
+    "runs": 9
+  },
+  "n_minus_one_candidate_count": 0,
+  "baseline": {
+    "schedule": {
+      "centers_m": [
+        0.0,
+        80.0,
+        160.0
+      ],
+      "burst_times_s": [
+        -5.188067444876784,
+        5.188067444876784,
+        15.564202334630352
+      ]
+    },
+    "normal_full_window_success": true,
+    "normal_minimum_squared_cross_section_slack_m2": 40.1723436825996,
+    "single_failure_full_window_success_rate": 0.0,
+    "worst_single_failure_continuous_cover_s": 9.542092286016203,
+    "double_coverage_time_ratio": 0.0,
+    "failure_scenarios": [
+      {
+        "failed_uav": 1,
+        "full_window_success": false,
+        "covered_time_ratio": 0.6229712858926342,
+        "longest_remaining_continuous_cover_s": 15.787249031349065,
+        "minimum_squared_cross_section_slack_m2": -37534.03803077432
+      },
+      {
+        "failed_uav": 2,
+        "full_window_success": false,
+        "covered_time_ratio": 0.5917602996254682,
+        "longest_remaining_continuous_cover_s": 9.542092286016203,
+        "minimum_squared_cross_section_slack_m2": -10466.757527434105
+      },
+      {
+        "failed_uav": 3,
+        "full_window_success": false,
+        "covered_time_ratio": 0.7852684144818977,
+        "longest_remaining_continuous_cover_s": 19.90841845720324,
+        "minimum_squared_cross_section_slack_m2": -11778.14152260135
+      }
+    ],
+    "total_path_length_m": 1593.7817320796141,
+    "total_turn_angle_rad": 0.8573286155607287,
+    "minimum_pairwise_distance_m": 78.92561593044428,
+    "synthetic_speed_reachability": true
+  },
+  "runtime_seconds": 21.38097479986027,
+  "peak_memory_mb": 0.655634880065918,
+  "formal_claims_prohibited": [
+    "absolute UAV trajectories",
+    "numerical d_safe recommendation",
+    "formal Pareto representative",
+    "N-1 feasibility in the real scenario"
+  ]
+}

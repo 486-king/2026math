@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "question_id": "Q3",
+  "language": "python",
+  "round": "round1_formal_event_feasibility",
+  "reviewed_files": [
+    "code/Q3/q3_code_plan.md",
+    "code/Q3/q3_common.py",
+    "code/Q3/q3_main.py",
+    "code/Q3/q3_baseline.py",
+    "code/Q3/q3_run.py",
+    "workspace/data_clean/q3_standardized_scenario.json",
+    "results/Q3/experiments/round1/run_summary.json"
+  ],
+  "decision_id": "q3_method_choice",
+  "checks": {
+    "syntax": {
+      "status": "PASS",
+      "evidence": [
+        "py_compile passed for all four Q3 Python modules.",
+        "The round-1 runner completed without exception."
+      ]
+    },
+    "input_contract": {
+      "status": "PASS",
+      "evidence": [
+        "The standardized input contains three positions, headings, availability times and radius reference points.",
+        "Every formal output retains SYNTHETIC_SCENARIO_ONLY.",
+        "No raw attachment was modified and no missing value was silently set to zero."
+      ]
+    },
+    "method_alignment": {
+      "status": "PASS",
+      "evidence": [
+        "Q3-A is the approved main method and Q3-B is the mandatory baseline.",
+        "Both methods apply the same complete-defense hard constraint before secondary optimization.",
+        "Q3-C code is absent and its trigger remains false.",
+        "No risk-probe candidate count or synthetic 127.73 m threshold appears in formal round-1 results."
+      ]
+    },
+    "reproducibility": {
+      "status": "PASS",
+      "evidence": [
+        "Two consecutive executions produced byte-identical certificate, scenario-status and comparison CSV artifacts.",
+        "The scenario SHA-256 and Python environment are recorded in run_summary.json."
+      ]
+    },
+    "output_contract": {
+      "status": "PASS",
+      "evidence": [
+        "The certificate, standardized status, validator recovery result, two CSV tables, one timeline figure and run summary exist.",
+        "Pareto, representative, route, turn and N-1 outputs are null/NOT_EVALUATED rather than fabricated after infeasibility."
+      ]
+    },
+    "event_chain_certificate": {
+      "status": "PASS",
+      "evidence": [
+        "With min availability 0 s, earliest command/release/burst are 0, 2 and 5.5 s.",
+        "All smoke radii are zero on the continuous interval [0,5.5), proving violation of full-window defense."
+      ]
+    },
+    "continuous_validator_regression": {
+      "status": "PASS",
+      "evidence": [
+        "The interval continuous-time certificate and independent disk-difference validator both pass the Q2 recovery fixture.",
+        "The recovery fixture is explicitly excluded from formal Q3 candidates."
+      ]
+    },
+    "claim_calibration": {
+      "status": "PASS",
+      "evidence": [
+        "The result is stated as structural infeasibility under the approved time-zero and availability definitions.",
+        "The necessary pre-tasking threshold min_i(a_i)<=-5.5 s is not described as sufficient.",
+        "No claim of global N-1 infeasibility is made."
+      ]
+    }
+  },
+  "findings": [
+    {
+      "severity": "DECISION_REQUIRED",
+      "item": "time_zero_and_availability_conflict",
+      "status": "OPEN",
+      "action": "The modeler must either accept Q3 infeasibility under a_i>=0 or authorize pre-tasking before lock; Q3-C cannot repair this deterministic conflict."
+    }
+  ],
+  "verdict": "PASSED_WITH_INFEASIBILITY_DECISION_REQUIRED",
+  "reviewed_at": "2026-07-29T21:56:30+08:00"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "audit_mode": "scoped",
+  "question_id": "Q3",
+  "impact_class": "CANONICAL",
+  "scope": {
+    "changed_identifiers": [
+      "a_i",
+      "a_crit",
+      "t_cmd",
+      "t_d",
+      "t_b",
+      "Q3 standardized scenario"
+    ],
+    "files_checked": [
+      "methods/Q3/q3_decisions.jsonl",
+      "methods/Q3/q3_method_card.md",
+      "planning/symbol_table.md",
+      "planning/model_assumptions.md",
+      "workspace/data_clean/q3_standardized_scenario.json",
+      "code/Q3/q3_code_plan.md",
+      "code/Q3/q3_common.py",
+      "code/Q3/q3_main.py",
+      "code/Q3/q3_baseline.py",
+      "code/Q3/q3_run.py",
+      "results/Q3/experiments/round1/run_summary.json",
+      "code/Q3/reviews/q3_python_review.json",
+      "robustness/Q3/q3_robustness_summary.json"
+    ]
+  },
+  "checks": {
+    "numerical_claims": {
+      "status": "PASS",
+      "evidence": "0 s availability, 2 s actual-release delay, 3.5 s burst delay, 5.5 s earliest burst and 5.5 s guaranteed initial naked duration agree across decision, code, metrics, tables and review."
+    },
+    "formula_parameter_constraint_roles": {
+      "status": "PASS",
+      "evidence": "Complete defense remains a hard constraint. A and B both stop before secondary optimization when the continuous naked interval is proved. The -5.5 s pre-task threshold is labeled necessary only."
+    },
+    "symbols_and_units": {
+      "status": "PASS",
+      "evidence": "a_i and a_crit are defined in seconds; command, release and burst events retain the canonical Q1 timing semantics."
+    },
+    "referenced_files": {
+      "status": "PASS",
+      "evidence": "All manifest, run-summary, review and robustness references exist and parse."
+    },
+    "human_decision_trace": {
+      "status": "PASS",
+      "evidence": "Q3-A/B/C roles trace to q3_method_choice; standardized coordinates, availability and SYNTHETIC_SCENARIO_ONLY trace to q3_parameterized_and_standardized_scenario."
+    },
+    "freshness": {
+      "status": "PASS",
+      "evidence": "The latest run, code review, robustness summary, symbols, assumptions and manifest all include the standardized-scenario decision and event-feasibility result."
+    }
+  },
+  "divergences": [],
+  "open_human_judgment": "Accept structural infeasibility under a_i>=0, or authorize pre-tasking no later than -5.5 s and rerun. Q3-C is not an applicable repair.",
+  "verdict": "PASSED_WAITING_HUMAN_RESULT_JUDGMENT",
+  "audited_at": "2026-07-29T21:58:02+08:00"
+}

@@ -1,13 +1,17 @@
 {
   "schema_version": 1,
   "question_id": "Q3",
-  "generated_at": "2026-07-29T18:35:00+08:00",
-  "data_refs": [
-    "workspace/data/data_profile.json",
-    "planning/model_assumptions.md",
-    "scratch/front_risk_probe_metrics.json"
+  "generated_at": "2026-07-29T21:20:00+08:00",
+  "decision_refs": [
+    "q3_objective_safety_energy_scope"
   ],
-  "representative_data_rule": "仅做三烟幕容量、三机组合结构和合成冲突恢复设计；没有把合成位置作为题目结果。",
+  "data_refs": [
+    "planning/parse/problem_parse.json",
+    "workspace/data/data_profile.json",
+    "interfaces/Q1_to_Q2_coverage_contract.md",
+    "methods/Q3/probes/q3_probe_metrics.json"
+  ],
+  "representative_data_rule": "All UAV starts, route shapes, center/burst grids and d_safe values are synthetic structure tests, not contest-result coordinates.",
   "methods": [
     {
       "id": "A",
@@ -15,63 +19,70 @@
       "executability": {
         "status": "PASS",
         "evidence": {
-          "uav_count": 3,
-          "bomb_count": 3,
-          "permutation_baseline_size": 6,
-          "lexicographic_structure_defined": true
+          "candidate_count": 864,
+          "normal_full_defense_candidate_count": 864,
+          "runtime_seconds": 21.38097479986027
         }
       },
       "data_coverage": {
         "status": "CONDITIONAL",
         "evidence": {
-          "uav_initial_states_available": false,
-          "safety_distance_available": false,
-          "energy_function_available": false
+          "real_uav_initial_states": 0,
+          "real_d_safe": null,
+          "real_energy_function": null
         }
       },
       "assumption_checks": [
         {
-          "name": "multiobjective_priority",
+          "name": "hard_complete_defense_filter",
           "status": "PASS",
-          "metric": "arbitrary_weight_required",
-          "value": false,
-          "threshold": false
+          "metric": "normal_full_defense_candidate_count",
+          "value": 864,
+          "threshold": ">0 in the synthetic structure probe"
         },
         {
-          "name": "collision_feasibility",
+          "name": "parametric_safety_filter",
+          "status": "PASS",
+          "metric": "d_safe_grid_levels",
+          "value": 7,
+          "threshold": ">=5"
+        },
+        {
+          "name": "continuous_certificate_available_for_formal_run",
           "status": "CONDITIONAL",
-          "metric": "real_minimum_pairwise_distance",
-          "value": null,
-          "threshold": ">=d_safe"
+          "metric": "formal_interval_certificates",
+          "value": 0,
+          "threshold": "one per reported formal candidate"
         }
       ],
       "output_degeneracy": {
-        "status": "CONDITIONAL",
+        "status": "PASS",
         "metrics": {
-          "distinct_objectives": 4,
-          "real_pareto_points": 0,
-          "weight_collapse_avoided": true
+          "representative_solution_change_count": 2,
+          "nonempty_d_safe_levels": 7,
+          "n_minus_one_full_defense_candidate_count_probe_only": 0
         }
       },
       "perturbation_sensitivity": {
-        "status": "CONDITIONAL",
-        "perturbation": "position/time/wind",
-        "metric": "leave-one-out minimum margin",
-        "value": null
+        "status": "PASS",
+        "perturbation": "third center +/-1 m and burst +/-0.1 s",
+        "metric": "normal full-defense retention",
+        "value": 1.0
       },
       "scale_check": {
         "status": "PASS",
-        "representative_n": 6,
-        "runtime_seconds": 0.001,
-        "peak_memory_mb": 1
+        "representative_n": 864,
+        "runtime_seconds": 21.38097479986027,
+        "peak_memory_mb": 0.655634880065918
       },
       "verdict": "CONDITIONAL",
       "conditions": [
-        "补齐三机初态、d_safe 和能耗/叠加定义。",
-        "所有候选必须做连续时间避碰和留一失效。"
+        "正式运行必须输入三机初态并将 d_safe 保留为参数。",
+        "正式报告候选必须通过连续时间避碰和连续烟幕并集证书。",
+        "理想点距离或膝点只用于 Pareto 集内代表解选择，不得改写完整防御硬约束。"
       ],
       "evidence_refs": [
-        "planning/mechanism_observation_structure.md"
+        "methods/Q3/probes/q3_probe_metrics.json"
       ]
     },
     {
@@ -80,49 +91,59 @@
       "executability": {
         "status": "PASS",
         "evidence": {
-          "assignment_permutations": 6,
-          "constructive_timing_rule": "PASS"
+          "explicit_three_bomb_schedule": true,
+          "normal_full_window_success_probe": true
         }
       },
       "data_coverage": {
         "status": "CONDITIONAL",
         "evidence": {
-          "real_positions": 0
+          "real_uav_initial_states": 0,
+          "real_d_safe": null
         }
       },
       "assumption_checks": [
         {
-          "name": "straight_path_conflict_free",
-          "status": "CONDITIONAL",
-          "metric": "paths_checked",
-          "value": 0,
-          "threshold": 3
+          "name": "same_output_contract_as_A",
+          "status": "PASS",
+          "metric": "reported_metrics",
+          "value": [
+            "normal defense",
+            "N-1 success",
+            "worst remaining duration",
+            "double-cover ratio",
+            "path length",
+            "turn angle"
+          ],
+          "threshold": "all required outputs"
         }
       ],
       "output_degeneracy": {
         "status": "PASS",
         "metrics": {
-          "always_returns_explicit_feasible_or_blocked_status": true
+          "always_returns_explicit_schedule_or_blocked_status": true,
+          "n_minus_one_success_rate_probe": 0.0
         }
       },
       "perturbation_sensitivity": {
         "status": "CONDITIONAL",
-        "perturbation": "timing +/- small delta",
-        "metric": "minimum overlap",
+        "perturbation": "formal timing and route perturbations not run without real inputs",
+        "metric": "not available",
         "value": null
       },
       "scale_check": {
         "status": "PASS",
         "representative_n": 6,
-        "runtime_seconds": 0.001,
-        "peak_memory_mb": 1
+        "runtime_seconds": 21.38097479986027,
+        "peak_memory_mb": 0.655634880065918
       },
       "verdict": "CONDITIONAL",
       "conditions": [
-        "真实匹配必须可达且全航程无冲突。"
+        "正式 baseline 必须进行 3! 分配、连续避碰和相同覆盖证书。",
+        "不得把构造方案称为 Pareto 最优。"
       ],
       "evidence_refs": [
-        "methods/Q3/q3_method_card.md"
+        "methods/Q3/probes/q3_probe_metrics.json"
       ]
     },
     {
@@ -131,23 +152,23 @@
       "executability": {
         "status": "CONDITIONAL",
         "evidence": {
-          "scenario_framework_defined": true,
-          "real_scenarios": 0
+          "zero_uncertainty_reduces_to_A": true,
+          "real_uncertainty_set_available": false
         }
       },
       "data_coverage": {
         "status": "CONDITIONAL",
         "evidence": {
-          "uncertainty_bounds_available": false
+          "supported_uncertainty_parameters": 0
         }
       },
       "assumption_checks": [
         {
           "name": "uncertainty_support",
           "status": "CONDITIONAL",
-          "metric": "supported_uncertain_parameters",
+          "metric": "physically_supported_bounds",
           "value": 0,
-          "threshold": ">0"
+          "threshold": ">0 before activation"
         }
       ],
       "output_degeneracy": {
@@ -158,7 +179,7 @@
       },
       "perturbation_sensitivity": {
         "status": "CONDITIONAL",
-        "perturbation": "not run without uncertainty set",
+        "perturbation": "not instantiated without supported bounds",
         "metric": null,
         "value": null
       },
@@ -170,11 +191,11 @@
       },
       "verdict": "CONDITIONAL",
       "conditions": [
-        "仅当 A/B 在有依据的扰动下脆弱时激活。",
-        "误差集必须来自数据或题面，不得任意设定。"
+        "仅在 A 的正式连续验证不稳定、N-1 降级过快且获得有依据误差范围时激活。",
+        "不得自行设置风、定位或时延误差范围。"
       ],
       "evidence_refs": [
-        "planning/model_assumptions.md"
+        "methods/Q3/probes/q3_probe_metrics.json"
       ]
     }
   ]

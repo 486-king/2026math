@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "question_id": "Q3",
+  "profile": "lean",
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "tested_claim": "Allowing lock-before pre-tasking removes the event-delay obstruction and yields continuously validated complete-defense candidates in the recorded collinear search family.",
+  "checks": [
+    {
+      "name": "event_delay_lower_bound",
+      "status": "PASS",
+      "range": "command-to-release 2 s plus release-to-burst 3.5 s",
+      "observed": "5.5 s is necessary but not sufficient"
+    },
+    {
+      "name": "warning_lead_sweep",
+      "status": "PASS",
+      "range": "5.5 to 58.0 s",
+      "observed": "No Q3-A candidate through 15.5 s; exact first recorded candidate common lead is 15.968199098479152 s; the coarse table first becomes feasible at 18.0 s."
+    },
+    {
+      "name": "warning_lead_definition",
+      "status": "PASS",
+      "range": "per-UAV a_i in [-60,0] s",
+      "observed": "Minimum common all-route lead is 15.968199098479152 s, while the minimum human-defined -max_i(a_i) is 0.0 s because one selected UAV may remain unused until t=0."
+    },
+    {
+      "name": "safety_distance_sweep",
+      "status": "PASS",
+      "range": "d_safe from 0 to 150 m",
+      "observed": "Feasible candidates exist at every reported grid value. The largest pairwise clearance in the recorded Q3-A family is 164.6524134588492 m; this is not a global threshold."
+    },
+    {
+      "name": "continuous_union_coverage",
+      "status": "PASS",
+      "range": "reported A representatives, minimum-lead A candidate, and Q3-B baseline over [0,25.36104262064107] s",
+      "observed": "Adaptive continuous envelope and independent disk-difference validators agree; maximum uncovered area is 0.0 m^2 in the independent checks."
+    },
+    {
+      "name": "n_minus_one",
+      "status": "CONDITIONAL",
+      "range": "three deterministic single-UAV failure cases",
+      "observed": "No N-1 full-window candidate was found in the recorded family; representative candidates reach success rates of 1/3 or 2/3.",
+      "limitation": "This is search evidence, not an impossibility proof."
+    },
+    {
+      "name": "position_heading_bearing_sensitivity",
+      "status": "CONDITIONAL",
+      "range": "approved coordinate, heading and beta research ranges",
+      "observed": "Not yet reoptimized because the three representative-selection rules disagree.",
+      "limitation": "Only the standardized initial geometry and conservative G1 window are supported in round 2."
+    }
+  ],
+  "overall_status": "CONDITIONAL",
+  "blocking_decision": "Representative-selection rules disagree, so representative-specific position, heading, availability and bearing sensitivity must wait for the modeler's choice.",
+  "claim_limit": "All numerical results are standardized-scenario, canonical-collinear-family evidence. They are neither real deployment coordinates nor full two-dimensional global optima.",
+  "generated_at": "2026-07-29T22:16:55+08:00"
+}

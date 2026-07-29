@@ -1,0 +1,3 @@
+﻿scenario_label,method_id,role,execution_status,input_status,feasibility_status,certificate_status,earliest_burst_s,initial_naked_duration_s,pareto_or_construction
+SYNTHETIC_SCENARIO_ONLY,Q3-A,main_candidate,PASS,PASS,FAIL,PASS,5.5,5.5,NOT_RUN_STRUCTURAL_INFEASIBILITY
+SYNTHETIC_SCENARIO_ONLY,Q3-B,usable_baseline,PASS,PASS,FAIL,PASS,5.5,5.5,NOT_RUN_STRUCTURAL_INFEASIBILITY

@@ -1,0 +1,169 @@
+{
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "claim_scope": "front-middle-rear analytic construction baseline",
+  "candidate": {
+    "candidate_id": "B-3",
+    "centers_m": [
+      40.0,
+      120.0,
+      200.0
+    ],
+    "burst_times_s": [
+      0.0,
+      10.376134889753565,
+      20.752269779507134
+    ],
+    "assignment": [
+      1,
+      0,
+      2
+    ],
+    "routes": [
+      {
+        "uav": 0,
+        "bomb": 1,
+        "start": [
+          -400.0,
+          0.0
+        ],
+        "initial_heading": 0.0,
+        "center": [
+          120.0,
+          0.0
+        ],
+        "release_point": [
+          22.0,
+          0.0
+        ],
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "burst_time": 10.376134889753565,
+        "release_time": 6.8761348897535655,
+        "command_time": 4.8761348897535655,
+        "latest_available_time": -8.195293681675006,
+        "path_length": 422.0,
+        "turn_angle": 0.0
+      },
+      {
+        "uav": 1,
+        "bomb": 0,
+        "start": [
+          -200.0,
+          300.0
+        ],
+        "initial_heading": 0.0,
+        "center": [
+          40.0,
+          0.0
+        ],
+        "release_point": [
+          -21.22011466033358,
+          76.52514332541698
+        ],
+        "direction": [
+          0.6246950475544243,
+          -0.7808688094430304
+        ],
+        "burst_time": 0.0,
+        "release_time": -3.5,
+        "command_time": -5.5,
+        "latest_available_time": -13.720980508784676,
+        "path_length": 286.1874542459709,
+        "turn_angle": 0.8960553845713441
+      },
+      {
+        "uav": 2,
+        "bomb": 2,
+        "start": [
+          -200.0,
+          -300.0
+        ],
+        "initial_heading": 0.0,
+        "center": [
+          200.0,
+          0.0
+        ],
+        "release_point": [
+          121.6,
+          -58.8
+        ],
+        "direction": [
+          0.8,
+          0.6
+        ],
+        "burst_time": 20.752269779507134,
+        "release_time": 17.252269779507134,
+        "command_time": 15.252269779507134,
+        "latest_available_time": 2.895126922364277,
+        "path_length": 402.0,
+        "turn_angle": 0.6435011087932843
+      }
+    ],
+    "lead_required_s": 13.720980508784676,
+    "common_all_uav_warning_lead_s": 13.720980508784676,
+    "user_defined_latest_uav_warning_lead_s": 0.0,
+    "latest_available_times_s": [
+      -8.195293681675006,
+      -13.720980508784676,
+      2.895126922364277
+    ],
+    "selected_available_times_s": [
+      -8.195293681675006,
+      -13.720980508784676,
+      0.0
+    ],
+    "d_safe_max_m": 189.7529718772099,
+    "total_path_length_m": 1110.187454245971,
+    "total_turn_angle_rad": 1.5395564933646284,
+    "normal_full_defense": true,
+    "normal_min_slack_sq_m2": 0.0,
+    "n_minus_one_success_rate": 0.0,
+    "worst_failure_continuous_cover_s": 10.355759070095104,
+    "double_cover_time_ratio": 0.0,
+    "failure_rows": [
+      {
+        "failed_uav_or_bomb": 1,
+        "full_window_success": false,
+        "longest_continuous_cover_s": 14.96301514617823,
+        "covered_time_ratio": 0.5906821963394343
+      },
+      {
+        "failed_uav_or_bomb": 2,
+        "full_window_success": false,
+        "longest_continuous_cover_s": 10.355759070095104,
+        "covered_time_ratio": 0.5923460898502496
+      },
+      {
+        "failed_uav_or_bomb": 3,
+        "full_window_success": false,
+        "longest_continuous_cover_s": 20.711518140190208,
+        "covered_time_ratio": 0.8169717138103162
+      }
+    ]
+  },
+  "validation": {
+    "continuous_envelope": {
+      "status": "PASS",
+      "start_s": 0.0,
+      "end_s": 25.36104262064107,
+      "duration_s": 25.36104262064107,
+      "adaptive_minimum_slack_sq_m2": 0.0,
+      "adaptive_minimum_time_s": 0.0,
+      "adaptive_minimum_ship_relative_x_m": -80.0,
+      "adaptive_minimum_source": "event",
+      "independent_fine_scan_minimum_slack_sq_m2": 0.0,
+      "independent_fine_scan_minimum_time_s": 0.0,
+      "fine_scan_negative_count": 0,
+      "fine_scan_points": 12001,
+      "validators_agree": true
+    },
+    "independent_disk_difference": {
+      "status": "PASS",
+      "time_checks": 401,
+      "maximum_uncovered_area_m2": 0.0
+    },
+    "validators_agree": true
+  }
+}

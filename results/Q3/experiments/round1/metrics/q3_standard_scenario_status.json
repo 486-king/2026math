@@ -1,0 +1,90 @@
+{
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "main": {
+    "method_id": "Q3-A",
+    "role": "main_candidate",
+    "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+    "execution_status": "PASS",
+    "input_status": "PASS",
+    "feasibility_status": "FAIL",
+    "certificate_status": "PASS",
+    "optimization_status": "NOT_RUN_STRUCTURAL_INFEASIBILITY",
+    "pareto_front": null,
+    "representative_solution": null,
+    "d_safe_feasible_interval_m": null,
+    "route_and_event_decisions": null,
+    "n_minus_one_metrics": null,
+    "reason": "The continuous initial naked interval violates the hard defense constraint before any smoke can exist.",
+    "certificate": {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "event_chain": "t_cmd>=a_i; t_d=t_cmd+2; t_b=t_d+3.5",
+      "defense_window_start_s": 0.0,
+      "defense_window_conservative_end_s": 25.36104262064107,
+      "minimum_availability_s": 0.0,
+      "earliest_command_s": 0.0,
+      "earliest_release_s": 2.0,
+      "earliest_burst_s": 5.5,
+      "guaranteed_initial_naked_interval_s": [
+        0.0,
+        5.5
+      ],
+      "guaranteed_initial_naked_duration_s": 5.5,
+      "necessary_availability_threshold_s": -5.5,
+      "necessary_condition": "min_i(a_i)<=window_start-5.5",
+      "necessary_condition_passes": false,
+      "full_window_defense_feasible": false,
+      "proof": "All smoke radii equal zero before their burst times. Since every command is issued no earlier than UAV availability, the first possible smoke appears at min(a_i)+5.5 s. If this is later than the lock-window start, the ship is necessarily uncovered on a nonempty continuous interval.",
+      "independent_of": [
+        "uav initial positions",
+        "uav initial headings",
+        "d_safe",
+        "missile bearing beta",
+        "smoke union geometry after first burst"
+      ],
+      "certificate_status": "PASS"
+    }
+  },
+  "baseline": {
+    "method_id": "Q3-B",
+    "role": "usable_baseline",
+    "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+    "execution_status": "PASS",
+    "input_status": "PASS",
+    "feasibility_status": "FAIL",
+    "certificate_status": "PASS",
+    "construction_status": "NOT_RUN_STRUCTURAL_INFEASIBILITY",
+    "route_and_event_decisions": null,
+    "n_minus_one_metrics": null,
+    "reason": "Front-middle-rear construction cannot remove the common command-to-burst delay.",
+    "certificate": {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "event_chain": "t_cmd>=a_i; t_d=t_cmd+2; t_b=t_d+3.5",
+      "defense_window_start_s": 0.0,
+      "defense_window_conservative_end_s": 25.36104262064107,
+      "minimum_availability_s": 0.0,
+      "earliest_command_s": 0.0,
+      "earliest_release_s": 2.0,
+      "earliest_burst_s": 5.5,
+      "guaranteed_initial_naked_interval_s": [
+        0.0,
+        5.5
+      ],
+      "guaranteed_initial_naked_duration_s": 5.5,
+      "necessary_availability_threshold_s": -5.5,
+      "necessary_condition": "min_i(a_i)<=window_start-5.5",
+      "necessary_condition_passes": false,
+      "full_window_defense_feasible": false,
+      "proof": "All smoke radii equal zero before their burst times. Since every command is issued no earlier than UAV availability, the first possible smoke appears at min(a_i)+5.5 s. If this is later than the lock-window start, the ship is necessarily uncovered on a nonempty continuous interval.",
+      "independent_of": [
+        "uav initial positions",
+        "uav initial headings",
+        "d_safe",
+        "missile bearing beta",
+        "smoke union geometry after first burst"
+      ],
+      "certificate_status": "PASS"
+    }
+  },
+  "formal_result_layer": "parameterized conclusion: full defense is impossible whenever min_i(a_i)>-5.5 s under the approved t=0 definition",
+  "probe_numbers_imported": false
+}

@@ -1,0 +1,28 @@
+{
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "event_chain": "t_cmd>=a_i; t_d=t_cmd+2; t_b=t_d+3.5",
+  "defense_window_start_s": 0.0,
+  "defense_window_conservative_end_s": 25.36104262064107,
+  "minimum_availability_s": 0.0,
+  "earliest_command_s": 0.0,
+  "earliest_release_s": 2.0,
+  "earliest_burst_s": 5.5,
+  "guaranteed_initial_naked_interval_s": [
+    0.0,
+    5.5
+  ],
+  "guaranteed_initial_naked_duration_s": 5.5,
+  "necessary_availability_threshold_s": -5.5,
+  "necessary_condition": "min_i(a_i)<=window_start-5.5",
+  "necessary_condition_passes": false,
+  "full_window_defense_feasible": false,
+  "proof": "All smoke radii equal zero before their burst times. Since every command is issued no earlier than UAV availability, the first possible smoke appears at min(a_i)+5.5 s. If this is later than the lock-window start, the ship is necessarily uncovered on a nonempty continuous interval.",
+  "independent_of": [
+    "uav initial positions",
+    "uav initial headings",
+    "d_safe",
+    "missile bearing beta",
+    "smoke union geometry after first burst"
+  ],
+  "certificate_status": "PASS"
+}

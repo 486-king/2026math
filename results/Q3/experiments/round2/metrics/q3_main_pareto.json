@@ -1,0 +1,3033 @@
+{
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "claim_scope": "standardized scenario; canonical collinear smoke-centre candidate family",
+  "candidate_count": 1440,
+  "minimum_actual_warning_lead_s": 15.968199098479152,
+  "minimum_common_all_uav_warning_lead_s": 15.968199098479152,
+  "minimum_user_defined_latest_uav_warning_lead_s": 0.0,
+  "warning_lead_definition_note": "-max_i(a_i) is the lead of the latest-available UAV; -min_i(a_i) is the common warning lead needed to make every selected route executable.",
+  "event_delay_lower_bound_s": 5.5,
+  "pareto_front_dsafe0": [
+    {
+      "candidate_id": "A-00017",
+      "lead_required_s": 22.285714285714285,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 83.7209140604326,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00018",
+      "lead_required_s": 22.285714285714285,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 83.7209140604326,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00023",
+      "lead_required_s": 20.285714285714285,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 60.61262307194081,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00024",
+      "lead_required_s": 20.285714285714285,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 60.61262307194081,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00029",
+      "lead_required_s": 18.285714285714285,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 10.296665116911733,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00030",
+      "lead_required_s": 18.285714285714285,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 10.296665116911733,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00035",
+      "lead_required_s": 16.285714285714285,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 40.019292838117316,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00036",
+      "lead_required_s": 16.285714285714285,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 40.019292838117316,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00041",
+      "lead_required_s": 15.968199098479152,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 70.0747187130729,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00042",
+      "lead_required_s": 15.968199098479152,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 70.0747187130729,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00113",
+      "lead_required_s": 23.0,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 83.7209140604326,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3527454242928453,
+      "total_path_length_m": 976.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00114",
+      "lead_required_s": 23.0,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 83.7209140604326,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3527454242928453,
+      "total_path_length_m": 976.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00119",
+      "lead_required_s": 21.0,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 78.58260805587977,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3527454242928453,
+      "total_path_length_m": 976.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00120",
+      "lead_required_s": 21.0,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 78.58260805587977,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3527454242928453,
+      "total_path_length_m": 976.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00125",
+      "lead_required_s": 19.0,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 28.266650100850686,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3527454242928453,
+      "total_path_length_m": 976.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00126",
+      "lead_required_s": 19.0,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 28.266650100850686,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3527454242928453,
+      "total_path_length_m": 976.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00131",
+      "lead_required_s": 17.0,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 22.049307854178384,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3527454242928453,
+      "total_path_length_m": 976.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00132",
+      "lead_required_s": 17.0,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 22.049307854178384,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3527454242928453,
+      "total_path_length_m": 976.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00137",
+      "lead_required_s": 15.968199098479152,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 72.36526580920746,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3527454242928453,
+      "total_path_length_m": 976.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00138",
+      "lead_required_s": 15.968199098479152,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 72.36526580920746,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3527454242928453,
+      "total_path_length_m": 976.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257
+    },
+    {
+      "candidate_id": "A-00217",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 46.38092783617386,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 10.355759070095104,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 993.948972850178,
+      "total_turn_angle_rad": 1.5882972629453929
+    },
+    {
+      "candidate_id": "A-00218",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 46.38092783617386,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 10.355759070095104,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 993.948972850178,
+      "total_turn_angle_rad": 1.5882972629453929
+    },
+    {
+      "candidate_id": "A-00223",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 4.0920533970100745,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 10.355759070095104,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 993.948972850178,
+      "total_turn_angle_rad": 1.5882972629453929
+    },
+    {
+      "candidate_id": "A-00224",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 4.0920533970100745,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 10.355759070095104,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 993.948972850178,
+      "total_turn_angle_rad": 1.5882972629453929
+    },
+    {
+      "candidate_id": "A-00229",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 44.43778343132874,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 10.355759070095104,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 993.948972850178,
+      "total_turn_angle_rad": 1.5882972629453929
+    },
+    {
+      "candidate_id": "A-00230",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 44.43778343132874,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 10.355759070095104,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 993.948972850178,
+      "total_turn_angle_rad": 1.5882972629453929
+    },
+    {
+      "candidate_id": "A-00313",
+      "lead_required_s": 18.17816660091372,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 65.00353534984697,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.934131736526945,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1006.7501834297914,
+      "total_turn_angle_rad": 1.5489475065567873
+    },
+    {
+      "candidate_id": "A-00314",
+      "lead_required_s": 18.17816660091372,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 65.00353534984697,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.934131736526945,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1006.7501834297914,
+      "total_turn_angle_rad": 1.5489475065567873
+    },
+    {
+      "candidate_id": "A-00319",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 14.063069271893019,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.934131736526945,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1006.7501834297914,
+      "total_turn_angle_rad": 1.5489475065567873
+    },
+    {
+      "candidate_id": "A-00320",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 14.063069271893019,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.934131736526945,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1006.7501834297914,
+      "total_turn_angle_rad": 1.5489475065567873
+    },
+    {
+      "candidate_id": "A-00325",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 36.877396806060865,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.934131736526945,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1006.7501834297914,
+      "total_turn_angle_rad": 1.5489475065567873
+    },
+    {
+      "candidate_id": "A-00326",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 36.877396806060865,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.934131736526945,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1006.7501834297914,
+      "total_turn_angle_rad": 1.5489475065567873
+    },
+    {
+      "candidate_id": "A-00331",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 27.40581410118193,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.934131736526945,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1006.7501834297914,
+      "total_turn_angle_rad": 1.5489475065567873
+    },
+    {
+      "candidate_id": "A-00332",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 27.40581410118193,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.934131736526945,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1006.7501834297914,
+      "total_turn_angle_rad": 1.5489475065567873
+    },
+    {
+      "candidate_id": "A-00415",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 32.5219032862355,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 15.554772807326524,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1020.127209177871,
+      "total_turn_angle_rad": 1.512109142771005
+    },
+    {
+      "candidate_id": "A-00416",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 32.5219032862355,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 15.554772807326524,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1020.127209177871,
+      "total_turn_angle_rad": 1.512109142771005
+    },
+    {
+      "candidate_id": "A-00421",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 18.83834414857051,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 15.554772807326524,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1020.127209177871,
+      "total_turn_angle_rad": 1.512109142771005
+    },
+    {
+      "candidate_id": "A-00422",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 18.83834414857051,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 15.554772807326524,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1020.127209177871,
+      "total_turn_angle_rad": 1.512109142771005
+    },
+    {
+      "candidate_id": "A-00427",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 49.529088115499164,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 15.554772807326524,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1020.127209177871,
+      "total_turn_angle_rad": 1.512109142771005
+    },
+    {
+      "candidate_id": "A-00428",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 49.529088115499164,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 15.554772807326524,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1020.127209177871,
+      "total_turn_angle_rad": 1.512109142771005
+    },
+    {
+      "candidate_id": "A-00433",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 8.786374773654895,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 15.554772807326524,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1020.127209177871,
+      "total_turn_angle_rad": 1.512109142771005
+    },
+    {
+      "candidate_id": "A-00434",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 8.786374773654895,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 15.554772807326524,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1020.127209177871,
+      "total_turn_angle_rad": 1.512109142771005
+    },
+    {
+      "candidate_id": "A-00523",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 52.236288896599966,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 17.541387812610072,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1034.0255873161357,
+      "total_turn_angle_rad": 1.477640041771497
+    },
+    {
+      "candidate_id": "A-00524",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 52.236288896599966,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 17.541387812610072,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1034.0255873161357,
+      "total_turn_angle_rad": 1.477640041771497
+    },
+    {
+      "candidate_id": "A-00529",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 30.14337929591268,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 17.541387812610072,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1034.0255873161357,
+      "total_turn_angle_rad": 1.477640041771497
+    },
+    {
+      "candidate_id": "A-00530",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 30.14337929591268,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 17.541387812610072,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1034.0255873161357,
+      "total_turn_angle_rad": 1.477640041771497
+    },
+    {
+      "candidate_id": "A-00535",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 11.255387349357683,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 17.541387812610072,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1034.0255873161357,
+      "total_turn_angle_rad": 1.477640041771497
+    },
+    {
+      "candidate_id": "A-00536",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 11.255387349357683,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 17.541387812610072,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1034.0255873161357,
+      "total_turn_angle_rad": 1.477640041771497
+    },
+    {
+      "candidate_id": "A-00625",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 51.43360815631523,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 14.96301514617823,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1048.3957625934333,
+      "total_turn_angle_rad": 1.445393159336243
+    },
+    {
+      "candidate_id": "A-00626",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 51.43360815631523,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 14.96301514617823,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1048.3957625934333,
+      "total_turn_angle_rad": 1.445393159336243
+    },
+    {
+      "candidate_id": "A-00631",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 9.43221293848507,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 14.96301514617823,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1048.3957625934333,
+      "total_turn_angle_rad": 1.445393159336243
+    },
+    {
+      "candidate_id": "A-00632",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 9.43221293848507,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 14.96301514617823,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1048.3957625934333,
+      "total_turn_angle_rad": 1.445393159336243
+    },
+    {
+      "candidate_id": "A-00637",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 7.665508713900936,
+      "d_safe_max_m": 32.5691822793451,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 14.96301514617823,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1048.3957625934333,
+      "total_turn_angle_rad": 1.445393159336243
+    },
+    {
+      "candidate_id": "A-00638",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 7.665508713900936,
+      "d_safe_max_m": 32.5691822793451,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 14.96301514617823,
+      "double_cover_time_ratio": 0.40765391014975044,
+      "total_path_length_m": 1048.3957625934333,
+      "total_turn_angle_rad": 1.445393159336243
+    },
+    {
+      "candidate_id": "A-00727",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 30.091285757238914,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.384642479746388,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1063.1928805543926,
+      "total_turn_angle_rad": 1.4152212317755395
+    },
+    {
+      "candidate_id": "A-00728",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 30.091285757238914,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.384642479746388,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1063.1928805543926,
+      "total_turn_angle_rad": 1.4152212317755395
+    },
+    {
+      "candidate_id": "A-00733",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.19397721250662,
+      "d_safe_max_m": 12.464076936664208,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.384642479746388,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1063.1928805543926,
+      "total_turn_angle_rad": 1.4152212317755395
+    },
+    {
+      "candidate_id": "A-00734",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.19397721250662,
+      "d_safe_max_m": 12.464076936664208,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.384642479746388,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1063.1928805543926,
+      "total_turn_angle_rad": 1.4152212317755395
+    },
+    {
+      "candidate_id": "A-00739",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 6.193977212506621,
+      "d_safe_max_m": 55.019439630567334,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.384642479746388,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1063.1928805543926,
+      "total_turn_angle_rad": 1.4152212317755395
+    },
+    {
+      "candidate_id": "A-00740",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 6.193977212506621,
+      "d_safe_max_m": 55.019439630567334,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 12.384642479746388,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "total_path_length_m": 1063.1928805543926,
+      "total_turn_angle_rad": 1.4152212317755395
+    },
+    {
+      "candidate_id": "A-00829",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 7.645537916771897,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 9.764001408946813,
+      "double_cover_time_ratio": 0.3860232945091514,
+      "total_path_length_m": 1078.3764991586065,
+      "total_turn_angle_rad": 1.3869801545707516
+    },
+    {
+      "candidate_id": "A-00830",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 7.645537916771897,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 9.764001408946813,
+      "double_cover_time_ratio": 0.3860232945091514,
+      "total_path_length_m": 1078.3764991586065,
+      "total_turn_angle_rad": 1.3869801545707516
+    },
+    {
+      "candidate_id": "A-00925",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 27.74759226243062,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3777038269550749,
+      "total_path_length_m": 1093.9102560806155,
+      "total_turn_angle_rad": 1.3605312972046328
+    },
+    {
+      "candidate_id": "A-00926",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 27.74759226243062,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.3777038269550749,
+      "total_path_length_m": 1093.9102560806155,
+      "total_turn_angle_rad": 1.3605312972046328
+    },
+    {
+      "candidate_id": "A-01015",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 65.02289713887788,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.194675540765391,
+      "total_path_length_m": 1109.7615186042071,
+      "total_turn_angle_rad": 1.335742987167333
+    },
+    {
+      "candidate_id": "A-01016",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 65.02289713887788,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.194675540765391,
+      "total_path_length_m": 1109.7615186042071,
+      "total_turn_angle_rad": 1.335742987167333
+    },
+    {
+      "candidate_id": "A-01021",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 47.83291020976762,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.194675540765391,
+      "total_path_length_m": 1109.7615186042071,
+      "total_turn_angle_rad": 1.335742987167333
+    },
+    {
+      "candidate_id": "A-01022",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 47.83291020976762,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.194675540765391,
+      "total_path_length_m": 1109.7615186042071,
+      "total_turn_angle_rad": 1.335742987167333
+    },
+    {
+      "candidate_id": "A-01027",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 7.857142857142858,
+      "d_safe_max_m": 3.864977139235463,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.194675540765391,
+      "total_path_length_m": 1109.7615186042071,
+      "total_turn_angle_rad": 1.335742987167333
+    },
+    {
+      "candidate_id": "A-01028",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 7.857142857142858,
+      "d_safe_max_m": 3.864977139235463,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.194675540765391,
+      "total_path_length_m": 1109.7615186042071,
+      "total_turn_angle_rad": 1.335742987167333
+    },
+    {
+      "candidate_id": "A-01033",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 5.857142857142858,
+      "d_safe_max_m": 40.10295593129671,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.194675540765391,
+      "total_path_length_m": 1109.7615186042071,
+      "total_turn_angle_rad": 1.335742987167333
+    },
+    {
+      "candidate_id": "A-01034",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 5.857142857142858,
+      "d_safe_max_m": 40.10295593129671,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.194675540765391,
+      "total_path_length_m": 1109.7615186042071,
+      "total_turn_angle_rad": 1.335742987167333
+    },
+    {
+      "candidate_id": "A-01039",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 3.8571428571428577,
+      "d_safe_max_m": 84.07088900182887,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.194675540765391,
+      "total_path_length_m": 1109.7615186042071,
+      "total_turn_angle_rad": 1.335742987167333
+    },
+    {
+      "candidate_id": "A-01040",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 3.8571428571428577,
+      "d_safe_max_m": 84.07088900182887,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.194675540765391,
+      "total_path_length_m": 1109.7615186042071,
+      "total_turn_angle_rad": 1.335742987167333
+    },
+    {
+      "candidate_id": "A-01117",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 67.89465020987333,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01118",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 67.89465020987333,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01123",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 23.52649453529196,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01124",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 23.52649453529196,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01129",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 6.433554143662773,
+      "d_safe_max_m": 20.841661139289442,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01130",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 6.433554143662773,
+      "d_safe_max_m": 20.841661139289442,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01135",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 4.433554143662773,
+      "d_safe_max_m": 65.20981681387084,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01136",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 4.433554143662773,
+      "d_safe_max_m": 65.20981681387084,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01141",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 2.4335541436627732,
+      "d_safe_max_m": 109.57797248845223,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01142",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 2.4335541436627732,
+      "d_safe_max_m": 109.57797248845223,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01147",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 0.43355414366277323,
+      "d_safe_max_m": 153.94612816303365,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01148",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 0.43355414366277323,
+      "d_safe_max_m": 153.94612816303365,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.07986688851913477,
+      "total_path_length_m": 1125.9010346267648,
+      "total_turn_angle_rad": 1.31249136435687
+    },
+    {
+      "candidate_id": "A-01153",
+      "lead_required_s": 31.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01154",
+      "lead_required_s": 31.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01159",
+      "lead_required_s": 29.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01160",
+      "lead_required_s": 29.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01165",
+      "lead_required_s": 27.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01166",
+      "lead_required_s": 27.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01171",
+      "lead_required_s": 25.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01172",
+      "lead_required_s": 25.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01177",
+      "lead_required_s": 23.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01178",
+      "lead_required_s": 23.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01183",
+      "lead_required_s": 21.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01184",
+      "lead_required_s": 21.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01189",
+      "lead_required_s": 19.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 133.26362146961634,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01190",
+      "lead_required_s": 19.019324222420494,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 133.26362146961634,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01195",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 79.75171182772227,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01196",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 79.75171182772227,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01201",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 26.239802185828196,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01202",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 26.239802185828196,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01207",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 27.272107456065875,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01208",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 27.272107456065875,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01213",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 80.78401709795996,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01214",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 80.78401709795996,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01219",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 43.189376394785555,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01220",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 43.189376394785555,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01225",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 7.0193242224204955,
+      "d_safe_max_m": 1.5490849717369497,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01226",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 7.0193242224204955,
+      "d_safe_max_m": 1.5490849717369497,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01231",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 5.0193242224204955,
+      "d_safe_max_m": 46.28754633825944,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01232",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 5.0193242224204955,
+      "d_safe_max_m": 46.28754633825944,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01237",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 3.0193242224204955,
+      "d_safe_max_m": 91.02600770478195,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01238",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 3.0193242224204955,
+      "d_safe_max_m": 91.02600770478195,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01243",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 1.0193242224204955,
+      "d_safe_max_m": 135.7644690713045,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01244",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 1.0193242224204955,
+      "d_safe_max_m": 135.7644690713045,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1142.3025968319812,
+      "total_turn_angle_rad": 1.2906607718525858
+    },
+    {
+      "candidate_id": "A-01249",
+      "lead_required_s": 31.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01250",
+      "lead_required_s": 31.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01255",
+      "lead_required_s": 29.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01256",
+      "lead_required_s": 29.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01261",
+      "lead_required_s": 27.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01262",
+      "lead_required_s": 27.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01267",
+      "lead_required_s": 25.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01268",
+      "lead_required_s": 25.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01273",
+      "lead_required_s": 23.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01274",
+      "lead_required_s": 23.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01279",
+      "lead_required_s": 21.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01280",
+      "lead_required_s": 21.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01285",
+      "lead_required_s": 19.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 152.84917259609387,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01286",
+      "lead_required_s": 19.613614596779975,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 152.84917259609387,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01291",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 99.17074661467238,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01292",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 99.17074661467238,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01297",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 45.49232063325088,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01298",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 45.49232063325088,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01303",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 8.186105348170615,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01304",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 8.186105348170615,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01309",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 61.86453132959214,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01310",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 61.86453132959214,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01315",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 62.84735386630956,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01316",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 62.84735386630956,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01321",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 7.613614596779975,
+      "d_safe_max_m": 17.76572760501569,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01322",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 7.613614596779975,
+      "d_safe_max_m": 17.76572760501569,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01327",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 5.613614596779975,
+      "d_safe_max_m": 27.315898656278158,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01328",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 5.613614596779975,
+      "d_safe_max_m": 27.315898656278158,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01333",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 3.613614596779975,
+      "d_safe_max_m": 72.39752491757206,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01334",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 3.613614596779975,
+      "d_safe_max_m": 72.39752491757206,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01339",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 1.6136145967799749,
+      "d_safe_max_m": 117.47915117886592,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01340",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 1.6136145967799749,
+      "d_safe_max_m": 117.47915117886592,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1158.9427273140464,
+      "total_turn_angle_rad": 1.2701438153362945
+    },
+    {
+      "candidate_id": "A-01345",
+      "lead_required_s": 32.21567385440701,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01346",
+      "lead_required_s": 32.21567385440701,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01351",
+      "lead_required_s": 30.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01352",
+      "lead_required_s": 30.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01357",
+      "lead_required_s": 28.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01358",
+      "lead_required_s": 28.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01363",
+      "lead_required_s": 26.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01364",
+      "lead_required_s": 26.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01369",
+      "lead_required_s": 24.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01370",
+      "lead_required_s": 24.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01375",
+      "lead_required_s": 22.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01376",
+      "lead_required_s": 22.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01381",
+      "lead_required_s": 20.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01382",
+      "lead_required_s": 20.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 164.6524134588492,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01387",
+      "lead_required_s": 18.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 118.67562440510504,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01388",
+      "lead_required_s": 18.215673854407008,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 118.67562440510504,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01393",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 64.84569461990117,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01394",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 64.84569461990117,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01399",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 11.015764834697311,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01400",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 11.015764834697311,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01405",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 42.81416495050658,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01406",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 42.81416495050658,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01411",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 82.49560213189183,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01412",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "d_safe_max_m": 82.49560213189183,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01417",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.215673854407008,
+      "d_safe_max_m": 37.095452500300084,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01418",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.215673854407008,
+      "d_safe_max_m": 37.095452500300084,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01423",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 6.215673854407008,
+      "d_safe_max_m": 8.304697131291665,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01424",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 6.215673854407008,
+      "d_safe_max_m": 8.304697131291665,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01429",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 4.215673854407008,
+      "d_safe_max_m": 53.704846762883435,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01430",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 4.215673854407008,
+      "d_safe_max_m": 53.704846762883435,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01435",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 2.215673854407008,
+      "d_safe_max_m": 99.10499639447522,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    },
+    {
+      "candidate_id": "A-01436",
+      "lead_required_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 2.215673854407008,
+      "d_safe_max_m": 99.10499639447522,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.0,
+      "total_path_length_m": 1175.8003865276035,
+      "total_turn_angle_rad": 1.2508411937176112
+    }
+  ],
+  "representative_dsafe0": {
+    "status": "DISAGREE_HUMAN_REQUIRED",
+    "selected_candidate_id": null,
+    "methods": {
+      "ideal_point": "A-00829",
+      "knee_chebyshev": "A-00017",
+      "layered": "A-00217"
+    }
+  },
+  "representative_candidates": {
+    "A-00017": {
+      "candidate_id": "A-00017",
+      "centers_m": [
+        33.737033193900004,
+        161.8328576639,
+        0.0
+      ],
+      "burst_times_s": [
+        -2.38582566,
+        8.44018905,
+        -8.0
+      ],
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "routes": [
+        {
+          "uav": 0,
+          "bomb": 2,
+          "start": [
+            -400.0,
+            0.0
+          ],
+          "initial_heading": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "release_point": [
+            -98.0,
+            0.0
+          ],
+          "direction": [
+            1.0,
+            0.0
+          ],
+          "burst_time": -8.0,
+          "release_time": -11.5,
+          "command_time": -13.5,
+          "latest_available_time": -22.285714285714285,
+          "path_length": 302.0,
+          "turn_angle": 0.0
+        },
+        {
+          "uav": 1,
+          "bomb": 0,
+          "start": [
+            -200.0,
+            300.0
+          ],
+          "initial_heading": 0.0,
+          "center": [
+            33.737033193900004,
+            0.0
+          ],
+          "release_point": [
+            -26.493943364365805,
+            77.30607649362133
+          ],
+          "direction": [
+            0.6146018016149573,
+            -0.7888375152410341
+          ],
+          "burst_time": -2.38582566,
+          "release_time": -5.88582566,
+          "command_time": -7.88582566,
+          "latest_available_time": -15.968199098479152,
+          "path_length": 282.30645627741626,
+          "turn_angle": 0.908915251008577
+        },
+        {
+          "uav": 2,
+          "bomb": 1,
+          "start": [
+            -200.0,
+            -300.0
+          ],
+          "initial_heading": 0.0,
+          "center": [
+            161.8328576639,
+            0.0
+          ],
+          "release_point": [
+            86.39078783192566,
+            -62.54993284942446
+          ],
+          "direction": [
+            0.7698170391017789,
+            0.6382646209124945
+          ],
+          "burst_time": 8.44018905,
+          "release_time": 4.940189050000001,
+          "command_time": 2.9401890500000007,
+          "latest_available_time": -8.346399714653828,
+          "path_length": 372.0244854103072,
+          "turn_angle": 0.6922418783740487
+        }
+      ],
+      "lead_required_s": 22.285714285714285,
+      "common_all_uav_warning_lead_s": 22.285714285714285,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "latest_available_times_s": [
+        -22.285714285714285,
+        -15.968199098479152,
+        -8.346399714653828
+      ],
+      "selected_available_times_s": [
+        -22.285714285714285,
+        -15.968199098479152,
+        -8.346399714653828
+      ],
+      "d_safe_max_m": 83.7209140604326,
+      "total_path_length_m": 956.3309416877235,
+      "total_turn_angle_rad": 1.6011571293826257,
+      "normal_full_defense": true,
+      "normal_min_slack_sq_m2": 1472.1324133515545,
+      "n_minus_one_success_rate": 0.3333333333333333,
+      "worst_failure_continuous_cover_s": 9.552659387108136,
+      "double_cover_time_ratio": 0.24958402662229617,
+      "failure_rows": [
+        {
+          "failed_uav_or_bomb": 1,
+          "full_window_success": false,
+          "longest_continuous_cover_s": 9.552659387108136,
+          "covered_time_ratio": 0.6655574043261231
+        },
+        {
+          "failed_uav_or_bomb": 2,
+          "full_window_success": false,
+          "longest_continuous_cover_s": 9.552659387108136,
+          "covered_time_ratio": 0.3777038269550749
+        },
+        {
+          "failed_uav_or_bomb": 3,
+          "full_window_success": true,
+          "longest_continuous_cover_s": 25.36104262064107,
+          "covered_time_ratio": 1.0
+        }
+      ]
+    },
+    "A-00217": {
+      "candidate_id": "A-00217",
+      "centers_m": [
+        33.737033193900004,
+        161.8328576639,
+        40.0
+      ],
+      "burst_times_s": [
+        -2.38582566,
+        8.44018905,
+        -4.0
+      ],
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "routes": [
+        {
+          "uav": 0,
+          "bomb": 0,
+          "start": [
+            -400.0,
+            0.0
+          ],
+          "initial_heading": 0.0,
+          "center": [
+            33.737033193900004,
+            0.0
+          ],
+          "release_point": [
+            -64.2629668061,
+            0.0
+          ],
+          "direction": [
+            1.0,
+            0.0
+          ],
+          "burst_time": -2.38582566,
+          "release_time": -5.88582566,
+          "command_time": -7.88582566,
+          "latest_available_time": -17.876433988353572,
+          "path_length": 335.7370331939,
+          "turn_angle": 0.0
+        },
+        {
+          "uav": 1,
+          "bomb": 1,
+          "start": [
+            -200.0,
+            300.0
+          ],
+          "initial_heading": 0.0,
+          "center": [
+            161.8328576639,
+            0.0
+          ],
+          "release_point": [
+            86.39078783192566,
+            62.54993284942446
+          ],
+          "direction": [
+            0.7698170391017789,
+            -0.6382646209124945
+          ],
+          "burst_time": 8.44018905,
+          "release_time": 4.940189050000001,
+          "command_time": 2.9401890500000007,
+          "latest_available_time": -8.346399714653828,
+          "path_length": 372.0244854103072,
+          "turn_angle": 0.6922418783740487
+        },
+        {
+          "uav": 2,
+          "bomb": 2,
+          "start": [
+            -200.0,
+            -300.0
+          ],
+          "initial_heading": 0.0,
+          "center": [
+            40.0,
+            0.0
+          ],
+          "release_point": [
+            -21.22011466033358,
+            -76.52514332541698
+          ],
+          "direction": [
+            0.6246950475544243,
+            0.7808688094430304
+          ],
+          "burst_time": -4.0,
+          "release_time": -7.5,
+          "command_time": -9.5,
+          "latest_available_time": -17.720980508784677,
+          "path_length": 286.1874542459709,
+          "turn_angle": 0.8960553845713441
+        }
+      ],
+      "lead_required_s": 17.876433988353572,
+      "common_all_uav_warning_lead_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "latest_available_times_s": [
+        -17.876433988353572,
+        -8.346399714653828,
+        -17.720980508784677
+      ],
+      "selected_available_times_s": [
+        -17.876433988353572,
+        -8.346399714653828,
+        -17.720980508784677
+      ],
+      "d_safe_max_m": 46.38092783617386,
+      "total_path_length_m": 993.948972850178,
+      "total_turn_angle_rad": 1.5882972629453929,
+      "normal_full_defense": true,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 10.355759070095104,
+      "double_cover_time_ratio": 0.40931780366056575,
+      "failure_rows": [
+        {
+          "failed_uav_or_bomb": 1,
+          "full_window_success": true,
+          "longest_continuous_cover_s": 25.36104262064107,
+          "covered_time_ratio": 1.0
+        },
+        {
+          "failed_uav_or_bomb": 2,
+          "full_window_success": false,
+          "longest_continuous_cover_s": 10.355759070095104,
+          "covered_time_ratio": 0.40931780366056575
+        },
+        {
+          "failed_uav_or_bomb": 3,
+          "full_window_success": true,
+          "longest_continuous_cover_s": 25.36104262064107,
+          "covered_time_ratio": 1.0
+        }
+      ]
+    },
+    "A-00829": {
+      "candidate_id": "A-00829",
+      "centers_m": [
+        33.737033193900004,
+        161.8328576639,
+        160.0
+      ],
+      "burst_times_s": [
+        -2.38582566,
+        8.44018905,
+        8.0
+      ],
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "routes": [
+        {
+          "uav": 0,
+          "bomb": 0,
+          "start": [
+            -400.0,
+            0.0
+          ],
+          "initial_heading": 0.0,
+          "center": [
+            33.737033193900004,
+            0.0
+          ],
+          "release_point": [
+            -64.2629668061,
+            0.0
+          ],
+          "direction": [
+            1.0,
+            0.0
+          ],
+          "burst_time": -2.38582566,
+          "release_time": -5.88582566,
+          "command_time": -7.88582566,
+          "latest_available_time": -17.876433988353572,
+          "path_length": 335.7370331939,
+          "turn_angle": 0.0
+        },
+        {
+          "uav": 1,
+          "bomb": 1,
+          "start": [
+            -200.0,
+            300.0
+          ],
+          "initial_heading": 0.0,
+          "center": [
+            161.8328576639,
+            0.0
+          ],
+          "release_point": [
+            86.39078783192566,
+            62.54993284942446
+          ],
+          "direction": [
+            0.7698170391017789,
+            -0.6382646209124945
+          ],
+          "burst_time": 8.44018905,
+          "release_time": 4.940189050000001,
+          "command_time": 2.9401890500000007,
+          "latest_available_time": -8.346399714653828,
+          "path_length": 372.0244854103072,
+          "turn_angle": 0.6922418783740487
+        },
+        {
+          "uav": 2,
+          "bomb": 2,
+          "start": [
+            -200.0,
+            -300.0
+          ],
+          "initial_heading": 0.0,
+          "center": [
+            160.0,
+            0.0
+          ],
+          "release_point": [
+            84.71431459945717,
+            -62.738071167119024
+          ],
+          "direction": [
+            0.7682212795973759,
+            0.6401843996644798
+          ],
+          "burst_time": 8.0,
+          "release_time": 4.5,
+          "command_time": 2.5,
+          "latest_available_time": -8.73624930551426,
+          "path_length": 370.61498055439927,
+          "turn_angle": 0.6947382761967029
+        }
+      ],
+      "lead_required_s": 17.876433988353572,
+      "common_all_uav_warning_lead_s": 17.876433988353572,
+      "user_defined_latest_uav_warning_lead_s": 8.346399714653828,
+      "latest_available_times_s": [
+        -17.876433988353572,
+        -8.346399714653828,
+        -8.73624930551426
+      ],
+      "selected_available_times_s": [
+        -17.876433988353572,
+        -8.346399714653828,
+        -8.73624930551426
+      ],
+      "d_safe_max_m": 7.645537916771897,
+      "total_path_length_m": 1078.3764991586065,
+      "total_turn_angle_rad": 1.3869801545707516,
+      "normal_full_defense": true,
+      "normal_min_slack_sq_m2": 1463.887280249689,
+      "n_minus_one_success_rate": 0.6666666666666666,
+      "worst_failure_continuous_cover_s": 9.764001408946813,
+      "double_cover_time_ratio": 0.3860232945091514,
+      "failure_rows": [
+        {
+          "failed_uav_or_bomb": 1,
+          "full_window_success": false,
+          "longest_continuous_cover_s": 9.764001408946813,
+          "covered_time_ratio": 0.3860232945091514
+        },
+        {
+          "failed_uav_or_bomb": 2,
+          "full_window_success": true,
+          "longest_continuous_cover_s": 25.36104262064107,
+          "covered_time_ratio": 1.0
+        },
+        {
+          "failed_uav_or_bomb": 3,
+          "full_window_success": true,
+          "longest_continuous_cover_s": 25.36104262064107,
+          "covered_time_ratio": 1.0
+        }
+      ]
+    }
+  },
+  "minimum_lead_candidate": {
+    "candidate_id": "A-00033",
+    "centers_m": [
+      33.737033193900004,
+      161.8328576639,
+      0.0
+    ],
+    "burst_times_s": [
+      -2.38582566,
+      8.44018905,
+      -2.0
+    ],
+    "assignment": [
+      1,
+      0,
+      2
+    ],
+    "routes": [
+      {
+        "uav": 0,
+        "bomb": 1,
+        "start": [
+          -400.0,
+          0.0
+        ],
+        "initial_heading": 0.0,
+        "center": [
+          161.8328576639,
+          0.0
+        ],
+        "release_point": [
+          63.8328576639,
+          0.0
+        ],
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "burst_time": 8.44018905,
+        "release_time": 4.940189050000001,
+        "command_time": 2.9401890500000007,
+        "latest_available_time": -11.625270152282141,
+        "path_length": 463.8328576639,
+        "turn_angle": 0.0
+      },
+      {
+        "uav": 1,
+        "bomb": 0,
+        "start": [
+          -200.0,
+          300.0
+        ],
+        "initial_heading": 0.0,
+        "center": [
+          33.737033193900004,
+          0.0
+        ],
+        "release_point": [
+          -26.493943364365805,
+          77.30607649362133
+        ],
+        "direction": [
+          0.6146018016149573,
+          -0.7888375152410341
+        ],
+        "burst_time": -2.38582566,
+        "release_time": -5.88582566,
+        "command_time": -7.88582566,
+        "latest_available_time": -15.968199098479152,
+        "path_length": 282.30645627741626,
+        "turn_angle": 0.908915251008577
+      },
+      {
+        "uav": 2,
+        "bomb": 2,
+        "start": [
+          -200.0,
+          -300.0
+        ],
+        "initial_heading": 0.0,
+        "center": [
+          0.0,
+          0.0
+        ],
+        "release_point": [
+          -54.36061923007246,
+          -81.54092884510868
+        ],
+        "direction": [
+          0.5547001962252291,
+          0.8320502943378437
+        ],
+        "burst_time": -2.0,
+        "release_time": -5.5,
+        "command_time": -7.5,
+        "latest_available_time": -14.87696884094282,
+        "path_length": 262.5551275463989,
+        "turn_angle": 0.9827937232473287
+      }
+    ],
+    "lead_required_s": 15.968199098479152,
+    "common_all_uav_warning_lead_s": 15.968199098479152,
+    "user_defined_latest_uav_warning_lead_s": 11.625270152282141,
+    "latest_available_times_s": [
+      -11.625270152282141,
+      -15.968199098479152,
+      -14.87696884094282
+    ],
+    "selected_available_times_s": [
+      -11.625270152282141,
+      -15.968199098479152,
+      -14.87696884094282
+    ],
+    "d_safe_max_m": 40.03438421184785,
+    "total_path_length_m": 1008.6944414877152,
+    "total_turn_angle_rad": 1.8917089742559057,
+    "normal_full_defense": true,
+    "normal_min_slack_sq_m2": 1472.1324133515545,
+    "n_minus_one_success_rate": 0.3333333333333333,
+    "worst_failure_continuous_cover_s": 9.552659387108136,
+    "double_cover_time_ratio": 0.24958402662229617,
+    "failure_rows": [
+      {
+        "failed_uav_or_bomb": 1,
+        "full_window_success": false,
+        "longest_continuous_cover_s": 16.907361747094047,
+        "covered_time_ratio": 0.8718801996672213
+      },
+      {
+        "failed_uav_or_bomb": 2,
+        "full_window_success": false,
+        "longest_continuous_cover_s": 9.552659387108136,
+        "covered_time_ratio": 0.3777038269550749
+      },
+      {
+        "failed_uav_or_bomb": 3,
+        "full_window_success": true,
+        "longest_continuous_cover_s": 25.36104262064107,
+        "covered_time_ratio": 1.0
+      }
+    ]
+  },
+  "representatives_by_dsafe": [
+    {
+      "d_safe_m": 0.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00829",
+        "knee_chebyshev": "A-00017",
+        "layered": "A-00217"
+      }
+    },
+    {
+      "d_safe_m": 10.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00925",
+        "knee_chebyshev": "A-00017",
+        "layered": "A-00217"
+      }
+    },
+    {
+      "d_safe_m": 20.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00925",
+        "knee_chebyshev": "A-00017",
+        "layered": "A-00217"
+      }
+    },
+    {
+      "d_safe_m": 30.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00523",
+        "knee_chebyshev": "A-00017",
+        "layered": "A-00217"
+      }
+    },
+    {
+      "d_safe_m": 40.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00523",
+        "knee_chebyshev": "A-00017",
+        "layered": "A-00217"
+      }
+    },
+    {
+      "d_safe_m": 50.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00523",
+        "knee_chebyshev": "A-00017",
+        "layered": "A-00233"
+      }
+    },
+    {
+      "d_safe_m": 60.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00607",
+        "knee_chebyshev": "A-00017",
+        "layered": "A-00431"
+      }
+    },
+    {
+      "d_safe_m": 70.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00607",
+        "knee_chebyshev": "A-00017",
+        "layered": "A-00445"
+      }
+    },
+    {
+      "d_safe_m": 80.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00505",
+        "knee_chebyshev": "A-00017",
+        "layered": "A-00505"
+      }
+    },
+    {
+      "d_safe_m": 90.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00505",
+        "knee_chebyshev": "A-00013",
+        "layered": "A-00505"
+      }
+    },
+    {
+      "d_safe_m": 100.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00505",
+        "knee_chebyshev": "A-00013",
+        "layered": "A-00505"
+      }
+    },
+    {
+      "d_safe_m": 110.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00307",
+        "knee_chebyshev": "A-00007",
+        "layered": "A-00307"
+      }
+    },
+    {
+      "d_safe_m": 120.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00205",
+        "knee_chebyshev": "A-00007",
+        "layered": "A-00205"
+      }
+    },
+    {
+      "d_safe_m": 130.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00205",
+        "knee_chebyshev": "A-00007",
+        "layered": "A-00205"
+      }
+    },
+    {
+      "d_safe_m": 140.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00205",
+        "knee_chebyshev": "A-00007",
+        "layered": "A-00205"
+      }
+    },
+    {
+      "d_safe_m": 150.0,
+      "status": "DISAGREE_HUMAN_REQUIRED",
+      "selected_candidate_id": null,
+      "methods": {
+        "ideal_point": "A-00103",
+        "knee_chebyshev": "A-00103",
+        "layered": "A-00199"
+      }
+    }
+  ],
+  "n_minus_one_full_window_candidates_found": 0,
+  "n_minus_one_claim": "not found in recorded search family; not a proof of impossibility",
+  "formal_candidate_validations": {
+    "A-00017": {
+      "continuous_envelope": {
+        "status": "PASS",
+        "start_s": 0.0,
+        "end_s": 25.36104262064107,
+        "duration_s": 25.36104262064107,
+        "adaptive_minimum_slack_sq_m2": 1472.1324133515545,
+        "adaptive_minimum_time_s": 25.36104262064107,
+        "adaptive_minimum_ship_relative_x_m": 80.0,
+        "adaptive_minimum_source": "event",
+        "independent_fine_scan_minimum_slack_sq_m2": 1472.1324133515545,
+        "independent_fine_scan_minimum_time_s": 25.36104262064107,
+        "fine_scan_negative_count": 0,
+        "fine_scan_points": 12001,
+        "validators_agree": true
+      },
+      "independent_disk_difference": {
+        "status": "PASS",
+        "time_checks": 401,
+        "maximum_uncovered_area_m2": 0.0
+      },
+      "validators_agree": true
+    },
+    "A-00033": {
+      "continuous_envelope": {
+        "status": "PASS",
+        "start_s": 0.0,
+        "end_s": 25.36104262064107,
+        "duration_s": 25.36104262064107,
+        "adaptive_minimum_slack_sq_m2": 1472.1324133515545,
+        "adaptive_minimum_time_s": 25.36104262064107,
+        "adaptive_minimum_ship_relative_x_m": 80.0,
+        "adaptive_minimum_source": "event",
+        "independent_fine_scan_minimum_slack_sq_m2": 1472.1324133515545,
+        "independent_fine_scan_minimum_time_s": 25.36104262064107,
+        "fine_scan_negative_count": 0,
+        "fine_scan_points": 12001,
+        "validators_agree": true
+      },
+      "independent_disk_difference": {
+        "status": "PASS",
+        "time_checks": 401,
+        "maximum_uncovered_area_m2": 0.0
+      },
+      "validators_agree": true
+    },
+    "A-00217": {
+      "continuous_envelope": {
+        "status": "PASS",
+        "start_s": 0.0,
+        "end_s": 25.36104262064107,
+        "duration_s": 25.36104262064107,
+        "adaptive_minimum_slack_sq_m2": 1463.887280249689,
+        "adaptive_minimum_time_s": 0.0,
+        "adaptive_minimum_ship_relative_x_m": -80.0,
+        "adaptive_minimum_source": "event",
+        "independent_fine_scan_minimum_slack_sq_m2": 1463.887280249689,
+        "independent_fine_scan_minimum_time_s": 0.0,
+        "fine_scan_negative_count": 0,
+        "fine_scan_points": 12001,
+        "validators_agree": true
+      },
+      "independent_disk_difference": {
+        "status": "PASS",
+        "time_checks": 401,
+        "maximum_uncovered_area_m2": 0.0
+      },
+      "validators_agree": true
+    },
+    "A-00829": {
+      "continuous_envelope": {
+        "status": "PASS",
+        "start_s": 0.0,
+        "end_s": 25.36104262064107,
+        "duration_s": 25.36104262064107,
+        "adaptive_minimum_slack_sq_m2": 1463.887280249689,
+        "adaptive_minimum_time_s": 0.0,
+        "adaptive_minimum_ship_relative_x_m": -80.0,
+        "adaptive_minimum_source": "event",
+        "independent_fine_scan_minimum_slack_sq_m2": 1463.887280249689,
+        "independent_fine_scan_minimum_time_s": 0.0,
+        "fine_scan_negative_count": 0,
+        "fine_scan_points": 12001,
+        "validators_agree": true
+      },
+      "independent_disk_difference": {
+        "status": "PASS",
+        "time_checks": 401,
+        "maximum_uncovered_area_m2": 0.0
+      },
+      "validators_agree": true
+    }
+  }
+}

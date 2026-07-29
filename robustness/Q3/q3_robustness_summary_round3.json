@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "question_id": "Q3",
+  "profile": "lean",
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "tested_claim": "The selected P2 plan is not confined to a narrow missile-bearing or standardized initial-state neighborhood under the declared diagnostic rule.",
+  "input_refs": [
+    "workspace/data_clean/q3_standardized_scenario.json",
+    "methods/Q3/q3_decisions.jsonl"
+  ],
+  "result_refs": [
+    "results/Q3/experiments/round3/metrics/q3_p2_formal_plan.json",
+    "results/Q3/experiments/round3/metrics/q3_p2_sensitivity.json",
+    "results/Q3/experiments/round3/metrics/q3_p2_combined_perturbations.json"
+  ],
+  "checks": [
+    {
+      "name": "missile_bearing",
+      "perturbation": "beta from 0 to pi at 5 degree spacing under G1 pure pursuit",
+      "metric": "complete-defense rate",
+      "threshold": "100%",
+      "observed": "100%; detection windows range from 24.167709255129896 to 25.361042620642717 s",
+      "status": "PASS",
+      "limitation": "The schedule is certified against the conservative maximum window; bearing does not rotate the ship-fixed smoke geometry."
+    },
+    {
+      "name": "position_one_at_a_time",
+      "perturbation": "each UAV x or y coordinate independently from -200 to +200 m",
+      "metric": "route execution within 60 s and achieved clearance",
+      "threshold": "all boundary cases execute",
+      "observed": "all execute; common lead 17.720980508784677 to 25.019291131210714 s; clearance 38.717572561967586 to 50.4605328425594 m",
+      "status": "PASS",
+      "limitation": "Smoke schedule and UAV assignment are held fixed."
+    },
+    {
+      "name": "heading_one_at_a_time",
+      "perturbation": "each initial heading independently from -45 to +45 degrees",
+      "metric": "execution and total turn",
+      "threshold": "all boundary cases execute",
+      "observed": "all execute; total turn 0.8028990995479446 to 2.373695426342841 rad",
+      "status": "PASS",
+      "limitation": "No minimum turn radius is supplied, so heading affects the maneuver metric but not reachability."
+    },
+    {
+      "name": "combined_initial_state",
+      "perturbation": "2000 seed-2026 uniform combined position and heading cases over the full approved ranges",
+      "metric": "execution rate and half-nominal-clearance retention",
+      "threshold": "execution >=95%; retention >=80%",
+      "observed": "execution 100%; retention 96.05%; clearance p05 29.51871333273017 m and median 46.21419709794967 m",
+      "status": "PASS",
+      "limitation": "The sample minimum is 0.23377203323868967 m, so no positive safety distance is guaranteed over the entire continuous perturbation box."
+    },
+    {
+      "name": "safety_distance",
+      "perturbation": "d_safe from 0 to 150 m",
+      "metric": "nominal feasibility and combined-perturbation retention",
+      "threshold": "parameterized reporting; no invented fixed requirement",
+      "observed": "nominal interval [0,46.38092783617386] m; retention is 96.65% at 20 m, 84.8% at 40 m, and 59.3% at 45 m",
+      "status": "PASS",
+      "limitation": "46.38092783617386 m is a nominal standardized-scenario value, not a robust guarantee."
+    },
+    {
+      "name": "single_uav_failure",
+      "perturbation": "remove UAV 1, 2, or 3 and refine coverage transition roots",
+      "metric": "full-window success, longest continuous cover, double-cover ratio",
+      "threshold": "report all three cases; N-1 is not a hard constraint",
+      "observed": "UAV 1 and UAV 3 failures retain the full window; UAV 2 failure covers [0,10.376134889744753] s; success rate 2/3 and double-cover ratio 0.40913676322201886",
+      "status": "PASS",
+      "limitation": "This does not prove any global N-1 feasibility or infeasibility statement."
+    }
+  ],
+  "overall_status": "PASS",
+  "fallback_trigger": {
+    "id": "P1_A-00017_recomparison",
+    "observed": false
+  },
+  "claim_limit": "P2 passes the declared diagnostic, but positive d_safe guarantees must remain parameterized. All coordinates and route values are SYNTHETIC_SCENARIO_ONLY.",
+  "generated_at": "2026-07-29T22:31:30+08:00"
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "question": "Q3",
+  "round": "round2",
+  "round_label": "prewarning_pareto",
+  "implementation_target": "python",
+  "random_seed": 2026,
+  "approved_decision_ids": [
+    "q3_method_choice",
+    "q3_parameterized_and_standardized_scenario",
+    "q3_result_adjust_pretask"
+  ],
+  "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+  "methods": [
+    {
+      "method_id": "Q3-A",
+      "role": "main_candidate",
+      "status": "executed",
+      "metrics_summary": {
+        "candidate_count": 1440,
+        "minimum_actual_warning_lead_s": 15.968199098479152,
+        "minimum_user_defined_latest_uav_warning_lead_s": 0.0,
+        "pareto_count_dsafe0": 182,
+        "representative_status_dsafe0": "DISAGREE_HUMAN_REQUIRED",
+        "n_minus_one_full_candidates_found": 0
+      }
+    },
+    {
+      "method_id": "Q3-B",
+      "role": "usable_baseline",
+      "status": "executed",
+      "metrics_summary": {
+        "candidate_id": "B-3",
+        "lead_required_s": 13.720980508784676,
+        "user_defined_latest_uav_warning_lead_s": 0.0,
+        "d_safe_max_m": 189.7529718772099,
+        "normal_min_slack_sq_m2": 0.0,
+        "n_minus_one_success_rate": 0.0,
+        "worst_failure_continuous_cover_s": 10.355759070095104,
+        "double_cover_time_ratio": 0.0,
+        "total_path_length_m": 1110.187454245971,
+        "total_turn_angle_rad": 1.5395564933646284
+      }
+    }
+  ],
+  "comparison": [
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "method_id": "Q3-A",
+      "minimum_lead_s": 15.968199098479152,
+      "user_defined_latest_uav_warning_lead_s": 0.0,
+      "maximum_d_safe_m": 164.6524134588492,
+      "pareto_count_dsafe0": 182,
+      "n_minus_one_full_candidates_found": 0,
+      "representative_status_dsafe0": "DISAGREE_HUMAN_REQUIRED",
+      "total_path_length_m": null,
+      "total_turn_angle_rad": null
+    },
+    {
+      "scenario_label": "SYNTHETIC_SCENARIO_ONLY",
+      "method_id": "Q3-B",
+      "minimum_lead_s": 13.720980508784676,
+      "user_defined_latest_uav_warning_lead_s": 0.0,
+      "maximum_d_safe_m": 189.7529718772099,
+      "pareto_count_dsafe0": 1,
+      "n_minus_one_full_candidates_found": 0,
+      "representative_status_dsafe0": "CONSTRUCTIVE_BASELINE",
+      "total_path_length_m": 1110.187454245971,
+      "total_turn_angle_rad": 1.5395564933646284
+    }
+  ],
+  "continuous_validation": {
+    "main_reported_candidates_all_pass": true,
+    "baseline_pass": true
+  },
+  "representative_decision": {
+    "status": "DISAGREE_HUMAN_REQUIRED",
+    "selected_candidate_id": null,
+    "methods": {
+      "ideal_point": "A-00829",
+      "knee_chebyshev": "A-00017",
+      "layered": "A-00217"
+    }
+  },
+  "claim_limits": [
+    "All coordinates are SYNTHETIC_SCENARIO_ONLY.",
+    "Q3-A searches a canonical collinear smoke-centre family, not the full two-dimensional global space.",
+    "Absence of an N-1 full-window candidate is not an impossibility proof.",
+    "The 864-candidate and 127.73 m risk-probe values are not imported."
+  ],
+  "fallback_trigger": {
+    "fallback_id": "Q3-C",
+    "observed": false,
+    "reason": "No traceable uncertainty set and no recorded fragility trigger."
+  },
+  "outputs": [
+    "results/Q3/experiments/round2/metrics/q3_main_pareto.json",
+    "results/Q3/experiments/round2/metrics/q3_baseline.json",
+    "results/Q3/experiments/round2/metrics/q3_pareto_by_dsafe.json",
+    "results/Q3/experiments/round2/tables/q3_lead_time_sensitivity.csv",
+    "results/Q3/experiments/round2/tables/q3_safety_thresholds.csv",
+    "results/Q3/experiments/round2/tables/q3_pareto_front_dsafe0.csv",
+    "results/Q3/experiments/round2/tables/q3_method_comparison.csv",
+    "results/Q3/experiments/round2/figures/q3_lead_time_feasibility.png"
+  ],
+  "runtime_seconds": 18.256235499866307,
+  "environment": {
+    "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.4"
+  }
+}
