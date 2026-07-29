@@ -1,38 +1,29 @@
-"""Run approved Q1 A+B round1 and save canonical experiment artifacts."""
+"""One-click production entry point for Q1.
+
+The production runner intentionally has no pytest or tests-directory dependency.
+Formal tests are executed separately before release and summarized in
+code/Q1/reviews/q1_final_validation.json.
+"""
 
 from __future__ import annotations
 
-import csv
-from datetime import datetime, timezone
+import argparse
 import json
-from pathlib import Path
-import platform
 import sys
-import time
+from pathlib import Path
 
-import numpy as np
-import pandas as pd
-import scipy
-
-from q1_analytic_baseline import run_baseline
-from q1_common import Q1Constants, SEED, smoke_radius, validate_constants
-from q1_event_model import structural_main_result
+from q1_outputs import finalize_production_run, generate_core_outputs
 
 
-ROOT = Path(__file__).resolve().parents[2]
-ROUND_DIR = ROOT / "results" / "Q1" / "experiments" / "round1"
-TABLE_DIR = ROUND_DIR / "tables"
-METRIC_DIR = ROUND_DIR / "metrics"
-
-
-def write_json(path: Path, data: dict[str, object]) -> None:
-    path.write_text(
-        json.dumps(data, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Generate and validate all Q1 production artifacts.")
+    parser.add_argument("--all", action="store_true", help="Generate all Q1 production artifacts.")
+    parser.add_argument("--scenario", type=Path, help="Optional complete scenario JSON.")
+    return parser.parse_args()
 
 
 def main() -> int:
+<<<<<<< HEAD
     np.random.seed(SEED)
     cfg = Q1Constants()
     errors = validate_constants(cfg)
@@ -274,6 +265,17 @@ def main() -> int:
     write_json(ROUND_DIR / "run_summary.json", run_summary)
     print(json.dumps(run_summary, ensure_ascii=False, indent=2))
     return 0 if comparison_pass else 2
+=======
+    args = parse_args()
+    try:
+        context = generate_core_outputs(args.scenario)
+        result = finalize_production_run(context)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0
+    except Exception as exc:
+        print(f"Q1 production run failed: {exc}", file=sys.stderr)
+        return 1
+>>>>>>> 05b4caca0369d310133e03bd82ba235ad075b5d3
 
 
 if __name__ == "__main__":

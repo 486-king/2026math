@@ -1,23 +1,16 @@
-"""Parameterized best-compensation family after accepted Q1 infeasibility."""
+"""Thin entry point for the Q1 maximum continuous coverage family."""
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
 import json
-from pathlib import Path
-import platform
-import sys
-import time
 
-from q1_common import Q1Constants, SEED, structural_bounds
-
-
-ROOT = Path(__file__).resolve().parents[2]
-ROUND_DIR = ROOT / "results" / "Q1" / "experiments" / "round3"
-METRIC_PATH = ROUND_DIR / "metrics" / "q1_parametric_compensation.json"
+from q1_common import T_DETECT_LOWER, write_json
+from q1_compensation import compensation_family, release_point_relation
+from q1_outputs import ROUND3
 
 
 def main() -> int:
+<<<<<<< HEAD
     start = time.perf_counter()
     cfg = Q1Constants()
     bounds = structural_bounds(cfg)
@@ -129,63 +122,17 @@ def main() -> int:
     METRIC_PATH.write_text(
         json.dumps(result, ensure_ascii=False, indent=2),
         encoding="utf-8"
+=======
+    result = compensation_family(
+        0.0,
+        T_DETECT_LOWER,
+        input_status="blocked_missing_scenario",
+        executable_value="not_evaluated",
+>>>>>>> 05b4caca0369d310133e03bd82ba235ad075b5d3
     )
-    run_summary = {
-        "schema_version": 1,
-        "question": "Q1",
-        "round": "round3",
-        "implementation_target": "python",
-        "random_seed": SEED,
-        "approved_decision_id": "q1_method_choice",
-        "result_decision_id": "q1_result_verdict_round1",
-        "methods": [
-            {
-                "method_id": "A-compensation",
-                "role": "accepted_post_infeasibility_compensation",
-                "script": "code/Q1/q1_parametric_compensation.py",
-                "status": "success",
-                "execution_time_seconds": result["runtime_seconds"],
-                "input_files": [
-                    "results/Q1/experiments/round1/metrics/q1_structural_metrics.json",
-                    "results/Q1/experiments/round2/metrics/q1_global_certificate.json",
-                    "methods/Q1/q1_decisions.jsonl"
-                ],
-                "output_files": [
-                    "results/Q1/experiments/round3/metrics/q1_parametric_compensation.json"
-                ],
-                "figure_files": [],
-                "metrics_summary": result["numeric_constants"],
-                "warnings": [
-                    "Absolute coordinates and times remain parameterized because initial states are absent."
-                ],
-                "errors": []
-            }
-        ],
-        "comparison": {
-            "compensation_respects_global_cover_upper_bound": (
-                abs(full_cover_s - bounds[
-                    "stationary_smoke_max_continuous_full_cover_s"
-                ]) <= 1e-12
-            ),
-            "strict_infeasibility_unchanged": True
-        },
-        "fallback_trigger": {
-            "fallback_id": "C",
-            "observed": True,
-            "resolved": True,
-            "evidence": "round2 global interval certificate"
-        },
-        "environment": {
-            "python": sys.version,
-            "platform": platform.platform()
-        },
-        "generated_at": datetime.now(timezone.utc).astimezone().isoformat()
-    }
-    (ROUND_DIR / "run_summary.json").write_text(
-        json.dumps(run_summary, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
-    print(json.dumps(run_summary, ensure_ascii=False, indent=2))
+    result["release_point_relation"] = release_point_relation()
+    write_json(ROUND3, result)
+    print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
 
 

@@ -1,30 +1,16 @@
-"""Triggered Q1-C global interval certificate.
-
-This specializes C to the dominating duration inequalities. General
-branch-and-bound is unnecessary because these global bounds already separate
-the feasible sets.
-"""
+"""Thin entry point for the Q1 A/B/C global certificate."""
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
 import json
-from pathlib import Path
-import platform
-import sys
-import time
 
-import numpy as np
-
-from q1_common import Q1Constants, SEED
-
-
-ROOT = Path(__file__).resolve().parents[2]
-ROUND_DIR = ROOT / "results" / "Q1" / "experiments" / "round2"
-METRIC_PATH = ROUND_DIR / "metrics" / "q1_global_certificate.json"
+from q1_certificates import build_global_certificate
+from q1_common import write_json
+from q1_outputs import ROUND2
 
 
 def main() -> int:
+<<<<<<< HEAD
     start = time.perf_counter()
     cfg = Q1Constants()
     cover_nominal = (
@@ -173,6 +159,12 @@ def main() -> int:
     )
     print(json.dumps(run_summary, ensure_ascii=False, indent=2))
     return 0 if certificate_pass else 2
+=======
+    result = build_global_certificate(locked_at_8000m=True)
+    write_json(ROUND2, result)
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0 if result["certificate_status"] == "verified" else 1
+>>>>>>> 05b4caca0369d310133e03bd82ba235ad075b5d3
 
 
 if __name__ == "__main__":

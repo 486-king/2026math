@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
   "question": "Q1",
+<<<<<<< HEAD
   "round": "round3",
   "implementation_target": "python",
   "random_seed": 2026,
@@ -48,9 +48,38 @@
     "resolved": true,
     "evidence": "round2 global interval certificate"
   },
+=======
+  "approved_model": "G1+S1+O0+U0",
+  "status": "completed",
+  "seed": 20260729,
+>>>>>>> 05b4caca0369d310133e03bd82ba235ad075b5d3
   "environment": {
-    "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
-    "platform": "Windows-11-10.0.26200-SP0"
+    "python": "3.12.13",
+    "operating_system": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "scipy": "1.18.0",
+    "pandas": "3.0.1",
+    "matplotlib": "3.11.1",
+    "pytest": "9.1.1",
+    "python_docx": "1.2.0"
   },
+<<<<<<< HEAD
   "generated_at": "2026-07-29T20:52:06.027846+08:00"
 }
+=======
+  "warnings": [
+    "Real absolute initial states are missing; no real absolute coordinate is reported."
+  ],
+  "fallback_trigger_state": "not_activated",
+  "round": 3,
+  "role": "parametric_compensation_family",
+  "outputs": [
+    "results/Q1/experiments/round3/metrics/q1_parametric_compensation.json"
+  ],
+  "metric_summary": {
+    "T_structural_max_s": 10.376134889753567,
+    "burst_interval_width_s": 7.623865110246433,
+    "T_executable_star": "not_evaluated"
+  }
+}
+>>>>>>> 05b4caca0369d310133e03bd82ba235ad075b5d3

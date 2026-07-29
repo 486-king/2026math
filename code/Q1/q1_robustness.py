@@ -1,44 +1,17 @@
-"""Risk-targeted robustness checks for the approved Q1 conclusion."""
+"""Thin entry point for structural-gap sensitivity."""
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
-import itertools
+import argparse
 import json
-from pathlib import Path
 
-from q1_common import Q1Constants
-
-
-ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT / "robustness" / "Q1" / "q1_robustness_summary.json"
-
-
-def duration_metrics(
-    cfg: Q1Constants,
-    ship_speed: float,
-    missile_speed: float,
-    smoke_radius: float,
-    cloud_drift_along_ship: float = 0.0,
-) -> dict[str, float | bool]:
-    relative_speed = abs(ship_speed - cloud_drift_along_ship)
-    cover = (
-        float("inf")
-        if relative_speed <= 1e-12
-        else 2.0 * max(0.0, smoke_radius - cfg.ship_radius_m) / relative_speed
-    )
-    detect = (cfg.detection_distance_m - cfg.ship_radius_m) / (
-        missile_speed + ship_speed
-    )
-    return {
-        "cover_upper_bound_s": cover,
-        "detection_lower_bound_s": detect,
-        "duration_margin_s": cover - detect,
-        "duration_necessary_condition_feasible": cover >= detect,
-    }
+from q1_common import write_json
+from q1_outputs import ROBUSTNESS_PATH
+from q1_robustness_core import gap_meaning, robustness_summary, structural_gap
 
 
 def main() -> int:
+<<<<<<< HEAD
     cfg = Q1Constants()
     nominal = duration_metrics(
         cfg,
@@ -266,6 +239,32 @@ def main() -> int:
         encoding="utf-8",
     )
     print(json.dumps(summary, ensure_ascii=False, indent=2))
+=======
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--R-c", type=float)
+    parser.add_argument("--R-s", type=float)
+    parser.add_argument("--V-s", type=float)
+    parser.add_argument("--V-m", type=float)
+    parser.add_argument("--D-max", type=float)
+    args = parser.parse_args()
+    if any(value is not None for value in vars(args).values()):
+        kwargs = {key.replace("_", "-"): value for key, value in vars(args).items() if value is not None}
+        mapped = {
+            {"R-c": "R_c", "R-s": "R_s", "V-s": "V_s", "V-m": "V_m", "D-max": "D_max"}[key]: value
+            for key, value in kwargs.items()
+        }
+        gap = structural_gap(**mapped)
+        result = {
+            "exploratory": True,
+            "explicit_command_line_parameters": mapped,
+            "G_s": gap,
+            "meaning": gap_meaning(gap),
+        }
+    else:
+        result = robustness_summary()
+    write_json(ROBUSTNESS_PATH, result)
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+>>>>>>> 05b4caca0369d310133e03bd82ba235ad075b5d3
     return 0
 
 

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "schema_version": 1,
   "question_id": "Q1",
   "tested_claim": "Under G1+S1+O0+U0 and statement constants, one stationary smoke cannot fully cover the ship for the entire detection window.",
@@ -253,3 +254,50 @@
   "canonical_interpretation": "The nominal G1+S1+O0+U0 infeasibility conclusion is locally stable to the recorded one-at-a-time 10 percent checks. G2 and S2 remain conditional extensions.",
   "generated_at": "2026-07-29T20:52:06.164178+08:00"
 }
+=======
+  "model_scope": "Q1_G1_S1_O0_U0_structural_sensitivity",
+  "G_formula": "(D_max-R_s)/(V_m+V_s)-2(R_c-R_s)/V_s",
+  "G_nominal_s": 13.791574365380546,
+  "nominal_meaning": "full_window_structurally_infeasible_certificate_remains_valid",
+  "sign_semantics": {
+    "G>0": "single-smoke full-window structural infeasibility certificate remains valid",
+    "G=0": "structural duration flip boundary",
+    "G<0": "duration necessary condition passes; overall feasibility is not established"
+  },
+  "parameterised_interface": {
+    "arguments": [
+      "R_c",
+      "R_s",
+      "V_s",
+      "V_m",
+      "D_max"
+    ],
+    "units": [
+      "m",
+      "m",
+      "m/s",
+      "m/s",
+      "m"
+    ]
+  },
+  "analytic_flip_relation": "T_detect_lower = T_structural_max",
+  "critical_R_c_given_other_nominal_parameters_m": 173.166519178542,
+  "uncertainty_ranges": "not_supplied_not_invented",
+  "wind_drift": "excluded_from_nominal_U0; formula interface only",
+  "exploratory": false,
+  "status": {
+    "execution_status": "completed",
+    "input_status": "blocked_missing_scenario",
+    "feasibility_status": "full_window_structurally_infeasible",
+    "certificate_status": "verified",
+    "T_executable_star": "not_evaluated"
+  },
+  "wind_interface": {
+    "implemented_scope": "formula_interface_only",
+    "formula": "c(t)=c(t_b)+integral_{t_b}^{t} v_wind(u) du",
+    "nominal_model": "U0_no_wind_drift",
+    "numerical_nominal_wind_result": "not_generated",
+    "reason": "No wind data or uncertainty range is supplied by the problem."
+  }
+}
+>>>>>>> 05b4caca0369d310133e03bd82ba235ad075b5d3

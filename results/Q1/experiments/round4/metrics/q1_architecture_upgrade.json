@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "schema_version": 1,
   "question_id": "Q1",
   "round": "round4",
@@ -135,3 +136,142 @@
     "warning": "No wind data; extension only."
   }
 }
+=======
+  "model_scope": "Q1 only: G1+S1+O0+U0 single smoke",
+  "excluded_scope": [
+    "Q2 exact continuous multi-smoke union geometry",
+    "Q3 multi-UAV cooperation",
+    "Q4 multi-threat scheduling",
+    "paper body"
+  ],
+  "event_semantics": {
+    "t_cmd": "command time",
+    "t_d": "actual release time; t_d=t_cmd+2",
+    "t_b": "burst time; t_b=t_d+3.5=t_cmd+5.5",
+    "t_m": "midpoint of maximum continuous coverage interval"
+  },
+  "status_semantics": {
+    "execution_status": [
+      "completed",
+      "failed"
+    ],
+    "input_status": [
+      "complete",
+      "blocked_missing_scenario",
+      "blocked_missing_fields",
+      "blocked_ambiguous_interpretation"
+    ],
+    "feasibility_status": [
+      "full_window_structurally_infeasible",
+      "executable_feasible",
+      "executable_infeasible",
+      "not_evaluated"
+    ],
+    "certificate_status": [
+      "verified",
+      "conditional",
+      "failed",
+      "not_evaluated"
+    ]
+  },
+  "core_values": {
+    "h_s": 5.188067444876784,
+    "T_structural_max_s": 10.376134889753567,
+    "T_detect_lower_s": 24.167709255134113,
+    "T_naked_lower_s": 13.791574365380546,
+    "burst_interval_width_s": 7.623865110246433
+  },
+  "source_documents": {
+    "present_in_this_run": false,
+    "verified_sha256": {
+      "B题：舰船烟幕遮蔽干扰优化.docx": "374a3a91f82fdd2475859258ca4e73902e6706e620920eedab16121ee85e4bfa",
+      "Q1_编程手与论文手分工.docx": "578aec2867cbdf32fbb2e5a64d06698fa0896eb1e5d5429a70e2f0df20fdffe5"
+    },
+    "metadata": {
+      "policy": "source Word files are local-only; partial repository copies are not treated as validation inputs",
+      "present": false,
+      "partially_present_files": [
+        "B题：舰船烟幕遮蔽干扰优化.docx"
+      ],
+      "expected_sha256": {
+        "B题：舰船烟幕遮蔽干扰优化.docx": "374a3a91f82fdd2475859258ca4e73902e6706e620920eedab16121ee85e4bfa",
+        "Q1_编程手与论文手分工.docx": "578aec2867cbdf32fbb2e5a64d06698fa0896eb1e5d5429a70e2f0df20fdffe5"
+      }
+    }
+  },
+  "Delta_single_degeneracy_test": {
+    "random_seed": 20260729,
+    "sample_count": 1000,
+    "max_abs_error_m": 0.0,
+    "tolerance_m": 1e-12,
+    "verified": true,
+    "method": "exact_closed_form_no_boundary_grid"
+  },
+  "scenario_input_state": {
+    "execution_status": "completed",
+    "input_status": "blocked_missing_scenario",
+    "feasibility_status": "full_window_structurally_infeasible",
+    "certificate_status": "verified",
+    "T_executable_star": "not_evaluated",
+    "missing_fields": [
+      "schema_version",
+      "scenario_id",
+      "scenario_type",
+      "time_origin",
+      "locked_at_8000m",
+      "ship.initial_position",
+      "ship.heading_or_velocity",
+      "missile.initial_position",
+      "missile.initial_heading",
+      "uav.initial_position",
+      "uav.initial_heading",
+      "uav.launch_reference_point",
+      "operating_radius_interpretation",
+      "earliest_command_time"
+    ],
+    "absolute_solution": "not_generated"
+  },
+  "Q1_to_Q2_boundary_state": {
+    "single_smoke_exact": true,
+    "multi_smoke_continuous_union": "intentionally_not_implemented",
+    "rejection_message": "Exact continuous multi-smoke union coverage belongs to Q2 and is intentionally not implemented in Q1."
+  },
+  "legacy_field_policy": {
+    "drop_time": "deprecated legacy alias of release time t_d",
+    "command_semantic_for_drop_time": false
+  },
+  "release_point_parameterisation": {
+    "formula": "p_d = c - 98 e_u",
+    "equivalent": "c = p_d + 98 e_u",
+    "e_u_constraint": "||e_u||_2 = 1",
+    "uniqueness": "parameterised_not_unique",
+    "source_type": "derived_quantity",
+    "derivation": "under S1 inertial-flight assumption: 28 m/s × 3.5 s = 98 m"
+  },
+  "source_conflicts_and_adopted_positions": [
+    {
+      "item": "problem_document_filename",
+      "adopted": "accept the existing local name with or without suffix (4); never rename the source"
+    },
+    {
+      "item": "unique_absolute_optimum",
+      "adopted": "block the executable optimum and output a parameterised family when absolute states are missing"
+    },
+    {
+      "item": "historical_project_references",
+      "adopted": "rebuild all four evidence rounds from the mathematical specification"
+    }
+  ],
+  "dependency_versions": {
+    "python": "3.12.13",
+    "operating_system": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "scipy": "1.18.0",
+    "pandas": "3.0.1",
+    "matplotlib": "3.11.1",
+    "pytest": "9.1.1",
+    "python_docx": "1.2.0"
+  },
+  "cleanup_status": "completed_by_production_finalizer"
+}
+>>>>>>> 05b4caca0369d310133e03bd82ba235ad075b5d3
