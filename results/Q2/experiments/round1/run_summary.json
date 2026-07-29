@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "question": "Q2",
+  "round": "round1",
+  "round_label": "preoptimization_validation",
+  "implementation_target": "python",
+  "random_seed": 2026,
+  "approved_decision_ids": [
+    "q2_objective_scope",
+    "q2_method_choice"
+  ],
+  "methods": [
+    {
+      "method_id": "A",
+      "role": "main_candidate_preoptimization_validation",
+      "script": "code/Q2/q2_continuous_validator.py",
+      "status": "success",
+      "execution_time_seconds": 0.015402999939396977,
+      "input_files": [
+        "methods/Q2/q2_decisions.jsonl",
+        "code/Q2/q2_code_plan.md",
+        "results/Q1/experiments/round3/metrics/q1_parametric_compensation.json"
+      ],
+      "output_files": [
+        "results/Q2/experiments/round1/metrics/q2_continuous_validation.json",
+        "results/Q2/experiments/round1/tables/q2_critical_times.csv"
+      ],
+      "figure_files": [
+        "results/Q2/experiments/round1/figures/q2_validation_margin_diagnostic.png"
+      ],
+      "metrics_summary": {
+        "relative_two_bomb_full_worst_M1_window": true,
+        "window_length_s": 25.36104262064107,
+        "unresolved_time_boxes": 0,
+        "validators_agree": true,
+        "minimum_squared_cross_section_slack_m2": 1463.887280249688,
+        "maximum_uncovered_area_m2": 0.0,
+        "relative_uav_transition_slack_m": 175.03258741000005
+      },
+      "warnings": [
+        "Relative coordinates only; absolute first-drop and 12 km checks are blocked.",
+        "This round validates one two-bomb candidate; it does not optimize the three-bomb capacity frontier."
+      ],
+      "errors": []
+    },
+    {
+      "method_id": "B",
+      "role": "usable_baseline",
+      "script": "code/Q2/q2_analytic_baseline.py",
+      "status": "success",
+      "execution_time_seconds": 5.620019510388374e-05,
+      "input_files": [
+        "results/Q1/experiments/round3/metrics/q1_parametric_compensation.json"
+      ],
+      "output_files": [
+        "results/Q2/experiments/round1/metrics/q2_baseline_metrics.json",
+        "results/Q2/experiments/round1/tables/q2_method_comparison.csv"
+      ],
+      "figure_files": [],
+      "metrics_summary": {
+        "two_bomb_capacity_s": 20.752269779507134,
+        "three_bomb_1s_overlap_capacity_s": 29.128404669260703,
+        "three_bomb_covers_worst_M1_window": true
+      },
+      "warnings": [
+        "B is a conservative feasible lower bound, not the multi-smoke global upper bound.",
+        "Absolute first-drop reachability is blocked."
+      ],
+      "errors": []
+    }
+  ],
+  "comparison": {
+    "directly_comparable": true,
+    "A_bomb_count": 2,
+    "B_bomb_count": 3,
+    "same_M1_upper_window_target_s": 25.36104262064107,
+    "A_relative_validation_pass": true,
+    "B_duration_feasibility_pass": true,
+    "absolute_operational_comparison_status": "blocked_missing_initial_state"
+  },
+  "output_degeneracy": {
+    "status": "PASS",
+    "one_two_three_bomb_capacities_distinct": true,
+    "absolute_solution_nonunique": true,
+    "interpretation": "Relative feasibility evidence with expected translation/time-shift nonuniqueness."
+  },
+  "fallback_trigger": {
+    "fallback_id": "C",
+    "observed": false,
+    "condition": "A continuous validator fails to certify or independent validators disagree",
+    "evidence": "results/Q2/experiments/round1/metrics/q2_continuous_validation.json",
+    "fallback_implemented": false
+  },
+  "environment": {
+    "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "shapely": "2.1.2"
+  },
+  "warnings": [
+    "No UAV initial/base position, operation-radius reference, or absolute task clock is available.",
+    "Nominal smoke drift is zero under the approved S1 convention.",
+    "C was not implemented."
+  ],
+  "generated_at": "2026-07-29T20:11:40.439828+08:00"
+}

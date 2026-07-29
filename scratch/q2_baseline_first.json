@@ -1,0 +1,63 @@
+{
+  "method_id": "B",
+  "role": "usable_baseline",
+  "single_cloud_cover_upper_s": 10.376134889753567,
+  "M1_detection_window_bounds_s": [
+    24.167709255134113,
+    25.36104262064107
+  ],
+  "capacities": [
+    {
+      "bomb_count": 1,
+      "zero_overlap_capacity_s": 10.376134889753567,
+      "covers_M1_lower_window": false,
+      "covers_M1_upper_window": false
+    },
+    {
+      "bomb_count": 2,
+      "zero_overlap_capacity_s": 20.752269779507134,
+      "covers_M1_lower_window": false,
+      "covers_M1_upper_window": false
+    },
+    {
+      "bomb_count": 3,
+      "zero_overlap_capacity_s": 31.128404669260703,
+      "covers_M1_lower_window": true,
+      "covers_M1_upper_window": true
+    }
+  ],
+  "three_bomb_chains": [
+    {
+      "overlap_s": 0.0,
+      "total_continuous_capacity_s": 31.128404669260703,
+      "center_spacing_m": 80.0,
+      "drop_time_gap_s": 10.376134889753567,
+      "uav_transition_distance_slack_m": 210.53177691309986,
+      "passes_1s_drop_interval": true,
+      "passes_conservative_2s_response_interval": true,
+      "covers_M1_upper_window": true
+    },
+    {
+      "overlap_s": 0.5,
+      "total_continuous_capacity_s": 30.128404669260703,
+      "center_spacing_m": 76.145,
+      "drop_time_gap_s": 9.876134889753567,
+      "uav_transition_distance_slack_m": 200.38677691309988,
+      "passes_1s_drop_interval": true,
+      "passes_conservative_2s_response_interval": true,
+      "covers_M1_upper_window": true
+    },
+    {
+      "overlap_s": 1.0,
+      "total_continuous_capacity_s": 29.128404669260703,
+      "center_spacing_m": 72.29,
+      "drop_time_gap_s": 9.376134889753567,
+      "uav_transition_distance_slack_m": 190.24177691309984,
+      "passes_1s_drop_interval": true,
+      "passes_conservative_2s_response_interval": true,
+      "covers_M1_upper_window": true
+    }
+  ],
+  "interpretation": "Legal conservative lower bound: at each time at least one cloud independently contains the complete ship disk.",
+  "absolute_first_drop_status": "blocked_missing_initial_state"
+}

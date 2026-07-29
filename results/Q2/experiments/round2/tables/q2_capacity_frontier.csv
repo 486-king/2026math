@@ -1,0 +1,4 @@
+﻿bomb_count,method_A_continuous_capacity_s,method_B_conservative_capacity_s,increment_over_B_s,validation_status,claim_scope
+1,10.376134889753567,10.376134889753567,0.0,PASS,analytic exact
+2,29.0718710419769,20.752269779507134,8.319601262469767,PASS,optimized canonical two-bomb collinear frontier
+3,42.5231298690008,31.128404669260703,11.394725199740094,PASS,best verified canonical collinear candidate; global optimum not proved

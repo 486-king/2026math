@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "question_id": "Q2",
+  "language": "python",
+  "round": "round1_preoptimization_validation",
+  "reviewed_files": [
+    "code/Q2/q2_code_plan.md",
+    "code/Q2/q2_common.py",
+    "code/Q2/q2_continuous_validator.py",
+    "code/Q2/q2_analytic_baseline.py",
+    "code/Q2/q2_run.py",
+    "results/Q2/experiments/round1/run_summary.json",
+    "results/Q2/experiments/round1/metrics/q2_continuous_validation.json",
+    "results/Q2/experiments/round1/metrics/q2_baseline_metrics.json"
+  ],
+  "decision_id": "q2_method_choice",
+  "checks": {
+    "syntax": {
+      "status": "PASS",
+      "evidence": [
+        "python -m py_compile passed for all four Q2 Python modules.",
+        "code/Q2/q2_run.py completed without exception after correcting Python boolean literals during the implementation loop."
+      ]
+    },
+    "input_contract": {
+      "status": "PASS",
+      "evidence": [
+        "Constants and the relative validation candidate match code/Q2/q2_code_plan.md.",
+        "The original DOCX SHA-256 remained e891f635bcb4182517c166d12f1e4f3d05c77e9c18b27a14302c7561f7f2a638.",
+        "Missing UAV initial/base position is returned as blocked_missing_initial_state rather than filled."
+      ]
+    },
+    "method_alignment": {
+      "status": "PASS",
+      "evidence": [
+        "Only approved A validation and B baseline are implemented.",
+        "A checks complete ship-disk inclusion in the two-smoke union rather than adding areas or chaining single-cloud intervals.",
+        "B is labeled a conservative feasible lower bound.",
+        "No C fallback implementation exists."
+      ]
+    },
+    "reproducibility": {
+      "status": "PASS",
+      "evidence": [
+        "Two consecutive runs produced identical q2_continuous_validation.json and q2_baseline_metrics.json.",
+        "Python, NumPy, SciPy and Shapely versions are recorded in run_summary.json.",
+        "The experiment seed is fixed at 2026."
+      ]
+    },
+    "output_contract": {
+      "status": "PASS",
+      "evidence": [
+        "Both method metric JSON files, two CSV tables, one diagnostic figure and run_summary.json exist.",
+        "A and B report directly comparable M1-window feasibility and bomb count.",
+        "Warnings preserve relative-coordinate and missing-first-drop limitations."
+      ]
+    },
+    "continuous_geometry_certificate": {
+      "status": "PASS",
+      "evidence": [
+        "Outward-rounded interval validation certified 25.36104262064107 s in 9 boxes with 0 unresolved boxes.",
+        "The certified boxes use single-cloud containment or an analytic two-cloud split condition over whole time intervals."
+      ]
+    },
+    "boundary_and_interior_coverage": {
+      "status": "PASS",
+      "evidence": [
+        "Independent cross-section partition has minimum squared slack 1463.887280249688 m^2.",
+        "High-resolution disk-difference checks report maximum uncovered area 0.0 m^2 at all critical times.",
+        "A synthetic 250 m cloud-separation case was correctly rejected with squared slack -22025.0 m^2."
+      ]
+    },
+    "independent_validator_agreement": {
+      "status": "PASS",
+      "evidence": [
+        "The interval certificate and independent adaptive cross-section/disk-difference validator both return PASS.",
+        "run_summary.json records validators_agree=true and does not trigger C."
+      ]
+    },
+    "raw_data_protection": {
+      "status": "PASS",
+      "evidence": [
+        "No raw attachment was written or transformed.",
+        "All new outputs are under code/Q2 or results/Q2."
+      ]
+    }
+  },
+  "findings": [],
+  "verdict": "PASSED",
+  "reviewed_at": "2026-07-29T20:12:16.5848256+08:00"
+}

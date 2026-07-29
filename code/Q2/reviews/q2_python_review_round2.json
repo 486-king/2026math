@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "question_id": "Q2",
+  "language": "python",
+  "round": "round2_formal_optimization",
+  "reviewed_files": [
+    "code/Q2/q2_code_plan.md",
+    "code/Q2/q2_union_optimizer.py",
+    "code/Q2/q2_run_round2.py",
+    "results/Q2/experiments/round2/run_summary.json",
+    "results/Q2/experiments/round2/metrics/q2_two_bomb_minimum_resource_plan.json",
+    "results/Q2/experiments/round2/metrics/q2_capacity_frontier.json",
+    "results/Q2/experiments/round1/metrics/q2_continuous_validation.json"
+  ],
+  "decision_id": "q2_method_choice",
+  "checks": {
+    "syntax": {
+      "status": "PASS",
+      "evidence": [
+        "python -m py_compile passed for q2_union_optimizer.py and q2_run_round2.py.",
+        "The round-2 entry point completed without exception."
+      ]
+    },
+    "input_contract": {
+      "status": "PASS",
+      "evidence": [
+        "M1 and S1 constants match the approved Q2 decision and shared Q2 constants.",
+        "The original problem DOCX SHA-256 remains e891f635bcb4182517c166d12f1e4f3d05c77e9c18b27a14302c7561f7f2a638.",
+        "Missing absolute UAV initial/base information remains blocked rather than imputed."
+      ]
+    },
+    "method_alignment": {
+      "status": "PASS",
+      "evidence": [
+        "A uses the complete ship-disk versus multi-smoke union criterion.",
+        "B is rerun as the mandatory conservative independent-chain baseline.",
+        "C is neither triggered nor implemented."
+      ]
+    },
+    "minimum_resource_logic": {
+      "status": "PASS",
+      "evidence": [
+        "The analytic one-bomb capacity is 10.376134889753567 s, below the 25.36104262064107 s worst-case M1 window.",
+        "The separate two-bomb full-window schedule retains the round-1 continuous interval certificate and independent-geometry PASS.",
+        "Together these establish two bombs as the minimum in the stated relative M1/S1 model."
+      ]
+    },
+    "exact_cross_section_geometry": {
+      "status": "PASS",
+      "evidence": [
+        "At fixed time each smoke-minus-target squared-height function is affine in ship-relative horizontal position.",
+        "The implementation evaluates both ship endpoints and every in-range pairwise affine intersection, covering the disk boundary and interior."
+      ]
+    },
+    "continuous_time_gap_check": {
+      "status": "PASS",
+      "evidence": [
+        "Each smoke-radius phase is checked by adaptive scalar minimization of the exact spatial envelope.",
+        "Independent fine scans use 20001, 30001 and 50001 time points and detect zero negative points.",
+        "The two-bomb full-window operational result additionally has the outward-rounded continuous interval certificate from round 1."
+      ]
+    },
+    "capacity_claim_calibration": {
+      "status": "PASS",
+      "evidence": [
+        "One-bomb capacity is labeled analytic.",
+        "Two-bomb capacity is restricted to the optimized canonical collinear frontier.",
+        "Three-bomb capacity is labeled best verified canonical collinear candidate and states that no global upper bound is available.",
+        "Boundary sensitivity is reported separately from the positive-margin two-bomb full-window plan."
+      ]
+    },
+    "baseline_comparison": {
+      "status": "PASS",
+      "evidence": [
+        "A and B use the same seconds-based connected complete-cover duration.",
+        "B capacities are 10.376134889753567, 20.752269779507134 and 31.128404669260703 s.",
+        "A increments over B are 0, 8.319601262469767 and 11.394725199740094 s."
+      ]
+    },
+    "relative_uav_transition": {
+      "status": "PASS",
+      "evidence": [
+        "The selected S1 98 m inherited-flight displacement is included in relative drop points.",
+        "Two-bomb frontier transition slack is 129.68998352608978 m.",
+        "Three-bomb frontier transition slacks are 155.18467597309987 m and 346.40666955345006 m.",
+        "All transitions pass both the 1 s and conservative 2 s interval interpretations."
+      ]
+    },
+    "reproducibility": {
+      "status": "PASS",
+      "evidence": [
+        "Two consecutive runs produced identical q2_capacity_frontier.json SHA-256 E1B6ABC790506C6F76182779BB3F6E0E71225A1229D5D2EA186AFE33129BD11E.",
+        "Search seeds 2031, 2032 and 2033 and environment versions are recorded.",
+        "Two nominal three-bomb candidates with hidden gaps were rejected instead of reported."
+      ]
+    },
+    "output_contract": {
+      "status": "PASS",
+      "evidence": [
+        "The minimum-resource JSON, capacity-frontier JSON, two CSV tables, one comparison figure and run summary exist.",
+        "The novice-facing Q2 handoff DOCX exists and maps each team role to saved evidence."
+      ]
+    },
+    "raw_data_protection": {
+      "status": "PASS",
+      "evidence": [
+        "No raw attachment was transformed or overwritten.",
+        "All modeling outputs remain under code/Q2, results/Q2 or the named handoff DOCX."
+      ]
+    }
+  },
+  "findings": [
+    {
+      "severity": "LIMITATION",
+      "item": "global_three_bomb_optimality",
+      "status": "OPEN",
+      "action": "Keep the three-bomb number hedged until a matching upper bound or broader certified search is available."
+    },
+    {
+      "severity": "BLOCKER",
+      "item": "absolute_first_drop_and_12km",
+      "status": "OPEN",
+      "action": "Require UAV initial position, reference base and absolute mission clock before claiming absolute operational feasibility."
+    }
+  ],
+  "verdict": "PASSED_WITH_CLAIM_LIMITS",
+  "reviewed_at": "2026-07-29T20:36:00+08:00"
+}

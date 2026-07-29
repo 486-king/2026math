@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "question": "Q2",
+  "round": "round2",
+  "round_label": "formal_optimization",
+  "implementation_target": "python",
+  "approved_decision_ids": [
+    "q2_objective_scope",
+    "q2_method_choice"
+  ],
+  "status": "PASS",
+  "minimum_resource_conclusion": {
+    "minimum_bombs_relative_model": 2,
+    "full_window_s": 25.36104262064107,
+    "continuous_certificate": "round1 PASS"
+  },
+  "capacity_frontier_s": {
+    "one_bomb": 10.376134889753567,
+    "two_bombs": 29.0718710419769,
+    "three_bombs_best_verified": 42.5231298690008
+  },
+  "baseline_capacity_s": {
+    "one_bomb": 10.376134889753567,
+    "two_bombs": 20.752269779507134,
+    "three_bombs": 31.128404669260703
+  },
+  "claim_limits": [
+    "Three-bomb value is best verified in the canonical collinear family, not a proved global optimum.",
+    "Absolute first-drop and 12 km feasibility remain blocked by missing initial/reference data.",
+    "No wind drift is included; drift remains a robustness extension parameter."
+  ],
+  "fallback": {
+    "method_C_triggered": false,
+    "reason": "Both geometry validators agree and the continuous validator is stable."
+  },
+  "runtime_seconds": 0.6129972001072019,
+  "environment": {
+    "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1"
+  },
+  "generated_at": "2026-07-29T20:31:04.107018+08:00",
+  "outputs": [
+    "results/Q2/experiments/round2/metrics/q2_two_bomb_minimum_resource_plan.json",
+    "results/Q2/experiments/round2/metrics/q2_capacity_frontier.json",
+    "results/Q2/experiments/round2/tables/q2_capacity_frontier.csv",
+    "results/Q2/experiments/round2/tables/q2_verified_schedules.csv",
+    "results/Q2/experiments/round2/figures/q2_capacity_frontier.png"
+  ]
+}

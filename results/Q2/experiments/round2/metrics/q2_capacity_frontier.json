@@ -1,0 +1,198 @@
+{
+  "question": "Q2",
+  "objective_scope": "O3",
+  "main_method": "A",
+  "mandatory_baseline": "B",
+  "capacity_definition": "length of one connected interval during which the complete ship disk is covered by the union of active smoke disks",
+  "items": [
+    {
+      "schedule": {
+        "label": "one_bomb_analytic",
+        "bomb_count": 1,
+        "cloud_centers_m": [
+          0.0
+        ],
+        "burst_times_s": [
+          -5.188067444876784
+        ],
+        "relative_drop_times_s": [
+          -8.688067444876783
+        ],
+        "relative_drop_points_m_assuming_inherited_plus_x_heading": [
+          -98.0
+        ],
+        "transition_checks": []
+      },
+      "start_s": -5.188067444876784,
+      "end_s": 5.188067444876784,
+      "duration_s": 10.376134889753567,
+      "derivation": "2*(Rc-Rs)/Vs",
+      "validation": {
+        "status": "PASS",
+        "start_s": -5.188067444876784,
+        "end_s": 5.188067444876784,
+        "duration_s": 10.376134889753567,
+        "adaptive_minimum_slack_sq_m2": 0.0,
+        "adaptive_minimum_time_s": -5.188067444876784,
+        "adaptive_minimum_ship_relative_x_m": -80.0,
+        "adaptive_minimum_source": "event",
+        "independent_fine_scan_minimum_slack_sq_m2": 0.0,
+        "independent_fine_scan_minimum_time_s": -5.188067444876784,
+        "fine_scan_negative_count": 0,
+        "fine_scan_points": 20001,
+        "validators_agree": true
+      }
+    },
+    {
+      "schedule": {
+        "label": "two_bomb_tangent_frontier",
+        "bomb_count": 2,
+        "cloud_centers_m": [
+          0.0,
+          160.84179338701009
+        ],
+        "burst_times_s": [
+          -5.188067444876784,
+          5.188067444876784
+        ],
+        "relative_drop_times_s": [
+          -8.688067444876783,
+          1.6880674448767836
+        ],
+        "relative_drop_points_m_assuming_inherited_plus_x_heading": [
+          -98.0,
+          62.841793387010085
+        ],
+        "transition_checks": [
+          {
+            "from_bomb": 1,
+            "to_bomb": 2,
+            "drop_time_gap_s": 10.376134889753565,
+            "relative_drop_point_distance_m": 160.84179338701009,
+            "uav_reachable_distance_m": 290.53177691309986,
+            "distance_slack_m": 129.68998352608978,
+            "passes_1s_drop_interval": true,
+            "passes_conservative_2s_interval": true
+          }
+        ]
+      },
+      "start_s": -5.188067444876784,
+      "end_s": 23.88380359710012,
+      "duration_s": 29.0718710419769,
+      "center_gap_m": 160.84179338701009,
+      "bridge_tangency_time_s": 14.862625326741187,
+      "bridge_tangency_slack_sq_m2": -1.8189894035458565e-12,
+      "derivation": "canonical collinear normalization; solve zero minimum bridge slack, then solve terminal decay containment root",
+      "validation": {
+        "status": "PASS",
+        "start_s": -5.188067444876784,
+        "end_s": 23.88380359710012,
+        "duration_s": 29.0718710419769,
+        "adaptive_minimum_slack_sq_m2": -9.094947017729282e-13,
+        "adaptive_minimum_time_s": 14.862625329151738,
+        "adaptive_minimum_ship_relative_x_m": -63.35923006877821,
+        "adaptive_minimum_source": "phase_minimum",
+        "independent_fine_scan_minimum_slack_sq_m2": 0.0,
+        "independent_fine_scan_minimum_time_s": -5.188067444876784,
+        "fine_scan_negative_count": 0,
+        "fine_scan_points": 30001,
+        "validators_agree": true
+      },
+      "claim_scope": "optimized canonical two-bomb collinear frontier"
+    },
+    {
+      "schedule": {
+        "label": "three_bomb_seed_2032_best_verified",
+        "bomb_count": 3,
+        "cloud_centers_m": [
+          0.0,
+          135.34710094,
+          247.85333129
+        ],
+        "burst_times_s": [
+          -5.188067444876784,
+          5.188067444876784,
+          21.57781387
+        ],
+        "relative_drop_times_s": [
+          -8.688067444876783,
+          1.6880674448767836,
+          18.07781387
+        ],
+        "relative_drop_points_m_assuming_inherited_plus_x_heading": [
+          -98.0,
+          37.34710093999999,
+          149.85333129
+        ],
+        "transition_checks": [
+          {
+            "from_bomb": 1,
+            "to_bomb": 2,
+            "drop_time_gap_s": 10.376134889753565,
+            "relative_drop_point_distance_m": 135.34710094,
+            "uav_reachable_distance_m": 290.53177691309986,
+            "distance_slack_m": 155.18467597309987,
+            "passes_1s_drop_interval": true,
+            "passes_conservative_2s_interval": true
+          },
+          {
+            "from_bomb": 2,
+            "to_bomb": 3,
+            "drop_time_gap_s": 16.389746425123217,
+            "relative_drop_point_distance_m": 112.50623035000001,
+            "uav_reachable_distance_m": 458.91289990345007,
+            "distance_slack_m": 346.40666955345006,
+            "passes_1s_drop_interval": true,
+            "passes_conservative_2s_interval": true
+          }
+        ]
+      },
+      "start_s": -5.1880674448762925,
+      "end_s": 37.33506242412451,
+      "duration_s": 42.5231298690008,
+      "search_seeds": [
+        2031,
+        2032,
+        2033
+      ],
+      "nominal_multistart_convergence_s": 42.52,
+      "rejected_hidden_gap_candidates": 2,
+      "validation": {
+        "status": "PASS",
+        "start_s": -5.1880674448762925,
+        "end_s": 37.33506242412451,
+        "duration_s": 42.5231298690008,
+        "adaptive_minimum_slack_sq_m2": 6.366462912410498e-12,
+        "adaptive_minimum_time_s": 37.33506242412451,
+        "adaptive_minimum_ship_relative_x_m": 80.0,
+        "adaptive_minimum_source": "event",
+        "independent_fine_scan_minimum_slack_sq_m2": 6.366462912410498e-12,
+        "independent_fine_scan_minimum_time_s": 37.33506242412451,
+        "fine_scan_negative_count": 0,
+        "fine_scan_points": 50001,
+        "validators_agree": true
+      },
+      "claim_scope": "best verified canonical collinear candidate; global optimum not proved",
+      "global_upper_bound_available": false,
+      "boundary_sensitive": true
+    }
+  ],
+  "baseline_independent_chain_capacities_s": {
+    "one_bomb": 10.376134889753567,
+    "two_bombs": 20.752269779507134,
+    "three_bombs": 31.128404669260703
+  },
+  "increment_over_B_s": {
+    "one_bomb": 0.0,
+    "two_bombs": 8.319601262469767,
+    "three_bombs": 11.394725199740094
+  },
+  "three_bomb_claim_warning": "The three-bomb value is the best continuously verified canonical collinear candidate from the recorded multi-start search. No matching global upper bound has been proved.",
+  "boundary_sensitivity": {
+    "two_bomb_capacity_frontier": "CONDITIONAL: internal bridge tangency has approximately zero slack; use the separately certified full-M1 schedule for the operational recommendation.",
+    "three_bomb_capacity_frontier": "CONDITIONAL: endpoint lies on the feasibility boundary and there is no global upper-bound proof.",
+    "minimum_resource_full_M1_plan": "PASS: round-1 minimum independent squared cross-section slack is 1463.887280249688 m^2."
+  },
+  "C_triggered": false,
+  "status": "PASS"
+}

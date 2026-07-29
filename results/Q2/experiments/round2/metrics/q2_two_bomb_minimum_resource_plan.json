@@ -1,0 +1,33 @@
+{
+  "question": "Q2",
+  "objective": "minimum bombs for complete worst-case M1 window",
+  "bomb_count": 2,
+  "minimality_evidence": {
+    "one_bomb_analytic_capacity_s": 10.376134889753567,
+    "worst_case_M1_window_s": 25.36104262064107,
+    "one_bomb_insufficient": true,
+    "two_bomb_full_window_continuously_certified": true,
+    "logical_conclusion": "one bomb cannot cover the window and a two-bomb schedule is continuously certified; therefore two is the minimum in the relative M1/S1 model"
+  },
+  "relative_schedule": {
+    "cloud_centers_m": [
+      0.0,
+      128.09582447
+    ],
+    "burst_times_s": [
+      -6.76157575,
+      4.06443896
+    ],
+    "drop_times_s": [
+      -10.26157575,
+      0.5644389600000004
+    ],
+    "window_start_s": -4.37575009,
+    "window_end_s": 20.98529253064107,
+    "window_duration_s": 25.36104262064107
+  },
+  "continuous_validation_source": "results/Q2/experiments/round1/metrics/q2_continuous_validation.json",
+  "absolute_operational_status": "blocked_missing_initial_state_and_reference_base",
+  "robustness_interpretation": "This full-window schedule is preferred operationally over the capacity-frontier tangency schedules because its round-1 independent minimum squared cross-section slack is positive.",
+  "status": "PASS"
+}

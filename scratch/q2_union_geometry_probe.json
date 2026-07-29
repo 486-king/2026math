@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "question_id": "Q2",
+  "purpose": "risk probe only; dense cross-section grid, not a final certificate",
+  "constants": {
+    "ship_speed_mps": 7.71,
+    "ship_radius_m": 80.0,
+    "smoke_max_radius_m": 120.0,
+    "constant_phase_s": 18.0,
+    "decay_phase_s": 5.0,
+    "single_cloud_full_cover_upper_s": 10.376134889753567,
+    "three_cloud_conservative_sum_s": 31.128404669260703
+  },
+  "grid": {
+    "dt_s": 0.08,
+    "dx_m": 1.0
+  },
+  "baseline": {
+    "label": "conservative_single-cloud_chain",
+    "centers_m": [
+      0.0,
+      80.0,
+      160.0
+    ],
+    "burst_times_s": [
+      -5.188067444876784,
+      5.188067444876784,
+      15.564202334630352
+    ],
+    "longest_continuous_union_cover_s_grid": 31.040000000000024,
+    "component_start_s_grid": -5.119999999999994,
+    "component_end_s_grid": 25.92000000000003,
+    "minimum_margin_in_component_m_grid": 4.0125679158317435,
+    "joint_only_time_grid_count": 0,
+    "joint_only_duration_approx_s": 0.0
+  },
+  "candidate": {
+    "label": "optimized_union_probe",
+    "centers_m": [
+      0.0,
+      128.11997934119663,
+      247.52767070926984
+    ],
+    "burst_times_s": [
+      -9.412483678806868,
+      5.176739287867381,
+      20.385084425180125
+    ],
+    "longest_continuous_union_cover_s_grid": 42.400000000000034,
+    "component_start_s_grid": -5.119999999999994,
+    "component_end_s_grid": 37.280000000000044,
+    "minimum_margin_in_component_m_grid": 0.021692056950051608,
+    "joint_only_time_grid_count": 141,
+    "joint_only_duration_approx_s": 11.28
+  },
+  "candidate_improvement_over_baseline_s_grid": 11.36000000000001,
+  "perturbation": {
+    "center_sigma_m": 1.0,
+    "burst_sigma_s": 0.1,
+    "runs": 80,
+    "duration_min_s_grid": 20.08000000000002,
+    "duration_median_s_grid": 31.760000000000026,
+    "duration_max_s_grid": 42.400000000000034
+  },
+  "optimizer": {
+    "success": true,
+    "message": "Optimization terminated successfully.",
+    "iterations": 49,
+    "evaluations": 2500
+  },
+  "runtime_seconds": 42.474107899935916,
+  "interpretation_limit": "Collinear smoke centers and grid coverage only. A continuous event/geometric certificate and UAV reachability are required before any formal claim."
+}

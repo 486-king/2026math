@@ -1,144 +1,246 @@
 {
   "schema_version": 1,
   "question_id": "Q2",
-  "generated_at": "2026-07-29T18:35:00+08:00",
+  "generated_at": "2026-07-29T20:01:30+08:00",
   "data_refs": [
     "workspace/data/data_profile.json",
-    "scratch/front_risk_probe_metrics.json"
+    "results/Q1/experiments/round2/metrics/q1_global_certificate.json",
+    "results/Q1/experiments/round3/metrics/q1_parametric_compensation.json"
   ],
-  "representative_data_rule": "使用题面全部常数计算单段/三段结构上界；用明确标注的合成区间链验证无缝调度逻辑。",
+  "representative_data_rule": "使用题面全部常数和 Q1 人工确认的 M1/S1；用相对共线云心构造覆盖难例与合作覆盖例。所有合成坐标只用于风险探针，不冒充真实战场坐标。",
+  "objective_scope_status": "O3_decided_by_human",
+  "shared_evidence": {
+    "single_cloud_full_cover_upper_s": 10.376134889753567,
+    "M1_detection_window_lower_s": 24.167709255134113,
+    "M1_detection_window_upper_s": 25.36104262064107,
+    "conservative_two_cloud_capacity_s": 20.752269779507134,
+    "conservative_three_cloud_capacity_s": 31.128404669260703,
+    "conservative_three_cloud_capacity_with_1s_overlap_s": 29.128404669260703,
+    "response_delay_probe": {
+      "statement_min_drop_interval_s": 1.0,
+      "conservative_serial_response_interval_s": 2.0,
+      "smallest_candidate_drop_gap_s": 9.376134889753567,
+      "status": "PASS",
+      "interpretation": "1 s 与保守 2 s 口径在当前候选中均不成为活动约束。"
+    }
+  },
   "methods": [
     {
       "id": "A",
       "role": "main_candidate",
+      "name": "事件驱动连续时间多圆并集覆盖与鲁棒词典序优化",
       "executability": {
         "status": "PASS",
         "evidence": {
-          "max_chain_depth": 3,
-          "interval_union_kernel": "PASS"
+          "geometry_kernel": "共线圆盘截面联合覆盖",
+          "optimizer": "固定种子的低维差分进化风险探针",
+          "two_cloud_worst_M1_window_candidate": {
+            "relative_cloud_centers_m": [
+              0.0,
+              128.09582447
+            ],
+            "relative_burst_times_s": [
+              -6.76157575,
+              4.06443896
+            ],
+            "relative_window_start_s": -4.37575009,
+            "window_length_s": 25.36104262064107,
+            "grid_min_cross_section_slack_m": 21.489834346568927,
+            "drop_time_gap_s": 10.82601471,
+            "same_heading_transition_distance_m": 128.09582447,
+            "uav_transition_distance_slack_m": 175.03258741000002
+          },
+          "three_cloud_duration_candidate_s_grid": 42.32,
+          "probe_runtime_seconds_range": [
+            33.1,
+            43.2
+          ]
         }
       },
       "data_coverage": {
         "status": "CONDITIONAL",
         "evidence": {
+          "statement_constants_used": 14,
           "scenario_rows": 0,
+          "relative_transition_reachability_tested": true,
           "uav_initial_state_available": false,
-          "smoke_motion_available": false
+          "operation_radius_reference_available": false
         }
       },
       "assumption_checks": [
         {
-          "name": "nonzero_structural_capacity",
+          "name": "multi_smoke_union_is_load_bearing",
           "status": "PASS",
-          "metric": "three-smoke continuous upper bound",
-          "value": {
-            "stationary_center_s": 31.128404669260703,
-            "comoving_center_s": 59.0
-          },
+          "metric": "three-cloud union candidate minus conservative chain",
+          "value_s_grid": 11.191595330739297,
           "threshold": ">0"
         },
         {
-          "name": "route_reachability",
+          "name": "two_bombs_can_cover_worst_M1_window_on_probe_grid",
+          "status": "PASS",
+          "metric": "grid minimum cross-section slack",
+          "value_m": 21.489834346568927,
+          "threshold": ">=0"
+        },
+        {
+          "name": "continuous_global_certificate",
           "status": "CONDITIONAL",
-          "metric": "real_transitions_tested",
+          "metric": "continuous event/arrangement proof completed",
+          "value": false,
+          "threshold": true
+        },
+        {
+          "name": "absolute_first_drop_reachability",
+          "status": "CONDITIONAL",
+          "metric": "real initial-state instances tested",
           "value": 0,
-          "threshold": ">=2"
+          "threshold": ">=1"
         }
       ],
       "output_degeneracy": {
         "status": "PASS",
         "metrics": {
-          "positive_interval_length": true,
-          "distinct_one_and_three_bomb_capacities": true
+          "one_two_three_bomb_outputs_distinct": true,
+          "cooperative_joint_only_coverage_observed": true,
+          "nonuniqueness_expected": true,
+          "nonuniqueness_reason": "绝对平移、旋转、时间平移及多个等价爆时族"
         }
       },
       "perturbation_sensitivity": {
-        "status": "PASS",
-        "perturbation": "ship speed +/-5%",
-        "metric": "stationary single-segment upper-bound relative change",
-        "value": 0.052631578947368585
+        "status": "CONDITIONAL",
+        "perturbation": "云心独立高斯标准差 1 m、爆时独立高斯标准差 0.1 s；探索范围无实测概率含义",
+        "metric": "网格覆盖与最小截面裕度",
+        "robust_two_cloud_window_candidate": {
+          "runs": 1000,
+          "feasible_fraction": 1.0,
+          "minimum_observed_slack_m": 11.288841955512062
+        },
+        "pure_duration_three_cloud_candidate": {
+          "runs": 200,
+          "fraction_retaining_at_least_40s": 0.305,
+          "minimum_observed_duration_s_grid": 20.160000000000018
+        },
+        "interpretation": "全窗口两弹候选有离散裕度；纯追求极限时长的三弹候选脆弱，正式目标必须加入鲁棒裕度。"
       },
       "scale_check": {
         "status": "PASS",
-        "representative_n": 3,
-        "runtime_seconds": 0.001,
-        "peak_memory_mb": 1
+        "representative_bomb_count": 3,
+        "decision_dimension": "<=7 in collinear probe",
+        "runtime_seconds_max_observed": 43.2,
+        "peak_memory_mb": null,
+        "condition": "正式二维连续几何核仍需重新计时。"
       },
       "verdict": "CONDITIONAL",
       "conditions": [
-        "补齐单机初态和烟幕运动后生成真实节点。",
-        "用连续事件复核离散候选不存在短空档。"
+        "必须用连续圆盘并集分离器和事件端点复核网格候选。",
+        "必须在提供 u_0 与作战半径基准后回代首弹绝对可达。",
+        "必须把鲁棒裕度设为词典序次级目标，不采用脆弱的纯时长边界解。"
       ],
       "evidence_refs": [
-        "scratch/front_risk_probe_metrics.json"
+        "scratch/q2_union_geometry_probe.py",
+        "scratch/q2_union_geometry_probe.json",
+        "methods/Q2/q2_method_card.md"
       ]
     },
     {
       "id": "B",
       "role": "usable_baseline",
+      "name": "独立完整覆盖的解析鲁棒接续链",
       "executability": {
         "status": "PASS",
         "evidence": {
           "analytic_chain_rule": "PASS",
-          "single_segment_upper_bound_s": 10.376134889753567
+          "single_segment_upper_s": 10.376134889753567,
+          "two_segment_capacity_s": 20.752269779507134,
+          "three_segment_capacity_s": 31.128404669260703,
+          "three_segment_capacity_with_1s_overlap_s": 29.128404669260703
         }
       },
       "data_coverage": {
         "status": "CONDITIONAL",
         "evidence": {
-          "real_reachability_instances": 0
+          "relative_chain_available": true,
+          "real_first_drop_reachability_instances": 0
         }
       },
       "assumption_checks": [
         {
-          "name": "just_in_time_reachability",
-          "status": "CONDITIONAL",
-          "metric": "uav_transition_slack",
-          "value": null,
+          "name": "completes_real_task",
+          "status": "PASS",
+          "metric": "legal continuous multi-bomb sequence available",
+          "value": true,
+          "threshold": true
+        },
+        {
+          "name": "duration_sufficiency_for_M1",
+          "status": "PASS",
+          "metric": "three-bomb 1 s-overlap capacity minus M1 upper window",
+          "value_s": 3.7673620486196335,
           "threshold": ">=0"
+        },
+        {
+          "name": "absolute_reachability",
+          "status": "CONDITIONAL",
+          "metric": "real initial-state instances tested",
+          "value": 0,
+          "threshold": ">=1"
         }
       ],
       "output_degeneracy": {
         "status": "PASS",
         "metrics": {
-          "nonzero_chain": true,
-          "uses_at_most_three_bombs": true
+          "one_bomb_capacity_s": 10.376134889753567,
+          "two_bomb_capacity_s": 20.752269779507134,
+          "three_bomb_capacity_s": 31.128404669260703,
+          "distinct_outputs": true
         }
       },
       "perturbation_sensitivity": {
         "status": "PASS",
-        "perturbation": "ship speed +/-5%",
-        "metric": "coverage duration relative change",
-        "value": 0.052631578947368585
+        "perturbation": "云心标准差 1 m、爆时标准差 0.1 s，200 次探索扰动",
+        "metric": "最长连续覆盖相对名义值的损失",
+        "zero_overlap": {
+          "status": "CONDITIONAL",
+          "fraction_within_0.5s_of_nominal": 0.285
+        },
+        "one_second_overlap": {
+          "status": "PASS",
+          "fraction_within_0.5s_of_nominal": 0.995
+        }
       },
       "scale_check": {
         "status": "PASS",
-        "representative_n": 3,
+        "representative_bomb_count": 3,
         "runtime_seconds": 0.001,
         "peak_memory_mb": 1
       },
       "verdict": "CONDITIONAL",
       "conditions": [
-        "所有构造点必须经真实可达性检查。",
-        "保留正的时间交叠裕度而非只做零裕度接触。"
+        "采用正重叠而不是零裕度接触。",
+        "补齐绝对首弹可达与作战半径回代。",
+        "明确它是保守下界，不能当联合覆盖全局上界。"
       ],
       "evidence_refs": [
+        "results/Q1/experiments/round3/metrics/q1_parametric_compensation.json",
+        "scratch/q2_union_geometry_probe.json",
         "methods/Q2/q2_method_card.md"
       ]
     },
     {
       "id": "C",
       "role": "conditional_fallback",
+      "name": "自适应时间—边界角混合整数覆盖模型",
       "executability": {
         "status": "PASS",
         "evidence": {
           "generic_milp_solver_success": true,
-          "runtime_seconds": 0.015190900070592761
+          "generic_runtime_seconds": 0.015190900070592761
         }
       },
       "data_coverage": {
         "status": "CONDITIONAL",
         "evidence": {
+          "real_union_geometry_instantiated": false,
           "real_time_grid_defined": false
         }
       },
@@ -146,37 +248,64 @@
         {
           "name": "continuous_time_discretization",
           "status": "CONDITIONAL",
-          "metric": "step_convergence_runs",
+          "metric": "adaptive refinement rounds",
           "value": 0,
-          "threshold": ">=3"
+          "threshold": ">=3 or continuous separator passes"
+        },
+        {
+          "name": "interior_hole_detection",
+          "status": "CONDITIONAL",
+          "metric": "synthetic hole cases recovered",
+          "value": 0,
+          "threshold": ">=1"
         }
       ],
       "output_degeneracy": {
         "status": "CONDITIONAL",
         "metrics": {
-          "pseudo_continuity_risk": true
+          "pseudo_continuity_risk": true,
+          "grid_assignment_symmetry": true
         }
       },
       "perturbation_sensitivity": {
         "status": "CONDITIONAL",
-        "perturbation": "time-step refinement",
-        "metric": "objective drift",
+        "perturbation": "时间与边界角网格逐级减半",
+        "metric": "目标漂移",
         "value": null
       },
       "scale_check": {
         "status": "PASS",
-        "representative_n": 8,
+        "representative_generic_n": 8,
         "runtime_seconds": 0.015190900070592761,
         "peak_memory_mb": null
       },
       "verdict": "CONDITIONAL",
       "conditions": [
-        "A 的节点生成发生结构性困难时才激活。",
-        "必须通过时间步加密和连续回代。"
+        "仅在 A 的连续几何实现发生记录的触发条件时激活。",
+        "必须通过自适应加密和连续分离器回代。",
+        "不得把粗网格求解器最优状态写成连续全局最优。"
       ],
       "evidence_refs": [
-        "scratch/front_risk_probe_metrics.json"
+        "methods/Q2/q2_method_card.md"
       ]
     }
+  ],
+  "fallback_trigger": {
+    "fallback_id": "C",
+    "activate_if": [
+      "A 的连续几何分离器无法稳定排除内部漏点。",
+      "A 多启动结果差异大且在预算内无法收紧上界。",
+      "新增离散逻辑使 A 的直接连续模型难以维护。"
+    ],
+    "do_not_activate_if": [
+      "A 与 B 已经通过连续证书且 C 只能重复结果。",
+      "只是想让方法名称显得更复杂。"
+    ]
+  },
+  "overall_status": "CONDITIONAL",
+  "blockers": [
+    "正式优化前必须完成连续联合覆盖最小验证实验。",
+    "缺无人机初始/基地位置、作战半径基准和绝对任务时钟；仅阻塞绝对坐标与首弹回代。",
+    "A 的联合覆盖候选尚需连续几何证书。"
   ]
 }

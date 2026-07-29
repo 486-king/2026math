@@ -1,0 +1,3 @@
+﻿method,bomb_count,validated_window_s,full_worst_M1_window,absolute_first_drop_status,role
+A,2,25.36104262064107,True,blocked_missing_initial_state,main_preoptimization_validation
+B,3,29.128404669260703,True,blocked_missing_initial_state,usable_baseline
