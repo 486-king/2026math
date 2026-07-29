@@ -74,3 +74,25 @@
 - “烟幕寿命”不等同于“舰船完整覆盖时长”；前者由 `T_c+T_f` 描述，后者由 `z(t)` 或 `g(t)` 描述。
 - “覆盖范围”统一分为烟幕并集面积 `A_union` 与核心完整遮蔽指示 `z(t)`，两者不得互换。
 - Q1 的单烟幕关系、Q2/Q3 的并集覆盖以及 Q4 的服务时窗使用同一全局时间 `t` 和同一舰船圆盘 `S(t)`。
+## Q1 teammate-review canonical symbol upgrade (2026-07-29)
+
+The following entries supersede ambiguous Q1 uses while preserving all
+previous numerical values.
+
+| Symbol | Plain name | Definition | Type | Domain/range | Unit | Scope | Source / conflict resolution |
+|---|---|---|---|---|---|---|---|
+| `G1` | Pure-pursuit guidance | Missile speed has constant magnitude and points to the ship centre | model label | nominal | 1 | Q1-Q2 | Renamed from M1 to avoid collision with numbered modules |
+| `G2` | Fixed-heading guidance | Missile follows a supplied fixed heading | model label | extension | 1 | Q1-Q2 | Renamed from M2; duration test is necessary only |
+| `O0` | Complete-disk coverage | Full 2-D ship disk must be inside the smoke union | model label | nominal | 1 | all | Problem success criterion |
+| `U0` | Nominal deterministic profile | No nominal wind drift | model label | nominal | 1 | Q1-Q2 | Human decision |
+| `t_cmd` | Bomb command time | Time at which the UAV receives/issues the drop command | decision/event | task clock | s | all | New canonical symbol |
+| `t_d` | Actual release time | `t_d=t_cmd+2` under the selected timing interpretation | decision/event | task clock | s | all | Replaces ambiguous “drop/response” wording |
+| `t_b` | Burst time | `t_b=t_d+3.5=t_cmd+5.5` | output/event | task clock | s | all | Same physical event as before |
+| `t_m` | Cover-interval midpoint | Midpoint of a selected single-smoke complete-cover interval | decision/intermediate | detection window | s | Q1 | Replaces the old Q1 use of `t_c`; `t_c` is no longer used for this meaning |
+| `Delta(t)` | Unified coverage defect | `max_{x in D_s(t)} min_j(||x-c_j(t)||-r_j(t))` | function/metric | real | m | Q1-Q3 | Complete coverage iff `Delta<=0`; Q1 single-smoke `g=-Delta` |
+| `T_structural_max` | Structural capacity upper bound | Maximum permitted by ship/smoke geometry before reachability | output | nonnegative | s | Q1-Q2 | `10.376134889753567` under fixed single smoke |
+| `T_executable_star` | Executable scenario optimum | Best duration after event, reachability and radius constraints | output | `[0,T_structural_max]` | s | Q1 | Not evaluable until absolute scenario inputs are supplied |
+
+Conflict resolution: `t_c` must not denote both a command time and a
+cover-interval midpoint. New and revised Q1/Q2 artifacts use `t_cmd` and `t_m`
+respectively.

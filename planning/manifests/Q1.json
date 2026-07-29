@@ -3,26 +3,27 @@
   "question_id": "Q1",
   "rigor_profile": "lean",
   "current_gate": "G4",
-  "status": "lean_Q1_complete_results_judged_and_handoff_ready",
+  "status": "structural_result_verified_architecture_upgraded_executable_solution_blocked",
   "artifacts": {
     "problem_parse": "planning/parse/problem_parse.json",
     "classification": "planning/classification/problem_classification.json",
     "data_profile": "workspace/data/data_profile.json",
     "symbol_table": "planning/symbol_table.md",
     "assumptions": "planning/model_assumptions.md",
+    "assumption_register": "planning/assumption_register.csv",
+    "scenario_schema": "planning/scenario_schema.json",
     "mechanism_structure": "planning/mechanism_observation_structure.md",
     "method_card": "methods/Q1/q1_method_card.md",
     "decision_ledger": "methods/Q1/q1_decisions.jsonl",
     "risk_probe": "methods/Q1/probes/risk_probe_summary.json",
-    "latest_run": "results/Q1/experiments/round3/run_summary.json",
+    "latest_run": "results/Q1/experiments/round4/run_summary.json",
     "code_plan": "code/Q1/q1_code_plan.md",
-    "code_review": "code/Q1/reviews/q1_python_review.json",
+    "code_review": "code/Q1/reviews/q1_python_review_round4.json",
     "robustness": "robustness/Q1/q1_robustness_summary.json",
-    "decision_report": "results/Q1/experiments/round1/q1_decision_report.md",
-    "final_result_analysis": "results/Q1/reports/q1_final_result_analysis.md",
-    "final_method_explanation": "methods/Q1/q1_final_method_explanation.md",
-    "programmer_handoff": "handoff/Q1/q1_programmer_checklist.md",
-    "writer_handoff": "handoff/Q1/q1_writer_checklist.md"
+    "revision_report": "results/Q1/reports/q1_teammate_review_revision.md",
+    "consistency_audit": "results/Q1/reports/q1_q2_scoped_consistency_round4.json",
+    "q1_to_q2_interface": "interfaces/Q1_to_Q2_coverage_contract.md",
+    "handoff_docx": "Q1_修订版_编程手与论文手分工.docx"
   },
   "allowed": {
     "code_generation": true,
@@ -30,12 +31,16 @@
     "paper_writing": false,
     "final_assembly": false
   },
-  "blockers": [],
+  "blockers": [
+    "缺少舰船、导弹、无人机绝对初始位置与航向、统一任务时钟和12 km参考点，无法计算场景化唯一可执行坐标和T_executable_star。",
+    "题面给出2 s响应延时但没有命名事件端点；当前按命令到实际释放解释，并已明确记录为人工采用的主解释。",
+    "题面没有风场数据；S2只能输出参数化扩展，不能给实际风下结论。"
+  ],
   "change_impact": "CANONICAL",
   "next_action": {
     "owner": "human",
     "skill": "workflow-orchestrator",
-    "reason": "Q1 已按 lean 完成；由建模手决定何时开始 Q2。"
+    "reason": "Q1结构证书与补偿族已完成并按队友审查升级。若需要唯一可执行投放坐标，请补齐scenario_schema所列真实输入；否则可使用修订版分工继续论文与后续问题。"
   },
-  "updated_at": "2026-07-29T19:09:00+08:00"
+  "updated_at": "2026-07-29T20:59:00+08:00"
 }

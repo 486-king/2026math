@@ -57,7 +57,7 @@ def main() -> int:
         },
         "global_bounds": {
             "fixed_smoke_complete_cover_interval_upper_s": cover_upper,
-            "M1_detection_window_lower_s": detect_lower,
+            "G1_detection_window_lower_s": detect_lower,
             "positive_separation_lower_s": separation_lower,
             "outward_rounding": "IEEE-754 nextafter"
         },
@@ -75,18 +75,20 @@ def main() -> int:
         "strict_full_window_feasible": not certificate_pass,
         "certificate_status": "PASS" if certificate_pass else "FAIL",
         "coordinate_solution_status": (
-            "no_feasible_coordinate_exists_under_M1_S1"
+            "no_feasible_coordinate_exists_under_G1_S1_O0_U0"
             if certificate_pass
             else "certificate_failed"
         ),
         "scope": [
-            "M1 pure pursuit",
+            "G1 pure pursuit with lock acquired at 8000 m",
+            "O0 complete two-dimensional ship-disk coverage",
+            "U0 nominal zero-drift profile",
             "S1 fixed smoke center after burst",
             "statement constants",
             "single smoke bomb"
         ],
         "limitations": [
-            "M2 can have a shorter FOV-limited window but lacks initial geometry.",
+            "G2 can have a shorter FOV-limited window but lacks initial geometry.",
             "Nonzero cloud drift changes the relative-speed bound and is not nominal."
         ],
         "runtime_seconds": runtime

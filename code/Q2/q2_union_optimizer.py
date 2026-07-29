@@ -290,9 +290,10 @@ def three_bomb_best_verified() -> dict:
 
 
 def serializable_schedule(schedule: Schedule) -> dict:
-    drop_times = [
+    release_times = [
         b - CONSTANTS.bomb_burst_delay_s for b in schedule.burst_times_s
     ]
+    command_times = [t - 2.0 for t in release_times]
     # Under the selected S1 interpretation and an inherited +x UAV heading,
     # the drop point is 3.5 s of horizontal flight before the fixed burst
     # centre. Translation does not affect consecutive transition distances.
@@ -301,8 +302,8 @@ def serializable_schedule(schedule: Schedule) -> dict:
     )
     drop_points = [center - inherited_displacement for center in schedule.centers_m]
     transition_checks = []
-    for j in range(len(drop_times) - 1):
-        dt = drop_times[j + 1] - drop_times[j]
+    for j in range(len(release_times) - 1):
+        dt = release_times[j + 1] - release_times[j]
         distance = abs(drop_points[j + 1] - drop_points[j])
         transition_checks.append(
             {
@@ -323,9 +324,17 @@ def serializable_schedule(schedule: Schedule) -> dict:
         "bomb_count": len(schedule.centers_m),
         "cloud_centers_m": list(schedule.centers_m),
         "burst_times_s": list(schedule.burst_times_s),
-        "relative_drop_times_s": drop_times,
+        "relative_command_times_s": command_times,
+        "relative_release_times_s": release_times,
+        "relative_drop_times_s": release_times,
+        "relative_drop_times_s_note": (
+            "Backward-compatible alias for relative_release_times_s"
+        ),
         "relative_drop_points_m_assuming_inherited_plus_x_heading": drop_points,
         "transition_checks": transition_checks,
+        "timing_interpretation": (
+            "t_release=t_command+2; t_burst=t_release+3.5"
+        ),
     }
 
 

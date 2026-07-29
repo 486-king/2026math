@@ -15,7 +15,13 @@ from scipy.integrate import solve_ivp
 from scipy.optimize import minimize_scalar
 from scipy.optimize import brentq
 
-from q1_common import Q1Constants, smoke_radius, structural_bounds, unit_vector
+from q1_common import (
+    Q1Constants,
+    command_release_burst_times,
+    smoke_radius,
+    structural_bounds,
+    unit_vector,
+)
 
 
 @dataclass(frozen=True)
@@ -23,15 +29,15 @@ class Scenario:
     ship_initial_position_m: tuple[float, float]
     ship_heading_rad: float
     missile_initial_position_m: tuple[float, float]
-    missile_model: str = "M1"
+    missile_model: str = "G1"
     missile_fixed_heading_rad: float | None = None
     uav_initial_position_m: tuple[float, float] | None = None
 
     def validate(self) -> None:
-        if self.missile_model not in {"M1", "M2"}:
-            raise ValueError("missile_model must be M1 or M2")
-        if self.missile_model == "M2" and self.missile_fixed_heading_rad is None:
-            raise ValueError("M2 requires missile_fixed_heading_rad")
+        if self.missile_model not in {"G1", "G2", "M1", "M2"}:
+            raise ValueError("missile_model must be G1 or G2")
+        if self.missile_model in {"G2", "M2"} and self.missile_fixed_heading_rad is None:
+            raise ValueError("G2 requires missile_fixed_heading_rad")
 
 
 def ship_position(t_s: float, scenario: Scenario, cfg: Q1Constants) -> np.ndarray:
@@ -45,12 +51,12 @@ def integrate_missile(
     cfg: Q1Constants,
     max_time_s: float = 300.0,
 ):
-    """Integrate M1 pure pursuit or M2 fixed-heading flight to target contact."""
+    """Integrate G1 pure pursuit or G2 fixed-heading flight to target contact."""
     scenario.validate()
     m0 = np.asarray(scenario.missile_initial_position_m, dtype=float)
 
     def rhs(t_s: float, missile_pos: np.ndarray) -> np.ndarray:
-        if scenario.missile_model == "M1":
+        if scenario.missile_model in {"G1", "M1"}:
             line_of_sight = ship_position(t_s, scenario, cfg) - missile_pos
             distance = np.linalg.norm(line_of_sight)
             if distance <= 1e-12:
@@ -213,15 +219,28 @@ def parametric_drop_relation(
     )
     drop_position = cloud_center - inherited_displacement
     drop_time = burst_time_s - cfg.bomb_burst_delay_s
+    command_time = drop_time - cfg.response_delay_s
+    timing = command_release_burst_times(command_time, cfg)
     return {
         "cloud_center_m": cloud_center.tolist(),
         "drop_position_m": drop_position.tolist(),
         "drop_time_s": drop_time,
+        "command_time_s": command_time,
         "burst_time_s": burst_time_s,
         "inertial_displacement_m": float(np.linalg.norm(inherited_displacement)),
-        "response_delay_satisfied_if_task_clock_starts_at_zero": (
-            drop_time >= cfg.response_delay_s
-        ),
+        "timing_chain": {
+            "primary_interpretation": "command_to_release_response_delay",
+            "t_release_minus_t_command_s": (
+                timing["release_time_s"] - timing["command_time_s"]
+            ),
+            "t_burst_minus_t_release_s": (
+                timing["burst_time_s"] - timing["release_time_s"]
+            ),
+            "t_burst_minus_t_command_s": (
+                cfg.response_delay_s + cfg.bomb_burst_delay_s
+            ),
+            "command_legal_if_task_clock_starts_at_zero": command_time >= 0.0,
+        },
         "uav_reachability": "blocked_without_uav_initial_position_and_task_clock",
     }
 
@@ -254,14 +273,15 @@ def structural_main_result(cfg: Q1Constants) -> dict[str, object]:
             "task_clock_definition",
         ],
         "output_degeneracy": {
-            "strict_feasible_set_empty_under_M1_S1_duration_bound": True,
+            "strict_feasible_set_empty_under_G1_S1_O0_U0_duration_bound": True,
             "unique_coordinate_identifiable": False,
         },
         "assumptions_used": [
-            "M1 pure pursuit",
+            "G1 pure pursuit with lock already acquired at 8000 m",
             "S1 inherited bomb velocity for 3.5 s",
             "stationary smoke center after burst",
             "no wind drift in the nominal model",
+            "2 s response delay is interpreted as command-to-release",
         ],
         "proof_notes": bounds["proof_notes"],
     }

@@ -32,11 +32,11 @@ def run_baseline(cfg: Q1Constants) -> dict[str, object]:
             "task_clock_definition",
         ],
         "output_degeneracy": {
-            "strict_feasible_set_empty_under_M1_S1_duration_bound": True,
+            "strict_feasible_set_empty_under_G1_S1_O0_U0_duration_bound": True,
             "unique_coordinate_identifiable": False,
         },
         "assumptions_used": [
-            "M1 range-rate bound",
+            "G1 range-rate bound with lock acquired at 8000 m",
             "S1 stationary smoke center after burst",
         ],
         "analytic_relations": {

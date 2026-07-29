@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "question_id": "Q1",
+  "round": "round4",
+  "decision_id": "q1_teammate_review_integration",
+  "canonical_model_label": "G1+S1+O0+U0",
+  "accepted_core_result_unchanged": true,
+  "core_numbers": {
+    "structural_cover_upper_s": 10.376134889753567,
+    "detection_window_lower_s": 24.167709255134113,
+    "minimum_naked_time_lower_s": 13.791574365380546
+  },
+  "premises": [
+    "G1 pure pursuit has already acquired lock at 8000 m.",
+    "S1 smoke centre is fixed after burst.",
+    "O0 requires complete two-dimensional ship-disk coverage.",
+    "U0 excludes nominal wind drift."
+  ],
+  "status_fields": {
+    "execution_status": "passed",
+    "input_status": "blocked_missing_absolute_geometry",
+    "feasibility_status": "proved_infeasible_for_full_window",
+    "compensation_status": "structural_family_available",
+    "certificate_status": "verified"
+  },
+  "event_semantics": {
+    "primary_interpretation": "command_to_release_response_delay",
+    "symbols": {
+      "t_cmd": "command time",
+      "t_d": "actual release time",
+      "t_b": "burst time",
+      "t_m": "midpoint of a selected complete-cover interval"
+    },
+    "checks": {
+      "release_minus_command_s": 2.0,
+      "burst_minus_release_s": 3.5,
+      "burst_minus_command_s": 5.5
+    },
+    "status": "PASS",
+    "warning": "The statement gives a 2 s response delay but does not explicitly identify the endpoint events; this is the human-approved primary interpretation."
+  },
+  "coverage_defect_interface": {
+    "definition": "Delta(t)=max_{x in D_ship(t)} min_j (||x-c_j(t)||-r_j(t))",
+    "complete_cover_condition": "Delta(t)<=0",
+    "single_smoke_identity": "single_smoke_margin(t)=-Delta(t)",
+    "random_test_count": 1000,
+    "maximum_identity_error_m": 4.547473508864641e-13,
+    "single_smoke_identity_status": "PASS",
+    "multi_smoke_guard_status": "PASS",
+    "multi_smoke_implementation": "Use the certified Q2 union-geometry kernel; Q1 refuses an uncertified finite-grid substitution."
+  },
+  "structural_vs_executable": {
+    "T_structural_max_s": 10.376134889753567,
+    "T_executable_relation": "T_executable_star<=T_structural_max",
+    "equality_requires": [
+      "cloud centre on the ship track",
+      "complete-cover interval lies in the 18 s full-radius phase",
+      "command, release and burst times are legal",
+      "UAV reaches the release point",
+      "chosen 12 km interpretation is satisfied",
+      "absolute scenario inputs are complete"
+    ],
+    "current_T_executable_status": "not_evaluated_missing_inputs"
+  },
+  "full_radius_interval_test": {
+    "burst_interval_relative_to_t_m_s": [
+      -12.811932555123217,
+      -5.188067444876784
+    ],
+    "endpoint_ages_s": {
+      "left_cover_age_at_earliest_burst_s": 7.623865110246434,
+      "right_cover_age_at_earliest_burst_s": 18.0,
+      "left_cover_age_at_latest_burst_s": 0.0,
+      "right_cover_age_at_latest_burst_s": 10.376134889753567
+    },
+    "status": "PASS"
+  },
+  "G2_fixed_heading_extension": {
+    "duration_necessary_condition": "|W_G2|<=10.376134889753567 s",
+    "full_feasibility_status": "not_evaluated_missing_initial_geometry",
+    "warning": "Duration is necessary, not sufficient."
+  },
+  "S2_drift_extension": {
+    "formula": "min(18,2(R_c-R_s)/||v_s-v_c||) for the ideal collinear constant-radius phase",
+    "parameter_curve": [
+      {
+        "along_track_cloud_drift_mps": -10.0,
+        "relative_speed_mps": 17.71,
+        "constant_radius_cover_bound_s": 4.517221908526256,
+        "extension_only": true
+      },
+      {
+        "along_track_cloud_drift_mps": -5.0,
+        "relative_speed_mps": 12.71,
+        "constant_radius_cover_bound_s": 6.294256490952006,
+        "extension_only": true
+      },
+      {
+        "along_track_cloud_drift_mps": 0.0,
+        "relative_speed_mps": 7.71,
+        "constant_radius_cover_bound_s": 10.376134889753567,
+        "extension_only": true
+      },
+      {
+        "along_track_cloud_drift_mps": 5.0,
+        "relative_speed_mps": 2.71,
+        "constant_radius_cover_bound_s": 18.0,
+        "extension_only": true
+      },
+      {
+        "along_track_cloud_drift_mps": 7.7,
+        "relative_speed_mps": 0.009999999999999787,
+        "constant_radius_cover_bound_s": 18.0,
+        "extension_only": true
+      },
+      {
+        "along_track_cloud_drift_mps": 7.71,
+        "relative_speed_mps": 0.0,
+        "constant_radius_cover_bound_s": 18.0,
+        "extension_only": true
+      },
+      {
+        "along_track_cloud_drift_mps": 7.72,
+        "relative_speed_mps": 0.009999999999999787,
+        "constant_radius_cover_bound_s": 18.0,
+        "extension_only": true
+      },
+      {
+        "along_track_cloud_drift_mps": 10.0,
+        "relative_speed_mps": 2.29,
+        "constant_radius_cover_bound_s": 18.0,
+        "extension_only": true
+      }
+    ],
+    "warning": "No wind data; extension only."
+  }
+}

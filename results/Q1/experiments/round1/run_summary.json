@@ -11,7 +11,7 @@
       "role": "main_candidate",
       "script": "code/Q1/q1_event_model.py",
       "status": "success",
-      "execution_time_seconds": 5.699926987290382e-06,
+      "execution_time_seconds": 5.499925464391708e-06,
       "input_files": [
         "planning/session_config.json",
         "methods/Q1/q1_decisions.jsonl",
@@ -24,7 +24,7 @@
       "figure_files": [],
       "warnings": [
         "Scenario initial states are absent; no unique coordinate/time claim is produced.",
-        "M2 is retained as a robustness reference but cannot run without fixed heading and initial state."
+        "G2 is retained as a robustness reference but cannot run without fixed heading and initial state."
       ],
       "errors": [],
       "metrics_summary": {
@@ -39,7 +39,7 @@
       "role": "usable_baseline",
       "script": "code/Q1/q1_analytic_baseline.py",
       "status": "success",
-      "execution_time_seconds": 4.200031980872154e-06,
+      "execution_time_seconds": 3.8000289350748062e-06,
       "input_files": [
         "planning/session_config.json",
         "methods/Q1/q1_decisions.jsonl",
@@ -52,7 +52,7 @@
       "figure_files": [],
       "warnings": [
         "Scenario initial states are absent; no unique coordinate/time claim is produced.",
-        "M2 is retained as a robustness reference but cannot run without fixed heading and initial state."
+        "G2 is retained as a robustness reference but cannot run without fixed heading and initial state."
       ],
       "errors": [],
       "metrics_summary": {
@@ -71,7 +71,7 @@
     "status": "PASS"
   },
   "output_degeneracy": {
-    "strict_feasible_set_empty_under_M1_S1_duration_bound": true,
+    "strict_feasible_set_empty_under_G1_S1_O0_U0_duration_bound": true,
     "unique_coordinate_identifiable": false,
     "interpretation": "A structural infeasibility result, not a numerical failure."
   },
@@ -87,5 +87,5 @@
     "scipy": "1.17.1",
     "pandas": "3.0.2"
   },
-  "generated_at": "2026-07-29T19:00:27.586643+08:00"
+  "generated_at": "2026-07-29T20:52:05.579766+08:00"
 }

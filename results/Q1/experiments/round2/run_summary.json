@@ -12,7 +12,7 @@
       "role": "conditional_fallback",
       "script": "code/Q1/q1_interval_certificate.py",
       "status": "success",
-      "execution_time_seconds": 2.359994687139988e-05,
+      "execution_time_seconds": 2.1800165995955467e-05,
       "input_files": [
         "results/Q1/experiments/round1/run_summary.json",
         "methods/Q1/q1_decisions.jsonl",
@@ -30,7 +30,7 @@
         "certificate_status": "PASS"
       },
       "warnings": [
-        "M2 can have a shorter FOV-limited window but lacks initial geometry.",
+        "G2 can have a shorter FOV-limited window but lacks initial geometry.",
         "Nonzero cloud drift changes the relative-speed bound and is not nominal."
       ],
       "errors": []
@@ -56,5 +56,5 @@
     "platform": "Windows-11-10.0.26200-SP0",
     "numpy": "2.4.4"
   },
-  "generated_at": "2026-07-29T19:00:27.999960+08:00"
+  "generated_at": "2026-07-29T20:52:05.839597+08:00"
 }

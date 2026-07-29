@@ -62,8 +62,82 @@ def smoke_radius(age_s: float | np.ndarray, cfg: Q1Constants) -> float | np.ndar
     return radius
 
 
+def single_smoke_margin(
+    ship_center_m: np.ndarray | tuple[float, float],
+    smoke_center_m: np.ndarray | tuple[float, float],
+    smoke_radius_m: float,
+    ship_radius_m: float,
+) -> float:
+    """Exact complete-cover margin for one circular smoke cloud.
+
+    Positive is safe, zero is tangent, and negative means that some part of
+    the ship disk is exposed.
+    """
+    ship = np.asarray(ship_center_m, dtype=float)
+    smoke = np.asarray(smoke_center_m, dtype=float)
+    return float(
+        smoke_radius_m
+        - ship_radius_m
+        - np.linalg.norm(ship - smoke)
+    )
+
+
+def coverage_defect(
+    ship_center_m: np.ndarray | tuple[float, float],
+    smoke_centers_m: np.ndarray,
+    smoke_radii_m: np.ndarray,
+    ship_radius_m: float,
+) -> float:
+    """Unified coverage-defect interface, exact for the Q1 single-smoke case.
+
+    The mathematical cross-question definition is
+
+        Delta(t) = max_{x in D_ship(t)} min_j (||x-c_j||-r_j).
+
+    Q1 contains exactly one active smoke cloud, for which the expression has
+    the closed form ||s-c||+R_s-r.  Multi-smoke callers must use the certified
+    Q2 union-geometry kernel rather than silently replacing the maximization
+    with a finite grid.
+    """
+    centers = np.asarray(smoke_centers_m, dtype=float)
+    radii = np.asarray(smoke_radii_m, dtype=float)
+    if centers.ndim != 2 or centers.shape[1] != 2:
+        raise ValueError("smoke_centers_m must have shape (n,2)")
+    if radii.shape != (centers.shape[0],):
+        raise ValueError("smoke_radii_m must have shape (n,)")
+    if centers.shape[0] != 1:
+        raise NotImplementedError(
+            "Q1 coverage_defect is exact only for one smoke; "
+            "use code/Q2/q2_union_optimizer.py for certified multi-smoke geometry"
+        )
+    return float(
+        np.linalg.norm(np.asarray(ship_center_m, dtype=float) - centers[0])
+        + ship_radius_m
+        - radii[0]
+    )
+
+
+def command_release_burst_times(
+    command_time_s: float,
+    cfg: Q1Constants,
+) -> dict[str, float]:
+    """Primary interpretation of the statement's 2 s response delay.
+
+    This timing semantics is human-approved in
+    q1_teammate_review_integration; the statement supplies the 2 s constant
+    but does not explicitly name its two endpoint events.
+    """
+    release = command_time_s + cfg.response_delay_s
+    burst = release + cfg.bomb_burst_delay_s
+    return {
+        "command_time_s": float(command_time_s),
+        "release_time_s": float(release),
+        "burst_time_s": float(burst),
+    }
+
+
 def structural_bounds(cfg: Q1Constants) -> dict[str, Any]:
-    """Scenario-independent necessary bounds for M1/S1."""
+    """Scenario-independent necessary bounds for G1/S1/O0/U0."""
     cover_margin_m = cfg.smoke_max_radius_m - cfg.ship_radius_m
     if cover_margin_m < 0:
         stationary_cover_s = 0.0
@@ -91,7 +165,10 @@ def structural_bounds(cfg: Q1Constants) -> dict[str, Any]:
     naked_lower_bound_s = max(0.0, min_detection_s - stationary_cover_s)
 
     return {
-        "model_scope": "M1 pure pursuit + S1 stationary smoke after burst",
+        "model_scope": (
+            "G1 pure pursuit + S1 stationary smoke + O0 complete-disk "
+            "coverage + U0 nominal deterministic assumptions"
+        ),
         "cover_margin_at_max_radius_m": cover_margin_m,
         "stationary_smoke_max_continuous_full_cover_s": stationary_cover_s,
         "comoving_smoke_relaxation_upper_bound_s": comoving_relaxation_s,
@@ -108,7 +185,9 @@ def structural_bounds(cfg: Q1Constants) -> dict[str, Any]:
             "at most 2(R_c-R_s)/V_s.",
             "Under pure pursuit, range rate is V_s*cos(phi)-V_m and is no smaller in "
             "magnitude than V_m-V_s and no larger than V_m+V_s. The shortest possible "
-            "8000 m-to-contact window uses V_m+V_s.",
+            "8000 m-to-contact window uses V_m+V_s. This window is active only under "
+            "the explicit standard-scenario premise that lock has already been acquired "
+            "at 8000 m; G1 then keeps the line-of-sight offset equal to zero.",
             "Because the maximum cover upper bound is shorter than the minimum detection "
             "window, strict full-window cover is impossible before UAV reachability is considered.",
         ],

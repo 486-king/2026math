@@ -38,21 +38,22 @@
       "task_clock_definition"
     ],
     "output_degeneracy": {
-      "strict_feasible_set_empty_under_M1_S1_duration_bound": true,
+      "strict_feasible_set_empty_under_G1_S1_O0_U0_duration_bound": true,
       "unique_coordinate_identifiable": false
     },
     "assumptions_used": [
-      "M1 pure pursuit",
+      "G1 pure pursuit with lock already acquired at 8000 m",
       "S1 inherited bomb velocity for 3.5 s",
       "stationary smoke center after burst",
-      "no wind drift in the nominal model"
+      "no wind drift in the nominal model",
+      "2 s response delay is interpreted as command-to-release"
     ],
     "proof_notes": [
       "For a fixed smoke center, complete cover implies the ship center stays within R_c-R_s=40 m of that center. A line moving at V_s can remain in this disk for at most 2(R_c-R_s)/V_s.",
-      "Under pure pursuit, range rate is V_s*cos(phi)-V_m and is no smaller in magnitude than V_m-V_s and no larger than V_m+V_s. The shortest possible 8000 m-to-contact window uses V_m+V_s.",
+      "Under pure pursuit, range rate is V_s*cos(phi)-V_m and is no smaller in magnitude than V_m-V_s and no larger than V_m+V_s. The shortest possible 8000 m-to-contact window uses V_m+V_s. This window is active only under the explicit standard-scenario premise that lock has already been acquired at 8000 m; G1 then keeps the line-of-sight offset equal to zero.",
       "Because the maximum cover upper bound is shorter than the minimum detection window, strict full-window cover is impossible before UAV reachability is considered."
     ],
-    "runtime_seconds": 5.699926987290382e-06
+    "runtime_seconds": 5.499925464391708e-06
   },
   "baseline": {
     "method_id": "B",
@@ -75,11 +76,11 @@
       "task_clock_definition"
     ],
     "output_degeneracy": {
-      "strict_feasible_set_empty_under_M1_S1_duration_bound": true,
+      "strict_feasible_set_empty_under_G1_S1_O0_U0_duration_bound": true,
       "unique_coordinate_identifiable": false
     },
     "assumptions_used": [
-      "M1 range-rate bound",
+      "G1 range-rate bound with lock acquired at 8000 m",
       "S1 stationary smoke center after burst"
     ],
     "analytic_relations": {
@@ -89,10 +90,10 @@
     },
     "proof_notes": [
       "For a fixed smoke center, complete cover implies the ship center stays within R_c-R_s=40 m of that center. A line moving at V_s can remain in this disk for at most 2(R_c-R_s)/V_s.",
-      "Under pure pursuit, range rate is V_s*cos(phi)-V_m and is no smaller in magnitude than V_m-V_s and no larger than V_m+V_s. The shortest possible 8000 m-to-contact window uses V_m+V_s.",
+      "Under pure pursuit, range rate is V_s*cos(phi)-V_m and is no smaller in magnitude than V_m-V_s and no larger than V_m+V_s. The shortest possible 8000 m-to-contact window uses V_m+V_s. This window is active only under the explicit standard-scenario premise that lock has already been acquired at 8000 m; G1 then keeps the line-of-sight offset equal to zero.",
       "Because the maximum cover upper bound is shorter than the minimum detection window, strict full-window cover is impossible before UAV reachability is considered."
     ],
-    "runtime_seconds": 4.200031980872154e-06
+    "runtime_seconds": 3.8000289350748062e-06
   },
   "comparison": {
     "exact_agreement_on_core_outputs": true,
@@ -107,9 +108,9 @@
     "radius_age_23_m": 0.0,
     "radius_age_23_plus_m": 0.0
   },
-  "m2_robustness_reference": {
+  "g2_robustness_reference": {
     "status": "blocked_missing_fixed_heading_and_initial_state",
-    "feasibility_change_condition": "M2 can change the conclusion only if the distance-and-FOV detection window is no longer than the stationary-smoke complete-cover upper bound.",
+    "feasibility_change_condition": "G2 can pass the duration necessary condition only if the distance-and-FOV window is no longer than the fixed-smoke complete-cover upper bound; this is not sufficient.",
     "threshold_seconds": 10.376134889753567
   },
   "fallback_trigger": {

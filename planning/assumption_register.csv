@@ -1,0 +1,6 @@
+﻿id,statement,class,source,scope
+F4,response delay equals 2 s,problem fact,problem statement,Q1-Q4
+A10,2 s is interpreted from command to actual release,human-approved timing interpretation,q1_teammate_review_integration,Q1-Q4
+A11,lock is already acquired when range first reaches 8000 m,standard-scenario premise,teammate review; required by G1 detection-window claim,Q1-Q2
+S2,"released bomb inherits 28 m/s horizontal UAV velocity for 3.5 s; drag, deceleration and wind are ignored",human-approved nominal simplification,q1_method_choice,Q1-Q2
+A12,12 km means distance from the initial takeoff point,"recommended primary interpretation, not yet evaluable",teammate review,Q1-Q4

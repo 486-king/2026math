@@ -79,10 +79,17 @@ def main() -> None:
         "relative_schedule": {
             "cloud_centers_m": list(CANDIDATE.cloud_centers_m),
             "burst_times_s": list(CANDIDATE.burst_times_s),
-            "drop_times_s": [
+            "release_times_s": [
                 b - CONSTANTS.bomb_burst_delay_s
                 for b in CANDIDATE.burst_times_s
             ],
+            "command_times_s": [
+                b - CONSTANTS.bomb_burst_delay_s - 2.0
+                for b in CANDIDATE.burst_times_s
+            ],
+            "timing_interpretation": (
+                "t_release=t_command+2; t_burst=t_release+3.5"
+            ),
             "window_start_s": window_start,
             "window_end_s": window_end,
             "window_duration_s": window_end - window_start,
@@ -198,6 +205,9 @@ def main() -> None:
                     "cloud_center_m": center,
                     "burst_time_s": burst,
                     "drop_time_s": burst - CONSTANTS.bomb_burst_delay_s,
+                    "command_time_s": (
+                        burst - CONSTANTS.bomb_burst_delay_s - 2.0
+                    ),
                     "covered_start_s": item["start_s"],
                     "covered_end_s": item["end_s"],
                 }

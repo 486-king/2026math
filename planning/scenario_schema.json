@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Q1 absolute execution scenario",
+  "type": "object",
+  "required": [
+    "task_clock_zero_definition",
+    "ship_initial_position_m",
+    "ship_heading_rad",
+    "missile_initial_position_m",
+    "uav_initial_position_m",
+    "operation_radius_reference"
+  ],
+  "properties": {
+    "task_clock_zero_definition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ship_initial_position_m": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "ship_heading_rad": {
+      "type": "number"
+    },
+    "missile_initial_position_m": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "uav_initial_position_m": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "operation_radius_reference": {
+      "enum": [
+        "distance_from_initial_takeoff_point",
+        "distance_from_realtime_ship_position",
+        "total_path_length"
+      ]
+    },
+    "lock_acquired_at_8000m": {
+      "const": true
+    }
+  },
+  "additionalProperties": false
+}

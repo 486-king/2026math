@@ -12,7 +12,7 @@
       "role": "accepted_post_infeasibility_compensation",
       "script": "code/Q1/q1_parametric_compensation.py",
       "status": "success",
-      "execution_time_seconds": 9.399838745594025e-06,
+      "execution_time_seconds": 1.0200077667832375e-05,
       "input_files": [
         "results/Q1/experiments/round1/metrics/q1_structural_metrics.json",
         "results/Q1/experiments/round2/metrics/q1_global_certificate.json",
@@ -52,5 +52,5 @@
     "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
     "platform": "Windows-11-10.0.26200-SP0"
   },
-  "generated_at": "2026-07-29T19:06:35.242102+08:00"
+  "generated_at": "2026-07-29T20:52:06.027846+08:00"
 }

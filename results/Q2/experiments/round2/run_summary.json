@@ -33,14 +33,14 @@
     "method_C_triggered": false,
     "reason": "Both geometry validators agree and the continuous validator is stable."
   },
-  "runtime_seconds": 0.6129972001072019,
+  "runtime_seconds": 0.6298584998585284,
   "environment": {
     "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
     "platform": "Windows-11-10.0.26200-SP0",
     "numpy": "2.4.4",
     "scipy": "1.17.1"
   },
-  "generated_at": "2026-07-29T20:31:04.107018+08:00",
+  "generated_at": "2026-07-29T20:53:21.904365+08:00",
   "outputs": [
     "results/Q2/experiments/round2/metrics/q2_two_bomb_minimum_resource_plan.json",
     "results/Q2/experiments/round2/metrics/q2_capacity_frontier.json",

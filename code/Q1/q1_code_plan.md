@@ -159,3 +159,31 @@ No figure is required for the structural run. A later supplied scenario may add 
 - `method_alignment`: A is event-driven M1/S1; B uses the approved analytic bounds.
 - `reproducibility`: deterministic outputs, seed recorded.
 - `output_contract`: required metrics and `run_summary.json` exist and agree.
+
+## Round 4 teammate-review architecture upgrade
+
+This round preserves the accepted G1/S1 structural infeasibility numbers and
+changes only the interfaces and claim discipline.
+
+- Canonical label: `G1+S1+O0+U0`.
+- `t_cmd` is command time, `t_d=t_cmd+2` is actual release, and
+  `t_b=t_d+3.5`; the command-to-release meaning of the 2 s statement constant
+  is a human-approved interpretation, not an unqualified problem fact.
+- The old coverage-midpoint symbol `t_c` is renamed `t_m`.
+- Q1 exposes the exact single-smoke identity
+  `single_smoke_margin=-coverage_defect`.
+- The Q1 common function refuses multi-smoke evaluation rather than using an
+  uncertified finite grid; Q2 supplies the certified union-geometry kernel.
+- Structural capacity and executable optimum are separate output fields.
+- Execution, input, feasibility and certificate states are separate.
+- G2 duration is only a necessary condition; S2 drift uses relative velocity
+  and remains an extension without wind data.
+
+Added checks:
+
+- command/release/burst event-chain identities;
+- 1000-case exact single-smoke defect degeneration;
+- full-radius burst-interval endpoints;
+- explicit guard against uncertified multi-smoke evaluation;
+- scenario schema with no defaulted absolute geometry;
+- Q1-to-Q2 interface contract.

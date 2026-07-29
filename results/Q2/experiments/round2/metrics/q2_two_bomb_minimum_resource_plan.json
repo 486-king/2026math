@@ -18,10 +18,15 @@
       -6.76157575,
       4.06443896
     ],
-    "drop_times_s": [
+    "release_times_s": [
       -10.26157575,
       0.5644389600000004
     ],
+    "command_times_s": [
+      -12.26157575,
+      -1.4355610399999996
+    ],
+    "timing_interpretation": "t_release=t_command+2; t_burst=t_release+3.5",
     "window_start_s": -4.37575009,
     "window_end_s": 20.98529253064107,
     "window_duration_s": 25.36104262064107

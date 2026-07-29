@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "question_id": "Q1",
-  "tested_claim": "Under M1/S1 and statement constants, one stationary smoke cannot fully cover the ship for the entire detection window.",
+  "tested_claim": "Under G1+S1+O0+U0 and statement constants, one stationary smoke cannot fully cover the ship for the entire detection window.",
   "input_sources": [
     "results/Q1/experiments/round1/metrics/q1_structural_metrics.json",
     "methods/Q1/q1_decisions.jsonl"
@@ -192,18 +192,18 @@
       "fallback_trigger_relevance": "A supplied physical parameter revision near a flip requires rerunning A and B."
     },
     {
-      "name": "M2_detection_window_condition",
-      "perturbation": "Replace M1 by a fixed-heading M2 trajectory.",
+      "name": "G2_detection_window_condition",
+      "perturbation": "Replace G1 by a fixed-heading G2 trajectory.",
       "metric": "actual distance-and-FOV window length",
       "threshold": 10.376134889753567,
       "observed": {
-        "required_for_possible_duration_feasibility": "M2 detection window <= threshold_seconds",
+        "required_for_possible_duration_feasibility": "G2 detection window <= threshold_seconds",
         "threshold_seconds": 10.376134889753567,
-        "actual_M2_window": null
+        "actual_G2_window": null
       },
       "status": "CONDITIONAL",
-      "limitation": "M2 initial position and fixed heading are absent.",
-      "fallback_trigger_relevance": "A changed feasibility conclusion under supplied M2 data requires a new result decision."
+      "limitation": "G2 initial position and fixed heading are absent.",
+      "fallback_trigger_relevance": "A changed feasibility conclusion under supplied G2 data requires a new result decision."
     },
     {
       "name": "cloud_drift_extension",
@@ -237,7 +237,7 @@
         ]
       },
       "status": "CONDITIONAL",
-      "limitation": "No wind direction or speed is supplied; this is not a nominal claim.",
+      "limitation": "No wind direction or speed is supplied. These are relaxed geometric upper bounds that hold the cloud at its maximum radius; exact S2 values require the 18 s/5 s event model.",
       "fallback_trigger_relevance": "A measured drift near ship speed requires upgrading the nominal model."
     }
   ],
@@ -250,5 +250,6 @@
   "overall_status": "CONDITIONAL",
   "interpretation": "The nominal infeasibility conclusion is locally stable to one-at-a-time ±10% checks. It is conditional on M1/S1; a sufficiently short M2 FOV window or strong along-track smoke drift can change the duration condition.",
   "fallback_C_triggered": true,
-  "generated_at": "2026-07-29T19:00:27.792978+08:00"
+  "canonical_interpretation": "The nominal G1+S1+O0+U0 infeasibility conclusion is locally stable to the recorded one-at-a-time 10 percent checks. G2 and S2 remain conditional extensions.",
+  "generated_at": "2026-07-29T20:52:06.164178+08:00"
 }

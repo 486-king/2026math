@@ -108,11 +108,12 @@ def main() -> int:
             "status": "PASS" if comparison_pass else "FAIL",
         },
         "boundary_checks": boundary_checks,
-        "m2_robustness_reference": {
+        "g2_robustness_reference": {
             "status": "blocked_missing_fixed_heading_and_initial_state",
             "feasibility_change_condition": (
-                "M2 can change the conclusion only if the distance-and-FOV detection "
-                "window is no longer than the stationary-smoke complete-cover upper bound."
+                "G2 can pass the duration necessary condition only if the "
+                "distance-and-FOV window is no longer than the fixed-smoke "
+                "complete-cover upper bound; this is not sufficient."
             ),
             "threshold_seconds": main_result[
                 "maximum_continuous_full_cover_seconds"
@@ -159,12 +160,15 @@ def main() -> int:
                     "interpretation": "rigorous upper bound under S1",
                 },
                 {
-                    "quantity": "m1_detection_window_lower_bound",
+                    "quantity": "g1_detection_window_lower_bound",
                     "value": main_result["detection_window_seconds"][
                         "lower_bound"
                     ],
                     "unit": "s",
-                    "interpretation": "shortest possible M1 detection window to ship-disk contact",
+                    "interpretation": (
+                        "shortest possible G1 detection window from an "
+                        "already-acquired 8000 m lock to ship-disk contact"
+                    ),
                 },
                 {
                     "quantity": "minimum_naked_time_lower_bound",
@@ -194,7 +198,7 @@ def main() -> int:
         "figure_files": [],
         "warnings": [
             "Scenario initial states are absent; no unique coordinate/time claim is produced.",
-            "M2 is retained as a robustness reference but cannot run without fixed heading and initial state.",
+            "G2 is retained as a robustness reference but cannot run without fixed heading and initial state.",
         ],
         "errors": [],
     }
@@ -253,7 +257,7 @@ def main() -> int:
         ],
         "comparison": metrics["comparison"],
         "output_degeneracy": {
-            "strict_feasible_set_empty_under_M1_S1_duration_bound": True,
+            "strict_feasible_set_empty_under_G1_S1_O0_U0_duration_bound": True,
             "unique_coordinate_identifiable": False,
             "interpretation": "A structural infeasibility result, not a numerical failure.",
         },

@@ -1,5 +1,25 @@
 # Q1 Method Card
 
+## Teammate-review revision state (2026-07-29)
+
+- Human authorization: `q1_teammate_review_integration`.
+- Canonical label: `G1+S1+O0+U0`.
+- Accepted core numbers are unchanged:
+  `T_structural_max=10.376134889753567 s`,
+  `T_detect_lower=24.167709255134113 s`, and
+  `T_naked_lower=13.791574365380546 s`.
+- The 8000 m window claim now explicitly assumes lock has already been
+  acquired. G1 then keeps the line-of-sight offset equal to zero.
+- Canonical events are `t_cmd`, `t_d=t_cmd+2`, and
+  `t_b=t_d+3.5`; the old cover-midpoint symbol is renamed from `t_c` to `t_m`.
+- The 2 s command-to-release meaning is a human-approved interpretation of an
+  ambiguous statement constant, not an unqualified problem fact.
+- Q1 exports the exact single-smoke degeneration of the unified coverage
+  defect. Certified multi-smoke evaluation remains in the Q2 geometry kernel.
+- Structural capacity and executable scenario optimum are separate. The latter
+  remains blocked by missing absolute geometry, task clock and 12 km reference.
+- Formal interface: `interfaces/Q1_to_Q2_coverage_contract.md`.
+
 ## Goal and success criteria
 
 先判定单弹对全部导弹可探测窗口的 100% 完整遮蔽是否可行；可行时给投放坐标、投放时刻、起爆时刻及连续时间证书，不可行时给严格不可行证据。禁止用“最大覆盖率”悄悄替换硬约束。

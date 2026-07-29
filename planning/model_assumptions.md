@@ -48,3 +48,15 @@
 ## 决策关联
 
 Q1 的 M1/S1 运动口径来自人工 `q1_method_choice`，本表只忠实转录，不把其扩写成已由数据验证的事实。Q2 尚待人工决定的是优化输出侧重和 A/B/C 方法；响应延时 2 s 的逐次计时语义仍不明确，但当前候选相邻投放间隔均大于 9 s，1 s 与保守 2 s 口径在风险探针中均不成为活动约束。
+## Q1 teammate-review assumption update (2026-07-29)
+
+| ID | Statement | Scope/source | Modeling need | Validation/evidence | Impact if violated | Mitigation | Decision |
+|---|---|---|---|---|---|---|---|
+| A10 | Interpret the statement’s 2 s response delay as command-to-actual-release: `t_d=t_cmd+2` | Q1-Q4; statement gives 2 s, endpoint meaning comes from teammate-review integration | Makes command, release and burst events schedulable without mixing symbols | `results/Q1/experiments/round4/metrics/q1_architecture_upgrade.json` event-chain test | All absolute command times shift; inter-release constraints could be misapplied | Keep interpretation field explicit and rerun if organizers clarify | `q1_teammate_review_integration` |
+| A11 | In the standard G1 scenario the missile has already acquired lock when range reaches 8000 m | Q1-Q2; premise needed by the teammate review | Makes the full 8000 m-to-contact interval an active detection window under pure pursuit | G1 line-of-sight offset is zero after lock | Detection-window lower bound may not describe the whole active window | Recompute distance-and-FOV activation if initial lock is not assumed | `q1_teammate_review_integration` |
+| A12 | The 98 m inertial displacement assumes the released bomb keeps the UAV’s instantaneous horizontal velocity for 3.5 s and ignores drag, horizontal deceleration and wind | Q1-Q2; earlier `q1_method_choice`, now stated explicitly | Maps release point to burst centre | `28*3.5=98 m`; synthetic identity checks | Release point and reachability change | Replace by `integral v_b(t)dt` when a trajectory law is supplied | `q1_method_choice`; clarified by teammate review |
+| A13 | Primary 12 km interpretation is distance from the initial takeoff point, not total path length | Q1-Q4; teammate recommendation | Needed for an eventual reachability check | Not evaluable because the reference point is missing | Executable solution may change | Report `blocked_missing_absolute_geometry`; retain total-path interpretation as sensitivity | `q1_teammate_review_integration` |
+
+The structural single-smoke infeasibility certificate does not depend on A10,
+A12 or A13. It does depend on A11 when the lower bound is described as an
+active detection-window lower bound rather than a pure closing-time bound.

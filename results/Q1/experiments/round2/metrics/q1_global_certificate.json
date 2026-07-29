@@ -11,7 +11,7 @@
   },
   "global_bounds": {
     "fixed_smoke_complete_cover_interval_upper_s": 10.376134889753569,
-    "M1_detection_window_lower_s": 24.16770925513411,
+    "G1_detection_window_lower_s": 24.16770925513411,
     "positive_separation_lower_s": 13.791574365380539,
     "outward_rounding": "IEEE-754 nextafter"
   },
@@ -22,16 +22,18 @@
   ],
   "strict_full_window_feasible": false,
   "certificate_status": "PASS",
-  "coordinate_solution_status": "no_feasible_coordinate_exists_under_M1_S1",
+  "coordinate_solution_status": "no_feasible_coordinate_exists_under_G1_S1_O0_U0",
   "scope": [
-    "M1 pure pursuit",
+    "G1 pure pursuit with lock acquired at 8000 m",
+    "O0 complete two-dimensional ship-disk coverage",
+    "U0 nominal zero-drift profile",
     "S1 fixed smoke center after burst",
     "statement constants",
     "single smoke bomb"
   ],
   "limitations": [
-    "M2 can have a shorter FOV-limited window but lacks initial geometry.",
+    "G2 can have a shorter FOV-limited window but lacks initial geometry.",
     "Nonzero cloud drift changes the relative-speed bound and is not nominal."
   ],
-  "runtime_seconds": 2.359994687139988e-05
+  "runtime_seconds": 2.1800165995955467e-05
 }

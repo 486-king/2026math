@@ -144,7 +144,7 @@ def main() -> int:
         "schema_version": 1,
         "question_id": "Q1",
         "tested_claim": (
-            "Under M1/S1 and statement constants, one stationary smoke cannot "
+            "Under G1+S1+O0+U0 and statement constants, one stationary smoke cannot "
             "fully cover the ship for the entire detection window."
         ),
         "input_sources": [
@@ -202,20 +202,20 @@ def main() -> int:
                 )
             },
             {
-                "name": "M2_detection_window_condition",
-                "perturbation": "Replace M1 by a fixed-heading M2 trajectory.",
+                "name": "G2_detection_window_condition",
+                "perturbation": "Replace G1 by a fixed-heading G2 trajectory.",
                 "metric": "actual distance-and-FOV window length",
                 "threshold": float(nominal["cover_upper_bound_s"]),
                 "observed": {
                     "required_for_possible_duration_feasibility": (
-                        "M2 detection window <= threshold_seconds"
+                        "G2 detection window <= threshold_seconds"
                     ),
                     "threshold_seconds": float(nominal["cover_upper_bound_s"]),
-                    "actual_M2_window": None
+                    "actual_G2_window": None
                 },
                 "status": "CONDITIONAL",
-                "limitation": "M2 initial position and fixed heading are absent.",
-                "fallback_trigger_relevance": "A changed feasibility conclusion under supplied M2 data requires a new result decision."
+                "limitation": "G2 initial position and fixed heading are absent.",
+                "fallback_trigger_relevance": "A changed feasibility conclusion under supplied G2 data requires a new result decision."
             },
             {
                 "name": "cloud_drift_extension",
@@ -229,7 +229,11 @@ def main() -> int:
                     "cases": drift_checks
                 },
                 "status": "CONDITIONAL",
-                "limitation": "No wind direction or speed is supplied; this is not a nominal claim.",
+                "limitation": (
+                    "No wind direction or speed is supplied. These are relaxed "
+                    "geometric upper bounds that hold the cloud at its maximum "
+                    "radius; exact S2 values require the 18 s/5 s event model."
+                ),
                 "fallback_trigger_relevance": "A measured drift near ship speed requires upgrading the nominal model."
             }
         ],
@@ -248,6 +252,11 @@ def main() -> int:
             "window or strong along-track smoke drift can change the duration condition."
         ),
         "fallback_C_triggered": True,
+        "canonical_interpretation": (
+            "The nominal G1+S1+O0+U0 infeasibility conclusion is locally "
+            "stable to the recorded one-at-a-time 10 percent checks. G2 and "
+            "S2 remain conditional extensions."
+        ),
         "generated_at": datetime.now(timezone.utc).astimezone().isoformat()
     }
 

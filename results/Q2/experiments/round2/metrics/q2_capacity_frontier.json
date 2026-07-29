@@ -15,13 +15,21 @@
         "burst_times_s": [
           -5.188067444876784
         ],
+        "relative_command_times_s": [
+          -10.688067444876783
+        ],
+        "relative_release_times_s": [
+          -8.688067444876783
+        ],
         "relative_drop_times_s": [
           -8.688067444876783
         ],
+        "relative_drop_times_s_note": "Backward-compatible alias for relative_release_times_s",
         "relative_drop_points_m_assuming_inherited_plus_x_heading": [
           -98.0
         ],
-        "transition_checks": []
+        "transition_checks": [],
+        "timing_interpretation": "t_release=t_command+2; t_burst=t_release+3.5"
       },
       "start_s": -5.188067444876784,
       "end_s": 5.188067444876784,
@@ -55,10 +63,19 @@
           -5.188067444876784,
           5.188067444876784
         ],
+        "relative_command_times_s": [
+          -10.688067444876783,
+          -0.3119325551232164
+        ],
+        "relative_release_times_s": [
+          -8.688067444876783,
+          1.6880674448767836
+        ],
         "relative_drop_times_s": [
           -8.688067444876783,
           1.6880674448767836
         ],
+        "relative_drop_times_s_note": "Backward-compatible alias for relative_release_times_s",
         "relative_drop_points_m_assuming_inherited_plus_x_heading": [
           -98.0,
           62.841793387010085
@@ -74,7 +91,8 @@
             "passes_1s_drop_interval": true,
             "passes_conservative_2s_interval": true
           }
-        ]
+        ],
+        "timing_interpretation": "t_release=t_command+2; t_burst=t_release+3.5"
       },
       "start_s": -5.188067444876784,
       "end_s": 23.88380359710012,
@@ -114,11 +132,22 @@
           5.188067444876784,
           21.57781387
         ],
+        "relative_command_times_s": [
+          -10.688067444876783,
+          -0.3119325551232164,
+          16.07781387
+        ],
+        "relative_release_times_s": [
+          -8.688067444876783,
+          1.6880674448767836,
+          18.07781387
+        ],
         "relative_drop_times_s": [
           -8.688067444876783,
           1.6880674448767836,
           18.07781387
         ],
+        "relative_drop_times_s_note": "Backward-compatible alias for relative_release_times_s",
         "relative_drop_points_m_assuming_inherited_plus_x_heading": [
           -98.0,
           37.34710093999999,
@@ -145,7 +174,8 @@
             "passes_1s_drop_interval": true,
             "passes_conservative_2s_interval": true
           }
-        ]
+        ],
+        "timing_interpretation": "t_release=t_command+2; t_burst=t_release+3.5"
       },
       "start_s": -5.1880674448762925,
       "end_s": 37.33506242412451,

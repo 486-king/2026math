@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "question": "Q1",
+  "round": "round4",
+  "round_label": "teammate_review_architecture_upgrade",
+  "status": "PASS",
+  "accepted_core_numbers_unchanged": true,
+  "execution_time_seconds": 0.018710099859163165,
+  "decision_id": "q1_teammate_review_integration",
+  "outputs": [
+    "results/Q1/experiments/round4/metrics/q1_architecture_upgrade.json",
+    "results/Q1/experiments/round4/tables/q1_drift_parameter_curve.csv",
+    "planning/scenario_schema.json",
+    "planning/assumption_register.csv",
+    "interfaces/Q1_to_Q2_coverage_contract.md"
+  ],
+  "environment": {
+    "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.4"
+  },
+  "generated_at": "2026-07-29T20:52:35.666243+08:00"
+}

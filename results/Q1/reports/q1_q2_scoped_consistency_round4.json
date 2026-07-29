@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "mode": "scoped",
+  "impact_class": "CANONICAL",
+  "scope": [
+    "Q1",
+    "Q2 timing consumer",
+    "identifiers G1 G2 t_cmd t_d t_b t_m Delta"
+  ],
+  "checks": {
+    "numbers": {
+      "status": "PASS",
+      "evidence": "Q1 rounds 1-4 agree on 10.376134889753567 s, 24.167709255134113 s and 13.791574365380546 s."
+    },
+    "symbols": {
+      "status": "PASS",
+      "evidence": "The global symbol table reserves t_cmd for command and t_m for coverage midpoint; the Q1-Q2 contract uses the same convention."
+    },
+    "timing": {
+      "status": "PASS",
+      "evidence": "Q1 and regenerated Q2 round-2 outputs expose t_release=t_command+2 and t_burst=t_release+3.5."
+    },
+    "coverage": {
+      "status": "PASS",
+      "evidence": "Q1 exact single-smoke defect degenerates to the old margin; Q2 keeps the certified multi-smoke union kernel."
+    },
+    "decisions": {
+      "status": "PASS",
+      "evidence": "Six unique valid Q1 JSONL decisions exist; q1_teammate_review_integration is append-only and does not supersede the accepted method or result verdict."
+    },
+    "files": {
+      "status": "PASS",
+      "evidence": "All round-4 output and interface paths in the run summary exist."
+    },
+    "claim_limits": {
+      "status": "PASS",
+      "evidence": "Absolute executable coordinates and wind conclusions remain blocked/parametric."
+    }
+  },
+  "divergences": [
+    {
+      "consumer": "historical pre-round4 prose and JSON keys",
+      "status": "RETAINED_AS_HISTORY",
+      "note": "Old M1/M2 and drop_time labels remain in historical artifacts; canonical round-4 and Q2 round-2 outputs provide the new labels and compatibility notes."
+    }
+  ],
+  "verdict": "PASSED_WITH_HISTORICAL_ALIASES",
+  "audited_at": "2026-07-29T20:52:00+08:00"
+}

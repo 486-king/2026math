@@ -211,6 +211,11 @@ Round 1 satisfied the human-mandated minimum validation experiment, so round 2
 is authorized to optimize method A and retain method B as the mandatory
 baseline. Method C remains unimplemented.
 
+Canonical Q1-to-Q2 event semantics are now:
+`t_release=t_command+2` and `t_burst=t_release+3.5`. Historical Q2 fields named
+`drop_time` are retained only as backward-compatible aliases for actual release
+time; new outputs must expose command and release separately.
+
 ## Round 2 questions
 
 1. What is the minimum number of bombs needed to cover the complete worst-case
