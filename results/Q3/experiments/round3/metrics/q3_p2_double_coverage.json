@@ -1,0 +1,33 @@
+{
+  "coverage_certificate_status": "verified",
+  "definition": "every point of the ship disk is covered by at least two smoke disks; equivalently every leave-one-smoke union covers the full ship disk",
+  "double_coverage_duration_s": 10.376134889753565,
+  "double_coverage_fraction": 0.4091367632223663,
+  "double_coverage_intervals": [
+    [
+      0.0,
+      10.376134889753565
+    ]
+  ],
+  "double_coverage_percent": 40.91367632223663,
+  "execution_status": "completed",
+  "freeze_status": "unfrozen",
+  "global_optimality_status": "not_proved",
+  "independent_method": "second_largest_L_j_envelope",
+  "input_status": "validated_synthetic_input",
+  "limitations": [
+    "Synthetic staging states only.",
+    "No real d_safe, energy model, turn radius, wind, or base reference."
+  ],
+  "maximum_method_margin_difference_m2": 0.0,
+  "method_agreement": true,
+  "paper_writing_allowed": false,
+  "reference_comparison_status": "matched_with_source_precision_after_computation",
+  "result_status": "verified",
+  "result_strength": "strict_continuous_double_coverage_measure",
+  "root_count": 1,
+  "safety_certificate_status": "verified",
+  "sampling_used_as_time_measure": false,
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "unresolved_interval_count": 0
+}

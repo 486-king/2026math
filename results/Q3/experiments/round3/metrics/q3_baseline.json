@@ -1,0 +1,3008 @@
+{
+  "N_minus_1": {
+    "N_minus_1_is_hard_constraint": false,
+    "failed_failed_uav_ids": [
+      1,
+      2,
+      3
+    ],
+    "failure_cases": [
+      {
+        "certificate_status": "verified",
+        "failed_uav_id": 1,
+        "failure_intervals": [
+          [
+            0.0,
+            10.376134889753567
+          ]
+        ],
+        "first_failure_time_s": 0.0,
+        "full_window_coverage": false,
+        "longest_continuous_full_coverage_s": 14.984907730887501,
+        "minimum_coverage_margin_m2": -1000000000000.0,
+        "remaining_double_coverage_fraction": 0.0,
+        "remaining_double_coverage_percent": 0.0,
+        "remaining_smoke_ids": [
+          "Q3B_RECON_2",
+          "Q3B_RECON_3"
+        ],
+        "total_full_coverage_duration_s": 14.984907730887501,
+        "worst_time_s": 0.0
+      },
+      {
+        "certificate_status": "verified",
+        "failed_uav_id": 2,
+        "failure_intervals": [
+          [
+            10.376134889753567,
+            20.752269779507134
+          ]
+        ],
+        "first_failure_time_s": 10.376134889753567,
+        "full_window_coverage": false,
+        "longest_continuous_full_coverage_s": 10.376134889753567,
+        "minimum_coverage_margin_m2": -11200.000000000004,
+        "remaining_double_coverage_fraction": 0.0,
+        "remaining_double_coverage_percent": 0.0,
+        "remaining_smoke_ids": [
+          "Q3B_RECON_1",
+          "Q3B_RECON_3"
+        ],
+        "total_full_coverage_duration_s": 14.984907730887501,
+        "worst_time_s": 15.564202334630352
+      },
+      {
+        "certificate_status": "verified",
+        "failed_uav_id": 3,
+        "failure_intervals": [
+          [
+            20.752269779507134,
+            25.36104262064107
+          ]
+        ],
+        "first_failure_time_s": 20.752269779507134,
+        "full_window_coverage": false,
+        "longest_continuous_full_coverage_s": 20.752269779507134,
+        "minimum_coverage_margin_m2": -9790.712737755113,
+        "remaining_double_coverage_fraction": 0.0,
+        "remaining_double_coverage_percent": 0.0,
+        "remaining_smoke_ids": [
+          "Q3B_RECON_1",
+          "Q3B_RECON_2"
+        ],
+        "total_full_coverage_duration_s": 20.752269779507134,
+        "worst_time_s": 25.36104262064107
+      }
+    ],
+    "fixed_plan_no_reoptimization": true,
+    "full_window_success_count": 0,
+    "full_window_success_fraction": 0.0,
+    "full_window_success_percent": 0.0,
+    "structural_feasibility_claimed": false,
+    "successful_failed_uav_ids": [],
+    "worst_failure_continuous_coverage_s": 10.376134889753567
+  },
+  "all_assignments": [
+    {
+      "assignment_feasible": false,
+      "assignment_uav_to_smoke_index": [
+        0,
+        1,
+        2
+      ],
+      "common_warning_lead_s": 15.714285714285714,
+      "execution_status": "failed",
+      "total_deployment_path_length_m": 1084.6342439892262,
+      "total_pre_release_path_length_m": 1084.6342439892262,
+      "total_turn_proxy_rad": 1.3966523897554786,
+      "uav_plans": [
+        {
+          "deployment_path_length_m": 342.0,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": true,
+            "status": "PASS",
+            "t_b_s": 0.0,
+            "t_cmd_s": -5.5,
+            "t_d_s": -3.5
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 342.0,
+          "release_point_m": [
+            -58.0,
+            0.0
+          ],
+          "smoke_center_m": 40.0,
+          "smoke_center_xy_m": [
+            40.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_1",
+          "staging_position_m": [
+            -400.0,
+            0.0
+          ],
+          "t_b_s": 0.0,
+          "t_cmd_s": -5.5,
+          "t_d_s": -3.5,
+          "t_start_s": -15.714285714285714,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.0,
+          "uav_id": 1,
+          "unit_heading": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "deployment_path_length_m": 340.63424398922615,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 10.376134889753567,
+            "t_cmd_s": 4.876134889753567,
+            "t_d_s": 6.876134889753567
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 340.63424398922615,
+          "release_point_m": [
+            48.50535399427167,
+            67.02623063037032
+          ],
+          "smoke_center_m": 120.00000000000001,
+          "smoke_center_xy_m": [
+            120.00000000000001,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_2",
+          "staging_position_m": [
+            -200.0,
+            300.0
+          ],
+          "t_b_s": 10.376134889753567,
+          "t_cmd_s": 4.876134889753567,
+          "t_d_s": 6.876134889753567,
+          "t_start_s": -5.289373824147367,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.7531512809621943,
+          "uav_id": 2,
+          "unit_heading": [
+            0.7295372041400852,
+            -0.6839411288813299
+          ]
+        },
+        {
+          "deployment_path_length_m": 402.0,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 20.752269779507134,
+            "t_cmd_s": 15.252269779507134,
+            "t_d_s": 17.252269779507134
+          },
+          "execution_status": "failed_start_time_window",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 402.0,
+          "release_point_m": [
+            121.6,
+            -58.8
+          ],
+          "smoke_center_m": 200.0,
+          "smoke_center_xy_m": [
+            200.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_3",
+          "staging_position_m": [
+            -200.0,
+            -300.0
+          ],
+          "t_b_s": 20.752269779507134,
+          "t_cmd_s": 15.252269779507134,
+          "t_d_s": 17.252269779507134,
+          "t_start_s": 2.895126922364277,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.6435011087932843,
+          "uav_id": 3,
+          "unit_heading": [
+            0.8,
+            0.6
+          ]
+        }
+      ]
+    },
+    {
+      "assignment_feasible": false,
+      "assignment_uav_to_smoke_index": [
+        0,
+        2,
+        1
+      ],
+      "common_warning_lead_s": 15.714285714285714,
+      "execution_status": "failed",
+      "total_deployment_path_length_m": 1084.6342439892262,
+      "total_pre_release_path_length_m": 1084.6342439892262,
+      "total_turn_proxy_rad": 1.3966523897554786,
+      "uav_plans": [
+        {
+          "deployment_path_length_m": 342.0,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": true,
+            "status": "PASS",
+            "t_b_s": 0.0,
+            "t_cmd_s": -5.5,
+            "t_d_s": -3.5
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 342.0,
+          "release_point_m": [
+            -58.0,
+            0.0
+          ],
+          "smoke_center_m": 40.0,
+          "smoke_center_xy_m": [
+            40.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_1",
+          "staging_position_m": [
+            -400.0,
+            0.0
+          ],
+          "t_b_s": 0.0,
+          "t_cmd_s": -5.5,
+          "t_d_s": -3.5,
+          "t_start_s": -15.714285714285714,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.0,
+          "uav_id": 1,
+          "unit_heading": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "deployment_path_length_m": 402.0,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 20.752269779507134,
+            "t_cmd_s": 15.252269779507134,
+            "t_d_s": 17.252269779507134
+          },
+          "execution_status": "failed_start_time_window",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 402.0,
+          "release_point_m": [
+            121.6,
+            58.8
+          ],
+          "smoke_center_m": 200.0,
+          "smoke_center_xy_m": [
+            200.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_3",
+          "staging_position_m": [
+            -200.0,
+            300.0
+          ],
+          "t_b_s": 20.752269779507134,
+          "t_cmd_s": 15.252269779507134,
+          "t_d_s": 17.252269779507134,
+          "t_start_s": 2.895126922364277,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.6435011087932843,
+          "uav_id": 2,
+          "unit_heading": [
+            0.8,
+            -0.6
+          ]
+        },
+        {
+          "deployment_path_length_m": 340.63424398922615,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 10.376134889753567,
+            "t_cmd_s": 4.876134889753567,
+            "t_d_s": 6.876134889753567
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 340.63424398922615,
+          "release_point_m": [
+            48.50535399427167,
+            -67.02623063037032
+          ],
+          "smoke_center_m": 120.00000000000001,
+          "smoke_center_xy_m": [
+            120.00000000000001,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_2",
+          "staging_position_m": [
+            -200.0,
+            -300.0
+          ],
+          "t_b_s": 10.376134889753567,
+          "t_cmd_s": 4.876134889753567,
+          "t_d_s": 6.876134889753567,
+          "t_start_s": -5.289373824147367,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.7531512809621943,
+          "uav_id": 3,
+          "unit_heading": [
+            0.7295372041400852,
+            0.6839411288813299
+          ]
+        }
+      ]
+    },
+    {
+      "assignment_feasible": false,
+      "assignment_uav_to_smoke_index": [
+        1,
+        0,
+        2
+      ],
+      "common_warning_lead_s": 13.720980508784676,
+      "execution_status": "failed",
+      "total_deployment_path_length_m": 1110.187454245971,
+      "total_pre_release_path_length_m": 1110.187454245971,
+      "total_turn_proxy_rad": 1.5395564933646284,
+      "uav_plans": [
+        {
+          "deployment_path_length_m": 422.0,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 10.376134889753567,
+            "t_cmd_s": 4.876134889753567,
+            "t_d_s": 6.876134889753567
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 422.0,
+          "release_point_m": [
+            22.000000000000014,
+            0.0
+          ],
+          "smoke_center_m": 120.00000000000001,
+          "smoke_center_xy_m": [
+            120.00000000000001,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_2",
+          "staging_position_m": [
+            -400.0,
+            0.0
+          ],
+          "t_b_s": 10.376134889753567,
+          "t_cmd_s": 4.876134889753567,
+          "t_d_s": 6.876134889753567,
+          "t_start_s": -8.195293681675004,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.0,
+          "uav_id": 1,
+          "unit_heading": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "deployment_path_length_m": 286.1874542459709,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": true,
+            "status": "PASS",
+            "t_b_s": 0.0,
+            "t_cmd_s": -5.5,
+            "t_d_s": -3.5
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 286.1874542459709,
+          "release_point_m": [
+            -21.22011466033358,
+            76.52514332541698
+          ],
+          "smoke_center_m": 40.0,
+          "smoke_center_xy_m": [
+            40.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_1",
+          "staging_position_m": [
+            -200.0,
+            300.0
+          ],
+          "t_b_s": 0.0,
+          "t_cmd_s": -5.5,
+          "t_d_s": -3.5,
+          "t_start_s": -13.720980508784676,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.8960553845713441,
+          "uav_id": 2,
+          "unit_heading": [
+            0.6246950475544243,
+            -0.7808688094430304
+          ]
+        },
+        {
+          "deployment_path_length_m": 402.0,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 20.752269779507134,
+            "t_cmd_s": 15.252269779507134,
+            "t_d_s": 17.252269779507134
+          },
+          "execution_status": "failed_start_time_window",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 402.0,
+          "release_point_m": [
+            121.6,
+            -58.8
+          ],
+          "smoke_center_m": 200.0,
+          "smoke_center_xy_m": [
+            200.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_3",
+          "staging_position_m": [
+            -200.0,
+            -300.0
+          ],
+          "t_b_s": 20.752269779507134,
+          "t_cmd_s": 15.252269779507134,
+          "t_d_s": 17.252269779507134,
+          "t_start_s": 2.895126922364277,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.6435011087932843,
+          "uav_id": 3,
+          "unit_heading": [
+            0.8,
+            0.6
+          ]
+        }
+      ]
+    },
+    {
+      "assignment_feasible": false,
+      "assignment_uav_to_smoke_index": [
+        1,
+        2,
+        0
+      ],
+      "common_warning_lead_s": 13.720980508784676,
+      "execution_status": "failed",
+      "total_deployment_path_length_m": 1110.187454245971,
+      "total_pre_release_path_length_m": 1110.187454245971,
+      "total_turn_proxy_rad": 1.5395564933646284,
+      "uav_plans": [
+        {
+          "deployment_path_length_m": 422.0,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 10.376134889753567,
+            "t_cmd_s": 4.876134889753567,
+            "t_d_s": 6.876134889753567
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 422.0,
+          "release_point_m": [
+            22.000000000000014,
+            0.0
+          ],
+          "smoke_center_m": 120.00000000000001,
+          "smoke_center_xy_m": [
+            120.00000000000001,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_2",
+          "staging_position_m": [
+            -400.0,
+            0.0
+          ],
+          "t_b_s": 10.376134889753567,
+          "t_cmd_s": 4.876134889753567,
+          "t_d_s": 6.876134889753567,
+          "t_start_s": -8.195293681675004,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.0,
+          "uav_id": 1,
+          "unit_heading": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "deployment_path_length_m": 402.0,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 20.752269779507134,
+            "t_cmd_s": 15.252269779507134,
+            "t_d_s": 17.252269779507134
+          },
+          "execution_status": "failed_start_time_window",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 402.0,
+          "release_point_m": [
+            121.6,
+            58.8
+          ],
+          "smoke_center_m": 200.0,
+          "smoke_center_xy_m": [
+            200.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_3",
+          "staging_position_m": [
+            -200.0,
+            300.0
+          ],
+          "t_b_s": 20.752269779507134,
+          "t_cmd_s": 15.252269779507134,
+          "t_d_s": 17.252269779507134,
+          "t_start_s": 2.895126922364277,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.6435011087932843,
+          "uav_id": 2,
+          "unit_heading": [
+            0.8,
+            -0.6
+          ]
+        },
+        {
+          "deployment_path_length_m": 286.1874542459709,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": true,
+            "status": "PASS",
+            "t_b_s": 0.0,
+            "t_cmd_s": -5.5,
+            "t_d_s": -3.5
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 286.1874542459709,
+          "release_point_m": [
+            -21.22011466033358,
+            -76.52514332541698
+          ],
+          "smoke_center_m": 40.0,
+          "smoke_center_xy_m": [
+            40.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_1",
+          "staging_position_m": [
+            -200.0,
+            -300.0
+          ],
+          "t_b_s": 0.0,
+          "t_cmd_s": -5.5,
+          "t_d_s": -3.5,
+          "t_start_s": -13.720980508784676,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.8960553845713441,
+          "uav_id": 3,
+          "unit_heading": [
+            0.6246950475544243,
+            0.7808688094430304
+          ]
+        }
+      ]
+    },
+    {
+      "assignment_feasible": true,
+      "assignment_uav_to_smoke_index": [
+        2,
+        0,
+        1
+      ],
+      "common_warning_lead_s": 13.720980508784676,
+      "execution_status": "feasible",
+      "safety": {
+        "certificate_status": "verified",
+        "minimum_distance_time_s": 5.049172573082764,
+        "minimum_pairwise_distance_m": 117.43112695204417,
+        "nominal_fixed_plan_maximum_d_safe_m": 117.43112695204417,
+        "pair_certificates": [
+          {
+            "candidate_times_s": [
+              -0.6763016490642926,
+              7.51899203261071,
+              25.36104262064107
+            ],
+            "certificate_status": "verified",
+            "method": "analytic_quadratic_distance_stationary_point",
+            "minimum_distance_time_s": 7.51899203261071,
+            "minimum_pairwise_distance_m": 379.50594375442,
+            "relative_velocity_mps": [
+              10.50853866847612,
+              21.86432666440485
+            ],
+            "relative_velocity_zero": false,
+            "safety_distance_m": 0.0,
+            "safety_margin_m": 379.50594375442,
+            "time_grid_used": false,
+            "trajectory_segment": [
+              -0.6763016490642926,
+              25.36104262064107
+            ],
+            "uav_i_position_m": [
+              -170.53177691309995,
+              0.0
+            ],
+            "uav_k_position_m": [
+              171.5181583904464,
+              -164.39769798805798
+            ],
+            "uav_pair": [
+              1,
+              2
+            ]
+          },
+          {
+            "candidate_times_s": [
+              -0.6763016490642926,
+              14.135630906058921,
+              25.36104262064107
+            ],
+            "certificate_status": "verified",
+            "method": "analytic_quadratic_distance_stationary_point",
+            "minimum_distance_time_s": 14.135630906058921,
+            "minimum_pairwise_distance_m": 195.77967914722998,
+            "relative_velocity_mps": [
+              7.572958284077615,
+              -19.150351608677237
+            ],
+            "relative_velocity_zero": false,
+            "safety_distance_m": 0.0,
+            "safety_margin_m": 195.77967914722998,
+            "time_grid_used": false,
+            "trajectory_segment": [
+              -0.6763016490642926,
+              25.36104262064107
+            ],
+            "uav_i_position_m": [
+              14.734111543450013,
+              0.0
+            ],
+            "uav_k_position_m": [
+              196.7953819559135,
+              71.99567058366893
+            ],
+            "uav_pair": [
+              1,
+              3
+            ]
+          },
+          {
+            "candidate_times_s": [
+              -5.289373824147367,
+              5.049172573082764,
+              25.36104262064107
+            ],
+            "certificate_status": "verified",
+            "method": "analytic_quadratic_distance_stationary_point",
+            "minimum_distance_time_s": 5.049172573082764,
+            "minimum_pairwise_distance_m": 117.43112695204417,
+            "relative_velocity_mps": [
+              -2.9355803843985058,
+              -41.01467827308208
+            ],
+            "relative_velocity_zero": false,
+            "safety_distance_m": 0.0,
+            "safety_margin_m": 117.43112695204417,
+            "time_grid_used": false,
+            "trajectory_segment": [
+              -5.289373824147367,
+              25.36104262064107
+            ],
+            "uav_i_position_m": [
+              128.31740681826813,
+              -110.39675852283517
+            ],
+            "uav_k_position_m": [
+              11.185918538218942,
+              -102.01320137041972
+            ],
+            "uav_pair": [
+              2,
+              3
+            ]
+          }
+        ],
+        "robust_safe_distance_guarantee": false,
+        "safety_distance_m": 0.0,
+        "safety_margin_m": 117.43112695204417,
+        "time_grid_used": false,
+        "uav_i_position_m": [
+          128.31740681826813,
+          -110.39675852283517
+        ],
+        "uav_k_position_m": [
+          11.185918538218942,
+          -102.01320137041972
+        ],
+        "uav_pair": [
+          2,
+          3
+        ]
+      },
+      "total_deployment_path_length_m": 1128.8216982351971,
+      "total_pre_release_path_length_m": 1128.8216982351971,
+      "total_turn_proxy_rad": 1.6492066655335385,
+      "uav_plans": [
+        {
+          "deployment_path_length_m": 502.0,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 20.752269779507134,
+            "t_cmd_s": 15.252269779507134,
+            "t_d_s": 17.252269779507134
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 502.0,
+          "release_point_m": [
+            102.0,
+            0.0
+          ],
+          "smoke_center_m": 200.0,
+          "smoke_center_xy_m": [
+            200.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_3",
+          "staging_position_m": [
+            -400.0,
+            0.0
+          ],
+          "t_b_s": 20.752269779507134,
+          "t_cmd_s": 15.252269779507134,
+          "t_d_s": 17.252269779507134,
+          "t_start_s": -0.6763016490642926,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.0,
+          "uav_id": 1,
+          "unit_heading": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "deployment_path_length_m": 286.1874542459709,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": true,
+            "status": "PASS",
+            "t_b_s": 0.0,
+            "t_cmd_s": -5.5,
+            "t_d_s": -3.5
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 286.1874542459709,
+          "release_point_m": [
+            -21.22011466033358,
+            76.52514332541698
+          ],
+          "smoke_center_m": 40.0,
+          "smoke_center_xy_m": [
+            40.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_1",
+          "staging_position_m": [
+            -200.0,
+            300.0
+          ],
+          "t_b_s": 0.0,
+          "t_cmd_s": -5.5,
+          "t_d_s": -3.5,
+          "t_start_s": -13.720980508784676,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.8960553845713441,
+          "uav_id": 2,
+          "unit_heading": [
+            0.6246950475544243,
+            -0.7808688094430304
+          ]
+        },
+        {
+          "deployment_path_length_m": 340.63424398922615,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 10.376134889753567,
+            "t_cmd_s": 4.876134889753567,
+            "t_d_s": 6.876134889753567
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 340.63424398922615,
+          "release_point_m": [
+            48.50535399427167,
+            -67.02623063037032
+          ],
+          "smoke_center_m": 120.00000000000001,
+          "smoke_center_xy_m": [
+            120.00000000000001,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_2",
+          "staging_position_m": [
+            -200.0,
+            -300.0
+          ],
+          "t_b_s": 10.376134889753567,
+          "t_cmd_s": 4.876134889753567,
+          "t_d_s": 6.876134889753567,
+          "t_start_s": -5.289373824147367,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.7531512809621943,
+          "uav_id": 3,
+          "unit_heading": [
+            0.7295372041400852,
+            0.6839411288813299
+          ]
+        }
+      ]
+    },
+    {
+      "assignment_feasible": true,
+      "assignment_uav_to_smoke_index": [
+        2,
+        1,
+        0
+      ],
+      "common_warning_lead_s": 13.720980508784676,
+      "execution_status": "feasible",
+      "safety": {
+        "certificate_status": "verified",
+        "minimum_distance_time_s": 5.049172573082764,
+        "minimum_pairwise_distance_m": 117.43112695204417,
+        "nominal_fixed_plan_maximum_d_safe_m": 117.43112695204417,
+        "pair_certificates": [
+          {
+            "candidate_times_s": [
+              -0.6763016490642926,
+              14.135630906058921,
+              25.36104262064107
+            ],
+            "certificate_status": "verified",
+            "method": "analytic_quadratic_distance_stationary_point",
+            "minimum_distance_time_s": 14.135630906058921,
+            "minimum_pairwise_distance_m": 195.77967914722998,
+            "relative_velocity_mps": [
+              7.572958284077615,
+              19.150351608677237
+            ],
+            "relative_velocity_zero": false,
+            "safety_distance_m": 0.0,
+            "safety_margin_m": 195.77967914722998,
+            "time_grid_used": false,
+            "trajectory_segment": [
+              -0.6763016490642926,
+              25.36104262064107
+            ],
+            "uav_i_position_m": [
+              14.734111543450013,
+              0.0
+            ],
+            "uav_k_position_m": [
+              196.7953819559135,
+              -71.99567058366893
+            ],
+            "uav_pair": [
+              1,
+              2
+            ]
+          },
+          {
+            "candidate_times_s": [
+              -0.6763016490642926,
+              7.51899203261071,
+              25.36104262064107
+            ],
+            "certificate_status": "verified",
+            "method": "analytic_quadratic_distance_stationary_point",
+            "minimum_distance_time_s": 7.51899203261071,
+            "minimum_pairwise_distance_m": 379.50594375442,
+            "relative_velocity_mps": [
+              10.50853866847612,
+              -21.86432666440485
+            ],
+            "relative_velocity_zero": false,
+            "safety_distance_m": 0.0,
+            "safety_margin_m": 379.50594375442,
+            "time_grid_used": false,
+            "trajectory_segment": [
+              -0.6763016490642926,
+              25.36104262064107
+            ],
+            "uav_i_position_m": [
+              -170.53177691309995,
+              0.0
+            ],
+            "uav_k_position_m": [
+              171.5181583904464,
+              164.39769798805798
+            ],
+            "uav_pair": [
+              1,
+              3
+            ]
+          },
+          {
+            "candidate_times_s": [
+              -5.289373824147367,
+              5.049172573082764,
+              25.36104262064107
+            ],
+            "certificate_status": "verified",
+            "method": "analytic_quadratic_distance_stationary_point",
+            "minimum_distance_time_s": 5.049172573082764,
+            "minimum_pairwise_distance_m": 117.43112695204417,
+            "relative_velocity_mps": [
+              2.9355803843985058,
+              -41.01467827308208
+            ],
+            "relative_velocity_zero": false,
+            "safety_distance_m": 0.0,
+            "safety_margin_m": 117.43112695204417,
+            "time_grid_used": false,
+            "trajectory_segment": [
+              -5.289373824147367,
+              25.36104262064107
+            ],
+            "uav_i_position_m": [
+              11.185918538218942,
+              102.01320137041972
+            ],
+            "uav_k_position_m": [
+              128.31740681826813,
+              110.39675852283517
+            ],
+            "uav_pair": [
+              2,
+              3
+            ]
+          }
+        ],
+        "robust_safe_distance_guarantee": false,
+        "safety_distance_m": 0.0,
+        "safety_margin_m": 117.43112695204417,
+        "time_grid_used": false,
+        "uav_i_position_m": [
+          11.185918538218942,
+          102.01320137041972
+        ],
+        "uav_k_position_m": [
+          128.31740681826813,
+          110.39675852283517
+        ],
+        "uav_pair": [
+          2,
+          3
+        ]
+      },
+      "total_deployment_path_length_m": 1128.8216982351971,
+      "total_pre_release_path_length_m": 1128.8216982351971,
+      "total_turn_proxy_rad": 1.6492066655335385,
+      "uav_plans": [
+        {
+          "deployment_path_length_m": 502.0,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 20.752269779507134,
+            "t_cmd_s": 15.252269779507134,
+            "t_d_s": 17.252269779507134
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 502.0,
+          "release_point_m": [
+            102.0,
+            0.0
+          ],
+          "smoke_center_m": 200.0,
+          "smoke_center_xy_m": [
+            200.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_3",
+          "staging_position_m": [
+            -400.0,
+            0.0
+          ],
+          "t_b_s": 20.752269779507134,
+          "t_cmd_s": 15.252269779507134,
+          "t_d_s": 17.252269779507134,
+          "t_start_s": -0.6763016490642926,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.0,
+          "uav_id": 1,
+          "unit_heading": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "deployment_path_length_m": 340.63424398922615,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": false,
+            "status": "PASS",
+            "t_b_s": 10.376134889753567,
+            "t_cmd_s": 4.876134889753567,
+            "t_d_s": 6.876134889753567
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 340.63424398922615,
+          "release_point_m": [
+            48.50535399427167,
+            67.02623063037032
+          ],
+          "smoke_center_m": 120.00000000000001,
+          "smoke_center_xy_m": [
+            120.00000000000001,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_2",
+          "staging_position_m": [
+            -200.0,
+            300.0
+          ],
+          "t_b_s": 10.376134889753567,
+          "t_cmd_s": 4.876134889753567,
+          "t_d_s": 6.876134889753567,
+          "t_start_s": -5.289373824147367,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.7531512809621943,
+          "uav_id": 2,
+          "unit_heading": [
+            0.7295372041400852,
+            -0.6839411288813299
+          ]
+        },
+        {
+          "deployment_path_length_m": 286.1874542459709,
+          "event_chain": {
+            "burst_before_lock": false,
+            "errors": [],
+            "negative_times_clipped": false,
+            "pre_lock_mission": true,
+            "status": "PASS",
+            "t_b_s": 0.0,
+            "t_cmd_s": -5.5,
+            "t_d_s": -3.5
+          },
+          "execution_status": "feasible",
+          "inertial_displacement_m": 98.0,
+          "initial_heading_rad": 0.0,
+          "operating_radius_status": "blocked_missing_base_reference",
+          "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+          "pre_release_path_length_m": 286.1874542459709,
+          "release_point_m": [
+            -21.22011466033358,
+            -76.52514332541698
+          ],
+          "smoke_center_m": 40.0,
+          "smoke_center_xy_m": [
+            40.0,
+            0.0
+          ],
+          "smoke_id": "Q3B_RECON_1",
+          "staging_position_m": [
+            -200.0,
+            -300.0
+          ],
+          "t_b_s": 0.0,
+          "t_cmd_s": -5.5,
+          "t_d_s": -3.5,
+          "t_start_s": -13.720980508784676,
+          "trajectory_end_s": 25.36104262064107,
+          "turn_proxy_rad": 0.8960553845713441,
+          "uav_id": 3,
+          "unit_heading": [
+            0.6246950475544243,
+            0.7808688094430304
+          ]
+        }
+      ]
+    }
+  ],
+  "assignment_count": 6,
+  "coverage_certificate": {
+    "analytic_internal_tangencies": [],
+    "canonical_box_count": 5,
+    "canonical_boxes": [
+      {
+        "canonical_box_id": "event_01",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 0.0,
+        "end_s": 10.376134889753567,
+        "internal_box_count": 6,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "start_s": 0.0
+      },
+      {
+        "canonical_box_id": "event_02",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 2075.3685749990036,
+        "end_s": 18.0,
+        "internal_box_count": 2,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "start_s": 10.376134889753567
+      },
+      {
+        "canonical_box_id": "event_03",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 0.0,
+        "end_s": 20.752269779507134,
+        "internal_box_count": 9,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "start_s": 18.0
+      },
+      {
+        "canonical_box_id": "event_04",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 98.9625259876652,
+        "end_s": 23.0,
+        "internal_box_count": 1,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "start_s": 20.752269779507134
+      },
+      {
+        "canonical_box_id": "event_05",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 4267.362923531903,
+        "end_s": 25.36104262064107,
+        "internal_box_count": 1,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "start_s": 23.0
+      }
+    ],
+    "certificate_status": "verified",
+    "certified_box_count": 19,
+    "failed_box_count": 0,
+    "first_failure_time_interval": null,
+    "gap_count": 0,
+    "independent_interval_method_agreement": true,
+    "internal_boxes": [
+      {
+        "active_smokes": [
+          0
+        ],
+        "box_id": "box_00001",
+        "canonical_box_id": "event_01",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 0.0,
+        "end_s": 0.1,
+        "midpoint_margin_m2": 92.37138975000016,
+        "numerical_upper_bound_m2": 184.44555900000069,
+        "proof_branch": "analytic_single_smoke_monotone_from_exact_zero",
+        "radius_regimes": [
+          "full_radius",
+          "not_burst",
+          "not_burst"
+        ],
+        "start_s": 0.0,
+        "subdivision_depth": 0
+      },
+      {
+        "active_smokes": [
+          0
+        ],
+        "box_id": "box_00002",
+        "canonical_box_id": "event_01",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 88.26340643650016,
+        "end_s": 2.6440337224383916,
+        "midpoint_margin_m2": 2426.8806269375,
+        "numerical_upper_bound_m2": 4765.497847438502,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "full_radius",
+          "not_burst",
+          "not_burst"
+        ],
+        "start_s": 0.1,
+        "subdivision_depth": 2
+      },
+      {
+        "active_smokes": [
+          0
+        ],
+        "box_id": "box_00003",
+        "canonical_box_id": "event_01",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 4380.769237186499,
+        "end_s": 5.188067444876784,
+        "midpoint_margin_m2": 6334.6578474375,
+        "numerical_upper_bound_m2": 8288.546457688502,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "full_radius",
+          "not_burst",
+          "not_burst"
+        ],
+        "start_s": 2.6440337224383916,
+        "subdivision_depth": 2
+      },
+      {
+        "active_smokes": [
+          0
+        ],
+        "box_id": "box_00004",
+        "canonical_box_id": "event_01",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 4380.769237186499,
+        "end_s": 7.732101167315175,
+        "midpoint_margin_m2": 6334.6578474375,
+        "numerical_upper_bound_m2": 8288.546457688502,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "full_radius",
+          "not_burst",
+          "not_burst"
+        ],
+        "start_s": 5.188067444876784,
+        "subdivision_depth": 2
+      },
+      {
+        "active_smokes": [
+          0
+        ],
+        "box_id": "box_00005",
+        "canonical_box_id": "event_01",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 88.26340643649834,
+        "end_s": 10.276134889753568,
+        "midpoint_margin_m2": 2426.880626937499,
+        "numerical_upper_bound_m2": 4765.497847438502,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "full_radius",
+          "not_burst",
+          "not_burst"
+        ],
+        "start_s": 7.732101167315175,
+        "subdivision_depth": 2
+      },
+      {
+        "active_smokes": [
+          0
+        ],
+        "box_id": "box_00006",
+        "canonical_box_id": "event_01",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 0.0,
+        "end_s": 10.376134889753567,
+        "midpoint_margin_m2": 92.37138974999834,
+        "numerical_upper_bound_m2": 184.44555900000069,
+        "proof_branch": "analytic_single_smoke_monotone_to_internal_contact_or_isolated_terminal_root",
+        "radius_regimes": [
+          "full_radius",
+          "not_burst",
+          "not_burst"
+        ],
+        "start_s": 10.276134889753568,
+        "subdivision_depth": 0
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00007",
+        "canonical_box_id": "event_02",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 2225.3709249990006,
+        "end_s": 14.188067444876783,
+        "midpoint_margin_m2": 6615.943025,
+        "numerical_upper_bound_m2": 11006.515125001,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "full_radius",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 10.376134889753567,
+        "subdivision_depth": 1
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00008",
+        "canonical_box_id": "event_02",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 2075.3685749990036,
+        "end_s": 18.0,
+        "midpoint_margin_m2": 7329.712775000005,
+        "numerical_upper_bound_m2": 12584.056975001009,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "full_radius",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 14.188067444876783,
+        "subdivision_depth": 1
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00009",
+        "canonical_box_id": "event_03",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 1534.495633074063,
+        "end_s": 18.663067444876784,
+        "midpoint_margin_m2": 4130.989769984377,
+        "numerical_upper_bound_m2": 6727.483906894692,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "linear_decay",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 18.0,
+        "subdivision_depth": 2
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00010",
+        "canonical_box_id": "event_03",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 472.2493229490646,
+        "end_s": 19.32613488975357,
+        "midpoint_margin_m2": 3068.743459859378,
+        "numerical_upper_bound_m2": 5665.237596769693,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "linear_decay",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 18.663067444876784,
+        "subdivision_depth": 2
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00011",
+        "canonical_box_id": "event_03",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 1053.0634196458568,
+        "end_s": 19.65766861219196,
+        "midpoint_margin_m2": 2237.7564084335945,
+        "numerical_upper_bound_m2": 3422.449397221332,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "linear_decay",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 19.32613488975357,
+        "subdivision_depth": 3
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00012",
+        "canonical_box_id": "event_03",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 539.5146543235668,
+        "end_s": 19.98920233463035,
+        "midpoint_margin_m2": 1667.4306032773484,
+        "numerical_upper_bound_m2": 2795.3465522311303,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "linear_decay",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 19.65766861219196,
+        "subdivision_depth": 3
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00013",
+        "canonical_box_id": "event_03",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 12.898338970009705,
+        "end_s": 20.320736057068743,
+        "midpoint_margin_m2": 1084.0372480898468,
+        "numerical_upper_bound_m2": 2155.1761572096843,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "linear_decay",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 19.98920233463035,
+        "subdivision_depth": 3
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00014",
+        "canonical_box_id": "event_03",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 130.73571734776962,
+        "end_s": 20.48650291828794,
+        "midpoint_margin_m2": 637.9166519912096,
+        "numerical_upper_bound_m2": 1145.0975866346498,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "linear_decay",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 20.320736057068743,
+        "subdivision_depth": 4
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00015",
+        "canonical_box_id": "event_03",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 165.60658026420103,
+        "end_s": 20.569386348897538,
+        "midpoint_margin_m2": 412.0999176071764,
+        "numerical_upper_bound_m2": 658.5932549501518,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "linear_decay",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 20.48650291828794,
+        "subdivision_depth": 5
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00016",
+        "canonical_box_id": "event_03",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 17.58975331828286,
+        "end_s": 20.652269779507133,
+        "midpoint_margin_m2": 260.5345256716255,
+        "numerical_upper_bound_m2": 503.47929802496816,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "linear_decay",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 20.569386348897538,
+        "subdivision_depth": 5
+      },
+      {
+        "active_smokes": [
+          0,
+          1
+        ],
+        "box_id": "box_00017",
+        "canonical_box_id": "event_03",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 0.0,
+        "end_s": 20.752269779507134,
+        "midpoint_margin_m2": 92.37138975000562,
+        "numerical_upper_bound_m2": 184.44555900000705,
+        "proof_branch": "analytic_single_smoke_monotone_to_internal_contact_or_isolated_terminal_root",
+        "radius_regimes": [
+          "linear_decay",
+          "full_radius",
+          "not_burst"
+        ],
+        "start_s": 20.652269779507133,
+        "subdivision_depth": 0
+      },
+      {
+        "active_smokes": [
+          0,
+          1,
+          2
+        ],
+        "box_id": "box_00018",
+        "canonical_box_id": "event_04",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 98.9625259876652,
+        "end_s": 23.0,
+        "midpoint_margin_m2": 6475.082225000001,
+        "numerical_upper_bound_m2": 12851.201924012339,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "linear_decay",
+          "full_radius",
+          "full_radius"
+        ],
+        "start_s": 20.752269779507134,
+        "subdivision_depth": 0
+      },
+      {
+        "active_smokes": [
+          1,
+          2
+        ],
+        "box_id": "box_00019",
+        "canonical_box_id": "event_05",
+        "certificate_status": "certified",
+        "conservative_lower_bound_m2": 4267.362923531903,
+        "end_s": 25.36104262064107,
+        "midpoint_margin_m2": 7098.641071643783,
+        "numerical_upper_bound_m2": 9929.919219755664,
+        "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+        "radius_regimes": [
+          "expired",
+          "full_radius",
+          "full_radius"
+        ],
+        "start_s": 23.0,
+        "subdivision_depth": 0
+      }
+    ],
+    "internal_subbox_count": 19,
+    "interval_cross_check": {
+      "event_times_s": [
+        0.0,
+        10.376134889753567,
+        18.0,
+        20.752269779507134,
+        23.0,
+        25.36104262064107
+      ],
+      "full_window_coverage": true,
+      "intervals": [
+        [
+          0.0,
+          25.36104262064107
+        ]
+      ],
+      "longest_continuous_full_coverage_s": 25.36104262064107,
+      "method": "physical_event_partition_and_brent_root_isolation",
+      "root_count": 0,
+      "roots_s": [],
+      "sampling_used_as_measure": false,
+      "total_full_coverage_duration_s": 25.36104262064107,
+      "unresolved_interval_count": 0
+    },
+    "method": "physical_event_and_structural_split_with_exact_xi_and_adaptive_lipschitz_outward_guard",
+    "minimum_certified_margin_m2": 0.0,
+    "numerical_policy": {
+      "failure_tolerance_m2": 1e-07,
+      "maximum_depth": 30,
+      "minimum_width_s": 1e-07,
+      "rounding_guard_m2": 1e-09
+    },
+    "time_grid_used_as_proof": false,
+    "undecided_box_count": 0
+  },
+  "coverage_certificate_status": "verified",
+  "display_name": "reconstructed transparent Q3-B baseline",
+  "execution_status": "completed",
+  "feasible_assignment_count": 2,
+  "freeze_status": "unfrozen",
+  "global_optimality_status": "not_proved",
+  "input_status": "validated_synthetic_input",
+  "legacy_reference": {
+    "N_minus_1": {
+      "N_minus_1_is_hard_constraint": false,
+      "failed_failed_uav_ids": [
+        1,
+        2,
+        3
+      ],
+      "failure_cases": [
+        {
+          "certificate_status": "verified",
+          "failed_uav_id": 1,
+          "failure_intervals": [
+            [
+              0.0,
+              10.376134889753565
+            ]
+          ],
+          "first_failure_time_s": 0.0,
+          "full_window_coverage": false,
+          "longest_continuous_full_coverage_s": 14.984907730887503,
+          "minimum_coverage_margin_m2": -1000000000000.0,
+          "remaining_double_coverage_fraction": 0.0,
+          "remaining_double_coverage_percent": 0.0,
+          "remaining_smoke_ids": [
+            "Q3B_LEGACY_2",
+            "Q3B_LEGACY_3"
+          ],
+          "total_full_coverage_duration_s": 14.984907730887503,
+          "worst_time_s": 0.0
+        },
+        {
+          "certificate_status": "verified",
+          "failed_uav_id": 2,
+          "failure_intervals": [
+            [
+              10.376134889753567,
+              20.752269779507134
+            ]
+          ],
+          "first_failure_time_s": 10.376134889753567,
+          "full_window_coverage": false,
+          "longest_continuous_full_coverage_s": 10.376134889753567,
+          "minimum_coverage_margin_m2": -11200.000000000004,
+          "remaining_double_coverage_fraction": 0.0,
+          "remaining_double_coverage_percent": 0.0,
+          "remaining_smoke_ids": [
+            "Q3B_LEGACY_1",
+            "Q3B_LEGACY_3"
+          ],
+          "total_full_coverage_duration_s": 14.984907730887501,
+          "worst_time_s": 15.564202334630352
+        },
+        {
+          "certificate_status": "verified",
+          "failed_uav_id": 3,
+          "failure_intervals": [
+            [
+              20.75226977950713,
+              25.36104262064107
+            ]
+          ],
+          "first_failure_time_s": 20.75226977950713,
+          "full_window_coverage": false,
+          "longest_continuous_full_coverage_s": 20.75226977950713,
+          "minimum_coverage_margin_m2": -9790.712737755119,
+          "remaining_double_coverage_fraction": 0.0,
+          "remaining_double_coverage_percent": 0.0,
+          "remaining_smoke_ids": [
+            "Q3B_LEGACY_1",
+            "Q3B_LEGACY_2"
+          ],
+          "total_full_coverage_duration_s": 20.75226977950713,
+          "worst_time_s": 25.36104262064107
+        }
+      ],
+      "fixed_plan_no_reoptimization": true,
+      "full_window_success_count": 0,
+      "full_window_success_fraction": 0.0,
+      "full_window_success_percent": 0.0,
+      "structural_feasibility_claimed": false,
+      "successful_failed_uav_ids": [],
+      "worst_failure_continuous_coverage_s": 10.376134889753567
+    },
+    "assignment_uav_to_smoke_index": [
+      1,
+      0,
+      2
+    ],
+    "blocking_reason": "UAV 3 requires t_start_s=2.895126922364277, outside the allowed [-60,0] start window.",
+    "coverage_certificate": {
+      "analytic_internal_tangencies": [],
+      "canonical_box_count": 5,
+      "canonical_boxes": [
+        {
+          "canonical_box_id": "event_01",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 0.0,
+          "end_s": 10.376134889753565,
+          "internal_box_count": 6,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "start_s": 0.0
+        },
+        {
+          "canonical_box_id": "event_02",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 2075.368574999002,
+          "end_s": 18.0,
+          "internal_box_count": 2,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "start_s": 10.376134889753565
+        },
+        {
+          "canonical_box_id": "event_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 0.0,
+          "end_s": 20.752269779507134,
+          "internal_box_count": 9,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "start_s": 18.0
+        },
+        {
+          "canonical_box_id": "event_04",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 98.96252598766429,
+          "end_s": 23.0,
+          "internal_box_count": 1,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "start_s": 20.752269779507134
+        },
+        {
+          "canonical_box_id": "event_05",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 4267.362923531903,
+          "end_s": 25.36104262064107,
+          "internal_box_count": 1,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "start_s": 23.0
+        }
+      ],
+      "certificate_status": "verified",
+      "certified_box_count": 19,
+      "failed_box_count": 0,
+      "first_failure_time_interval": null,
+      "gap_count": 0,
+      "independent_interval_method_agreement": true,
+      "internal_boxes": [
+        {
+          "active_smokes": [
+            0
+          ],
+          "box_id": "box_00001",
+          "canonical_box_id": "event_01",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 0.0,
+          "end_s": 0.1,
+          "midpoint_margin_m2": 92.37138975000016,
+          "numerical_upper_bound_m2": 184.44555900000069,
+          "proof_branch": "analytic_single_smoke_monotone_from_exact_zero",
+          "radius_regimes": [
+            "full_radius",
+            "not_burst",
+            "not_burst"
+          ],
+          "start_s": 0.0,
+          "subdivision_depth": 0
+        },
+        {
+          "active_smokes": [
+            0
+          ],
+          "box_id": "box_00002",
+          "canonical_box_id": "event_01",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 88.26340643649971,
+          "end_s": 2.644033722438391,
+          "midpoint_margin_m2": 2426.880626937499,
+          "numerical_upper_bound_m2": 4765.4978474385,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "full_radius",
+            "not_burst",
+            "not_burst"
+          ],
+          "start_s": 0.1,
+          "subdivision_depth": 2
+        },
+        {
+          "active_smokes": [
+            0
+          ],
+          "box_id": "box_00003",
+          "canonical_box_id": "event_01",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 4380.769237186498,
+          "end_s": 5.188067444876783,
+          "midpoint_margin_m2": 6334.657847437499,
+          "numerical_upper_bound_m2": 8288.5464576885,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "full_radius",
+            "not_burst",
+            "not_burst"
+          ],
+          "start_s": 2.644033722438391,
+          "subdivision_depth": 2
+        },
+        {
+          "active_smokes": [
+            0
+          ],
+          "box_id": "box_00004",
+          "canonical_box_id": "event_01",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 4380.769237186499,
+          "end_s": 7.732101167315174,
+          "midpoint_margin_m2": 6334.6578474375,
+          "numerical_upper_bound_m2": 8288.546457688502,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "full_radius",
+            "not_burst",
+            "not_burst"
+          ],
+          "start_s": 5.188067444876783,
+          "subdivision_depth": 2
+        },
+        {
+          "active_smokes": [
+            0
+          ],
+          "box_id": "box_00005",
+          "canonical_box_id": "event_01",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 88.26340643650335,
+          "end_s": 10.276134889753566,
+          "midpoint_margin_m2": 2426.8806269375027,
+          "numerical_upper_bound_m2": 4765.497847438503,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "full_radius",
+            "not_burst",
+            "not_burst"
+          ],
+          "start_s": 7.732101167315174,
+          "subdivision_depth": 2
+        },
+        {
+          "active_smokes": [
+            0
+          ],
+          "box_id": "box_00006",
+          "canonical_box_id": "event_01",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 0.0,
+          "end_s": 10.376134889753565,
+          "midpoint_margin_m2": 92.37138975000562,
+          "numerical_upper_bound_m2": 184.4455590000034,
+          "proof_branch": "analytic_single_smoke_monotone_to_internal_contact_or_isolated_terminal_root",
+          "radius_regimes": [
+            "full_radius",
+            "not_burst",
+            "not_burst"
+          ],
+          "start_s": 10.276134889753566,
+          "subdivision_depth": 0
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00007",
+          "canonical_box_id": "event_02",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 2225.3709249989997,
+          "end_s": 14.188067444876783,
+          "midpoint_margin_m2": 6615.9430250000005,
+          "numerical_upper_bound_m2": 11006.515125001004,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "full_radius",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 10.376134889753565,
+          "subdivision_depth": 1
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00008",
+          "canonical_box_id": "event_02",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 2075.368574999002,
+          "end_s": 18.0,
+          "midpoint_margin_m2": 7329.712775000004,
+          "numerical_upper_bound_m2": 12584.056975001007,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "full_radius",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 14.188067444876783,
+          "subdivision_depth": 1
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00009",
+          "canonical_box_id": "event_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1534.4956330740595,
+          "end_s": 18.663067444876784,
+          "midpoint_margin_m2": 4130.989769984373,
+          "numerical_upper_bound_m2": 6727.4839068946885,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 18.0,
+          "subdivision_depth": 2
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00010",
+          "canonical_box_id": "event_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 472.2493229490619,
+          "end_s": 19.32613488975357,
+          "midpoint_margin_m2": 3068.7434598593754,
+          "numerical_upper_bound_m2": 5665.237596769691,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 18.663067444876784,
+          "subdivision_depth": 2
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00011",
+          "canonical_box_id": "event_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1053.0634196458532,
+          "end_s": 19.65766861219196,
+          "midpoint_margin_m2": 2237.756408433591,
+          "numerical_upper_bound_m2": 3422.4493972213286,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 19.32613488975357,
+          "subdivision_depth": 3
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00012",
+          "canonical_box_id": "event_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 539.5146543235641,
+          "end_s": 19.98920233463035,
+          "midpoint_margin_m2": 1667.4306032773457,
+          "numerical_upper_bound_m2": 2795.3465522311276,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 19.65766861219196,
+          "subdivision_depth": 3
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00013",
+          "canonical_box_id": "event_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 12.898338970006977,
+          "end_s": 20.320736057068743,
+          "midpoint_margin_m2": 1084.037248089844,
+          "numerical_upper_bound_m2": 2155.1761572096816,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 19.98920233463035,
+          "subdivision_depth": 3
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00014",
+          "canonical_box_id": "event_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 130.73571734776598,
+          "end_s": 20.48650291828794,
+          "midpoint_margin_m2": 637.916651991206,
+          "numerical_upper_bound_m2": 1145.0975866346462,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 20.320736057068743,
+          "subdivision_depth": 4
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00015",
+          "canonical_box_id": "event_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 165.6065802641983,
+          "end_s": 20.569386348897538,
+          "midpoint_margin_m2": 412.09991760717367,
+          "numerical_upper_bound_m2": 658.5932549501491,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 20.48650291828794,
+          "subdivision_depth": 5
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00016",
+          "canonical_box_id": "event_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 17.58975331828013,
+          "end_s": 20.652269779507133,
+          "midpoint_margin_m2": 260.53452567162276,
+          "numerical_upper_bound_m2": 503.47929802496543,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 20.569386348897538,
+          "subdivision_depth": 5
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00017",
+          "canonical_box_id": "event_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 0.0,
+          "end_s": 20.752269779507134,
+          "midpoint_margin_m2": 92.37138975000198,
+          "numerical_upper_bound_m2": 184.4455590000034,
+          "proof_branch": "analytic_single_smoke_monotone_to_internal_contact_or_isolated_terminal_root",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 20.652269779507133,
+          "subdivision_depth": 0
+        },
+        {
+          "active_smokes": [
+            0,
+            1,
+            2
+          ],
+          "box_id": "box_00018",
+          "canonical_box_id": "event_04",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 98.96252598766429,
+          "end_s": 23.0,
+          "midpoint_margin_m2": 6475.082225,
+          "numerical_upper_bound_m2": 12851.201924012339,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius",
+            "full_radius"
+          ],
+          "start_s": 20.752269779507134,
+          "subdivision_depth": 0
+        },
+        {
+          "active_smokes": [
+            1,
+            2
+          ],
+          "box_id": "box_00019",
+          "canonical_box_id": "event_05",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 4267.362923531903,
+          "end_s": 25.36104262064107,
+          "midpoint_margin_m2": 7098.641071643783,
+          "numerical_upper_bound_m2": 9929.919219755664,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "expired",
+            "full_radius",
+            "full_radius"
+          ],
+          "start_s": 23.0,
+          "subdivision_depth": 0
+        }
+      ],
+      "internal_subbox_count": 19,
+      "interval_cross_check": {
+        "event_times_s": [
+          0.0,
+          10.376134889753565,
+          18.0,
+          20.752269779507134,
+          23.0,
+          25.36104262064107
+        ],
+        "full_window_coverage": true,
+        "intervals": [
+          [
+            0.0,
+            25.36104262064107
+          ]
+        ],
+        "longest_continuous_full_coverage_s": 25.36104262064107,
+        "method": "physical_event_partition_and_brent_root_isolation",
+        "root_count": 0,
+        "roots_s": [],
+        "sampling_used_as_measure": false,
+        "total_full_coverage_duration_s": 25.36104262064107,
+        "unresolved_interval_count": 0
+      },
+      "method": "physical_event_and_structural_split_with_exact_xi_and_adaptive_lipschitz_outward_guard",
+      "minimum_certified_margin_m2": 0.0,
+      "numerical_policy": {
+        "failure_tolerance_m2": 1e-07,
+        "maximum_depth": 30,
+        "minimum_width_s": 1e-07,
+        "rounding_guard_m2": 1e-09
+      },
+      "time_grid_used_as_proof": false,
+      "undecided_box_count": 0
+    },
+    "deployment_feasibility_status": "FAIL",
+    "display_name": "legacy Q3-B B-3 reference",
+    "event_chain_status": "PASS",
+    "failed_deployment_plans": [
+      {
+        "execution_status": "failed_start_time_window",
+        "t_start_s": 2.895126922364277,
+        "uav_id": 3
+      }
+    ],
+    "full_decision_variables_available": true,
+    "independent_verification_status": "failed_current_start_time_window",
+    "provenance": "recovered_read_only_from_git_history",
+    "recomputed_metrics": {
+      "N_minus_1_full_window_success_count": 0,
+      "common_warning_lead_s": 13.720980508784676,
+      "double_coverage_fraction": 0.0,
+      "double_coverage_percent": 0.0,
+      "nominal_minimum_pairwise_distance_m": 189.75297187720994,
+      "total_deployment_path_length_m": 1110.187454245971,
+      "total_turn_proxy_rad": 1.5395564933646284
+    },
+    "reference_only": true,
+    "reference_or_computed": "reference_with_current_independent_audit",
+    "safety_certificate": {
+      "certificate_status": "verified",
+      "minimum_distance_time_s": 3.759496016305354,
+      "minimum_pairwise_distance_m": 189.75297187720994,
+      "nominal_fixed_plan_maximum_d_safe_m": 189.75297187720994,
+      "pair_certificates": [
+        {
+          "candidate_times_s": [
+            -8.195293681675006,
+            3.759496016305354,
+            25.36104262064107
+          ],
+          "certificate_status": "verified",
+          "method": "analytic_quadratic_distance_stationary_point",
+          "minimum_distance_time_s": 3.759496016305354,
+          "minimum_pairwise_distance_m": 189.75297187720994,
+          "relative_velocity_mps": [
+            10.50853866847612,
+            21.86432666440485
+          ],
+          "relative_velocity_zero": false,
+          "safety_distance_m": 0.0,
+          "safety_margin_m": 189.75297187720994,
+          "time_grid_used": false,
+          "trajectory_segment": [
+            -8.195293681675006,
+            25.36104262064107
+          ],
+          "uav_i_position_m": [
+            -65.26588845654993,
+            0.0
+          ],
+          "uav_k_position_m": [
+            105.7590791952232,
+            -82.19884899402899
+          ],
+          "uav_pair": [
+            1,
+            2
+          ]
+        },
+        {
+          "candidate_times_s": [
+            2.895126922364277,
+            16.992773763201782,
+            25.36104262064107
+          ],
+          "certificate_status": "verified",
+          "method": "analytic_quadratic_distance_stationary_point",
+          "minimum_distance_time_s": 16.992773763201782,
+          "minimum_pairwise_distance_m": 199.72798046635455,
+          "relative_velocity_mps": [
+            5.599999999999998,
+            -16.8
+          ],
+          "relative_velocity_zero": false,
+          "safety_distance_m": 0.0,
+          "safety_margin_m": 199.72798046635455,
+          "time_grid_used": false,
+          "trajectory_segment": [
+            2.895126922364277,
+            25.36104262064107
+          ],
+          "uav_i_position_m": [
+            305.26588845655,
+            0.0
+          ],
+          "uav_k_position_m": [
+            115.78728923476012,
+            -63.159533073929936
+          ],
+          "uav_pair": [
+            1,
+            3
+          ]
+        },
+        {
+          "candidate_times_s": [
+            2.895126922364277,
+            9.85911459620879,
+            25.36104262064107
+          ],
+          "certificate_status": "verified",
+          "method": "analytic_quadratic_distance_stationary_point",
+          "minimum_distance_time_s": 9.85911459620879,
+          "minimum_pairwise_distance_m": 258.515392707797,
+          "relative_velocity_mps": [
+            -4.9085386684761225,
+            -38.664326664404854
+          ],
+          "relative_velocity_zero": false,
+          "safety_distance_m": 0.0,
+          "safety_margin_m": 258.515392707797,
+          "time_grid_used": false,
+          "trajectory_segment": [
+            2.895126922364277,
+            25.36104262064107
+          ],
+          "uav_i_position_m": [
+            212.45032172264877,
+            -215.56290215331103
+          ],
+          "uav_k_position_m": [
+            -44.00667610588289,
+            -183.00500707941217
+          ],
+          "uav_pair": [
+            2,
+            3
+          ]
+        }
+      ],
+      "robust_safe_distance_guarantee": false,
+      "safety_distance_m": 0.0,
+      "safety_margin_m": 189.75297187720994,
+      "time_grid_used": false,
+      "uav_i_position_m": [
+        -65.26588845654993,
+        0.0
+      ],
+      "uav_k_position_m": [
+        105.7590791952232,
+        -82.19884899402899
+      ],
+      "uav_pair": [
+        1,
+        2
+      ]
+    },
+    "scheme_id": "Q3_B_LEGACY_REFERENCE_ONLY",
+    "smoke_records": [
+      {
+        "smoke_center_m": 40.0,
+        "smoke_id": "Q3B_LEGACY_1",
+        "t_b_s": 0.0
+      },
+      {
+        "smoke_center_m": 120.0,
+        "smoke_id": "Q3B_LEGACY_2",
+        "t_b_s": 10.376134889753565
+      },
+      {
+        "smoke_center_m": 200.0,
+        "smoke_id": "Q3B_LEGACY_3",
+        "t_b_s": 20.752269779507134
+      }
+    ],
+    "source": {
+      "assignment_uav_to_smoke_index": [
+        1,
+        0,
+        2
+      ],
+      "burst_times_s": [
+        0.0,
+        10.376134889753565,
+        20.752269779507134
+      ],
+      "candidate_id": "B-3",
+      "centers_m": [
+        40.0,
+        120.0,
+        200.0
+      ],
+      "commit": "36b874664ad9b814e5768c7c6c1e008f01374a54",
+      "path": "results/Q3/experiments/round2/metrics/q3_baseline.json"
+    },
+    "strict_double_coverage": {
+      "definition": "every point of the ship disk is covered by at least two smoke disks; equivalently every leave-one-smoke union covers the full ship disk",
+      "double_coverage_duration_s": 0,
+      "double_coverage_fraction": 0.0,
+      "double_coverage_intervals": [],
+      "double_coverage_percent": 0.0,
+      "independent_method": "second_largest_L_j_envelope",
+      "maximum_method_margin_difference_m2": 0.0,
+      "method_agreement": true,
+      "result_status": "verified",
+      "root_count": 0,
+      "sampling_used_as_time_measure": false,
+      "unresolved_interval_count": 0
+    },
+    "uav_plans": [
+      {
+        "deployment_path_length_m": 422.0,
+        "event_chain": {
+          "burst_before_lock": false,
+          "errors": [],
+          "negative_times_clipped": false,
+          "pre_lock_mission": false,
+          "status": "PASS",
+          "t_b_s": 10.376134889753565,
+          "t_cmd_s": 4.8761348897535655,
+          "t_d_s": 6.8761348897535655
+        },
+        "execution_status": "feasible",
+        "inertial_displacement_m": 98.0,
+        "initial_heading_rad": 0.0,
+        "operating_radius_status": "blocked_missing_base_reference",
+        "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+        "pre_release_path_length_m": 422.0,
+        "release_point_m": [
+          22.0,
+          0.0
+        ],
+        "smoke_center_m": 120.0,
+        "smoke_center_xy_m": [
+          120.0,
+          0.0
+        ],
+        "smoke_id": "Q3B_LEGACY_2",
+        "staging_position_m": [
+          -400.0,
+          0.0
+        ],
+        "t_b_s": 10.376134889753565,
+        "t_cmd_s": 4.8761348897535655,
+        "t_d_s": 6.8761348897535655,
+        "t_start_s": -8.195293681675006,
+        "trajectory_end_s": 25.36104262064107,
+        "turn_proxy_rad": 0.0,
+        "uav_id": 1,
+        "unit_heading": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "deployment_path_length_m": 286.1874542459709,
+        "event_chain": {
+          "burst_before_lock": false,
+          "errors": [],
+          "negative_times_clipped": false,
+          "pre_lock_mission": true,
+          "status": "PASS",
+          "t_b_s": 0.0,
+          "t_cmd_s": -5.5,
+          "t_d_s": -3.5
+        },
+        "execution_status": "feasible",
+        "inertial_displacement_m": 98.0,
+        "initial_heading_rad": 0.0,
+        "operating_radius_status": "blocked_missing_base_reference",
+        "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+        "pre_release_path_length_m": 286.1874542459709,
+        "release_point_m": [
+          -21.22011466033358,
+          76.52514332541698
+        ],
+        "smoke_center_m": 40.0,
+        "smoke_center_xy_m": [
+          40.0,
+          0.0
+        ],
+        "smoke_id": "Q3B_LEGACY_1",
+        "staging_position_m": [
+          -200.0,
+          300.0
+        ],
+        "t_b_s": 0.0,
+        "t_cmd_s": -5.5,
+        "t_d_s": -3.5,
+        "t_start_s": -13.720980508784676,
+        "trajectory_end_s": 25.36104262064107,
+        "turn_proxy_rad": 0.8960553845713441,
+        "uav_id": 2,
+        "unit_heading": [
+          0.6246950475544243,
+          -0.7808688094430304
+        ]
+      },
+      {
+        "deployment_path_length_m": 402.0,
+        "event_chain": {
+          "burst_before_lock": false,
+          "errors": [],
+          "negative_times_clipped": false,
+          "pre_lock_mission": false,
+          "status": "PASS",
+          "t_b_s": 20.752269779507134,
+          "t_cmd_s": 15.252269779507134,
+          "t_d_s": 17.252269779507134
+        },
+        "execution_status": "failed_start_time_window",
+        "inertial_displacement_m": 98.0,
+        "initial_heading_rad": 0.0,
+        "operating_radius_status": "blocked_missing_base_reference",
+        "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+        "pre_release_path_length_m": 402.0,
+        "release_point_m": [
+          121.6,
+          -58.8
+        ],
+        "smoke_center_m": 200.0,
+        "smoke_center_xy_m": [
+          200.0,
+          0.0
+        ],
+        "smoke_id": "Q3B_LEGACY_3",
+        "staging_position_m": [
+          -200.0,
+          -300.0
+        ],
+        "t_b_s": 20.752269779507134,
+        "t_cmd_s": 15.252269779507134,
+        "t_d_s": 17.252269779507134,
+        "t_start_s": 2.895126922364277,
+        "trajectory_end_s": 25.36104262064107,
+        "turn_proxy_rad": 0.6435011087932843,
+        "uav_id": 3,
+        "unit_heading": [
+          0.8,
+          0.6
+        ]
+      }
+    ],
+    "used_in_model_comparison_as_verified_candidate": false,
+    "used_in_pareto_ranking": false
+  },
+  "legacy_reference_comparison": {
+    "comparison_direction": "computed_minus_legacy_metric_reference",
+    "complete_legacy_configuration_available": false,
+    "metric_reference_used_in_optimizer_or_acceptance": false,
+    "reference_gaps": {
+      "N_minus_1_full_window_success_count": {
+        "computed": 0.0,
+        "legacy_metric_reference": 0.0,
+        "reference_gap_computed_minus_legacy": 0.0
+      },
+      "common_warning_lead_s": {
+        "computed": 13.720980508784676,
+        "legacy_metric_reference": 13.721,
+        "reference_gap_computed_minus_legacy": -1.9491215324407563e-05
+      },
+      "double_coverage_fraction": {
+        "computed": 0.0,
+        "legacy_metric_reference": 0.0,
+        "reference_gap_computed_minus_legacy": 0.0
+      },
+      "nominal_minimum_pairwise_distance_m": {
+        "computed": 117.43112695204417,
+        "legacy_metric_reference": 189.753,
+        "reference_gap_computed_minus_legacy": -72.32187304795582
+      },
+      "total_deployment_path_length_m": {
+        "computed": 1128.8216982351971,
+        "legacy_metric_reference": 1110.187,
+        "reference_gap_computed_minus_legacy": 18.63469823519722
+      },
+      "total_turn_proxy_rad": {
+        "computed": 1.6492066655335385,
+        "legacy_metric_reference": 1.54,
+        "reference_gap_computed_minus_legacy": 0.10920666553353842
+      },
+      "worst_failure_continuous_coverage_s": {
+        "computed": 10.376134889753567,
+        "legacy_metric_reference": 10.3761,
+        "reference_gap_computed_minus_legacy": 3.488975356802371e-05
+      }
+    },
+    "status": "not_a_legacy_plan_reproduction"
+  },
+  "legacy_scheme_identity_claimed": false,
+  "limitations": [
+    "Synthetic staging states only.",
+    "The front/middle/rear construction is a transparent baseline, not a global optimum.",
+    "Absolute 12 km base reachability remains blocked."
+  ],
+  "paper_writing_allowed": false,
+  "provenance": "reconstructed_from_Q2_conservative_three_interval_structure",
+  "reference_comparison_status": "computed_independently_not_target_fitted",
+  "reference_or_computed": "computed",
+  "result_strength": "transparent_constructive_baseline",
+  "safety_certificate_status": "verified",
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "scheme_id": "Q3_B_RECONSTRUCTED_TRANSPARENT_BASELINE",
+  "selected_assignment": {
+    "assignment_feasible": true,
+    "assignment_uav_to_smoke_index": [
+      2,
+      0,
+      1
+    ],
+    "common_warning_lead_s": 13.720980508784676,
+    "execution_status": "feasible",
+    "safety": {
+      "certificate_status": "verified",
+      "minimum_distance_time_s": 5.049172573082764,
+      "minimum_pairwise_distance_m": 117.43112695204417,
+      "nominal_fixed_plan_maximum_d_safe_m": 117.43112695204417,
+      "pair_certificates": [
+        {
+          "candidate_times_s": [
+            -0.6763016490642926,
+            7.51899203261071,
+            25.36104262064107
+          ],
+          "certificate_status": "verified",
+          "method": "analytic_quadratic_distance_stationary_point",
+          "minimum_distance_time_s": 7.51899203261071,
+          "minimum_pairwise_distance_m": 379.50594375442,
+          "relative_velocity_mps": [
+            10.50853866847612,
+            21.86432666440485
+          ],
+          "relative_velocity_zero": false,
+          "safety_distance_m": 0.0,
+          "safety_margin_m": 379.50594375442,
+          "time_grid_used": false,
+          "trajectory_segment": [
+            -0.6763016490642926,
+            25.36104262064107
+          ],
+          "uav_i_position_m": [
+            -170.53177691309995,
+            0.0
+          ],
+          "uav_k_position_m": [
+            171.5181583904464,
+            -164.39769798805798
+          ],
+          "uav_pair": [
+            1,
+            2
+          ]
+        },
+        {
+          "candidate_times_s": [
+            -0.6763016490642926,
+            14.135630906058921,
+            25.36104262064107
+          ],
+          "certificate_status": "verified",
+          "method": "analytic_quadratic_distance_stationary_point",
+          "minimum_distance_time_s": 14.135630906058921,
+          "minimum_pairwise_distance_m": 195.77967914722998,
+          "relative_velocity_mps": [
+            7.572958284077615,
+            -19.150351608677237
+          ],
+          "relative_velocity_zero": false,
+          "safety_distance_m": 0.0,
+          "safety_margin_m": 195.77967914722998,
+          "time_grid_used": false,
+          "trajectory_segment": [
+            -0.6763016490642926,
+            25.36104262064107
+          ],
+          "uav_i_position_m": [
+            14.734111543450013,
+            0.0
+          ],
+          "uav_k_position_m": [
+            196.7953819559135,
+            71.99567058366893
+          ],
+          "uav_pair": [
+            1,
+            3
+          ]
+        },
+        {
+          "candidate_times_s": [
+            -5.289373824147367,
+            5.049172573082764,
+            25.36104262064107
+          ],
+          "certificate_status": "verified",
+          "method": "analytic_quadratic_distance_stationary_point",
+          "minimum_distance_time_s": 5.049172573082764,
+          "minimum_pairwise_distance_m": 117.43112695204417,
+          "relative_velocity_mps": [
+            -2.9355803843985058,
+            -41.01467827308208
+          ],
+          "relative_velocity_zero": false,
+          "safety_distance_m": 0.0,
+          "safety_margin_m": 117.43112695204417,
+          "time_grid_used": false,
+          "trajectory_segment": [
+            -5.289373824147367,
+            25.36104262064107
+          ],
+          "uav_i_position_m": [
+            128.31740681826813,
+            -110.39675852283517
+          ],
+          "uav_k_position_m": [
+            11.185918538218942,
+            -102.01320137041972
+          ],
+          "uav_pair": [
+            2,
+            3
+          ]
+        }
+      ],
+      "robust_safe_distance_guarantee": false,
+      "safety_distance_m": 0.0,
+      "safety_margin_m": 117.43112695204417,
+      "time_grid_used": false,
+      "uav_i_position_m": [
+        128.31740681826813,
+        -110.39675852283517
+      ],
+      "uav_k_position_m": [
+        11.185918538218942,
+        -102.01320137041972
+      ],
+      "uav_pair": [
+        2,
+        3
+      ]
+    },
+    "total_deployment_path_length_m": 1128.8216982351971,
+    "total_pre_release_path_length_m": 1128.8216982351971,
+    "total_turn_proxy_rad": 1.6492066655335385,
+    "uav_plans": [
+      {
+        "deployment_path_length_m": 502.0,
+        "event_chain": {
+          "burst_before_lock": false,
+          "errors": [],
+          "negative_times_clipped": false,
+          "pre_lock_mission": false,
+          "status": "PASS",
+          "t_b_s": 20.752269779507134,
+          "t_cmd_s": 15.252269779507134,
+          "t_d_s": 17.252269779507134
+        },
+        "execution_status": "feasible",
+        "inertial_displacement_m": 98.0,
+        "initial_heading_rad": 0.0,
+        "operating_radius_status": "blocked_missing_base_reference",
+        "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+        "pre_release_path_length_m": 502.0,
+        "release_point_m": [
+          102.0,
+          0.0
+        ],
+        "smoke_center_m": 200.0,
+        "smoke_center_xy_m": [
+          200.0,
+          0.0
+        ],
+        "smoke_id": "Q3B_RECON_3",
+        "staging_position_m": [
+          -400.0,
+          0.0
+        ],
+        "t_b_s": 20.752269779507134,
+        "t_cmd_s": 15.252269779507134,
+        "t_d_s": 17.252269779507134,
+        "t_start_s": -0.6763016490642926,
+        "trajectory_end_s": 25.36104262064107,
+        "turn_proxy_rad": 0.0,
+        "uav_id": 1,
+        "unit_heading": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "deployment_path_length_m": 286.1874542459709,
+        "event_chain": {
+          "burst_before_lock": false,
+          "errors": [],
+          "negative_times_clipped": false,
+          "pre_lock_mission": true,
+          "status": "PASS",
+          "t_b_s": 0.0,
+          "t_cmd_s": -5.5,
+          "t_d_s": -3.5
+        },
+        "execution_status": "feasible",
+        "inertial_displacement_m": 98.0,
+        "initial_heading_rad": 0.0,
+        "operating_radius_status": "blocked_missing_base_reference",
+        "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+        "pre_release_path_length_m": 286.1874542459709,
+        "release_point_m": [
+          -21.22011466033358,
+          76.52514332541698
+        ],
+        "smoke_center_m": 40.0,
+        "smoke_center_xy_m": [
+          40.0,
+          0.0
+        ],
+        "smoke_id": "Q3B_RECON_1",
+        "staging_position_m": [
+          -200.0,
+          300.0
+        ],
+        "t_b_s": 0.0,
+        "t_cmd_s": -5.5,
+        "t_d_s": -3.5,
+        "t_start_s": -13.720980508784676,
+        "trajectory_end_s": 25.36104262064107,
+        "turn_proxy_rad": 0.8960553845713441,
+        "uav_id": 2,
+        "unit_heading": [
+          0.6246950475544243,
+          -0.7808688094430304
+        ]
+      },
+      {
+        "deployment_path_length_m": 340.63424398922615,
+        "event_chain": {
+          "burst_before_lock": false,
+          "errors": [],
+          "negative_times_clipped": false,
+          "pre_lock_mission": false,
+          "status": "PASS",
+          "t_b_s": 10.376134889753567,
+          "t_cmd_s": 4.876134889753567,
+          "t_d_s": 6.876134889753567
+        },
+        "execution_status": "feasible",
+        "inertial_displacement_m": 98.0,
+        "initial_heading_rad": 0.0,
+        "operating_radius_status": "blocked_missing_base_reference",
+        "post_release_uav_motion": "continues_same_straight_velocity_through_T_worst",
+        "pre_release_path_length_m": 340.63424398922615,
+        "release_point_m": [
+          48.50535399427167,
+          -67.02623063037032
+        ],
+        "smoke_center_m": 120.00000000000001,
+        "smoke_center_xy_m": [
+          120.00000000000001,
+          0.0
+        ],
+        "smoke_id": "Q3B_RECON_2",
+        "staging_position_m": [
+          -200.0,
+          -300.0
+        ],
+        "t_b_s": 10.376134889753567,
+        "t_cmd_s": 4.876134889753567,
+        "t_d_s": 6.876134889753567,
+        "t_start_s": -5.289373824147367,
+        "trajectory_end_s": 25.36104262064107,
+        "turn_proxy_rad": 0.7531512809621943,
+        "uav_id": 3,
+        "unit_heading": [
+          0.7295372041400852,
+          0.6839411288813299
+        ]
+      }
+    ]
+  },
+  "smoke_records": [
+    {
+      "smoke_center_m": 40.0,
+      "smoke_id": "Q3B_RECON_1",
+      "t_b_s": 0.0
+    },
+    {
+      "smoke_center_m": 120.00000000000001,
+      "smoke_id": "Q3B_RECON_2",
+      "t_b_s": 10.376134889753567
+    },
+    {
+      "smoke_center_m": 200.0,
+      "smoke_id": "Q3B_RECON_3",
+      "t_b_s": 20.752269779507134
+    }
+  ],
+  "strict_double_coverage": {
+    "definition": "every point of the ship disk is covered by at least two smoke disks; equivalently every leave-one-smoke union covers the full ship disk",
+    "double_coverage_duration_s": 0,
+    "double_coverage_fraction": 0.0,
+    "double_coverage_intervals": [],
+    "double_coverage_percent": 0.0,
+    "independent_method": "second_largest_L_j_envelope",
+    "maximum_method_margin_difference_m2": 0.0,
+    "method_agreement": true,
+    "result_status": "verified",
+    "root_count": 0,
+    "sampling_used_as_time_measure": false,
+    "unresolved_interval_count": 0
+  },
+  "verification_status": "verified"
+}

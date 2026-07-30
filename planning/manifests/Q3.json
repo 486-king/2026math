@@ -1,38 +1,48 @@
 {
-  "schema_version": 1,
-  "question_id": "Q3",
-  "rigor_profile": "lean",
-  "current_gate": "G2.5",
-  "status": "method_screened_waiting_human_and_missing_inputs",
+  "allowed": {
+    "code_generation": true,
+    "final_assembly": false,
+    "freeze": false,
+    "paper_writing": false
+  },
   "artifacts": {
-    "problem_parse": "planning/parse/problem_parse.json",
-    "classification": "planning/classification/problem_classification.json",
-    "data_profile": "workspace/data/data_profile.json",
-    "symbol_table": "planning/symbol_table.md",
     "assumptions": "planning/model_assumptions.md",
+    "classification": "planning/classification/problem_classification.json",
+    "code_review": "code/Q3/reviews/q3_python_review_round3.json",
+    "data_profile": "workspace/data/data_profile.json",
+    "decision_ledger": "methods/Q3/q3_decisions.jsonl",
+    "final_manifest": "results/Q3/q3_final_manifest.json",
+    "final_validation": "code/Q3/reviews/q3_final_validation.json",
+    "latest_run": "results/Q3/experiments/round3/run_summary.json",
     "mechanism_structure": "planning/mechanism_observation_structure.md",
     "method_card": "methods/Q3/q3_method_card.md",
-    "decision_ledger": null,
+    "p2_formal_plan": "results/Q3/experiments/round3/metrics/q3_p2_formal_plan.json",
+    "pareto_front": "results/Q3/experiments/round3/metrics/q3_pareto_front.json",
+    "problem_parse": "planning/parse/problem_parse.json",
+    "reference_plan": "workspace/data_clean/q3_reference_plan_p2.json",
     "risk_probe": "methods/Q3/probes/risk_probe_summary.json",
-    "latest_run": null
-  },
-  "allowed": {
-    "code_generation": false,
-    "freeze": false,
-    "paper_writing": false,
-    "final_assembly": false
+    "standardized_scenario": "workspace/data_clean/q3_standardized_scenario.json",
+    "symbol_table": "planning/symbol_table.md"
   },
   "blockers": [
-    "缺三机初始状态。",
-    "缺安全距离、能耗函数与烟幕叠加物理定义。",
-    "继承 Q1 的运动定义缺失。",
-    "尚无人类 A/B/C 方法选择。"
+    "缺少真实三机初始状态；本轮具体坐标仅用于 SYNTHETIC_SCENARIO_ONLY。",
+    "缺少题面或实测支持的真实 d_safe；本轮保持参数化并报告名义阈值。",
+    "缺少真实能耗模型；本轮仅使用部署航程与转向代理。",
+    "缺少真实最小转弯半径与转向动力学；本轮采用瞬时转向后的二维直线部署。"
   ],
   "change_impact": "CANONICAL",
+  "current_gate": "G4",
+  "freeze_status": "unfrozen",
+  "global_optimality_status": "not_proved",
   "next_action": {
     "owner": "human",
-    "skill": "decision-prompt-builder",
-    "reason": "选择 Q3 的 A/B/C，并确认安全、能耗和叠加口径。"
+    "reason": "Q3 formal synthetic results accepted for modelling and paper-team handoff; numbers remain unfrozen."
   },
-  "updated_at": "2026-07-29T18:40:00+08:00"
+  "paper_writing_allowed": false,
+  "question_id": "Q3",
+  "rigor_profile": "lean",
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "schema_version": 1,
+  "status": "Q3_results_accepted_and_handoff_ready",
+  "updated_at": "2026-07-30T14:07:56+08:00"
 }

@@ -1,0 +1,148 @@
+{
+  "certificate_status": "verified",
+  "coverage_certificate_status": "verified",
+  "d_safe_parameter_status": "not_given_by_problem",
+  "execution_status": "completed",
+  "freeze_status": "unfrozen",
+  "global_optimality_status": "not_proved",
+  "input_status": "validated_synthetic_input",
+  "limitations": [
+    "Synthetic staging states only.",
+    "No real d_safe, energy model, turn radius, wind, or base reference."
+  ],
+  "minimum_distance_time_s": -3.0810741369642844,
+  "minimum_pairwise_distance_m": 46.380927839689086,
+  "nominal_feasible_interval_m": [
+    0.0,
+    46.380927839689086
+  ],
+  "nominal_fixed_plan_maximum_d_safe_m": 46.380927839689086,
+  "pair_certificates": [
+    {
+      "candidate_times_s": [
+        -8.346399714546605,
+        5.314607131964285,
+        25.36104262064107
+      ],
+      "certificate_status": "verified",
+      "method": "analytic_quadratic_distance_stationary_point",
+      "minimum_distance_time_s": 5.314607131964285,
+      "minimum_pairwise_distance_m": 164.6524134586918,
+      "relative_velocity_mps": [
+        6.445122905244837,
+        17.871409385664
+      ],
+      "relative_velocity_zero": false,
+      "safety_distance_m": 0.0,
+      "safety_margin_m": 164.6524134586918,
+      "time_grid_used": false,
+      "trajectory_segment": [
+        -8.346399714546605,
+        25.36104262064107
+      ],
+      "uav_i_position_m": [
+        249.3491513649999,
+        0.0
+      ],
+      "uav_k_position_m": [
+        94.46132356715106,
+        55.858554025645134
+      ],
+      "uav_pair": [
+        1,
+        2
+      ]
+    },
+    {
+      "candidate_times_s": [
+        -17.720980508784677,
+        -3.0810741369642844,
+        25.36104262064107
+      ],
+      "certificate_status": "verified",
+      "method": "analytic_quadratic_distance_stationary_point",
+      "minimum_distance_time_s": -3.0810741369642844,
+      "minimum_pairwise_distance_m": 46.380927839689086,
+      "relative_velocity_mps": [
+        10.50853866847612,
+        -21.86432666440485
+      ],
+      "relative_velocity_zero": false,
+      "safety_distance_m": 0.0,
+      "safety_margin_m": 46.380927839689086,
+      "time_grid_used": false,
+      "trajectory_segment": [
+        -17.720980508784677,
+        25.36104262064107
+      ],
+      "uav_i_position_m": [
+        14.270075835,
+        0.0
+      ],
+      "uav_k_position_m": [
+        56.07335619982649,
+        20.09169524978313
+      ],
+      "uav_pair": [
+        1,
+        3
+      ]
+    },
+    {
+      "candidate_times_s": [
+        -8.346399714546605,
+        1.9097992249745506,
+        25.36104262064107
+      ],
+      "certificate_status": "verified",
+      "method": "analytic_quadratic_distance_stationary_point",
+      "minimum_distance_time_s": 1.9097992249745506,
+      "minimum_pairwise_distance_m": 122.9377180307373,
+      "relative_velocity_mps": [
+        4.0634157632312835,
+        -39.73573605006885
+      ],
+      "relative_velocity_zero": false,
+      "safety_distance_m": 0.0,
+      "safety_margin_m": 122.9377180307373,
+      "time_grid_used": false,
+      "trajectory_segment": [
+        -8.346399714546605,
+        25.36104262064107
+      ],
+      "uav_i_position_m": [
+        21.071107600736752,
+        116.70727001100448
+      ],
+      "uav_k_position_m": [
+        143.37102462071215,
+        129.2137807758902
+      ],
+      "uav_pair": [
+        2,
+        3
+      ]
+    }
+  ],
+  "paper_writing_allowed": false,
+  "reference_comparison_status": "matched_with_source_precision_after_computation",
+  "result_strength": "continuous_analytic_pairwise_safety_certificate",
+  "robust_safe_distance_guarantee": false,
+  "safety_certificate_status": "verified",
+  "safety_distance_m": 0.0,
+  "safety_margin_m": 46.380927839689086,
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "time_grid_used": false,
+  "uav_i_position_m": [
+    14.270075835,
+    0.0
+  ],
+  "uav_k_position_m": [
+    56.07335619982649,
+    20.09169524978313
+  ],
+  "uav_pair": [
+    1,
+    3
+  ]
+}
