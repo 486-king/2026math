@@ -1,38 +1,69 @@
 {
-  "schema_version": 1,
-  "question_id": "Q4",
-  "rigor_profile": "lean",
-  "current_gate": "G2.5",
-  "status": "method_screened_waiting_human_and_missing_inputs",
-  "artifacts": {
-    "problem_parse": "planning/parse/problem_parse.json",
-    "classification": "planning/classification/problem_classification.json",
-    "data_profile": "workspace/data/data_profile.json",
-    "symbol_table": "planning/symbol_table.md",
-    "assumptions": "planning/model_assumptions.md",
-    "mechanism_structure": "planning/mechanism_observation_structure.md",
-    "method_card": "methods/Q4/q4_method_card.md",
-    "decision_ledger": null,
-    "risk_probe": "methods/Q4/probes/risk_probe_summary.json",
-    "latest_run": null
-  },
   "allowed": {
-    "code_generation": false,
+    "code_generation": true,
+    "final_assembly": false,
     "freeze": false,
-    "paper_writing": false,
-    "final_assembly": false
+    "paper_writing": false
+  },
+  "artifacts": {
+    "candidate_accounting_audit": "results/Q4/experiments/round1/metrics/q4_candidate_accounting_audit.json",
+    "code_review": "code/Q4/reviews/q4_python_review.json",
+    "decision_ledger": "methods/Q4/q4_decisions.jsonl",
+    "dependency_snapshot": "workspace/data_clean/q4_dependency_snapshot.json",
+    "final_manifest": "results/Q4/q4_final_manifest.json",
+    "final_validation": "code/Q4/reviews/q4_final_validation.json",
+    "latest_run": "results/Q4/experiments/round1/run_summary.json",
+    "lexicographic_replay_audit": "results/Q4/experiments/round1/metrics/q4_lexicographic_replay_audit.json",
+    "lexicographic_stage_log": "results/Q4/experiments/round1/metrics/q4_lexicographic_stage_log.json",
+    "method_card": "methods/Q4/q4_method_card.md",
+    "representative_choices": "workspace/data_clean/q4_representative_choices.json",
+    "representative_endpoint_comparison": "results/Q4/experiments/round1/tables/q4_representative_endpoint_comparison.csv",
+    "representative_endpoint_selection": "results/Q4/experiments/round1/metrics/q4_representative_endpoint_selection.json",
+    "risk_probe": "methods/Q4/probes/risk_probe_summary.json",
+    "robustness_report": "robustness/Q4/q4_robustness_report.md",
+    "route_network_audit": "results/Q4/experiments/round1/metrics/q4_route_network_audit.json",
+    "scenarios": "workspace/data_clean/q4_s2_scenarios.json",
+    "schedule_replay_audit": "results/Q4/experiments/round1/metrics/q4_schedule_replay_audit.json",
+    "shared_action_audit": "results/Q4/experiments/round1/metrics/q4_shared_action_audit.json",
+    "template_gate": "results/Q4/experiments/round1/metrics/q4_template_gate.json",
+    "template_library": "workspace/data_clean/q4_template_library.json",
+    "workguide_reference": "workspace/data_clean/q4_workguide_reference.json"
   },
   "blockers": [
-    "缺多批次导弹场景表和五机状态。",
-    "缺动态重算周期与 Q1-Q3 服务模板。",
-    "没有威胁权重或误差数据。",
-    "尚无人类 A/B/C 方法选择。"
+    "Missing real missile-batch table and real five-UAV states.",
+    "Missing real d_safe and real home/operating-radius references.",
+    "Missing credible uncertainty distribution; Q4-C remains dormant.",
+    "Q3 dependency is unfrozen and must be revalidated after any hash change."
   ],
   "change_impact": "CANONICAL",
+  "continuous_global_optimality_status": "not_claimed",
+  "cross_group_comparison_performed": false,
+  "current_gate": "G4",
+  "environment_status": "verified_in_available_environment_only",
+  "finite_network_proof_status": "proved_within_current_finite_network",
+  "freeze_status": "unfrozen",
+  "human_result_acceptance_status": "accepted_for_modelling_handoff",
+  "legacy_identity_claimed": false,
   "next_action": {
     "owner": "human",
-    "skill": "decision-prompt-builder",
-    "reason": "选择 Q4 的 A/B/C；未补批次数据前只能保留结构和合成恢复测试。"
+    "reason": "Q4 reconstructed synthetic scheduling results and representative endpoints accepted for modelling handoff; numerical freezing and final paper use remain unauthorized."
   },
-  "updated_at": "2026-07-29T18:40:00+08:00"
+  "paper_writing_allowed": false,
+  "question_id": "Q4",
+  "representative_selection_status": "human_selected_from_verified_reconstructed_endpoints",
+  "retained_alternative_ids": [
+    "P1_T_RECONSTRUCTED",
+    "P2_T_RECONSTRUCTED"
+  ],
+  "rigor_profile": "lean",
+  "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "schema_version": 1,
+  "selected_endpoint_ids": [
+    "P1_L_RECONSTRUCTED",
+    "P2_L_RECONSTRUCTED"
+  ],
+  "selection_rule_id": "lexicographic_defence_then_path_then_turn_then_change",
+  "status": "Q4_results_accepted_and_handoff_ready",
+  "updated_at": "2026-07-31T00:00:00+08:00"
 }

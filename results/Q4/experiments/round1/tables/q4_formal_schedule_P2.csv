@@ -1,0 +1,3 @@
+﻿representative_plan,endpoint_id,candidate_id,template_id,covered_threat_ids,uav_id,role_id,role_start_time_s,command_times_s,drop_times_s,burst_times_s,role_end_time_s,bomb_count,scenario_scope,freeze_status
+P2,P2_L_RECONSTRUCTED,S2-SUF-OVR::T-Q2-TWO::SUF-OVR-M1+SUF-OVR-M2+SUF-OVR-M3+SUF-OVR-M4::UAV-2,T-Q2-TWO,"[""SUF-OVR-M1"",""SUF-OVR-M2"",""SUF-OVR-M3"",""SUF-OVR-M4""]",UAV-2,R1,35.25,"[37.25,42.25]","[39.25,44.25]","[42.75,47.75]",49.25,2,SYNTHETIC_SCENARIO_ONLY,unfrozen
+P2,P2_T_RECONSTRUCTED,S2-SUF-OVR::T-Q2-TWO::SUF-OVR-M1+SUF-OVR-M2+SUF-OVR-M3+SUF-OVR-M4::UAV-5,T-Q2-TWO,"[""SUF-OVR-M1"",""SUF-OVR-M2"",""SUF-OVR-M3"",""SUF-OVR-M4""]",UAV-5,R1,35.25,"[37.25,42.25]","[39.25,44.25]","[42.75,47.75]",49.25,2,SYNTHETIC_SCENARIO_ONLY,unfrozen

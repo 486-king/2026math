@@ -1,0 +1,8 @@
+﻿template_id,source_question,continuous_recomputed_status,independent_recomputed_status,source_hash_status,role_state_status,event_chain_status,gate_status,rejection_reasons
+T-Q1-SINGLE,Q1,PASS,PASS,matched,complete,PASS,ACCEPTED,[]
+T-Q2-THREE,Q2,PASS,PASS,matched,complete,PASS,ACCEPTED,[]
+T-Q2-TWO,Q2,PASS,PASS,matched,complete,PASS,ACCEPTED,[]
+T-Q3-BASELINE-REJECT,Q3,PASS,FAIL,matched,complete,PASS,REJECTED,"[""independent_validator_failure"",""validator_disagreement""]"
+T-Q3-P1,Q3,PASS,PASS,matched,complete,PASS,ACCEPTED,[]
+T-Q3-P2,Q3,PASS,PASS,matched,complete,PASS,ACCEPTED,[]
+T-Q3-P4,Q3,PASS,PASS,matched,complete,PASS,ACCEPTED,[]

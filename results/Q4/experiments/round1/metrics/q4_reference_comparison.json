@@ -1,0 +1,26 @@
+{
+  "candidate_validation_status": "PASS",
+  "continuous_global_optimality_status": "not_claimed",
+  "dependency_status": "matched",
+  "finite_candidate_optimality_status": "proved_within_current_finite_network",
+  "freeze_status": "unfrozen",
+  "input_provenance": "transparent_reconstructed_synthetic_inputs",
+  "legacy_reference_comparison_status": "blocked_missing_complete_legacy_inputs",
+  "limitations": [
+    "No real missile-batch table or real five-UAV state was supplied.",
+    "The optimization is over a finite verified template-route network.",
+    "Continuous-space and all-possible-template global optimality are not claimed.",
+    "Q3 dependencies are accepted only at their recorded unfrozen hashes."
+  ],
+  "paper_writing_allowed": false,
+  "reference_comparison_status": "not_directly_comparable_missing_complete_legacy_inputs",
+  "reference_only_workguide_sha256": "893C5B082D8F19D2694BB322FADD56CD4A5E56FAC1C3292A75FC0A0F97E58DAC",
+  "reference_reproduction_status": "not_directly_comparable_missing_complete_legacy_inputs",
+  "route_network_status": "PASS",
+  "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "solver_status": "completed",
+  "template_gate_status": "PASS",
+  "used_for_acceptance": false,
+  "used_for_tuning": false
+}

@@ -1,0 +1,163 @@
+{
+  "candidate_validation_status": "PASS",
+  "continuous_global_optimality_status": "not_claimed",
+  "dependency_status": "matched",
+  "finite_candidate_optimality_status": "proved_within_current_finite_network",
+  "forced_no_incumbent_timeout": {
+    "A_incumbent_available": false,
+    "A_last_completed_stage": null,
+    "A_solver_status": "time_limit_no_incumbent_forced_test",
+    "B_validation_status": "PASS",
+    "fallback_reason": "no_independently_validated_A_incumbent",
+    "fallback_triggered": true,
+    "final_plan_source": "Q4-B",
+    "status": "PASS"
+  },
+  "formal_timeout_incumbent_rule": {
+    "missing_or_invalid_incumbent": {
+      "fallback_reason": "no_independently_validated_A_incumbent",
+      "final_source": "Q4-B"
+    },
+    "optimal_A": {
+      "final_source": "Q4-A",
+      "proof_status": "proved_within_current_finite_network"
+    },
+    "timeout_with_independently_validated_incumbent": {
+      "final_source": "Q4-A_INCUMBENT",
+      "proof_status": "not_proved_due_to_timeout",
+      "required_gates": [
+        "incumbent_vector_available",
+        "incumbent_integrality_status",
+        "independent_network_replay",
+        "schedule_replay_status",
+        "continuous_safety_status",
+        "shared_action_audit_status"
+      ]
+    }
+  },
+  "freeze_status": "unfrozen",
+  "illegal_incumbent_fault_audit": {
+    "all_trigger_Q4_B": true,
+    "cases": [
+      {
+        "failed_gate": "incumbent_integrality_status",
+        "fallback_reason": "no_independently_validated_A_incumbent",
+        "fault_id": "fractional_incumbent",
+        "final_source": "Q4-B",
+        "incumbent_accepted": false,
+        "status": "PASS"
+      },
+      {
+        "failed_gate": "schedule_replay_status",
+        "fallback_reason": "no_independently_validated_A_incumbent",
+        "fault_id": "over_inventory_incumbent",
+        "final_source": "Q4-B",
+        "incumbent_accepted": false,
+        "status": "PASS"
+      },
+      {
+        "failed_gate": "independent_network_replay",
+        "fallback_reason": "no_independently_validated_A_incumbent",
+        "fault_id": "temporal_conflict_incumbent",
+        "final_source": "Q4-B",
+        "incumbent_accepted": false,
+        "status": "PASS"
+      },
+      {
+        "failed_gate": "shared_action_audit_status",
+        "fallback_reason": "no_independently_validated_A_incumbent",
+        "fault_id": "illegal_shared_event_incumbent",
+        "final_source": "Q4-B",
+        "incumbent_accepted": false,
+        "status": "PASS"
+      },
+      {
+        "failed_gate": "schedule_replay_status",
+        "fallback_reason": "no_independently_validated_A_incumbent",
+        "fault_id": "frozen_action_violation_incumbent",
+        "final_source": "Q4-B",
+        "incumbent_accepted": false,
+        "status": "PASS"
+      }
+    ],
+    "fault_case_count": 5,
+    "rejected_case_count": 5
+  },
+  "input_provenance": "transparent_reconstructed_synthetic_inputs",
+  "limitations": [
+    "No real missile-batch table or real five-UAV state was supplied.",
+    "The optimization is over a finite verified template-route network.",
+    "Continuous-space and all-possible-template global optimality are not claimed.",
+    "Q3 dependencies are accepted only at their recorded unfrozen hashes."
+  ],
+  "paper_writing_allowed": false,
+  "reference_comparison_status": "not_directly_comparable_missing_complete_legacy_inputs",
+  "route_network_status": "PASS",
+  "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "solver_status": "completed",
+  "template_gate_status": "PASS",
+  "wall_clock_results_in_core_hash_set": false,
+  "wall_clock_scan": [
+    {
+      "A_incumbent_available": false,
+      "A_last_completed_stage": null,
+      "A_solver_status": "time_limit_or_iteration_limit",
+      "experiment_type": "environment_dependent_wall_clock_experiment",
+      "fallback_triggered": true,
+      "final_plan_source": "Q4-B",
+      "finite_candidate_optimality_status": "not_applicable_greedy_baseline",
+      "observed_wall_clock_s": 0.2871378999989247,
+      "time_limit_s": 1e-06,
+      "total_full_defence_count": 5
+    },
+    {
+      "A_incumbent_available": false,
+      "A_last_completed_stage": null,
+      "A_solver_status": "time_limit_or_iteration_limit",
+      "experiment_type": "environment_dependent_wall_clock_experiment",
+      "fallback_triggered": true,
+      "final_plan_source": "Q4-B",
+      "finite_candidate_optimality_status": "not_applicable_greedy_baseline",
+      "observed_wall_clock_s": 0.2643975999999384,
+      "time_limit_s": 0.001,
+      "total_full_defence_count": 5
+    },
+    {
+      "A_incumbent_available": false,
+      "A_last_completed_stage": null,
+      "A_solver_status": "time_limit_or_iteration_limit",
+      "experiment_type": "environment_dependent_wall_clock_experiment",
+      "fallback_triggered": true,
+      "final_plan_source": "Q4-B",
+      "finite_candidate_optimality_status": "not_applicable_greedy_baseline",
+      "observed_wall_clock_s": 0.2985296000006201,
+      "time_limit_s": 0.01,
+      "total_full_defence_count": 5
+    },
+    {
+      "A_incumbent_available": true,
+      "A_last_completed_stage": "minimize_flexible_plan_changes",
+      "A_solver_status": "optimal",
+      "experiment_type": "environment_dependent_wall_clock_experiment",
+      "fallback_triggered": false,
+      "final_plan_source": "Q4-A",
+      "finite_candidate_optimality_status": "proved_within_current_finite_network",
+      "observed_wall_clock_s": 1.0756841999973403,
+      "time_limit_s": 0.1,
+      "total_full_defence_count": 5
+    },
+    {
+      "A_incumbent_available": true,
+      "A_last_completed_stage": "minimize_flexible_plan_changes",
+      "A_solver_status": "optimal",
+      "experiment_type": "environment_dependent_wall_clock_experiment",
+      "fallback_triggered": false,
+      "final_plan_source": "Q4-A",
+      "finite_candidate_optimality_status": "proved_within_current_finite_network",
+      "observed_wall_clock_s": 1.0901388000020233,
+      "time_limit_s": 1.0,
+      "total_full_defence_count": 5
+    }
+  ]
+}

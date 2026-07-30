@@ -1,0 +1,363 @@
+{
+  "candidate_count_conservation_status": "PASS",
+  "candidate_validation_status": "PASS",
+  "checks": {
+    "G4_human_result_acceptance": "PASS",
+    "Q1_dependency_unchanged": "PASS",
+    "Q2_dependency_unchanged": "PASS",
+    "Q3_dependency_unchanged": "PASS",
+    "Q3_unfrozen_dependency_disclosed": "PASS",
+    "baseline_order_matches_workguide": "PASS",
+    "baseline_same_contract": "PASS",
+    "bomb_minimisation": "PASS",
+    "candidate_atomicity": "PASS",
+    "candidate_count_conservation": "PASS",
+    "canonical_physical_action_identity": "PASS",
+    "commitment_instance_freeze": "PASS",
+    "continuous_cross_template_safety": "PASS",
+    "continuous_transition_feasibility": "PASS",
+    "deterministic_outputs": "PASS",
+    "dual_validator_gate": "PASS",
+    "environment_dependent_timeout_scan": "PASS",
+    "executed_instance_freeze": "PASS",
+    "fallback_validation": "PASS",
+    "finite_candidate_scope_disclosed": "PASS",
+    "finite_shift_candidate_scope": "PASS",
+    "five_uav_capacity": "PASS",
+    "four_endpoints_retained_unselected": "PASS",
+    "freeze_remains_unauthorized": "PASS",
+    "historical_recovery_provenance": "PASS",
+    "human_endpoint_selection_rule": "PASS",
+    "illegal_incumbent_rejection": "PASS",
+    "incidental_coverage_semantics": "PASS",
+    "independent_five_uav_schedule_replay": "PASS",
+    "information_timing": "PASS",
+    "input_contract": "PASS",
+    "lexicographic_level_order": "PASS",
+    "lexicographic_objective_independent_replay": "PASS",
+    "method_alignment": "PASS",
+    "multi_threat_sharing_validity": "PASS",
+    "network_node_count_conservation": "PASS",
+    "nine_scenario_matrix_complete": "PASS",
+    "no_continuous_global_optimum_claim": "PASS",
+    "no_cross_group_endpoint_ranking": "PASS",
+    "no_current_frozen_core": "PASS",
+    "no_erroneous_single_service_constraint": "PASS",
+    "no_hidden_weighted_score": "PASS",
+    "no_pre_reveal_action": "PASS",
+    "no_real_probability_claim": "PASS",
+    "no_scope_leak": "PASS",
+    "operating_radius_reference": "PASS",
+    "output_contract": "PASS",
+    "partial_coverage_not_success": "PASS",
+    "path_turn_endpoints": "PASS",
+    "per_threat_shared_candidate_revalidation": "PASS",
+    "per_uav_three_bomb_limit": "PASS",
+    "plan_change_minimisation": "PASS",
+    "prior_stage_lock_replay": "PASS",
+    "reference_not_used_in_solver": "PASS",
+    "regime_comparison_field_completeness": "PASS",
+    "remaining_window_risk_vector": "PASS",
+    "representative_endpoint_grouping": "PASS",
+    "representative_endpoint_provenance": "PASS",
+    "reproducibility": "PASS",
+    "rolling_inventory_update": "PASS",
+    "rolling_uav_state_update": "PASS",
+    "route_dependent_path_cost": "PASS",
+    "route_dependent_turn_cost": "PASS",
+    "route_flow_conservation": "PASS",
+    "same_level_urgency": "PASS",
+    "shared_candidate_fault_injection": "PASS",
+    "shortage_rejection_transparency": "PASS",
+    "small_instance_exhaustive_match": "PASS",
+    "source_document_integrity": "PASS",
+    "syntax": "PASS",
+    "synthetic_scenario_scope": "PASS",
+    "template_instance_revalidation": "PASS",
+    "template_role_end_state": "PASS",
+    "template_schema_complete": "PASS",
+    "temporary_artifact_cleanup": "PASS",
+    "threat_success_not_double_counted": "PASS",
+    "timeout_incumbent_independent_gate": "PASS",
+    "timeout_incumbent_semantics": "PASS",
+    "total_fifteen_bomb_limit": "PASS",
+    "unselected_endpoints_retained": "PASS"
+  },
+  "continuous_global_optimality_status": "not_claimed",
+  "cross_group_comparison_performed": false,
+  "current_gate": "G4",
+  "dependency_status": "matched",
+  "development_test_contract_count": 85,
+  "development_test_status": "PASS",
+  "failure_trigger_audit": {
+    "all_illegal_cases_failed_or_were_explicitly_rejected": true,
+    "cases": [
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "continuous_validator_FAIL",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "independent_validator_FAIL",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "validator_disagreement",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "source_hash_mismatch",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "role_end_state_missing",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "transformed_coverage_failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "partial_multi_threat_window",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "unrevealed_negative_action",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "new_past_action",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "single_uav_four_bombs",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "total_sixteen_bombs",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "same_uav_simultaneous_roles",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "unreachable_transition",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "transition_outside_12km",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "internal_safety_failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "cross_template_service_failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "arc_candidate_safety_failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "arc_arc_safety_failure",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "executed_instance_removed",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "committed_instance_changed",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "partial_coverage_marked_success",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "level1_displaces_feasible_level3",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "weighted_formal_objective",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "initial_state_path_double_count",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "threat_success_double_count",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "erroneous_sum_x_le_one",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "incumbent_wrongly_triggers_B",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "no_incumbent_fails_to_trigger_B",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "invalid_B_takeover",
+        "status": "PASS"
+      },
+      {
+        "actual": "FAIL_OR_EXPLICIT_REJECTION",
+        "expected": "FAIL_OR_EXPLICIT_REJECTION",
+        "fault_id": "rolling_inventory_not_decremented",
+        "status": "PASS"
+      }
+    ],
+    "detected_case_count": 30,
+    "injected_case_count": 30
+  },
+  "final_audit_temporary_test_count": 25,
+  "final_audit_temporary_test_pass_count": 25,
+  "finite_candidate_optimality_status": "proved_within_current_finite_network",
+  "freeze_status": "unfrozen",
+  "human_result_acceptance_status": "accepted_for_modelling_handoff",
+  "input_provenance": "transparent_reconstructed_synthetic_inputs",
+  "lexicographic_replay_audit_status": "PASS",
+  "limitations": [
+    "No real missile-batch table or real five-UAV state was supplied.",
+    "The optimization is over a finite verified template-route network.",
+    "Continuous-space and all-possible-template global optimality are not claimed.",
+    "Q3 dependencies are accepted only at their recorded unfrozen hashes."
+  ],
+  "numerical_freeze_authorized": false,
+  "paper_writing_allowed": false,
+  "paper_writing_authorized": false,
+  "reference_comparison_status": "not_directly_comparable_missing_complete_legacy_inputs",
+  "regime_comparison_field_status": "PASS",
+  "representative_selection_status": "human_selected_from_verified_reconstructed_endpoints",
+  "retained_alternative_ids": [
+    "P1_T_RECONSTRUCTED",
+    "P2_T_RECONSTRUCTED"
+  ],
+  "review_status": "PASS",
+  "route_network_status": "PASS",
+  "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "schedule_replay_audit_status": "PASS",
+  "selected_endpoint_ids": [
+    "P1_L_RECONSTRUCTED",
+    "P2_L_RECONSTRUCTED"
+  ],
+  "selection_rule_id": "lexicographic_defence_then_path_then_turn_then_change",
+  "shared_action_audit_status": "PASS",
+  "solver_status": "completed",
+  "template_gate_status": "PASS",
+  "temporary_test_assets_retained": false,
+  "timeout_incumbent_fault_audit": {
+    "all_trigger_Q4_B": true,
+    "cases": [
+      {
+        "failed_gate": "incumbent_integrality_status",
+        "fallback_reason": "no_independently_validated_A_incumbent",
+        "fault_id": "fractional_incumbent",
+        "final_source": "Q4-B",
+        "incumbent_accepted": false,
+        "status": "PASS"
+      },
+      {
+        "failed_gate": "schedule_replay_status",
+        "fallback_reason": "no_independently_validated_A_incumbent",
+        "fault_id": "over_inventory_incumbent",
+        "final_source": "Q4-B",
+        "incumbent_accepted": false,
+        "status": "PASS"
+      },
+      {
+        "failed_gate": "independent_network_replay",
+        "fallback_reason": "no_independently_validated_A_incumbent",
+        "fault_id": "temporal_conflict_incumbent",
+        "final_source": "Q4-B",
+        "incumbent_accepted": false,
+        "status": "PASS"
+      },
+      {
+        "failed_gate": "shared_action_audit_status",
+        "fallback_reason": "no_independently_validated_A_incumbent",
+        "fault_id": "illegal_shared_event_incumbent",
+        "final_source": "Q4-B",
+        "incumbent_accepted": false,
+        "status": "PASS"
+      },
+      {
+        "failed_gate": "schedule_replay_status",
+        "fallback_reason": "no_independently_validated_A_incumbent",
+        "fault_id": "frozen_action_violation_incumbent",
+        "final_source": "Q4-B",
+        "incumbent_accepted": false,
+        "status": "PASS"
+      }
+    ],
+    "fault_case_count": 5,
+    "rejected_case_count": 5
+  }
+}
