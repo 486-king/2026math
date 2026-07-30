@@ -2,8 +2,8 @@
   "schema_version": 1,
   "question_id": "Q2",
   "rigor_profile": "lean",
-  "current_gate": "G2.5",
-  "status": "method_screened_waiting_human_and_missing_inputs",
+  "current_gate": "G4",
+  "status": "Q2_results_accepted_and_handoff_ready",
   "artifacts": {
     "problem_parse": "planning/parse/problem_parse.json",
     "classification": "planning/classification/problem_classification.json",
@@ -12,27 +12,28 @@
     "assumptions": "planning/model_assumptions.md",
     "mechanism_structure": "planning/mechanism_observation_structure.md",
     "method_card": "methods/Q2/q2_method_card.md",
-    "decision_ledger": null,
+    "decision_ledger": "methods/Q2/q2_decisions.jsonl",
     "risk_probe": "methods/Q2/probes/risk_probe_summary.json",
-    "latest_run": null
+    "latest_run": "results/Q2/experiments/round2/run_summary.json",
+    "code_review": "code/Q2/reviews/q2_python_review_round2.json",
+    "final_validation": "code/Q2/reviews/q2_final_validation.json",
+    "final_manifest": "results/Q2/q2_final_manifest.json",
+    "robustness": "robustness/Q2/q2_robustness_summary.json"
   },
   "allowed": {
-    "code_generation": false,
+    "code_generation": true,
     "freeze": false,
     "paper_writing": false,
     "final_assembly": false
   },
   "blockers": [
-    "继承 Q1 的运动定义缺失。",
-    "缺单机初始状态与作战半径基准。",
-    "缺响应延时计时口径。",
-    "尚无人类 A/B/C 方法选择。"
+    "缺少无人机绝对初始状态与基地/作战半径基准，绝对首投可达性不可验证。"
   ],
   "change_impact": "CANONICAL",
   "next_action": {
     "owner": "human",
-    "skill": "decision-prompt-builder",
-    "reason": "选择 Q2 的 A/B/C，并确认烟幕中心运动解释。"
+    "skill": "workflow-orchestrator",
+    "reason": "Q2 正式结果已由用户人工接受，编程手交付就绪，交由建模手和论文手使用。"
   },
-  "updated_at": "2026-07-29T18:40:00+08:00"
+  "updated_at": "2026-07-30T09:45:46+08:00"
 }
