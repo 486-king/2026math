@@ -1,0 +1,291 @@
+{
+  "duplicate_path_count": 0,
+  "file_count": 45,
+  "files": [
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/README_Q3.md",
+      "sha256": "3457953d7f2f0b15e15e5706bd9d4f1715388229169d62ba3e29d5377ce39f69",
+      "size_bytes": 3941
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_baseline.py",
+      "sha256": "ecca18d8e180a439b656bf90b11cfb8ec8e89338a303bb19d815574281a2bbd2",
+      "size_bytes": 7841
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_common.py",
+      "sha256": "76648b129ac36a475de57b5e3c073179ee6f6dcb86e6ddffa088f0952770e2f7",
+      "size_bytes": 7022
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_coverage.py",
+      "sha256": "96f868664fc7ecac3b05bcdc0fa579feaf7f9bb668d4566373c286ca2fbb9ead",
+      "size_bytes": 15024
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_outputs.py",
+      "sha256": "b389e5669a28c907e6b32aa5aff60b17dcbd964ffe9f0db00d6b1a83464c1c50",
+      "size_bytes": 19921
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_pareto.py",
+      "sha256": "3dd0c503d4d5aaecfdc9d5086b11d79a43944185a10c86b8cee1b42554a57dc3",
+      "size_bytes": 28691
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_q2_adapter.py",
+      "sha256": "7726363cc109a14d20513d5485526942e558902823869fd5326cd4977b21dfed",
+      "size_bytes": 2857
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_run_round3.py",
+      "sha256": "209530d4f489c2bf1f1728d9f5d747d384d49b063b364dca5f7ca70e3ec72708",
+      "size_bytes": 48929
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_safety.py",
+      "sha256": "352af27ff86d225f2b9a2076724a7058db0403b4016d0752b4c6e75a8e5fcf4e",
+      "size_bytes": 3470
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_scenario.py",
+      "sha256": "207089df37bca4c79d48ffc33424b9467444c49cc2f1f76f9e98349d08c0bd04",
+      "size_bytes": 2231
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_sensitivity.py",
+      "sha256": "2ad290f84ccb08991082a7bf56af19792385d0836dfc6a3e13287f9ba2c2cbf8",
+      "size_bytes": 18865
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/q3_trajectory.py",
+      "sha256": "475ee49a2a7bb8638a09bdc4bfc710f84697cff707487e3944bd774d116ccf51",
+      "size_bytes": 5707
+    },
+    {
+      "artifact_role": "production_code_or_documentation",
+      "relative_path": "code/Q3/requirements-q3.txt",
+      "sha256": "83c94a8748e5ffcb1a5c3c3eb343f4e9e934562b436fdb5de436f32703ee9ecf",
+      "size_bytes": 37
+    },
+    {
+      "artifact_role": "review_or_final_validation",
+      "relative_path": "code/Q3/reviews/q3_final_validation.json",
+      "sha256": "32a0780b723e1f933d0d3cf17e7609c95caf96ab61a63334d93faf38672a8674",
+      "size_bytes": 13748
+    },
+    {
+      "artifact_role": "review_or_final_validation",
+      "relative_path": "code/Q3/reviews/q3_python_review_round3.json",
+      "sha256": "16245ab7e68cce6c99b7c8e632b2db538278b2b8393997331e3110a9a0494cdb",
+      "size_bytes": 35566
+    },
+    {
+      "artifact_role": "method_or_human_decision_record",
+      "relative_path": "methods/Q3/probes/risk_probe_summary.json",
+      "sha256": "635d021b56828a53206d54ab8afced87dbc802e98839005193c3b4b1c2d3a4da",
+      "size_bytes": 5097
+    },
+    {
+      "artifact_role": "method_or_human_decision_record",
+      "relative_path": "methods/Q3/q3_decisions.jsonl",
+      "sha256": "e212d65f6566d8d83ce54ab995e33c0a530d5392f2bd3f834db9393f2bec2a09",
+      "size_bytes": 3563
+    },
+    {
+      "artifact_role": "method_or_human_decision_record",
+      "relative_path": "methods/Q3/q3_method_card.md",
+      "sha256": "0ef94010fe74bb3592e2fd8406be223bbed738e28d2907f29f32bd31d7c70cb3",
+      "size_bytes": 11047
+    },
+    {
+      "artifact_role": "workflow_manifest",
+      "relative_path": "planning/manifests/Q3.json",
+      "sha256": "9b809fd292a418ce0d1ff0843e26f448eb093d947acbe0586cc884f16d93f829",
+      "size_bytes": 2219
+    },
+    {
+      "artifact_role": "formal_figure",
+      "relative_path": "results/Q3/experiments/round3/figures/q3_p2_safety_sensitivity.png",
+      "sha256": "731463e9a682c6f7a3349e6bedf2ce5a1c5de0a6eb885a35fceb002cfbb2dcd2",
+      "size_bytes": 130777
+    },
+    {
+      "artifact_role": "formal_figure",
+      "relative_path": "results/Q3/experiments/round3/figures/q3_p2_trajectories.png",
+      "sha256": "a1199282d388003f5ed044e1e52062a194bee1c71fdf3a5352337f98bd8b2044",
+      "size_bytes": 83025
+    },
+    {
+      "artifact_role": "formal_figure",
+      "relative_path": "results/Q3/experiments/round3/figures/q3_pareto_front.png",
+      "sha256": "5ba94e2c5e3a2c44d558140bcdb352e7525e3bd492405ca05cb468fbd1b24201",
+      "size_bytes": 108367
+    },
+    {
+      "artifact_role": "formal_machine_result",
+      "relative_path": "results/Q3/experiments/round3/metrics/q3_baseline.json",
+      "sha256": "4e2fed00eb1ed222e88d991d786d4bdcd4baba324fb7782dc8bebb976d5f5b7d",
+      "size_bytes": 95342
+    },
+    {
+      "artifact_role": "formal_machine_result",
+      "relative_path": "results/Q3/experiments/round3/metrics/q3_p2_combined_perturbations.json",
+      "sha256": "180bfaae82a4a75d012f423d76fb241658793ca349a0112da59f9592aa20b2bc",
+      "size_bytes": 2046157
+    },
+    {
+      "artifact_role": "formal_machine_result",
+      "relative_path": "results/Q3/experiments/round3/metrics/q3_p2_continuous_validation.json",
+      "sha256": "764cce8c523f9947912029c754d5a08d48fad097f971403d46aba8ffe869bcef",
+      "size_bytes": 20918
+    },
+    {
+      "artifact_role": "formal_machine_result",
+      "relative_path": "results/Q3/experiments/round3/metrics/q3_p2_double_coverage.json",
+      "sha256": "52307800036f920442a5988818d29621fdcb74a0c3d5462c26c9aeb6d0effffd",
+      "size_bytes": 1261
+    },
+    {
+      "artifact_role": "formal_machine_result",
+      "relative_path": "results/Q3/experiments/round3/metrics/q3_p2_failure_details.json",
+      "sha256": "8271ef683214708412e65c2d092024fb12f467dfcf0a7c5d6be0329a73516b2f",
+      "size_bytes": 2844
+    },
+    {
+      "artifact_role": "formal_machine_result",
+      "relative_path": "results/Q3/experiments/round3/metrics/q3_p2_formal_plan.json",
+      "sha256": "758d940fa9357b820720859b1f55766e6e14d127ea3ccb8adfa6bc93ae845f3b",
+      "size_bytes": 14862
+    },
+    {
+      "artifact_role": "formal_machine_result",
+      "relative_path": "results/Q3/experiments/round3/metrics/q3_p2_safety_certificate.json",
+      "sha256": "b88e06e66ffc0d86ac86374028503db661e3107d2a48bba6b9713df3418dcfd9",
+      "size_bytes": 3980
+    },
+    {
+      "artifact_role": "formal_machine_result",
+      "relative_path": "results/Q3/experiments/round3/metrics/q3_pareto_front.json",
+      "sha256": "af40a709bd0ae8b130d869e9146d22298d86aaadaffca913e6893734042271c5",
+      "size_bytes": 1766012
+    },
+    {
+      "artifact_role": "formal_machine_result",
+      "relative_path": "results/Q3/experiments/round3/metrics/q3_source_document_provenance.json",
+      "sha256": "b64ec5524c61da6b62fa7f89014bbedf4171637f1acb4bfce83370bd7d1832d1",
+      "size_bytes": 2149
+    },
+    {
+      "artifact_role": "formal_machine_result",
+      "relative_path": "results/Q3/experiments/round3/run_summary.json",
+      "sha256": "d8d6ac1d43e5f9cdbd48a0e9c85d6a70b4a20ed71786466b27a50c3b43d0b65f",
+      "size_bytes": 5066
+    },
+    {
+      "artifact_role": "formal_table",
+      "relative_path": "results/Q3/experiments/round3/tables/q3_p2_availability_thresholds.csv",
+      "sha256": "05f758a37b3dcdd2a47a30796e5b229f685241fe5f130bffa117e4077bd524a4",
+      "size_bytes": 805
+    },
+    {
+      "artifact_role": "formal_table",
+      "relative_path": "results/Q3/experiments/round3/tables/q3_p2_bearing_sensitivity.csv",
+      "sha256": "00a56569e461d23545dd7faa6c729ea32c37e8847c46e0df0c91b04b3b8b044c",
+      "size_bytes": 5441
+    },
+    {
+      "artifact_role": "formal_table",
+      "relative_path": "results/Q3/experiments/round3/tables/q3_p2_comparison.csv",
+      "sha256": "6e445371c224301b943a8cd4d7c0b9dff7286a902c4311f0da1ba1f8d2db11aa",
+      "size_bytes": 1970
+    },
+    {
+      "artifact_role": "formal_table",
+      "relative_path": "results/Q3/experiments/round3/tables/q3_p2_events.csv",
+      "sha256": "f672d30bc8a1221f95eb41e798a67b1667cdac7a6051af678f7e72bbc966ee99",
+      "size_bytes": 699
+    },
+    {
+      "artifact_role": "formal_table",
+      "relative_path": "results/Q3/experiments/round3/tables/q3_p2_failure_details.csv",
+      "sha256": "25276bd1c3dacde492ca167f4484637527249724216eb6bd941542b765f63cae",
+      "size_bytes": 710
+    },
+    {
+      "artifact_role": "formal_table",
+      "relative_path": "results/Q3/experiments/round3/tables/q3_p2_heading_sensitivity.csv",
+      "sha256": "3b211a049870ad3572089d0f5190de9004b4ea50022ee8b1ae3d332f10211e1d",
+      "size_bytes": 665
+    },
+    {
+      "artifact_role": "formal_table",
+      "relative_path": "results/Q3/experiments/round3/tables/q3_p2_position_sensitivity.csv",
+      "sha256": "5e5e82da0d383af6b3bea735717b15f7f2044c00644cea86b2118b766c6834cd",
+      "size_bytes": 4377
+    },
+    {
+      "artifact_role": "formal_table",
+      "relative_path": "results/Q3/experiments/round3/tables/q3_p2_safety_sensitivity.csv",
+      "sha256": "d829959dfdb7dd94316f66a3e6acbb0b589da7572f5f4fbfbc8f33bc31136984",
+      "size_bytes": 2916
+    },
+    {
+      "artifact_role": "formal_table",
+      "relative_path": "results/Q3/experiments/round3/tables/q3_p2_trajectory.csv",
+      "sha256": "e7aebfbb7665ffd1d722dac4a2d1e272c853f17c31df2732e639b550cbf5dc02",
+      "size_bytes": 2017
+    },
+    {
+      "artifact_role": "formal_table",
+      "relative_path": "results/Q3/experiments/round3/tables/q3_pareto_front.csv",
+      "sha256": "81b44f3f98971f8d832c84160b0b5cd12f4297f907d606978edc3cc608a083b1",
+      "size_bytes": 18205
+    },
+    {
+      "artifact_role": "robustness_report",
+      "relative_path": "robustness/Q3/q3_robustness_report_round3.md",
+      "sha256": "9bcb25a57df8f7ec85f558e975585f7550f6bce99489ca8ac2c4683cb41247ff",
+      "size_bytes": 2387
+    },
+    {
+      "artifact_role": "standardized_synthetic_input",
+      "relative_path": "workspace/data_clean/q3_reference_plan_p2.json",
+      "sha256": "3dd3438b603c033524fae5e745235020a47640228519cbe1b14593f0e060c391",
+      "size_bytes": 5047
+    },
+    {
+      "artifact_role": "standardized_synthetic_input",
+      "relative_path": "workspace/data_clean/q3_standardized_scenario.json",
+      "sha256": "19b9fec3947e334dfbc59421ea403581f8dc13fbc3435d70e8aeb4433f128735",
+      "size_bytes": 904
+    }
+  ],
+  "hash_error_count": 0,
+  "missing_path_count": 0,
+  "question_id": "Q3",
+  "schema_version": 1,
+  "self_manifest_policy": "q3_final_manifest.json is excluded because a stable recursive self-hash is impossible",
+  "source_documents_excluded": [
+    "B题：舰船烟幕遮蔽干扰优化.docx",
+    "Q3_编程手与论文手任务清单.docx"
+  ],
+  "unallowed_path_count": 0,
+  "workspace_data_clean_files": [
+    "workspace/data_clean/q3_reference_plan_p2.json",
+    "workspace/data_clean/q3_standardized_scenario.json"
+  ],
+  "workspace_data_clean_scope_status": "only_expected_q3_files_present"
+}

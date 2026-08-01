@@ -1,0 +1,1445 @@
+{
+  "broken_plan_counterexample": {
+    "area_diagnostic_failed": true,
+    "certificate_status": "failed",
+    "continuous_certificate": {
+      "analytic_internal_tangencies": [],
+      "canonical_box_count": 4,
+      "canonical_boxes": [
+        {
+          "canonical_box_id": "broken_01",
+          "certificate_status": "failed",
+          "conservative_lower_bound_m2": -11211.460796560239,
+          "end_s": 14.44018905,
+          "internal_box_count": 2,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "start_s": 0.0
+        },
+        {
+          "canonical_box_id": "broken_02",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 2716.152613921482,
+          "end_s": 15.61417434,
+          "internal_box_count": 1,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "start_s": 14.44018905
+        },
+        {
+          "canonical_box_id": "broken_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1079.0318774692857,
+          "end_s": 20.614174339999998,
+          "internal_box_count": 6,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "start_s": 15.61417434
+        },
+        {
+          "canonical_box_id": "broken_04",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1137.2725254662348,
+          "end_s": 25.36104262064107,
+          "internal_box_count": 1,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "start_s": 20.614174339999998
+        }
+      ],
+      "certificate_status": "failed",
+      "certified_box_count": 9,
+      "failed_box_count": 1,
+      "first_failure_time_interval": [
+        7.220094525,
+        14.44018905
+      ],
+      "gap_count": 1,
+      "internal_boxes": [
+        {
+          "active_smokes": [
+            0
+          ],
+          "box_id": "box_00001",
+          "canonical_box_id": "broken_01",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 689.1855409707308,
+          "end_s": 7.220094525,
+          "midpoint_margin_m2": 7020.57686808942,
+          "numerical_upper_bound_m2": 13351.96819520811,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 0.0,
+          "subdivision_depth": 1
+        },
+        {
+          "active_smokes": [
+            0
+          ],
+          "box_id": "box_00002",
+          "canonical_box_id": "broken_01",
+          "certificate_status": "failed",
+          "conservative_lower_bound_m2": -11211.460796560239,
+          "end_s": 14.44018905,
+          "midpoint_margin_m2": -2438.5295963160643,
+          "numerical_upper_bound_m2": 6334.40160392811,
+          "proof_branch": "exact_midpoint_counterexample",
+          "radius_regimes": [
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 7.220094525,
+          "subdivision_depth": 1
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00003",
+          "canonical_box_id": "broken_02",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 2716.152613921482,
+          "end_s": 15.61417434,
+          "midpoint_margin_m2": 4224.557023258747,
+          "numerical_upper_bound_m2": 5732.961432596013,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "full_radius",
+            "full_radius"
+          ],
+          "start_s": 14.44018905,
+          "subdivision_depth": 0
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00004",
+          "canonical_box_id": "broken_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1590.6727377955197,
+          "end_s": 16.239174339999998,
+          "midpoint_margin_m2": 3991.9293487274467,
+          "numerical_upper_bound_m2": 6393.185959659375,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 15.61417434,
+          "subdivision_depth": 3
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00005",
+          "canonical_box_id": "broken_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1079.0318774692857,
+          "end_s": 16.864174339999998,
+          "midpoint_margin_m2": 3480.2884884012196,
+          "numerical_upper_bound_m2": 5881.545099333155,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 16.239174339999998,
+          "subdivision_depth": 3
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00006",
+          "canonical_box_id": "broken_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1155.891307608473,
+          "end_s": 17.489174339999998,
+          "midpoint_margin_m2": 3355.368270102907,
+          "numerical_upper_bound_m2": 5554.845232597342,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 16.864174339999998,
+          "subdivision_depth": 3
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00007",
+          "canonical_box_id": "broken_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1568.6866447780365,
+          "end_s": 18.114174339999998,
+          "midpoint_margin_m2": 3566.38395883497,
+          "numerical_upper_bound_m2": 5564.081272891905,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 17.489174339999998,
+          "subdivision_depth": 3
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00008",
+          "canonical_box_id": "broken_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1330.39771896557,
+          "end_s": 19.364174339999998,
+          "midpoint_margin_m2": 4922.233050203437,
+          "numerical_upper_bound_m2": 8514.068381441308,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 18.114174339999998,
+          "subdivision_depth": 2
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00009",
+          "canonical_box_id": "broken_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 3921.129854401082,
+          "end_s": 20.614174339999998,
+          "midpoint_margin_m2": 6705.84659188895,
+          "numerical_upper_bound_m2": 9490.563329376819,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 19.364174339999998,
+          "subdivision_depth": 2
+        },
+        {
+          "active_smokes": [
+            1
+          ],
+          "box_id": "box_00010",
+          "canonical_box_id": "broken_04",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1137.2725254662348,
+          "end_s": 25.36104262064107,
+          "midpoint_margin_m2": 5298.534007027906,
+          "numerical_upper_bound_m2": 9459.79548858958,
+          "proof_branch": "physical_event_split_with_adaptive_lipschitz",
+          "radius_regimes": [
+            "expired",
+            "full_radius"
+          ],
+          "start_s": 20.614174339999998,
+          "subdivision_depth": 0
+        }
+      ],
+      "internal_subbox_count": 10,
+      "method": "physical_event_and_structural_split_with_exact_xi_and_adaptive_lipschitz_outward_guard",
+      "minimum_certified_margin_m2": 689.1855409707308,
+      "numerical_policy": {
+        "failure_tolerance_m2": 1e-07,
+        "maximum_depth": 24,
+        "minimum_width_s": 1e-07,
+        "rounding_guard_m2": 1e-09
+      },
+      "time_grid_used_as_proof": false,
+      "undecided_box_count": 0
+    },
+    "counterexample": "second_burst_delayed_by_6_seconds",
+    "exact_cross_section_failed": true,
+    "false_positive_gate_passed": true,
+    "first_failure_time_interval": [
+      7.220094525,
+      14.44018905
+    ],
+    "minimum_margin_m2": -10434.621952111862,
+    "minimum_margin_time_s": 14.439309616061992,
+    "uncovered_area_or_gap": {
+      "area_tolerance_m2": 1e-30,
+      "breakpoint_count": 4,
+      "clipping_applied": false,
+      "conservative_area_upper_bound_m2": 4811.770077479452,
+      "convergence_difference_m2": 1.326888317454376e-57,
+      "fixed_time_exact_coverage_proved": false,
+      "fixed_time_exact_section_margin_m2": -10434.621952111862,
+      "geometric_positive_part_applied": true,
+      "initial_quadrature_error_bound_m2": 8.290505908294881e-10,
+      "integration_precision_digits": 60,
+      "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+      "negative_value_clamped": false,
+      "precision_doubling_difference_m2": 1.326888317454376e-57,
+      "proof_or_diagnostic_status": "positive_uncovered_area_detected",
+      "raw_uncovered_area_m2": 4811.770077478623,
+      "repeated_precision_digits": 120,
+      "repeated_quadrature_error_bound_m2": 8.290505908294881e-10,
+      "time_s": 14.439309616061992,
+      "upper_bound_construction": "raw_repeated_precision_area_plus_repeated_adaptive_simpson_error_estimate_plus_precision_doubling_difference",
+      "verified_no_uncovered_area": false
+    }
+  },
+  "canonical_two_bomb_validation": {
+    "absolute_execution_status": "blocked_missing_uav_initial_state_and_base_reference",
+    "certificate_status": "verified",
+    "continuous_certificate": {
+      "analytic_internal_tangencies": [],
+      "canonical_box_count": 9,
+      "canonical_boxes": [
+        {
+          "canonical_box_id": "canonical_01",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1179.3404290200485,
+          "end_s": 4.375750089494163,
+          "internal_box_count": 1,
+          "proof_branch": "single_smoke_1_left_endpoint",
+          "start_s": 0.0
+        },
+        {
+          "canonical_box_id": "canonical_02",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1758.6123951094144,
+          "end_s": 8.44018905,
+          "internal_box_count": 1,
+          "proof_branch": "single_smoke_1_right_endpoint",
+          "start_s": 4.375750089494163
+        },
+        {
+          "canonical_box_id": "canonical_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1341.2551197028413,
+          "end_s": 12.682872298962387,
+          "internal_box_count": 2,
+          "proof_branch": "equal_radius_pair_intersection_decreasing",
+          "start_s": 8.44018905
+        },
+        {
+          "canonical_box_id": "canonical_04",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 259.25184430450275,
+          "end_s": 15.61417434,
+          "internal_box_count": 1,
+          "proof_branch": "equal_radius_pair_intersection_increasing",
+          "start_s": 12.682872298962387
+        },
+        {
+          "canonical_box_id": "canonical_05",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 634.1036781011293,
+          "end_s": 17.081923625940767,
+          "internal_box_count": 2,
+          "proof_branch": "decay_pair_intersection_decreasing",
+          "start_s": 15.61417434
+        },
+        {
+          "canonical_box_id": "canonical_06",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 614.4803759631376,
+          "end_s": 17.906572666137915,
+          "internal_box_count": 1,
+          "proof_branch": "decay_pair_intersection_increasing",
+          "start_s": 17.081923625940767
+        },
+        {
+          "canonical_box_id": "canonical_07",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 651.7713991581198,
+          "end_s": 20.614174339999998,
+          "internal_box_count": 2,
+          "proof_branch": "smoke_2_left_endpoint_with_smoke_1_decay",
+          "start_s": 17.906572666137915
+        },
+        {
+          "canonical_box_id": "canonical_08",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 7525.893324998259,
+          "end_s": 20.98999450843061,
+          "internal_box_count": 1,
+          "proof_branch": "single_smoke_2_left_endpoint",
+          "start_s": 20.614174339999998
+        },
+        {
+          "canonical_box_id": "canonical_09",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1188.1967533855652,
+          "end_s": 25.36104262064107,
+          "internal_box_count": 1,
+          "proof_branch": "single_smoke_2_right_endpoint",
+          "start_s": 20.98999450843061
+        }
+      ],
+      "certificate_status": "verified",
+      "certified_box_count": 12,
+      "failed_box_count": 0,
+      "first_failure_time_interval": null,
+      "gap_count": 0,
+      "internal_boxes": [
+        {
+          "active_smokes": [
+            0
+          ],
+          "box_id": "box_00001",
+          "canonical_box_id": "canonical_01",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1179.3404290200485,
+          "end_s": 4.375750089494163,
+          "midpoint_margin_m2": 5016.49049268421,
+          "numerical_upper_bound_m2": 8853.640556348373,
+          "proof_branch": "single_smoke_1_left_endpoint",
+          "radius_regimes": [
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 0.0,
+          "subdivision_depth": 0
+        },
+        {
+          "active_smokes": [
+            0
+          ],
+          "box_id": "box_00002",
+          "canonical_box_id": "canonical_02",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1758.6123951094144,
+          "end_s": 8.44018905,
+          "midpoint_margin_m2": 5247.554908518083,
+          "numerical_upper_bound_m2": 8736.497421926753,
+          "proof_branch": "single_smoke_1_right_endpoint",
+          "radius_regimes": [
+            "full_radius",
+            "not_burst"
+          ],
+          "start_s": 4.375750089494163,
+          "subdivision_depth": 0
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00003",
+          "canonical_box_id": "canonical_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1608.7589367772687,
+          "end_s": 10.561530674481194,
+          "midpoint_margin_m2": 4499.748526755197,
+          "numerical_upper_bound_m2": 7390.738116733127,
+          "proof_branch": "equal_radius_pair_intersection_decreasing",
+          "radius_regimes": [
+            "full_radius",
+            "full_radius"
+          ],
+          "start_s": 8.44018905,
+          "subdivision_depth": 1
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00004",
+          "canonical_box_id": "canonical_03",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1341.2551197028413,
+          "end_s": 12.682872298962387,
+          "midpoint_margin_m2": 3964.7408926063436,
+          "numerical_upper_bound_m2": 6588.226665509847,
+          "proof_branch": "equal_radius_pair_intersection_decreasing",
+          "radius_regimes": [
+            "full_radius",
+            "full_radius"
+          ],
+          "start_s": 10.561530674481194,
+          "subdivision_depth": 1
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00005",
+          "canonical_box_id": "canonical_04",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 259.25184430450275,
+          "end_s": 15.61417434,
+          "midpoint_margin_m2": 4025.5587660877422,
+          "numerical_upper_bound_m2": 7791.8656878709835,
+          "proof_branch": "equal_radius_pair_intersection_increasing",
+          "radius_regimes": [
+            "full_radius",
+            "full_radius"
+          ],
+          "start_s": 12.682872298962387,
+          "subdivision_depth": 0
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00006",
+          "canonical_box_id": "canonical_05",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1152.4222968156657,
+          "end_s": 16.348048982970383,
+          "midpoint_margin_m2": 3930.703445756318,
+          "numerical_upper_bound_m2": 6708.984594696972,
+          "proof_branch": "decay_pair_intersection_decreasing",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 15.61417434,
+          "subdivision_depth": 1
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00007",
+          "canonical_box_id": "canonical_05",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 634.1036781011293,
+          "end_s": 17.081923625940767,
+          "midpoint_margin_m2": 3412.384827041788,
+          "numerical_upper_bound_m2": 6190.665975982448,
+          "proof_branch": "decay_pair_intersection_decreasing",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 16.348048982970383,
+          "subdivision_depth": 1
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00008",
+          "canonical_box_id": "canonical_06",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 614.4803759631376,
+          "end_s": 17.906572666137915,
+          "midpoint_margin_m2": 3423.798622841271,
+          "numerical_upper_bound_m2": 6233.116869719405,
+          "proof_branch": "decay_pair_intersection_increasing",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 17.081923625940767,
+          "subdivision_depth": 0
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00009",
+          "canonical_box_id": "canonical_07",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 651.7713991581198,
+          "end_s": 19.260373503068955,
+          "midpoint_margin_m2": 4687.053858653922,
+          "numerical_upper_bound_m2": 8722.336318149728,
+          "proof_branch": "smoke_2_left_endpoint_with_smoke_1_decay",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 17.906572666137915,
+          "subdivision_depth": 1
+        },
+        {
+          "active_smokes": [
+            0,
+            1
+          ],
+          "box_id": "box_00010",
+          "canonical_box_id": "canonical_07",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 3546.9358672208114,
+          "end_s": 20.614174339999998,
+          "midpoint_margin_m2": 6635.486705810918,
+          "numerical_upper_bound_m2": 9724.037544401026,
+          "proof_branch": "smoke_2_left_endpoint_with_smoke_1_decay",
+          "radius_regimes": [
+            "linear_decay",
+            "full_radius"
+          ],
+          "start_s": 19.260373503068955,
+          "subdivision_depth": 1
+        },
+        {
+          "active_smokes": [
+            1
+          ],
+          "box_id": "box_00011",
+          "canonical_box_id": "canonical_08",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 7525.893324998259,
+          "end_s": 20.98999450843061,
+          "midpoint_margin_m2": 7766.095137067051,
+          "numerical_upper_bound_m2": 8006.296949135843,
+          "proof_branch": "single_smoke_2_left_endpoint",
+          "radius_regimes": [
+            "expired",
+            "full_radius"
+          ],
+          "start_s": 20.614174339999998,
+          "subdivision_depth": 0
+        },
+        {
+          "active_smokes": [
+            1
+          ],
+          "box_id": "box_00012",
+          "canonical_box_id": "canonical_09",
+          "certificate_status": "certified",
+          "conservative_lower_bound_m2": 1188.1967533855652,
+          "end_s": 25.36104262064107,
+          "midpoint_margin_m2": 5020.001865310466,
+          "numerical_upper_bound_m2": 8851.806977235368,
+          "proof_branch": "single_smoke_2_right_endpoint",
+          "radius_regimes": [
+            "expired",
+            "full_radius"
+          ],
+          "start_s": 20.98999450843061,
+          "subdivision_depth": 0
+        }
+      ],
+      "internal_subbox_count": 12,
+      "method": "physical_event_and_structural_split_with_exact_xi_and_adaptive_lipschitz_outward_guard",
+      "minimum_certified_margin_m2": 259.25184430450275,
+      "numerical_policy": {
+        "failure_tolerance_m2": 1e-07,
+        "maximum_depth": 30,
+        "minimum_width_s": 1e-07,
+        "rounding_guard_m2": 1e-09
+      },
+      "time_grid_used_as_proof": false,
+      "undecided_box_count": 0
+    },
+    "defence_window_s": [
+      0.0,
+      25.36104262064107
+    ],
+    "event_chain": [
+      {
+        "burst_relation_error_s": 0.0,
+        "center_m": 33.73703319,
+        "event_relations": {
+          "t_b": "t_d+3.5=t_cmd+5.5",
+          "t_d": "t_cmd+2"
+        },
+        "pre_lock_mission": true,
+        "release_relation_error_s": 0.0,
+        "smoke_id": "minimum_resource_smoke_1",
+        "t_b_s": -2.38582566,
+        "t_cmd_s": -7.88582566,
+        "t_d_s": -5.88582566
+      },
+      {
+        "burst_relation_error_s": 0.0,
+        "center_m": 161.83285766,
+        "event_relations": {
+          "t_b": "t_d+3.5=t_cmd+5.5",
+          "t_d": "t_cmd+2"
+        },
+        "pre_lock_mission": false,
+        "release_relation_error_s": 0.0,
+        "smoke_id": "minimum_resource_smoke_2",
+        "t_b_s": 8.44018905,
+        "t_cmd_s": 2.94018905,
+        "t_d_s": 4.94018905
+      }
+    ],
+    "exact_cross_section_validation": {
+      "dense_time_point_count": 20001,
+      "event_checks": [
+        {
+          "active_smoke_indices": [
+            0
+          ],
+          "candidate_count": 2,
+          "event": "align_first_s",
+          "minimising_xi_m": -80.0,
+          "minimum_squared_section_margin_m2": 8000.0,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [],
+          "time_s": 4.375750089494163,
+          "valid_smoke_count": 1
+        },
+        {
+          "active_smoke_indices": [
+            0,
+            1
+          ],
+          "candidate_count": 3,
+          "event": "second_burst_s",
+          "minimising_xi_m": 32.7110878495,
+          "minimum_squared_section_margin_m2": 4967.880206635444,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [
+            {
+              "smoke_indices": [
+                0,
+                1
+              ],
+              "status": "candidate",
+              "xi_m": 32.7110878495
+            }
+          ],
+          "time_s": 8.44018905,
+          "valid_smoke_count": 2
+        },
+        {
+          "active_smoke_indices": [
+            0,
+            1
+          ],
+          "candidate_count": 3,
+          "event": "full_pair_stationary_s",
+          "minimising_xi_m": -7.100112010176658e-15,
+          "minimum_squared_section_margin_m2": 3897.864938337737,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [
+            {
+              "smoke_indices": [
+                0,
+                1
+              ],
+              "status": "candidate",
+              "xi_m": -7.100112010176658e-15
+            }
+          ],
+          "time_s": 12.682872298962387,
+          "valid_smoke_count": 2
+        },
+        {
+          "active_smoke_indices": [
+            0,
+            1
+          ],
+          "candidate_count": 3,
+          "event": "first_decay_start_s",
+          "minimising_xi_m": -22.60033873639999,
+          "minimum_squared_section_margin_m2": 4408.640249337759,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [
+            {
+              "smoke_indices": [
+                0,
+                1
+              ],
+              "status": "candidate",
+              "xi_m": -22.60033873639999
+            }
+          ],
+          "time_s": 15.61417434,
+          "valid_smoke_count": 2
+        },
+        {
+          "active_smoke_indices": [
+            0,
+            1
+          ],
+          "candidate_count": 3,
+          "event": "decay_pair_stationary_s",
+          "minimising_xi_m": -62.072818252221936,
+          "minimum_squared_section_margin_m2": 3351.4488963666104,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [
+            {
+              "smoke_indices": [
+                0,
+                1
+              ],
+              "status": "candidate",
+              "xi_m": -62.072818252221936
+            }
+          ],
+          "time_s": 17.081923625940767,
+          "valid_smoke_count": 2
+        },
+        {
+          "active_smoke_indices": [
+            0,
+            1
+          ],
+          "candidate_count": 2,
+          "event": "pair_intersection_hits_left_boundary_s",
+          "minimising_xi_m": -80.0,
+          "minimum_squared_section_margin_m2": 3631.1266137302337,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [
+            {
+              "smoke_indices": [
+                0,
+                1
+              ],
+              "status": "candidate",
+              "xi_m": -80.00000000000004
+            }
+          ],
+          "time_s": 17.906572666137915,
+          "valid_smoke_count": 2
+        },
+        {
+          "active_smoke_indices": [
+            1
+          ],
+          "candidate_count": 2,
+          "event": "first_expiry_s",
+          "minimising_xi_m": -80.0,
+          "minimum_squared_section_margin_m2": 7527.992308044207,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [],
+          "time_s": 20.614174339999998,
+          "valid_smoke_count": 1
+        },
+        {
+          "active_smoke_indices": [
+            1
+          ],
+          "candidate_count": 2,
+          "event": "align_second_s",
+          "minimising_xi_m": -80.0,
+          "minimum_squared_section_margin_m2": 8000.0,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [],
+          "time_s": 20.98999450843061,
+          "valid_smoke_count": 1
+        },
+        {
+          "active_smoke_indices": [
+            1
+          ],
+          "candidate_count": 2,
+          "event": "window_end_s",
+          "minimising_xi_m": 80.0,
+          "minimum_squared_section_margin_m2": 1472.132412464689,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [],
+          "time_s": 25.36104262064107,
+          "valid_smoke_count": 1
+        }
+      ],
+      "interval_extrema": [
+        {
+          "active_smoke_indices": [
+            0
+          ],
+          "candidate_count": 2,
+          "minimising_xi_m": -80.0,
+          "minimum_squared_section_margin_m2": 1463.8872811368383,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [],
+          "time_s": 0.0,
+          "valid_smoke_count": 1
+        },
+        {
+          "active_smoke_indices": [
+            0
+          ],
+          "candidate_count": 2,
+          "minimising_xi_m": 80.0,
+          "minimum_squared_section_margin_m2": 2004.1118680248028,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [],
+          "time_s": 8.44018885645981,
+          "valid_smoke_count": 1
+        },
+        {
+          "active_smoke_indices": [
+            0,
+            1
+          ],
+          "candidate_count": 3,
+          "minimising_xi_m": -7.100112010176658e-15,
+          "minimum_squared_section_margin_m2": 3897.864938337737,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [
+            {
+              "smoke_indices": [
+                0,
+                1
+              ],
+              "status": "candidate",
+              "xi_m": -7.100112010176658e-15
+            }
+          ],
+          "time_s": 12.682872298962387,
+          "valid_smoke_count": 2
+        },
+        {
+          "active_smoke_indices": [
+            0,
+            1
+          ],
+          "candidate_count": 3,
+          "minimising_xi_m": -7.100112010176658e-15,
+          "minimum_squared_section_margin_m2": 3897.864938337737,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [
+            {
+              "smoke_indices": [
+                0,
+                1
+              ],
+              "status": "candidate",
+              "xi_m": -7.100112010176658e-15
+            }
+          ],
+          "time_s": 12.682872298962387,
+          "valid_smoke_count": 2
+        },
+        {
+          "active_smoke_indices": [
+            0,
+            1
+          ],
+          "candidate_count": 3,
+          "minimising_xi_m": -62.072818252221936,
+          "minimum_squared_section_margin_m2": 3351.4488963666104,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [
+            {
+              "smoke_indices": [
+                0,
+                1
+              ],
+              "status": "candidate",
+              "xi_m": -62.072818252221936
+            }
+          ],
+          "time_s": 17.081923625940767,
+          "valid_smoke_count": 2
+        },
+        {
+          "active_smoke_indices": [
+            0,
+            1
+          ],
+          "candidate_count": 3,
+          "minimising_xi_m": -62.072818252221936,
+          "minimum_squared_section_margin_m2": 3351.4488963666104,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [
+            {
+              "smoke_indices": [
+                0,
+                1
+              ],
+              "status": "candidate",
+              "xi_m": -62.072818252221936
+            }
+          ],
+          "time_s": 17.081923625940767,
+          "valid_smoke_count": 2
+        },
+        {
+          "active_smoke_indices": [
+            0,
+            1
+          ],
+          "candidate_count": 2,
+          "minimising_xi_m": -80.0,
+          "minimum_squared_section_margin_m2": 3631.1266137302337,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [
+            {
+              "smoke_indices": [
+                0,
+                1
+              ],
+              "status": "candidate",
+              "xi_m": -80.00000000000004
+            }
+          ],
+          "time_s": 17.906572666137915,
+          "valid_smoke_count": 2
+        },
+        {
+          "active_smoke_indices": [
+            1
+          ],
+          "candidate_count": 2,
+          "minimising_xi_m": -80.0,
+          "minimum_squared_section_margin_m2": 7527.992308044207,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [],
+          "time_s": 20.614174339999998,
+          "valid_smoke_count": 1
+        },
+        {
+          "active_smoke_indices": [
+            1
+          ],
+          "candidate_count": 2,
+          "minimising_xi_m": 80.0,
+          "minimum_squared_section_margin_m2": 1472.132412464689,
+          "numerical_tolerance": 1e-10,
+          "pairwise_intersections": [],
+          "time_s": 25.36104262064107,
+          "valid_smoke_count": 1
+        }
+      ],
+      "method": "exact_xi_candidates_plus_deterministic_dense_time_diagnostic",
+      "minimum_cross_section_margin_m2": 1463.8872811368383,
+      "minimum_time_s": 0.0,
+      "reference_absolute_error_m2": 8.871502359397709e-07,
+      "reference_margin_m2": 1463.887280249688,
+      "time_scan_role": "independent_bug_detection_not_continuous_proof",
+      "verified": true
+    },
+    "execution_status": "completed",
+    "formal_method_name_zh": "共线烟幕圆盘并集连续优化模型",
+    "global_optimality_status": "minimum_bomb_count_proved_in_relative_collinear_model",
+    "high_precision_area_diagnostics": [
+      {
+        "area_tolerance_m2": 1e-30,
+        "breakpoint_count": 2,
+        "clipping_applied": false,
+        "conservative_area_upper_bound_m2": 0.0,
+        "convergence_difference_m2": 0.0,
+        "fixed_time_exact_coverage_proved": true,
+        "fixed_time_exact_section_margin_m2": 1463.8872811368383,
+        "geometric_positive_part_applied": true,
+        "initial_quadrature_error_bound_m2": 0.0,
+        "integration_precision_digits": 60,
+        "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+        "negative_value_clamped": false,
+        "precision_doubling_difference_m2": 0.0,
+        "proof_or_diagnostic_status": "exact_zero_from_fixed_time_analytic_section",
+        "raw_uncovered_area_m2": 0.0,
+        "repeated_precision_digits": 120,
+        "repeated_quadrature_error_bound_m2": 0.0,
+        "time_s": 0.0,
+        "upper_bound_construction": "exact_zero_from_necessary_and_sufficient_fixed_time_collinear_section",
+        "verified_no_uncovered_area": true
+      },
+      {
+        "area_tolerance_m2": 1e-30,
+        "breakpoint_count": 2,
+        "clipping_applied": false,
+        "conservative_area_upper_bound_m2": 0.0,
+        "convergence_difference_m2": 0.0,
+        "fixed_time_exact_coverage_proved": true,
+        "fixed_time_exact_section_margin_m2": 8000.0,
+        "geometric_positive_part_applied": true,
+        "initial_quadrature_error_bound_m2": 0.0,
+        "integration_precision_digits": 60,
+        "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+        "negative_value_clamped": false,
+        "precision_doubling_difference_m2": 0.0,
+        "proof_or_diagnostic_status": "exact_zero_from_fixed_time_analytic_section",
+        "raw_uncovered_area_m2": 0.0,
+        "repeated_precision_digits": 120,
+        "repeated_quadrature_error_bound_m2": 0.0,
+        "time_s": 4.375750089494163,
+        "upper_bound_construction": "exact_zero_from_necessary_and_sufficient_fixed_time_collinear_section",
+        "verified_no_uncovered_area": true
+      },
+      {
+        "area_tolerance_m2": 1e-30,
+        "breakpoint_count": 4,
+        "clipping_applied": false,
+        "conservative_area_upper_bound_m2": 0.0,
+        "convergence_difference_m2": 0.0,
+        "fixed_time_exact_coverage_proved": true,
+        "fixed_time_exact_section_margin_m2": 4967.880206635444,
+        "geometric_positive_part_applied": true,
+        "initial_quadrature_error_bound_m2": 0.0,
+        "integration_precision_digits": 60,
+        "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+        "negative_value_clamped": false,
+        "precision_doubling_difference_m2": 0.0,
+        "proof_or_diagnostic_status": "exact_zero_from_fixed_time_analytic_section",
+        "raw_uncovered_area_m2": 0.0,
+        "repeated_precision_digits": 120,
+        "repeated_quadrature_error_bound_m2": 0.0,
+        "time_s": 8.44018905,
+        "upper_bound_construction": "exact_zero_from_necessary_and_sufficient_fixed_time_collinear_section",
+        "verified_no_uncovered_area": true
+      },
+      {
+        "area_tolerance_m2": 1e-30,
+        "breakpoint_count": 5,
+        "clipping_applied": false,
+        "conservative_area_upper_bound_m2": 0.0,
+        "convergence_difference_m2": 0.0,
+        "fixed_time_exact_coverage_proved": true,
+        "fixed_time_exact_section_margin_m2": 3897.864938337737,
+        "geometric_positive_part_applied": true,
+        "initial_quadrature_error_bound_m2": 0.0,
+        "integration_precision_digits": 60,
+        "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+        "negative_value_clamped": false,
+        "precision_doubling_difference_m2": 0.0,
+        "proof_or_diagnostic_status": "exact_zero_from_fixed_time_analytic_section",
+        "raw_uncovered_area_m2": 0.0,
+        "repeated_precision_digits": 120,
+        "repeated_quadrature_error_bound_m2": 0.0,
+        "time_s": 12.682872298962387,
+        "upper_bound_construction": "exact_zero_from_necessary_and_sufficient_fixed_time_collinear_section",
+        "verified_no_uncovered_area": true
+      },
+      {
+        "area_tolerance_m2": 1e-30,
+        "breakpoint_count": 5,
+        "clipping_applied": false,
+        "conservative_area_upper_bound_m2": 0.0,
+        "convergence_difference_m2": 0.0,
+        "fixed_time_exact_coverage_proved": true,
+        "fixed_time_exact_section_margin_m2": 4408.640249337759,
+        "geometric_positive_part_applied": true,
+        "initial_quadrature_error_bound_m2": 0.0,
+        "integration_precision_digits": 60,
+        "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+        "negative_value_clamped": false,
+        "precision_doubling_difference_m2": 0.0,
+        "proof_or_diagnostic_status": "exact_zero_from_fixed_time_analytic_section",
+        "raw_uncovered_area_m2": 0.0,
+        "repeated_precision_digits": 120,
+        "repeated_quadrature_error_bound_m2": 0.0,
+        "time_s": 15.61417434,
+        "upper_bound_construction": "exact_zero_from_necessary_and_sufficient_fixed_time_collinear_section",
+        "verified_no_uncovered_area": true
+      },
+      {
+        "area_tolerance_m2": 1e-30,
+        "breakpoint_count": 4,
+        "clipping_applied": false,
+        "conservative_area_upper_bound_m2": 0.0,
+        "convergence_difference_m2": 0.0,
+        "fixed_time_exact_coverage_proved": true,
+        "fixed_time_exact_section_margin_m2": 3351.4488963666104,
+        "geometric_positive_part_applied": true,
+        "initial_quadrature_error_bound_m2": 0.0,
+        "integration_precision_digits": 60,
+        "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+        "negative_value_clamped": false,
+        "precision_doubling_difference_m2": 0.0,
+        "proof_or_diagnostic_status": "exact_zero_from_fixed_time_analytic_section",
+        "raw_uncovered_area_m2": 0.0,
+        "repeated_precision_digits": 120,
+        "repeated_quadrature_error_bound_m2": 0.0,
+        "time_s": 17.081923625940767,
+        "upper_bound_construction": "exact_zero_from_necessary_and_sufficient_fixed_time_collinear_section",
+        "verified_no_uncovered_area": true
+      },
+      {
+        "area_tolerance_m2": 1e-30,
+        "breakpoint_count": 3,
+        "clipping_applied": false,
+        "conservative_area_upper_bound_m2": 0.0,
+        "convergence_difference_m2": 0.0,
+        "fixed_time_exact_coverage_proved": true,
+        "fixed_time_exact_section_margin_m2": 3631.1266137302337,
+        "geometric_positive_part_applied": true,
+        "initial_quadrature_error_bound_m2": 0.0,
+        "integration_precision_digits": 60,
+        "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+        "negative_value_clamped": false,
+        "precision_doubling_difference_m2": 0.0,
+        "proof_or_diagnostic_status": "exact_zero_from_fixed_time_analytic_section",
+        "raw_uncovered_area_m2": 0.0,
+        "repeated_precision_digits": 120,
+        "repeated_quadrature_error_bound_m2": 0.0,
+        "time_s": 17.906572666137915,
+        "upper_bound_construction": "exact_zero_from_necessary_and_sufficient_fixed_time_collinear_section",
+        "verified_no_uncovered_area": true
+      },
+      {
+        "area_tolerance_m2": 1e-30,
+        "breakpoint_count": 2,
+        "clipping_applied": false,
+        "conservative_area_upper_bound_m2": 0.0,
+        "convergence_difference_m2": 0.0,
+        "fixed_time_exact_coverage_proved": true,
+        "fixed_time_exact_section_margin_m2": 7527.992308044207,
+        "geometric_positive_part_applied": true,
+        "initial_quadrature_error_bound_m2": 0.0,
+        "integration_precision_digits": 60,
+        "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+        "negative_value_clamped": false,
+        "precision_doubling_difference_m2": 0.0,
+        "proof_or_diagnostic_status": "exact_zero_from_fixed_time_analytic_section",
+        "raw_uncovered_area_m2": 0.0,
+        "repeated_precision_digits": 120,
+        "repeated_quadrature_error_bound_m2": 0.0,
+        "time_s": 20.614174339999998,
+        "upper_bound_construction": "exact_zero_from_necessary_and_sufficient_fixed_time_collinear_section",
+        "verified_no_uncovered_area": true
+      },
+      {
+        "area_tolerance_m2": 1e-30,
+        "breakpoint_count": 2,
+        "clipping_applied": false,
+        "conservative_area_upper_bound_m2": 0.0,
+        "convergence_difference_m2": 0.0,
+        "fixed_time_exact_coverage_proved": true,
+        "fixed_time_exact_section_margin_m2": 8000.0,
+        "geometric_positive_part_applied": true,
+        "initial_quadrature_error_bound_m2": 0.0,
+        "integration_precision_digits": 60,
+        "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+        "negative_value_clamped": false,
+        "precision_doubling_difference_m2": 0.0,
+        "proof_or_diagnostic_status": "exact_zero_from_fixed_time_analytic_section",
+        "raw_uncovered_area_m2": 0.0,
+        "repeated_precision_digits": 120,
+        "repeated_quadrature_error_bound_m2": 0.0,
+        "time_s": 20.98999450843061,
+        "upper_bound_construction": "exact_zero_from_necessary_and_sufficient_fixed_time_collinear_section",
+        "verified_no_uncovered_area": true
+      },
+      {
+        "area_tolerance_m2": 1e-30,
+        "breakpoint_count": 2,
+        "clipping_applied": false,
+        "conservative_area_upper_bound_m2": 0.0,
+        "convergence_difference_m2": 0.0,
+        "fixed_time_exact_coverage_proved": true,
+        "fixed_time_exact_section_margin_m2": 1472.132412464689,
+        "geometric_positive_part_applied": true,
+        "initial_quadrature_error_bound_m2": 0.0,
+        "integration_precision_digits": 60,
+        "method": "decimal_adaptive_simpson_vertical_cross_section_integration",
+        "negative_value_clamped": false,
+        "precision_doubling_difference_m2": 0.0,
+        "proof_or_diagnostic_status": "exact_zero_from_fixed_time_analytic_section",
+        "raw_uncovered_area_m2": 0.0,
+        "repeated_precision_digits": 120,
+        "repeated_quadrature_error_bound_m2": 0.0,
+        "time_s": 25.36104262064107,
+        "upper_bound_construction": "exact_zero_from_necessary_and_sufficient_fixed_time_collinear_section",
+        "verified_no_uncovered_area": true
+      }
+    ],
+    "input_status": "relative_model_complete_absolute_inputs_missing",
+    "maximum_uncovered_area_upper_bound_m2": 0.0,
+    "minimum_bomb_count": 2,
+    "minimum_bomb_count_statement_zh": "在允许锁定前预警部署的 G1/S1/O0/U0 共线相对模型中，完成 G1 最坏探测窗口全防御的最少弹药数为 2。",
+    "minimum_release_interval_verified": true,
+    "model_scope": {
+      "comparison_missile_model": "G2_fixed_heading",
+      "coverage_model": "O0_complete_two_dimensional_ship_disk",
+      "main_method_name_zh": "共线烟幕圆盘并集连续优化模型",
+      "missile_model": "G1_pure_pursuit_constant_speed",
+      "nominal_drift_model": "U0_no_wind_drift",
+      "smoke_motion_model": "S1_inertial_before_burst_fixed_center_after_burst"
+    },
+    "one_bomb_impossibility": {
+      "proof": "2(R_c-R_s)/V_s < (D_max-R_s)/(V_m-V_s)",
+      "single_smoke_upper_bound_s": 10.376134889753567,
+      "strict_inequality_verified": true,
+      "worst_detection_window_s": 25.36104262064107
+    },
+    "pre_lock_dependency": "required",
+    "relative_feasibility_status": "full_worst_window_feasible",
+    "relative_reachability": {
+      "absolute_execution_status": "blocked_missing_uav_initial_state_and_base_reference",
+      "absolute_first_release_position": "not_generated",
+      "all_candidates": [
+        {
+          "minimum_transition_slack_m": 175.03258741,
+          "relative_release_positions_m": [
+            131.73703319,
+            259.83285766
+          ],
+          "relative_transition_status": "feasible",
+          "release_heading_signs": [
+            -1,
+            -1
+          ],
+          "release_times_s": [
+            -5.88582566,
+            4.94018905
+          ],
+          "transitions": [
+            {
+              "available_travel_distance_m": 303.12841188,
+              "from_smoke_id": "minimum_resource_smoke_1",
+              "minimum_release_interval_s": 1.0,
+              "relative_transition_verified": true,
+              "release_interval_s": 10.826014709999999,
+              "release_interval_verified": true,
+              "to_smoke_id": "minimum_resource_smoke_2",
+              "transition_distance_m": 128.09582447,
+              "transition_slack_m": 175.03258741
+            }
+          ]
+        },
+        {
+          "minimum_transition_slack_m": 235.22423634999998,
+          "relative_release_positions_m": [
+            131.73703319,
+            63.83285766
+          ],
+          "relative_transition_status": "feasible",
+          "release_heading_signs": [
+            -1,
+            1
+          ],
+          "release_times_s": [
+            -5.88582566,
+            4.94018905
+          ],
+          "transitions": [
+            {
+              "available_travel_distance_m": 303.12841188,
+              "from_smoke_id": "minimum_resource_smoke_1",
+              "minimum_release_interval_s": 1.0,
+              "relative_transition_verified": true,
+              "release_interval_s": 10.826014709999999,
+              "release_interval_verified": true,
+              "to_smoke_id": "minimum_resource_smoke_2",
+              "transition_distance_m": 67.90417553,
+              "transition_slack_m": 235.22423634999998
+            }
+          ]
+        },
+        {
+          "minimum_transition_slack_m": -20.967412590000038,
+          "relative_release_positions_m": [
+            -64.26296681,
+            259.83285766
+          ],
+          "relative_transition_status": "infeasible",
+          "release_heading_signs": [
+            1,
+            -1
+          ],
+          "release_times_s": [
+            -5.88582566,
+            4.94018905
+          ],
+          "transitions": [
+            {
+              "available_travel_distance_m": 303.12841188,
+              "from_smoke_id": "minimum_resource_smoke_1",
+              "minimum_release_interval_s": 1.0,
+              "relative_transition_verified": false,
+              "release_interval_s": 10.826014709999999,
+              "release_interval_verified": true,
+              "to_smoke_id": "minimum_resource_smoke_2",
+              "transition_distance_m": 324.09582447,
+              "transition_slack_m": -20.967412590000038
+            }
+          ]
+        },
+        {
+          "minimum_transition_slack_m": 175.03258741,
+          "relative_release_positions_m": [
+            -64.26296681,
+            63.83285766
+          ],
+          "relative_transition_status": "feasible",
+          "release_heading_signs": [
+            1,
+            1
+          ],
+          "release_times_s": [
+            -5.88582566,
+            4.94018905
+          ],
+          "transitions": [
+            {
+              "available_travel_distance_m": 303.12841188,
+              "from_smoke_id": "minimum_resource_smoke_1",
+              "minimum_release_interval_s": 1.0,
+              "relative_transition_verified": true,
+              "release_interval_s": 10.826014709999999,
+              "release_interval_verified": true,
+              "to_smoke_id": "minimum_resource_smoke_2",
+              "transition_distance_m": 128.09582447,
+              "transition_slack_m": 175.03258741
+            }
+          ]
+        }
+      ],
+      "enumerated_heading_count": 4,
+      "feasible_heading_count": 3,
+      "operating_radius_status": "not_evaluated_missing_base_reference",
+      "relative_transition_status": "feasible",
+      "selected_heading_combination": {
+        "minimum_transition_slack_m": 235.22423634999998,
+        "relative_release_positions_m": [
+          131.73703319,
+          63.83285766
+        ],
+        "relative_transition_status": "feasible",
+        "release_heading_signs": [
+          -1,
+          1
+        ],
+        "release_times_s": [
+          -5.88582566,
+          4.94018905
+        ],
+        "transitions": [
+          {
+            "available_travel_distance_m": 303.12841188,
+            "from_smoke_id": "minimum_resource_smoke_1",
+            "minimum_release_interval_s": 1.0,
+            "relative_transition_verified": true,
+            "release_interval_s": 10.826014709999999,
+            "release_interval_verified": true,
+            "to_smoke_id": "minimum_resource_smoke_2",
+            "transition_distance_m": 67.90417553,
+            "transition_slack_m": 235.22423634999998
+          }
+        ]
+      }
+    },
+    "release_interval_s": 10.826014709999999,
+    "result_strength": "continuous_certificate_plus_independent_geometry",
+    "scheme_id": "Q2_A_two_bomb_minimum_resource_full_worst_window",
+    "structural_events": {
+      "align_first_s": 4.375750089494163,
+      "align_second_s": 20.98999450843061,
+      "decay_pair_stationary_s": 17.081923625940767,
+      "first_decay_start_s": 15.61417434,
+      "first_expiry_s": 20.614174339999998,
+      "full_pair_stationary_s": 12.682872298962387,
+      "pair_intersection_hits_left_boundary_s": 17.906572666137915,
+      "second_burst_s": 8.44018905,
+      "window_end_s": 25.36104262064107
+    }
+  },
+  "no_pre_lock_counterfactual": {
+    "allow_pre_lock_mission": false,
+    "conclusion_zh": "若所有任务只能在锁定时刻后下达，则事件延迟导致最初 5.5 s 必然裸露，无法从 t=0 实现全窗口遮蔽。",
+    "constraint": "t_cmd,j >= 0",
+    "derived_earliest_burst_s": 5.5,
+    "derived_earliest_release_s": 2.0,
+    "full_window_feasible": false,
+    "interval_right_open": true,
+    "proof_type": "analytic_event_delay_certificate_independent_of_bomb_count",
+    "unavoidable_initial_naked_duration_s": 5.5,
+    "unavoidable_initial_naked_interval_s": [
+      0.0,
+      5.5
+    ]
+  }
+}

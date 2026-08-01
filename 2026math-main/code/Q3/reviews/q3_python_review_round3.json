@@ -1,0 +1,1131 @@
+{
+  "checks": {
+    "98m_inertial_displacement": {
+      "status": "PASS"
+    },
+    "N_minus_1_three_cases": {
+      "status": "PASS"
+    },
+    "P1_P4_provenance": {
+      "status": "PASS"
+    },
+    "P2_reference_not_used_as_acceptance_target": {
+      "status": "PASS"
+    },
+    "P2_reference_reproduction": {
+      "status": "PASS"
+    },
+    "Q1_interface_unchanged": {
+      "status": "PASS"
+    },
+    "Q2_interface_unchanged": {
+      "status": "PASS"
+    },
+    "absolute_base_radius_blocked": {
+      "status": "PASS"
+    },
+    "availability_thresholds": {
+      "status": "PASS"
+    },
+    "baseline_legacy_and_reconstructed_not_conflated": {
+      "status": "PASS"
+    },
+    "baseline_same_metric_contract": {
+      "status": "PASS"
+    },
+    "bearing_non_degeneracy": {
+      "status": "PASS"
+    },
+    "continuous_coverage_certificate": {
+      "status": "PASS"
+    },
+    "continuous_pairwise_safety": {
+      "status": "PASS"
+    },
+    "coverage_monotonicity_inheritance_scope": {
+      "status": "PASS"
+    },
+    "d_safe_nominal_vs_robust": {
+      "status": "PASS"
+    },
+    "deployment_distance_semantics": {
+      "status": "PASS"
+    },
+    "deployment_geometry": {
+      "status": "PASS"
+    },
+    "deterministic_outputs": {
+      "status": "PASS"
+    },
+    "double_coverage_continuous_measure": {
+      "status": "PASS"
+    },
+    "epsilon_constraint_pareto": {
+      "status": "PASS"
+    },
+    "event_semantics": {
+      "status": "PASS"
+    },
+    "execution_and_safety_retention_separated": {
+      "status": "PASS"
+    },
+    "fixed_plan_vs_scheme_switch": {
+      "status": "PASS"
+    },
+    "fraction_percent_consistency": {
+      "status": "PASS"
+    },
+    "heading_non_degeneracy": {
+      "status": "PASS"
+    },
+    "hybrid_candidate_pool_scope": {
+      "status": "PASS"
+    },
+    "independent_area_validation": {
+      "status": "PASS"
+    },
+    "input_contract": {
+      "status": "PASS"
+    },
+    "method_alignment": {
+      "status": "PASS"
+    },
+    "no_Q4_scope_leak": {
+      "status": "PASS"
+    },
+    "no_frozen_numbers": {
+      "status": "PASS"
+    },
+    "no_global_optimum_overclaim": {
+      "status": "PASS"
+    },
+    "no_hidden_weighted_score": {
+      "status": "PASS"
+    },
+    "no_real_energy_claim": {
+      "status": "PASS"
+    },
+    "no_real_probability_claim": {
+      "status": "PASS"
+    },
+    "no_time_grid_proof": {
+      "status": "PASS"
+    },
+    "no_turn_radius_claim": {
+      "status": "PASS"
+    },
+    "output_contract": {
+      "status": "PASS"
+    },
+    "parameter_single_source": {
+      "status": "PASS"
+    },
+    "perturbation_failure_retention": {
+      "status": "PASS"
+    },
+    "perturbation_scope_transparency": {
+      "status": "PASS"
+    },
+    "post_release_uav_motion": {
+      "status": "PASS"
+    },
+    "reproducibility": {
+      "status": "PASS"
+    },
+    "scenario_scope": {
+      "status": "PASS"
+    },
+    "source_document_integrity": {
+      "status": "PASS"
+    },
+    "strict_double_coverage_definition": {
+      "status": "PASS"
+    },
+    "structured_six_variable_multistart": {
+      "status": "PASS"
+    },
+    "syntax": {
+      "status": "PASS"
+    },
+    "synthetic_labels": {
+      "status": "PASS"
+    },
+    "temporary_artifact_cleanup": {
+      "status": "PASS"
+    },
+    "turn_proxy_semantics": {
+      "status": "PASS"
+    },
+    "workspace_data_clean_scope": {
+      "status": "PASS"
+    }
+  },
+  "details": {
+    "baseline_identity_audit": {
+      "legacy": "Q3_B_LEGACY_REFERENCE_ONLY",
+      "legacy_verification_status": "failed_current_start_time_window",
+      "reconstructed": "Q3_B_RECONSTRUCTED_TRANSPARENT_BASELINE"
+    },
+    "candidate_pool_composition": {
+      "full_six_variable_candidate_count": 24,
+      "historical_verified_candidate_count": 2,
+      "restricted_fixed_core_candidate_count": 181,
+      "total_verified_candidate_count": 207
+    },
+    "continuous_problem_pareto_completeness": "not_proved",
+    "coverage_monotonicity_inheritance_scope": "normal_three_smoke_coverage_only",
+    "environment_deviation": {
+      "actual": {
+        "cpu": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+        "matplotlib": "3.11.1",
+        "mpmath": "not_installed",
+        "numpy": "2.3.5",
+        "operating_system": "Windows-11-10.0.26200-SP0",
+        "pandas": "3.0.1",
+        "pytest": "9.1.1",
+        "python": "3.12.13",
+        "scipy": "1.18.0"
+      },
+      "core_result_difference_observed": false,
+      "environment_compatibility_status": "verified_in_available_environment_only",
+      "environment_matches_work_guide": false,
+      "requested_numpy": "2.4.4",
+      "requested_python": "3.13",
+      "specified_environment_rerun_completed": false,
+      "two_available_environment_runs_byte_identity_required": true
+    },
+    "error_triggers": {
+      "coverage_short_gap": {
+        "area_diagnostic_observed": "positive_uncovered_area_detected",
+        "coverage_certificate_observed": "failed",
+        "expected": "FAIL",
+        "triggered": true
+      },
+      "event_chain_error": {
+        "details": {
+          "burst_before_lock": false,
+          "errors": [
+            {
+              "error_s": 0.5,
+              "field": "t_b_s"
+            }
+          ],
+          "negative_times_clipped": false,
+          "pre_lock_mission": false,
+          "status": "FAIL",
+          "t_b_s": 6.0,
+          "t_cmd_s": 0.0,
+          "t_d_s": 2.0
+        },
+        "expected": "FAIL",
+        "observed": "FAIL",
+        "triggered": true
+      },
+      "insufficient_safety_distance": {
+        "details": {
+          "certificate_status": "failed",
+          "minimum_distance_time_s": -3.0810741369642844,
+          "minimum_pairwise_distance_m": 46.380927839689086,
+          "nominal_fixed_plan_maximum_d_safe_m": 46.380927839689086,
+          "pair_certificates": [
+            {
+              "candidate_times_s": [
+                -8.346399714546605,
+                5.314607131964285,
+                25.36104262064107
+              ],
+              "certificate_status": "verified",
+              "method": "analytic_quadratic_distance_stationary_point",
+              "minimum_distance_time_s": 5.314607131964285,
+              "minimum_pairwise_distance_m": 164.6524134586918,
+              "relative_velocity_mps": [
+                6.445122905244837,
+                17.871409385664
+              ],
+              "relative_velocity_zero": false,
+              "safety_distance_m": 47.380927839689086,
+              "safety_margin_m": 117.2714856190027,
+              "time_grid_used": false,
+              "trajectory_segment": [
+                -8.346399714546605,
+                25.36104262064107
+              ],
+              "uav_i_position_m": [
+                249.3491513649999,
+                0.0
+              ],
+              "uav_k_position_m": [
+                94.46132356715106,
+                55.858554025645134
+              ],
+              "uav_pair": [
+                1,
+                2
+              ]
+            },
+            {
+              "candidate_times_s": [
+                -17.720980508784677,
+                -3.0810741369642844,
+                25.36104262064107
+              ],
+              "certificate_status": "failed",
+              "method": "analytic_quadratic_distance_stationary_point",
+              "minimum_distance_time_s": -3.0810741369642844,
+              "minimum_pairwise_distance_m": 46.380927839689086,
+              "relative_velocity_mps": [
+                10.50853866847612,
+                -21.86432666440485
+              ],
+              "relative_velocity_zero": false,
+              "safety_distance_m": 47.380927839689086,
+              "safety_margin_m": -1.0,
+              "time_grid_used": false,
+              "trajectory_segment": [
+                -17.720980508784677,
+                25.36104262064107
+              ],
+              "uav_i_position_m": [
+                14.270075835,
+                0.0
+              ],
+              "uav_k_position_m": [
+                56.07335619982649,
+                20.09169524978313
+              ],
+              "uav_pair": [
+                1,
+                3
+              ]
+            },
+            {
+              "candidate_times_s": [
+                -8.346399714546605,
+                1.9097992249745506,
+                25.36104262064107
+              ],
+              "certificate_status": "verified",
+              "method": "analytic_quadratic_distance_stationary_point",
+              "minimum_distance_time_s": 1.9097992249745506,
+              "minimum_pairwise_distance_m": 122.9377180307373,
+              "relative_velocity_mps": [
+                4.0634157632312835,
+                -39.73573605006885
+              ],
+              "relative_velocity_zero": false,
+              "safety_distance_m": 47.380927839689086,
+              "safety_margin_m": 75.55679019104821,
+              "time_grid_used": false,
+              "trajectory_segment": [
+                -8.346399714546605,
+                25.36104262064107
+              ],
+              "uav_i_position_m": [
+                21.071107600736752,
+                116.70727001100448
+              ],
+              "uav_k_position_m": [
+                143.37102462071215,
+                129.2137807758902
+              ],
+              "uav_pair": [
+                2,
+                3
+              ]
+            }
+          ],
+          "robust_safe_distance_guarantee": false,
+          "safety_distance_m": 47.380927839689086,
+          "safety_margin_m": -1.0,
+          "time_grid_used": false,
+          "uav_i_position_m": [
+            14.270075835,
+            0.0
+          ],
+          "uav_k_position_m": [
+            56.07335619982649,
+            20.09169524978313
+          ],
+          "uav_pair": [
+            1,
+            3
+          ]
+        },
+        "expected": "FAIL",
+        "observed": "failed",
+        "triggered": true
+      },
+      "pseudo_double_coverage": {
+        "expected": "FAIL",
+        "strict_double_coverage_observed": "FAIL",
+        "test_time_s": 12.0,
+        "triggered": true,
+        "two_or_more_smokes_may_exist": true
+      }
+    },
+    "pareto_relation_scope": "nondominated_within_verified_candidate_pool",
+    "reference_comparison": {
+      "N_minus_1_success_count_matches": true,
+      "all_reported_values_match": true,
+      "comparison_policy": "half_last_reported_unit_plus_explicit_numerical_allowance",
+      "comparisons": [
+        {
+          "absolute_error": 1.9000000861524313e-07,
+          "computed": -64.26296681,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV1_release_x_m",
+          "reference": -64.262967,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": 1.9000000861524313e-07
+        },
+        {
+          "absolute_error": 0.0,
+          "computed": 0.0,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV1_release_y_m",
+          "reference": 0.0,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": 0.0
+        },
+        {
+          "absolute_error": 1.1785715514633921e-08,
+          "computed": -17.876433988214284,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV1_start_time_s",
+          "reference": -17.876434,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": 1.1785715514633921e-08
+        },
+        {
+          "absolute_error": 3.318999995371996e-05,
+          "computed": 335.73703319,
+          "half_last_unit_plus_numerical_tolerance": 0.000500001,
+          "matches": true,
+          "name": "UAV1_path_m",
+          "reference": 335.737,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 3,
+          "signed_error": 3.318999995371996e-05
+        },
+        {
+          "absolute_error": 0.0,
+          "computed": 0.0,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV1_turn_rad",
+          "reference": 0.0,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": 0.0
+        },
+        {
+          "absolute_error": 1.7164306598260737e-07,
+          "computed": 86.39078782835693,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV2_release_x_m",
+          "reference": 86.390788,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": -1.7164306598260737e-07
+        },
+        {
+          "absolute_error": 1.5017601384670343e-07,
+          "computed": 62.54993284982399,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV2_release_y_m",
+          "reference": 62.549933,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": -1.5017601384670343e-07
+        },
+        {
+          "absolute_error": 2.8545339425534166e-07,
+          "computed": -8.346399714546605,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV2_start_time_s",
+          "reference": -8.3464,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": 2.8545339425534166e-07
+        },
+        {
+          "absolute_error": 0.00048540730495005846,
+          "computed": 372.02448540730495,
+          "half_last_unit_plus_numerical_tolerance": 0.000500001,
+          "matches": true,
+          "name": "UAV2_path_m",
+          "reference": 372.024,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 3,
+          "signed_error": 0.00048540730495005846
+        },
+        {
+          "absolute_error": 1.2162065554655044e-07,
+          "computed": 0.6922418783793445,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV2_turn_rad",
+          "reference": 0.692242,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": -1.2162065554655044e-07
+        },
+        {
+          "absolute_error": 3.396664212118594e-07,
+          "computed": -21.22011466033358,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV3_release_x_m",
+          "reference": -21.220115,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": 3.396664212118594e-07
+        },
+        {
+          "absolute_error": 3.254169769206783e-07,
+          "computed": -76.52514332541698,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV3_release_y_m",
+          "reference": -76.525143,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": -3.254169769206783e-07
+        },
+        {
+          "absolute_error": 4.912153208636028e-07,
+          "computed": -17.720980508784677,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV3_start_time_s",
+          "reference": -17.720981,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": 4.912153208636028e-07
+        },
+        {
+          "absolute_error": 0.0004542459709000468,
+          "computed": 286.1874542459709,
+          "half_last_unit_plus_numerical_tolerance": 0.000500001,
+          "matches": true,
+          "name": "UAV3_path_m",
+          "reference": 286.187,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 3,
+          "signed_error": 0.0004542459709000468
+        },
+        {
+          "absolute_error": 3.845713441030796e-07,
+          "computed": 0.8960553845713441,
+          "half_last_unit_plus_numerical_tolerance": 5.009999999999999e-07,
+          "matches": true,
+          "name": "UAV3_turn_rad",
+          "reference": 0.896055,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 6,
+          "signed_error": 3.845713441030796e-07
+        },
+        {
+          "absolute_error": 1.8571455484561739e-10,
+          "computed": 17.876433988214284,
+          "half_last_unit_plus_numerical_tolerance": 1.05e-09,
+          "matches": true,
+          "name": "common_warning_lead_s",
+          "reference": 17.8764339884,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 10,
+          "signed_error": -1.8571455484561739e-10
+        },
+        {
+          "absolute_error": 6.924096851435024e-09,
+          "computed": 993.9489728432759,
+          "half_last_unit_plus_numerical_tolerance": 1.005e-08,
+          "matches": true,
+          "name": "total_pre_release_path_length_m",
+          "reference": 993.9489728502,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 10,
+          "signed_error": -6.924096851435024e-09
+        },
+        {
+          "absolute_error": 5.068856445689107e-11,
+          "computed": 1.5882972629506886,
+          "half_last_unit_plus_numerical_tolerance": 1.05e-09,
+          "matches": true,
+          "name": "total_turn_proxy_rad",
+          "reference": 1.5882972629,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 10,
+          "signed_error": 5.068856445689107e-11
+        },
+        {
+          "absolute_error": 3.489084576813184e-09,
+          "computed": 46.380927839689086,
+          "half_last_unit_plus_numerical_tolerance": 1.005e-08,
+          "matches": true,
+          "name": "nominal_minimum_pairwise_distance_m",
+          "reference": 46.3809278362,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 10,
+          "signed_error": 3.489084576813184e-09
+        },
+        {
+          "absolute_error": 3.5715430612981436e-11,
+          "computed": -3.0810741369642844,
+          "half_last_unit_plus_numerical_tolerance": 1.05e-09,
+          "matches": true,
+          "name": "minimum_distance_time_s",
+          "reference": -3.081074137,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 10,
+          "signed_error": 3.5715430612981436e-11
+        },
+        {
+          "absolute_error": 2.236633100949348e-11,
+          "computed": 0.4091367632223663,
+          "half_last_unit_plus_numerical_tolerance": 1.05e-09,
+          "matches": true,
+          "name": "strict_double_coverage_fraction",
+          "reference": 0.4091367632,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 10,
+          "signed_error": 2.236633100949348e-11
+        },
+        {
+          "absolute_error": 5.356781684895395e-11,
+          "computed": 10.376134889753567,
+          "half_last_unit_plus_numerical_tolerance": 1.05e-09,
+          "matches": true,
+          "name": "worst_failure_continuous_coverage_s",
+          "reference": 10.3761348897,
+          "reference_used_in_candidate_acceptance": false,
+          "report_decimal_places": 10,
+          "signed_error": 5.356781684895395e-11
+        }
+      ],
+      "minimum_distance_pair_matches": true,
+      "reference_only": true,
+      "source_document": "Q3_编程手与论文手任务清单.docx",
+      "source_sha256": "364225ffb5aaa640b743b62590f2f20d985faac40057be86bb8e35305721255f",
+      "used_as_human_selected_fixed_candidate": true,
+      "used_in_candidate_acceptance": false,
+      "used_in_optimizer_constraints": false,
+      "used_in_optimizer_objective": false
+    },
+    "search_funnel": {
+      "all_raw_starts_distinct": true,
+      "all_verified_results_change_c1_c2_tb1_tb2": true,
+      "continuous_safety_pass_count": 24,
+      "deployment_feasible_count": 24,
+      "event_chain_feasible_count": 24,
+      "failure_reason_counts": {},
+      "failure_reason_counts_across_homotopy_steps": {
+        "continuous_coverage_certificate_failed": 15,
+        "deployment_infeasible": 4,
+        "fast_coverage_screen_failed": 23
+      },
+      "fast_screen_pass_count": 24,
+      "final_verified_candidate_count": 207,
+      "full_continuous_certificate_attempt_count": 39,
+      "independently_full_certified_count": 24,
+      "independently_full_certified_historical_candidate_count": 2,
+      "independently_full_certified_total_count": 26,
+      "inherited_coverage_certificate_count": 181,
+      "numerically_converged_count": 24,
+      "random_seed": 2026,
+      "raw_optimizer_result_count": 24,
+      "raw_optimizer_start_count": 24,
+      "restricted_structural_evaluation_attempt_count": 181,
+      "restricted_structural_pass_count": 181,
+      "six_variable_component_scope": "structured_multistart_six_variable_search",
+      "start_outcomes": [
+        {
+          "assignment_uav_to_smoke_index": [
+            0,
+            1,
+            2
+          ],
+          "raw_six_variable_start": [
+            34.45277244470174,
+            159.39251032286063,
+            47.86907360457394,
+            -2.1505753964459764,
+            7.967647717154826,
+            -3.3547408770733673
+          ],
+          "raw_start_id": "S6-001",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-001",
+          "start_structure": "P2_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            0,
+            1,
+            2
+          ],
+          "raw_six_variable_start": [
+            41.6205753467087,
+            118.70941276729219,
+            200.61113921074053,
+            -0.10084861632221537,
+            10.609615989834762,
+            20.962194859775774
+          ],
+          "raw_start_id": "S6-002",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-002",
+          "start_structure": "Q3_B_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            0,
+            1,
+            2
+          ],
+          "raw_six_variable_start": [
+            30.280516406578602,
+            167.84378604831636,
+            20.060614785289406,
+            -5.222878030812215,
+            10.414379322700052,
+            -7.080593773343119
+          ],
+          "raw_start_id": "S6-003",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-003",
+          "start_structure": "time_stagger_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            0,
+            1,
+            2
+          ],
+          "raw_six_variable_start": [
+            14.848630052000635,
+            138.7381898873736,
+            75.10326737338099,
+            -1.4203696296577843,
+            7.521779360236298,
+            -4.743579758816597
+          ],
+          "raw_start_id": "S6-004",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-004",
+          "start_structure": "center_perturbation_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            0,
+            2,
+            1
+          ],
+          "raw_six_variable_start": [
+            35.527840796154884,
+            158.29358086452956,
+            46.78159039948622,
+            -2.038392724496974,
+            8.007845627975323,
+            -3.600004248127425
+          ],
+          "raw_start_id": "S6-005",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-005",
+          "start_structure": "P2_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            0,
+            2,
+            1
+          ],
+          "raw_six_variable_start": [
+            38.83766448494488,
+            121.49849622876872,
+            201.18984926208574,
+            0.0533548383424895,
+            10.298685179087212,
+            20.975679674996957
+          ],
+          "raw_start_id": "S6-006",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-006",
+          "start_structure": "Q3_B_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            0,
+            2,
+            1
+          ],
+          "raw_six_variable_start": [
+            29.99054268801018,
+            166.56390861847981,
+            21.60179839601689,
+            -5.476154758049069,
+            10.538186485066893,
+            -7.093089836368815
+          ],
+          "raw_start_id": "S6-007",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-007",
+          "start_structure": "time_stagger_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            0,
+            2,
+            1
+          ],
+          "raw_six_variable_start": [
+            14.783245375247198,
+            140.6362212180034,
+            73.91156791562943,
+            -1.3892704985075597,
+            7.480203276510279,
+            -4.655546817622771
+          ],
+          "raw_start_id": "S6-008",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-008",
+          "start_structure": "center_perturbation_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            1,
+            0,
+            2
+          ],
+          "raw_six_variable_start": [
+            36.66199582343378,
+            159.02678991849854,
+            48.48601303850375,
+            -2.149753501601585,
+            8.000285679960317,
+            -3.502585161041472
+          ],
+          "raw_start_id": "S6-009",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-009",
+          "start_structure": "P2_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            1,
+            0,
+            2
+          ],
+          "raw_six_variable_start": [
+            39.87988364962468,
+            120.70255689139849,
+            200.3087100179848,
+            -0.04186467850376685,
+            10.127036066556975,
+            20.899285309894886
+          ],
+          "raw_start_id": "S6-010",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-010",
+          "start_structure": "Q3_B_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            1,
+            0,
+            2
+          ],
+          "raw_six_variable_start": [
+            29.81457007457734,
+            166.13903631524508,
+            19.999820089644775,
+            -5.589102693252691,
+            10.642541086276678,
+            -6.755131916207748
+          ],
+          "raw_start_id": "S6-011",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-011",
+          "start_structure": "time_stagger_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            1,
+            0,
+            2
+          ],
+          "raw_six_variable_start": [
+            13.97197406006233,
+            139.26578253436554,
+            75.92025831127633,
+            -1.4787065943910587,
+            7.473713929182225,
+            -4.541714518842485
+          ],
+          "raw_start_id": "S6-012",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-012",
+          "start_structure": "center_perturbation_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            1,
+            2,
+            0
+          ],
+          "raw_six_variable_start": [
+            36.8338818205235,
+            160.66671526385613,
+            49.55358170526671,
+            -2.0253579273999756,
+            7.870326206334036,
+            -3.276468958344169
+          ],
+          "raw_start_id": "S6-013",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-013",
+          "start_structure": "P2_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            1,
+            2,
+            0
+          ],
+          "raw_six_variable_start": [
+            38.094529714687106,
+            119.19083782568345,
+            199.12645397240237,
+            0.08591299086135235,
+            10.369816422789821,
+            20.54871405388586
+          ],
+          "raw_start_id": "S6-014",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-014",
+          "start_structure": "Q3_B_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            1,
+            2,
+            0
+          ],
+          "raw_six_variable_start": [
+            27.78846474097972,
+            167.25012064709455,
+            19.965933329363704,
+            -5.335134599329799,
+            10.472200981932769,
+            -6.80477044585016
+          ],
+          "raw_start_id": "S6-015",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-015",
+          "start_structure": "time_stagger_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            1,
+            2,
+            0
+          ],
+          "raw_six_variable_start": [
+            17.410620621482387,
+            138.58588630440946,
+            76.76848347788214,
+            -1.2419623468386083,
+            7.5097021761114835,
+            -4.420196366254525
+          ],
+          "raw_start_id": "S6-016",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-016",
+          "start_structure": "center_perturbation_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            2,
+            0,
+            1
+          ],
+          "raw_six_variable_start": [
+            35.92127410960257,
+            160.50191085857136,
+            46.933052824800555,
+            -2.0361676638652098,
+            8.197310580935826,
+            -3.682619274189435
+          ],
+          "raw_start_id": "S6-017",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-017",
+          "start_structure": "P2_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            2,
+            0,
+            1
+          ],
+          "raw_six_variable_start": [
+            40.462033097435466,
+            119.61133390211829,
+            201.06414536586513,
+            -0.2161428196897297,
+            10.429542080270668,
+            20.930809124500456
+          ],
+          "raw_start_id": "S6-018",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-018",
+          "start_structure": "Q3_B_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            2,
+            0,
+            1
+          ],
+          "raw_six_variable_start": [
+            30.250424639452362,
+            166.1182084418141,
+            20.623184223687556,
+            -5.466749238631994,
+            10.524485444205046,
+            -7.185827799278973
+          ],
+          "raw_start_id": "S6-019",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-019",
+          "start_structure": "time_stagger_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            2,
+            0,
+            1
+          ],
+          "raw_six_variable_start": [
+            14.85700016678357,
+            137.96373117278767,
+            73.33563755585077,
+            -1.3584408500917469,
+            7.306038160696154,
+            -4.491958706181134
+          ],
+          "raw_start_id": "S6-020",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-020",
+          "start_structure": "center_perturbation_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            2,
+            1,
+            0
+          ],
+          "raw_six_variable_start": [
+            36.37531132229136,
+            160.3576023773981,
+            47.42024405835416,
+            -2.1764861767806276,
+            7.947022420781904,
+            -3.6910751777378024
+          ],
+          "raw_start_id": "S6-021",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-021",
+          "start_structure": "P2_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            2,
+            1,
+            0
+          ],
+          "raw_six_variable_start": [
+            40.65273345862906,
+            121.27861832574884,
+            199.89201944345194,
+            0.029148698474273704,
+            10.605374946601374,
+            20.851727365333378
+          ],
+          "raw_start_id": "S6-022",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-022",
+          "start_structure": "Q3_B_neighborhood"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            2,
+            1,
+            0
+          ],
+          "raw_six_variable_start": [
+            30.717172736590605,
+            168.3908510892181,
+            18.863162304336477,
+            -5.310742630839655,
+            10.548886302663197,
+            -6.828886035138237
+          ],
+          "raw_start_id": "S6-023",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-023",
+          "start_structure": "time_stagger_structure"
+        },
+        {
+          "assignment_uav_to_smoke_index": [
+            2,
+            1,
+            0
+          ],
+          "raw_six_variable_start": [
+            15.112175374007576,
+            140.5880364828522,
+            75.41760242321043,
+            -1.4311451430886675,
+            7.241031928541083,
+            -4.57347578310843
+          ],
+          "raw_start_id": "S6-024",
+          "result_status": "verified",
+          "selected_candidate_id": "S6-024",
+          "start_structure": "center_perturbation_structure"
+        }
+      ],
+      "starts_per_assignment": 4,
+      "true_six_variable_start_count": 24,
+      "uav_assignment_count": 6
+    },
+    "search_scope": "hybrid_fixed_core_and_structured_six_variable_multistart_search",
+    "search_scope_limitations": [
+      "Most candidates retain a previously verified two-smoke coverage core.",
+      "Twenty-four distinct starts explore all six smoke centre and burst-time variables across all six UAV assignments.",
+      "Two candidates were recovered from Git history and independently revalidated.",
+      "The reported nondominated set is defined only over the finite verified candidate pool.",
+      "No completeness or global Pareto-front claim is made for the continuous non-convex problem."
+    ],
+    "unexpected_workspace_data_clean_files": [],
+    "workspace_data_clean_files": [
+      "workspace/data_clean/q3_reference_plan_p2.json",
+      "workspace/data_clean/q3_standardized_scenario.json"
+    ],
+    "workspace_data_clean_scope_status": "only_expected_q3_files_present"
+  },
+  "failed_checks": [],
+  "question_id": "Q3",
+  "review_status": "passed",
+  "schema_version": 1
+}

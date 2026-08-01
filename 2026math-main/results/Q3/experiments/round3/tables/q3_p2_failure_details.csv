@@ -1,0 +1,4 @@
+﻿failed_uav_id,full_window_coverage,certificate_status,first_failure_time_s,failure_intervals,longest_continuous_full_coverage_s,total_full_coverage_duration_s,minimum_coverage_margin_m2,remaining_double_coverage_fraction,remaining_double_coverage_percent,worst_time_s,remaining_smoke_ids
+1,True,verified,,[],25.36104262064107,25.36104262064107,0.0,0.0,0.0,0.0,"[""P2_2"", ""P2_3""]"
+2,False,verified,10.376134889753567,"[[10.376134889753567, 25.36104262064107]]",10.376134889753567,10.376134889753567,-1000000000000.0,0.37710663861221005,37.71066386122101,25.36104262064107,"[""P2_1"", ""P2_3""]"
+3,True,verified,,[],25.36104262064107,25.36104262064107,1463.8872811368383,0.0,0.0,0.0,"[""P2_1"", ""P2_2""]"

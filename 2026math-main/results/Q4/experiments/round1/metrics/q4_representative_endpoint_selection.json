@@ -1,0 +1,240 @@
+{
+  "candidate_validation_status": "PASS",
+  "comparison_groups": [
+    {
+      "comparison_group": "P1_RECONSTRUCTED_S2_CRI_SEQ",
+      "cross_group_comparison_allowed": false,
+      "direct_comparison_allowed": true,
+      "endpoint_ids": [
+        "P1_L_RECONSTRUCTED",
+        "P1_T_RECONSTRUCTED"
+      ],
+      "selected_endpoint_id": "P1_L_RECONSTRUCTED"
+    },
+    {
+      "comparison_group": "P2_RECONSTRUCTED_S2_SUF_OVR",
+      "cross_group_comparison_allowed": false,
+      "direct_comparison_allowed": true,
+      "endpoint_ids": [
+        "P2_L_RECONSTRUCTED",
+        "P2_T_RECONSTRUCTED"
+      ],
+      "selected_endpoint_id": "P2_L_RECONSTRUCTED"
+    }
+  ],
+  "complete_metric_rows": [
+    {
+      "applicable_scenario_or_regime": "S2-CRI-SEQ::CRI::SEQ",
+      "arrival_structure": "SEQ",
+      "bomb_count": 7,
+      "comparison_group": "P1_RECONSTRUCTED_S2_CRI_SEQ",
+      "endpoint_family": "P1",
+      "endpoint_id": "P1_L_RECONSTRUCTED",
+      "finite_network_proof_status": "proved_within_current_finite_network",
+      "grade_1_complete_count": 1,
+      "grade_2_complete_count": 2,
+      "grade_3_complete_count": 2,
+      "maximum_base_distance_m": 2647.6404589747453,
+      "maximum_bombs_used_by_one_uav": 3,
+      "minimum_pairwise_distance_m": 130.86192258687146,
+      "plan_change_count": 3,
+      "proof_status": "proved_within_current_finite_network",
+      "provenance": "reconstructed_from_current_verified_finite_network",
+      "remaining_risk": {
+        "level_1_unserved_window_s": 0,
+        "level_2_unserved_window_s": 0,
+        "level_3_unserved_window_s": 0
+      },
+      "resource_regime": "CRI",
+      "result_strength": "proved_within_current_finite_network_on_reconstructed_synthetic_scenario",
+      "same_grade_urgency_result": {
+        "definition": "smaller_is_better_under_existing_formal_stage_definition",
+        "level_1_served_reaction_time_objective": 80.0318,
+        "level_2_served_reaction_time_objective": 182.0636,
+        "level_3_served_reaction_time_objective": 138.0636
+      },
+      "scenario_id": "S2-CRI-SEQ",
+      "schedule_replay_status": "PASS",
+      "selected_as_representative": true,
+      "selection_status": "human_selected_representative",
+      "service_path_length_m": 2160.0,
+      "total_path_length_m": 3741.4846962689103,
+      "total_turn_proxy_rad": 5.151868098772724,
+      "transition_path_length_m": 1581.4846962689103,
+      "uncovered_window_s": 0,
+      "undefended_threat_ids": []
+    },
+    {
+      "applicable_scenario_or_regime": "S2-CRI-SEQ::CRI::SEQ",
+      "arrival_structure": "SEQ",
+      "bomb_count": 7,
+      "comparison_group": "P1_RECONSTRUCTED_S2_CRI_SEQ",
+      "endpoint_family": "P1",
+      "endpoint_id": "P1_T_RECONSTRUCTED",
+      "finite_network_proof_status": "proved_within_current_finite_network",
+      "grade_1_complete_count": 1,
+      "grade_2_complete_count": 2,
+      "grade_3_complete_count": 2,
+      "maximum_base_distance_m": 2647.6404589747453,
+      "maximum_bombs_used_by_one_uav": 3,
+      "minimum_pairwise_distance_m": 130.86192258687146,
+      "plan_change_count": 3,
+      "proof_status": "proved_within_current_finite_network",
+      "provenance": "reconstructed_from_current_verified_finite_network",
+      "remaining_risk": {
+        "level_1_unserved_window_s": 0,
+        "level_2_unserved_window_s": 0,
+        "level_3_unserved_window_s": 0
+      },
+      "resource_regime": "CRI",
+      "result_strength": "proved_within_current_finite_network_on_reconstructed_synthetic_scenario",
+      "same_grade_urgency_result": {
+        "definition": "smaller_is_better_under_existing_formal_stage_definition",
+        "level_1_served_reaction_time_objective": 80.0318,
+        "level_2_served_reaction_time_objective": 182.0636,
+        "level_3_served_reaction_time_objective": 138.0636
+      },
+      "scenario_id": "S2-CRI-SEQ",
+      "schedule_replay_status": "PASS",
+      "selected_as_representative": false,
+      "selection_status": "verified_alternative_retained",
+      "service_path_length_m": 2160.0,
+      "total_path_length_m": 3741.4846962689103,
+      "total_turn_proxy_rad": 5.151868098772724,
+      "transition_path_length_m": 1581.4846962689103,
+      "uncovered_window_s": 0,
+      "undefended_threat_ids": []
+    },
+    {
+      "applicable_scenario_or_regime": "S2-SUF-OVR::SUF::OVR",
+      "arrival_structure": "OVR",
+      "bomb_count": 2,
+      "comparison_group": "P2_RECONSTRUCTED_S2_SUF_OVR",
+      "endpoint_family": "P2",
+      "endpoint_id": "P2_L_RECONSTRUCTED",
+      "finite_network_proof_status": "proved_within_current_finite_network",
+      "grade_1_complete_count": 1,
+      "grade_2_complete_count": 1,
+      "grade_3_complete_count": 2,
+      "maximum_base_distance_m": 2469.817807045694,
+      "maximum_bombs_used_by_one_uav": 2,
+      "minimum_pairwise_distance_m": Infinity,
+      "plan_change_count": 1,
+      "proof_status": "proved_within_current_finite_network",
+      "provenance": "reconstructed_from_current_verified_finite_network",
+      "remaining_risk": {
+        "level_1_unserved_window_s": 0,
+        "level_2_unserved_window_s": 0,
+        "level_3_unserved_window_s": 0
+      },
+      "resource_regime": "SUF",
+      "result_strength": "proved_within_current_finite_network_on_reconstructed_synthetic_scenario",
+      "same_grade_urgency_result": {
+        "definition": "smaller_is_better_under_existing_formal_stage_definition",
+        "level_1_served_reaction_time_objective": 47.031800000000004,
+        "level_2_served_reaction_time_objective": 46.281800000000004,
+        "level_3_served_reaction_time_objective": 94.81360000000001
+      },
+      "scenario_id": "S2-SUF-OVR",
+      "schedule_replay_status": "PASS",
+      "selected_as_representative": true,
+      "selection_status": "human_selected_representative",
+      "service_path_length_m": 640.0,
+      "total_path_length_m": 1228.727441181401,
+      "total_turn_proxy_rad": 2.712123025060966,
+      "transition_path_length_m": 588.727441181401,
+      "uncovered_window_s": 0,
+      "undefended_threat_ids": []
+    },
+    {
+      "applicable_scenario_or_regime": "S2-SUF-OVR::SUF::OVR",
+      "arrival_structure": "OVR",
+      "bomb_count": 2,
+      "comparison_group": "P2_RECONSTRUCTED_S2_SUF_OVR",
+      "endpoint_family": "P2",
+      "endpoint_id": "P2_T_RECONSTRUCTED",
+      "finite_network_proof_status": "proved_within_current_finite_network",
+      "grade_1_complete_count": 1,
+      "grade_2_complete_count": 1,
+      "grade_3_complete_count": 2,
+      "maximum_base_distance_m": 2647.6404589747453,
+      "maximum_bombs_used_by_one_uav": 2,
+      "minimum_pairwise_distance_m": Infinity,
+      "plan_change_count": 1,
+      "proof_status": "proved_within_current_finite_network",
+      "provenance": "reconstructed_from_current_verified_finite_network",
+      "remaining_risk": {
+        "level_1_unserved_window_s": 0,
+        "level_2_unserved_window_s": 0,
+        "level_3_unserved_window_s": 0
+      },
+      "resource_regime": "SUF",
+      "result_strength": "proved_within_current_finite_network_on_reconstructed_synthetic_scenario",
+      "same_grade_urgency_result": {
+        "definition": "smaller_is_better_under_existing_formal_stage_definition",
+        "level_1_served_reaction_time_objective": 47.031800000000004,
+        "level_2_served_reaction_time_objective": 46.281800000000004,
+        "level_3_served_reaction_time_objective": 94.81360000000001
+      },
+      "scenario_id": "S2-SUF-OVR",
+      "schedule_replay_status": "PASS",
+      "selected_as_representative": false,
+      "selection_status": "verified_alternative_retained",
+      "service_path_length_m": 640.0,
+      "total_path_length_m": 1300.3786792439623,
+      "total_turn_proxy_rad": 1.417198630687125,
+      "transition_path_length_m": 660.3786792439622,
+      "uncovered_window_s": 0,
+      "undefended_threat_ids": []
+    }
+  ],
+  "continuous_global_optimality_status": "not_claimed",
+  "cross_group_comparison_performed": false,
+  "dependency_status": "matched",
+  "finite_candidate_optimality_status": "proved_within_current_finite_network",
+  "freeze_status": "unfrozen",
+  "global_optimality_status": "not_claimed",
+  "input_provenance": "transparent_reconstructed_synthetic_inputs",
+  "limitations": [
+    "Comparison is performed only within the same reconstructed physical scenario and endpoint family.",
+    "Total turn is a manoeuvre-complexity proxy; minimum turn radius, turn time and true turn energy are not modelled.",
+    "The selected endpoints are proved only within the current finite verified network.",
+    "No continuous-space global optimality or legacy Q4-S2 identity is claimed."
+  ],
+  "paper_writing_allowed": false,
+  "reference_comparison_status": "not_directly_comparable_missing_complete_legacy_inputs",
+  "representative_selection_status": "human_selected_from_verified_reconstructed_endpoints",
+  "retained_alternative_ids": [
+    "P1_T_RECONSTRUCTED",
+    "P2_T_RECONSTRUCTED"
+  ],
+  "route_network_status": "PASS",
+  "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "selected_endpoint_ids": [
+    "P1_L_RECONSTRUCTED",
+    "P2_L_RECONSTRUCTED"
+  ],
+  "selection_rule": {
+    "cross_group_comparison_allowed": false,
+    "global_optimality_claimed": false,
+    "primary": [
+      "maximize_grade_3_complete_count",
+      "maximize_grade_2_complete_count",
+      "maximize_grade_1_complete_count",
+      "preserve_same_grade_urgency_priority",
+      "minimize_remaining_risk",
+      "minimize_uncovered_window",
+      "minimize_bomb_count"
+    ],
+    "secondary": [
+      "minimize_total_path_length_m",
+      "minimize_total_turn_proxy_rad",
+      "minimize_plan_change_count"
+    ]
+  },
+  "selection_rule_id": "lexicographic_defence_then_path_then_turn_then_change",
+  "selection_status": "human_selected_from_verified_reconstructed_endpoints",
+  "solver_status": "completed",
+  "template_gate_status": "PASS"
+}

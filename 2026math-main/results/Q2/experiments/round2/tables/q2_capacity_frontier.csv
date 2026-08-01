@@ -1,0 +1,7 @@
+﻿method,bomb_count,continuous_capacity_s,result_strength,global_optimality_status
+A,1,10.376134889754,analytic_exact,proved_for_one_fixed_smoke
+B,1,10.376134889754,conservative_constructive_baseline,not_claimed
+A,2,29.071871041977,best_verified_two_bomb_collinear_solution,not_proved
+B,2,20.752269779507,conservative_constructive_baseline,not_claimed
+A,3,42.523129869000,best_verified_collinear_solution,not_proved
+B,3,31.128404669261,conservative_constructive_baseline,not_claimed

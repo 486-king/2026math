@@ -1,0 +1,213 @@
+{
+  "manifest_version": "2.0",
+  "scope": "Q1 production code, machine results, figures, and required handoff only",
+  "source_documents": [
+    {
+      "path": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "sha256": "374a3a91f82fdd2475859258ca4e73902e6706e620920eedab16121ee85e4bfa",
+      "committed": false,
+      "policy": "local source only"
+    },
+    {
+      "path": "Q1_编程手与论文手分工.docx",
+      "sha256": "578aec2867cbdf32fbb2e5a64d06698fa0896eb1e5d5429a70e2f0df20fdffe5",
+      "committed": false,
+      "policy": "local source only"
+    }
+  ],
+  "formal_files": [
+    {
+      "path": "code/Q1/README_Q1.md",
+      "sha256": "556233bdc7058e28db4f3d066d54c3d58a77e93db4f6f33fcde04122fea07a6b",
+      "bytes": 3775
+    },
+    {
+      "path": "code/Q1/q1_architecture_upgrade.py",
+      "sha256": "8e02311e122946460978f45e11d7959305c470a0c44ec4e77713ca9f860a919e",
+      "bytes": 465
+    },
+    {
+      "path": "code/Q1/q1_certificates.py",
+      "sha256": "2944703cf1de4390d4a2526256b1a29444ffae48019ac30c742603f49c2b166f",
+      "bytes": 5055
+    },
+    {
+      "path": "code/Q1/q1_common.py",
+      "sha256": "aa60cf61f99ed89b0469dc70c2632f77fcfb0e1af5a37b24a1fa39419db7dd32",
+      "bytes": 10432
+    },
+    {
+      "path": "code/Q1/q1_compensation.py",
+      "sha256": "50fc314dd7fb5628be19916bf938d1bce66880bd4a72d95c984ccb63132a833d",
+      "bytes": 4959
+    },
+    {
+      "path": "code/Q1/q1_coverage.py",
+      "sha256": "ebec91008f1e870ce2c62988f74b5ff022e29741c4df12ca53e170e6fb150987",
+      "bytes": 2567
+    },
+    {
+      "path": "code/Q1/q1_extensions.py",
+      "sha256": "ebfe3d6f8454f272178557b977ccf7bf11be5ee1a7a1c4a10f9ace6ee59d7c61",
+      "bytes": 2337
+    },
+    {
+      "path": "code/Q1/q1_interval_certificate.py",
+      "sha256": "af84620e647c8efe9a418e87a00d3611e14c257f733907a9754ccb5ef7b8d3ec",
+      "bytes": 522
+    },
+    {
+      "path": "code/Q1/q1_models.py",
+      "sha256": "86368c58cee22b8f3047dc491692412b28db9cd27505929a189f6901db8d8009",
+      "bytes": 2683
+    },
+    {
+      "path": "code/Q1/q1_outputs.py",
+      "sha256": "9c745a98fe03c854c141183425f3548b437ddaecfe12dd489ccb3f0647ef9c09",
+      "bytes": 28402
+    },
+    {
+      "path": "code/Q1/q1_parametric_compensation.py",
+      "sha256": "98496f3e1281e2889e311de897513cbf6bca25385c2a9763a85c4e0fe39eab80",
+      "bytes": 686
+    },
+    {
+      "path": "code/Q1/q1_reachability.py",
+      "sha256": "973c038cff863732adc33f3f2ad988d4ecaf9b2a079ec4130ab1def172f610a6",
+      "bytes": 11534
+    },
+    {
+      "path": "code/Q1/q1_robustness.py",
+      "sha256": "1fe141e883ec9ad9e0725a27f1b2b7c17c529818597636336157aa6801f0de72",
+      "bytes": 1374
+    },
+    {
+      "path": "code/Q1/q1_robustness_core.py",
+      "sha256": "304bde92f40fbb82f19bbb457bfc2ab9da35d61b45a83be65e6798d6c80e733b",
+      "bytes": 1939
+    },
+    {
+      "path": "code/Q1/q1_run.py",
+      "sha256": "dd416bfaa5fa4faa83fadbf3ae3dcf3a31d49ea402f0ebbf74ece6ed68364bc7",
+      "bytes": 1191
+    },
+    {
+      "path": "code/Q1/requirements-q1.txt",
+      "sha256": "625e404ae18bc2c1d08930612edfd738f7023d28099bd953b3f69a5a237cc584",
+      "bytes": 51
+    },
+    {
+      "path": "code/Q1/reviews/q1_final_validation.json",
+      "sha256": "15757588253221e182e528c5664558b28f917842317e18ffc02064ac5cb33ff0",
+      "bytes": 7999
+    },
+    {
+      "path": "interfaces/Q1_to_Q2_coverage_contract.md",
+      "sha256": "e167e941035fd069ddb5dd82ae2d609583578924b783d3f1aeaf44514406b189",
+      "bytes": 1508
+    },
+    {
+      "path": "planning/assumption_register.csv",
+      "sha256": "7a7a4020fb436c76465f5b00de61ef52f557d9ee6da1ccc36cd6c43ee2e034ef",
+      "bytes": 1903
+    },
+    {
+      "path": "planning/scenario_schema.json",
+      "sha256": "24030487011e4703e8d9c41cce4b5b4a9f9e5812084cc4e6b22cb8a27b9c515f",
+      "bytes": 2051
+    },
+    {
+      "path": "results/Q1/experiments/round1/metrics/q1_structural_metrics.json",
+      "sha256": "3085b3fa141a1bb88ac44ecc9e03ff363e883ab38616f7c437b1df73da8e596f",
+      "bytes": 5618
+    },
+    {
+      "path": "results/Q1/experiments/round1/run_summary.json",
+      "sha256": "d22620ce8eb6ceb30c6b3bfbdde1f904da54006d0241430ac4ae80a56b84d81f",
+      "bytes": 832
+    },
+    {
+      "path": "results/Q1/experiments/round2/metrics/q1_global_certificate.json",
+      "sha256": "8fee8299113620424be6033dfbbdf512e73ec717d6567dac04b8b873070a7100",
+      "bytes": 2314
+    },
+    {
+      "path": "results/Q1/experiments/round2/run_summary.json",
+      "sha256": "914eac799d54c8412db2bd148e22ed350d875d8ae85a38bd7fcde8c54400a333",
+      "bytes": 799
+    },
+    {
+      "path": "results/Q1/experiments/round3/metrics/q1_parametric_compensation.json",
+      "sha256": "8c446163b4be65eee42bc715482108ff782a5fc8c3c991d028db642952d4d5bc",
+      "bytes": 4121
+    },
+    {
+      "path": "results/Q1/experiments/round3/run_summary.json",
+      "sha256": "57b9ff49c2014f9b06835a4611e8d9baea6d7e9ef84e8c479ad79a7162e477e3",
+      "bytes": 853
+    },
+    {
+      "path": "results/Q1/experiments/round4/metrics/q1_architecture_upgrade.json",
+      "sha256": "dda54cc1cb630daaf33f8bd9232430a7df7b9c504792492f0cbb8af9e00ef608",
+      "bytes": 4724
+    },
+    {
+      "path": "results/Q1/experiments/round4/run_summary.json",
+      "sha256": "ef891a628d822399cad75413d35b5e7439a4fcf5ebae797e558a7a8dc9f3d154",
+      "bytes": 831
+    },
+    {
+      "path": "results/Q1/figures/q1_compensation_strategies.png",
+      "sha256": "78d44104d1340110d93814906eb2a65f81eaac1eeed432be44f5f5b13f992b27",
+      "bytes": 45822
+    },
+    {
+      "path": "results/Q1/figures/q1_single_smoke_margin.png",
+      "sha256": "f25f806b94bbc3a801e1c2f1273e551fab5fa2ef4f1c57e7666f996acc7d2d8a",
+      "bytes": 90682
+    },
+    {
+      "path": "results/Q1/figures/q1_structural_detection_timeline.png",
+      "sha256": "d38e73f42a32b822a8d6174a48aaab03fec83ef0e0dc4ec380e3181d9156ef96",
+      "bytes": 43405
+    },
+    {
+      "path": "results/Q1/plot_data/q1_compensation_strategies.csv",
+      "sha256": "4d66ddb83571eacc91c04b39f27cc84bb64d6563abd8300340100b349889ea8b",
+      "bytes": 493
+    },
+    {
+      "path": "results/Q1/plot_data/q1_single_smoke_margin.csv",
+      "sha256": "7c087640858b285d1283b30f53ec5efb2dc0cfca862f610eb5547e3d5cbdb25b",
+      "bytes": 73926
+    },
+    {
+      "path": "results/Q1/plot_data/q1_structural_detection_timeline.csv",
+      "sha256": "67ab138a45212da12d99740a8d510dd7ebef75912ca0acab2361846a7d2503fd",
+      "bytes": 262
+    },
+    {
+      "path": "results/Q1/q1_q2_scoped_consistency.json",
+      "sha256": "40f53b6952d971c2b364f9c7eb630e9525428c66c7b8a972f36bd9de03819979",
+      "bytes": 898
+    },
+    {
+      "path": "results/Q1/q1_run_summary.json",
+      "sha256": "5a9176d1d8d1dcb8ab23954ac6d8d3adf3ee8597dd446a4d51322af2f51a91eb",
+      "bytes": 2391
+    },
+    {
+      "path": "robustness/Q1/q1_robustness_summary.json",
+      "sha256": "f5aaa1314ad23edd893b0c65f5dc0208fd5da07e917b522ee487f1ad329dc7d8",
+      "bytes": 1586
+    }
+  ],
+  "self_entry": {
+    "path": "results/Q1/q1_final_manifest.json",
+    "sha256": "self_referential_not_applicable"
+  },
+  "formal_file_count_excluding_self": 37,
+  "tests_included": false,
+  "temporary_files_included": false,
+  "Q2_Q3_Q4_modified_by_Q1": false
+}

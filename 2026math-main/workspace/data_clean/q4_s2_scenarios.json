@@ -1,0 +1,1625 @@
+{
+  "arrival_structures": [
+    "SEQ",
+    "OVR",
+    "SUR"
+  ],
+  "freeze_status": "unfrozen",
+  "legacy_identity_claimed": false,
+  "real_five_uav_states_available": false,
+  "real_missile_batch_data_available": false,
+  "resource_regimes": [
+    "SUF",
+    "CRI",
+    "SHO"
+  ],
+  "scenario_count": 9,
+  "scenario_generation_rule": "transparent factorial reconstruction; no work-guide result was used for tuning",
+  "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "scenarios": [
+    {
+      "arrival_structure": "SEQ",
+      "available_prealert_lead_s": 60.0,
+      "available_template_ids": [
+        "T-Q1-SINGLE",
+        "T-Q2-TWO",
+        "T-Q2-THREE",
+        "T-Q3-P1",
+        "T-Q3-P2",
+        "T-Q3-P4"
+      ],
+      "commitment_horizon_s": 8.0,
+      "committed_actions": [],
+      "current_time_s": 0.0,
+      "d_safe_m": 25.0,
+      "d_safe_source": "synthetic_scenario_assumption",
+      "executed_actions": [],
+      "freeze_status": "unfrozen",
+      "legacy_identity_claimed": false,
+      "objective_contract_id": "LEXICOGRAPHIC_3_2_1_NO_WEIGHT_VARIATION",
+      "previous_plan": [],
+      "protected_objects": [
+        {
+          "protected_object_id": "SHIP-O0",
+          "reference_position_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "real_five_uav_states_available": false,
+      "real_missile_batch_data_available": false,
+      "resource_regime": "SUF",
+      "rolling_horizon_s": 180.0,
+      "scenario_id": "S2-SUF-SEQ",
+      "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+      "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+      "solver_time_limit_s": 5.0,
+      "threats": [
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 54.0,
+          "defence_window_start_s": 46.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SUF-SEQ-M1",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 76.0,
+          "defence_window_start_s": 68.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SUF-SEQ-M2",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B2",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 98.0,
+          "defence_window_start_s": 90.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SUF-SEQ-M3",
+          "threat_level": 1
+        },
+        {
+          "batch_id": "B2",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 120.0,
+          "defence_window_start_s": 112.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SUF-SEQ-M4",
+          "threat_level": 3
+        }
+      ],
+      "uavs": [
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2400.0,
+            0.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1000.0,
+            0.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-1"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-2"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            -900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            -550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-3"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            350.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-4"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            -500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            -350.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-5"
+        }
+      ]
+    },
+    {
+      "arrival_structure": "OVR",
+      "available_prealert_lead_s": 60.0,
+      "available_template_ids": [
+        "T-Q1-SINGLE",
+        "T-Q2-TWO",
+        "T-Q2-THREE",
+        "T-Q3-P1",
+        "T-Q3-P2",
+        "T-Q3-P4"
+      ],
+      "commitment_horizon_s": 8.0,
+      "committed_actions": [],
+      "current_time_s": 0.0,
+      "d_safe_m": 25.0,
+      "d_safe_source": "synthetic_scenario_assumption",
+      "executed_actions": [],
+      "freeze_status": "unfrozen",
+      "legacy_identity_claimed": false,
+      "objective_contract_id": "LEXICOGRAPHIC_3_2_1_NO_WEIGHT_VARIATION",
+      "previous_plan": [],
+      "protected_objects": [
+        {
+          "protected_object_id": "SHIP-O0",
+          "reference_position_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "real_five_uav_states_available": false,
+      "real_missile_batch_data_available": false,
+      "resource_regime": "SUF",
+      "rolling_horizon_s": 180.0,
+      "scenario_id": "S2-SUF-OVR",
+      "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+      "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+      "solver_time_limit_s": 5.0,
+      "threats": [
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.9,
+          "defence_window_end_s": 62.0,
+          "defence_window_start_s": 54.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SUF-OVR-M1",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.54,
+          "defence_window_end_s": 63.5,
+          "defence_window_start_s": 55.5,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SUF-OVR-M2",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.18000000000000005,
+          "defence_window_end_s": 65.0,
+          "defence_window_start_s": 57.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SUF-OVR-M3",
+          "threat_level": 1
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.18000000000000005,
+          "defence_window_end_s": 66.5,
+          "defence_window_start_s": 58.5,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SUF-OVR-M4",
+          "threat_level": 3
+        }
+      ],
+      "uavs": [
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2400.0,
+            0.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1000.0,
+            0.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-1"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-2"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            -900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            -550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-3"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            350.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-4"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            -500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            -350.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-5"
+        }
+      ]
+    },
+    {
+      "arrival_structure": "SUR",
+      "available_prealert_lead_s": 60.0,
+      "available_template_ids": [
+        "T-Q1-SINGLE",
+        "T-Q2-TWO",
+        "T-Q2-THREE",
+        "T-Q3-P1",
+        "T-Q3-P2",
+        "T-Q3-P4"
+      ],
+      "commitment_horizon_s": 8.0,
+      "committed_actions": [],
+      "current_time_s": 0.0,
+      "d_safe_m": 25.0,
+      "d_safe_source": "synthetic_scenario_assumption",
+      "executed_actions": [],
+      "freeze_status": "unfrozen",
+      "legacy_identity_claimed": false,
+      "objective_contract_id": "LEXICOGRAPHIC_3_2_1_NO_WEIGHT_VARIATION",
+      "previous_plan": [],
+      "protected_objects": [
+        {
+          "protected_object_id": "SHIP-O0",
+          "reference_position_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "real_five_uav_states_available": false,
+      "real_missile_batch_data_available": false,
+      "resource_regime": "SUF",
+      "rolling_horizon_s": 180.0,
+      "scenario_id": "S2-SUF-SUR",
+      "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+      "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+      "solver_time_limit_s": 5.0,
+      "threats": [
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.9,
+          "defence_window_end_s": 50.0,
+          "defence_window_start_s": 42.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SUF-SUR-M1",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.54,
+          "defence_window_end_s": 76.0,
+          "defence_window_start_s": 68.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SUF-SUR-M2",
+          "threat_level": 1
+        },
+        {
+          "batch_id": "B2",
+          "bearing_rad": -0.18000000000000005,
+          "defence_window_end_s": 100.0,
+          "defence_window_start_s": 92.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 12.0,
+          "threat_id": "SUF-SUR-M3",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "SUR",
+          "bearing_rad": 0.18000000000000005,
+          "defence_window_end_s": 61.0,
+          "defence_window_start_s": 53.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 32.0,
+          "threat_id": "SUF-SUR-M4",
+          "threat_level": 3
+        }
+      ],
+      "uavs": [
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2400.0,
+            0.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1000.0,
+            0.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-1"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-2"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            -900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            -550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-3"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            350.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-4"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            -500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            -350.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-5"
+        }
+      ]
+    },
+    {
+      "arrival_structure": "SEQ",
+      "available_prealert_lead_s": 60.0,
+      "available_template_ids": [
+        "T-Q1-SINGLE",
+        "T-Q2-TWO",
+        "T-Q2-THREE",
+        "T-Q3-P1",
+        "T-Q3-P2",
+        "T-Q3-P4"
+      ],
+      "commitment_horizon_s": 8.0,
+      "committed_actions": [],
+      "current_time_s": 0.0,
+      "d_safe_m": 25.0,
+      "d_safe_source": "synthetic_scenario_assumption",
+      "executed_actions": [],
+      "freeze_status": "unfrozen",
+      "legacy_identity_claimed": false,
+      "objective_contract_id": "LEXICOGRAPHIC_3_2_1_NO_WEIGHT_VARIATION",
+      "previous_plan": [],
+      "protected_objects": [
+        {
+          "protected_object_id": "SHIP-O0",
+          "reference_position_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "real_five_uav_states_available": false,
+      "real_missile_batch_data_available": false,
+      "resource_regime": "CRI",
+      "rolling_horizon_s": 180.0,
+      "scenario_id": "S2-CRI-SEQ",
+      "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+      "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+      "solver_time_limit_s": 5.0,
+      "threats": [
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 54.0,
+          "defence_window_start_s": 46.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-SEQ-M1",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 76.0,
+          "defence_window_start_s": 68.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-SEQ-M2",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B2",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 98.0,
+          "defence_window_start_s": 90.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-SEQ-M3",
+          "threat_level": 1
+        },
+        {
+          "batch_id": "B2",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 120.0,
+          "defence_window_start_s": 112.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-SEQ-M4",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "B3",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 142.0,
+          "defence_window_start_s": 134.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-SEQ-M5",
+          "threat_level": 2
+        }
+      ],
+      "uavs": [
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2400.0,
+            0.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1000.0,
+            0.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-1"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-2"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            -900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            -550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-3"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            350.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-4"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            -500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            -350.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-5"
+        }
+      ]
+    },
+    {
+      "arrival_structure": "OVR",
+      "available_prealert_lead_s": 60.0,
+      "available_template_ids": [
+        "T-Q1-SINGLE",
+        "T-Q2-TWO",
+        "T-Q2-THREE",
+        "T-Q3-P1",
+        "T-Q3-P2",
+        "T-Q3-P4"
+      ],
+      "commitment_horizon_s": 8.0,
+      "committed_actions": [],
+      "current_time_s": 0.0,
+      "d_safe_m": 25.0,
+      "d_safe_source": "synthetic_scenario_assumption",
+      "executed_actions": [],
+      "freeze_status": "unfrozen",
+      "legacy_identity_claimed": false,
+      "objective_contract_id": "LEXICOGRAPHIC_3_2_1_NO_WEIGHT_VARIATION",
+      "previous_plan": [],
+      "protected_objects": [
+        {
+          "protected_object_id": "SHIP-O0",
+          "reference_position_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "real_five_uav_states_available": false,
+      "real_missile_batch_data_available": false,
+      "resource_regime": "CRI",
+      "rolling_horizon_s": 180.0,
+      "scenario_id": "S2-CRI-OVR",
+      "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+      "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+      "solver_time_limit_s": 5.0,
+      "threats": [
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.9,
+          "defence_window_end_s": 62.0,
+          "defence_window_start_s": 54.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-OVR-M1",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.54,
+          "defence_window_end_s": 63.5,
+          "defence_window_start_s": 55.5,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-OVR-M2",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.18000000000000005,
+          "defence_window_end_s": 65.0,
+          "defence_window_start_s": 57.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-OVR-M3",
+          "threat_level": 1
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.18000000000000005,
+          "defence_window_end_s": 66.5,
+          "defence_window_start_s": 58.5,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-OVR-M4",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.5399999999999999,
+          "defence_window_end_s": 68.0,
+          "defence_window_start_s": 60.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-OVR-M5",
+          "threat_level": 2
+        }
+      ],
+      "uavs": [
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2400.0,
+            0.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1000.0,
+            0.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-1"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-2"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            -900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            -550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-3"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            350.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-4"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            -500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            -350.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-5"
+        }
+      ]
+    },
+    {
+      "arrival_structure": "SUR",
+      "available_prealert_lead_s": 60.0,
+      "available_template_ids": [
+        "T-Q1-SINGLE",
+        "T-Q2-TWO",
+        "T-Q2-THREE",
+        "T-Q3-P1",
+        "T-Q3-P2",
+        "T-Q3-P4"
+      ],
+      "commitment_horizon_s": 8.0,
+      "committed_actions": [],
+      "current_time_s": 0.0,
+      "d_safe_m": 25.0,
+      "d_safe_source": "synthetic_scenario_assumption",
+      "executed_actions": [],
+      "freeze_status": "unfrozen",
+      "legacy_identity_claimed": false,
+      "objective_contract_id": "LEXICOGRAPHIC_3_2_1_NO_WEIGHT_VARIATION",
+      "previous_plan": [],
+      "protected_objects": [
+        {
+          "protected_object_id": "SHIP-O0",
+          "reference_position_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "real_five_uav_states_available": false,
+      "real_missile_batch_data_available": false,
+      "resource_regime": "CRI",
+      "rolling_horizon_s": 180.0,
+      "scenario_id": "S2-CRI-SUR",
+      "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+      "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+      "solver_time_limit_s": 5.0,
+      "threats": [
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.9,
+          "defence_window_end_s": 50.0,
+          "defence_window_start_s": 42.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-SUR-M1",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.54,
+          "defence_window_end_s": 76.0,
+          "defence_window_start_s": 68.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "CRI-SUR-M2",
+          "threat_level": 1
+        },
+        {
+          "batch_id": "B2",
+          "bearing_rad": -0.18000000000000005,
+          "defence_window_end_s": 100.0,
+          "defence_window_start_s": 92.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 12.0,
+          "threat_id": "CRI-SUR-M3",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "SUR",
+          "bearing_rad": 0.18000000000000005,
+          "defence_window_end_s": 61.0,
+          "defence_window_start_s": 53.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 32.0,
+          "threat_id": "CRI-SUR-M4",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "SUR",
+          "bearing_rad": 0.5399999999999999,
+          "defence_window_end_s": 64.0,
+          "defence_window_start_s": 56.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 32.0,
+          "threat_id": "CRI-SUR-M5",
+          "threat_level": 3
+        }
+      ],
+      "uavs": [
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2400.0,
+            0.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1000.0,
+            0.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-1"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-2"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            -900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            -550.0
+          ],
+          "remaining_bombs": 3,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-3"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            350.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-4"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            -500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            -350.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-5"
+        }
+      ]
+    },
+    {
+      "arrival_structure": "SEQ",
+      "available_prealert_lead_s": 60.0,
+      "available_template_ids": [
+        "T-Q1-SINGLE",
+        "T-Q2-TWO",
+        "T-Q2-THREE",
+        "T-Q3-P1",
+        "T-Q3-P2",
+        "T-Q3-P4"
+      ],
+      "commitment_horizon_s": 8.0,
+      "committed_actions": [],
+      "current_time_s": 0.0,
+      "d_safe_m": 25.0,
+      "d_safe_source": "synthetic_scenario_assumption",
+      "executed_actions": [],
+      "freeze_status": "unfrozen",
+      "legacy_identity_claimed": false,
+      "objective_contract_id": "LEXICOGRAPHIC_3_2_1_NO_WEIGHT_VARIATION",
+      "previous_plan": [],
+      "protected_objects": [
+        {
+          "protected_object_id": "SHIP-O0",
+          "reference_position_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "real_five_uav_states_available": false,
+      "real_missile_batch_data_available": false,
+      "resource_regime": "SHO",
+      "rolling_horizon_s": 180.0,
+      "scenario_id": "S2-SHO-SEQ",
+      "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+      "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+      "solver_time_limit_s": 5.0,
+      "threats": [
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 54.0,
+          "defence_window_start_s": 46.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-SEQ-M1",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 76.0,
+          "defence_window_start_s": 68.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-SEQ-M2",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B2",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 98.0,
+          "defence_window_start_s": 90.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-SEQ-M3",
+          "threat_level": 1
+        },
+        {
+          "batch_id": "B2",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 120.0,
+          "defence_window_start_s": 112.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-SEQ-M4",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "B3",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 142.0,
+          "defence_window_start_s": 134.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-SEQ-M5",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B3",
+          "bearing_rad": 0.1,
+          "defence_window_end_s": 164.0,
+          "defence_window_start_s": 156.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-SEQ-M6",
+          "threat_level": 1
+        }
+      ],
+      "uavs": [
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2400.0,
+            0.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1000.0,
+            0.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-1"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            550.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-2"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            -900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            -550.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-3"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            350.0
+          ],
+          "remaining_bombs": 1,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-4"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            -500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            -350.0
+          ],
+          "remaining_bombs": 1,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-5"
+        }
+      ]
+    },
+    {
+      "arrival_structure": "OVR",
+      "available_prealert_lead_s": 60.0,
+      "available_template_ids": [
+        "T-Q1-SINGLE",
+        "T-Q2-TWO",
+        "T-Q2-THREE",
+        "T-Q3-P1",
+        "T-Q3-P2",
+        "T-Q3-P4"
+      ],
+      "commitment_horizon_s": 8.0,
+      "committed_actions": [],
+      "current_time_s": 0.0,
+      "d_safe_m": 25.0,
+      "d_safe_source": "synthetic_scenario_assumption",
+      "executed_actions": [],
+      "freeze_status": "unfrozen",
+      "legacy_identity_claimed": false,
+      "objective_contract_id": "LEXICOGRAPHIC_3_2_1_NO_WEIGHT_VARIATION",
+      "previous_plan": [],
+      "protected_objects": [
+        {
+          "protected_object_id": "SHIP-O0",
+          "reference_position_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "real_five_uav_states_available": false,
+      "real_missile_batch_data_available": false,
+      "resource_regime": "SHO",
+      "rolling_horizon_s": 180.0,
+      "scenario_id": "S2-SHO-OVR",
+      "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+      "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+      "solver_time_limit_s": 5.0,
+      "threats": [
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.9,
+          "defence_window_end_s": 62.0,
+          "defence_window_start_s": 54.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-OVR-M1",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.54,
+          "defence_window_end_s": 63.5,
+          "defence_window_start_s": 55.5,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-OVR-M2",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.18000000000000005,
+          "defence_window_end_s": 65.0,
+          "defence_window_start_s": 57.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-OVR-M3",
+          "threat_level": 1
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.18000000000000005,
+          "defence_window_end_s": 66.5,
+          "defence_window_start_s": 58.5,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-OVR-M4",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.5399999999999999,
+          "defence_window_end_s": 68.0,
+          "defence_window_start_s": 60.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-OVR-M5",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": 0.8999999999999998,
+          "defence_window_end_s": 69.5,
+          "defence_window_start_s": 61.5,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-OVR-M6",
+          "threat_level": 1
+        }
+      ],
+      "uavs": [
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2400.0,
+            0.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1000.0,
+            0.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-1"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            550.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-2"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            -900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            -550.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-3"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            350.0
+          ],
+          "remaining_bombs": 1,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-4"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            -500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            -350.0
+          ],
+          "remaining_bombs": 1,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-5"
+        }
+      ]
+    },
+    {
+      "arrival_structure": "SUR",
+      "available_prealert_lead_s": 60.0,
+      "available_template_ids": [
+        "T-Q1-SINGLE",
+        "T-Q2-TWO",
+        "T-Q2-THREE",
+        "T-Q3-P1",
+        "T-Q3-P2",
+        "T-Q3-P4"
+      ],
+      "commitment_horizon_s": 8.0,
+      "committed_actions": [],
+      "current_time_s": 0.0,
+      "d_safe_m": 25.0,
+      "d_safe_source": "synthetic_scenario_assumption",
+      "executed_actions": [],
+      "freeze_status": "unfrozen",
+      "legacy_identity_claimed": false,
+      "objective_contract_id": "LEXICOGRAPHIC_3_2_1_NO_WEIGHT_VARIATION",
+      "previous_plan": [],
+      "protected_objects": [
+        {
+          "protected_object_id": "SHIP-O0",
+          "reference_position_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "real_five_uav_states_available": false,
+      "real_missile_batch_data_available": false,
+      "resource_regime": "SHO",
+      "rolling_horizon_s": 180.0,
+      "scenario_id": "S2-SHO-SUR",
+      "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+      "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+      "solver_time_limit_s": 5.0,
+      "threats": [
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.9,
+          "defence_window_end_s": 50.0,
+          "defence_window_start_s": 42.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-SUR-M1",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "B1",
+          "bearing_rad": -0.54,
+          "defence_window_end_s": 76.0,
+          "defence_window_start_s": 68.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 0.0,
+          "threat_id": "SHO-SUR-M2",
+          "threat_level": 1
+        },
+        {
+          "batch_id": "B2",
+          "bearing_rad": -0.18000000000000005,
+          "defence_window_end_s": 100.0,
+          "defence_window_start_s": 92.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 12.0,
+          "threat_id": "SHO-SUR-M3",
+          "threat_level": 2
+        },
+        {
+          "batch_id": "SUR",
+          "bearing_rad": 0.18000000000000005,
+          "defence_window_end_s": 61.0,
+          "defence_window_start_s": 53.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 32.0,
+          "threat_id": "SHO-SUR-M4",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "SUR",
+          "bearing_rad": 0.5399999999999999,
+          "defence_window_end_s": 64.0,
+          "defence_window_start_s": 56.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 32.0,
+          "threat_id": "SHO-SUR-M5",
+          "threat_level": 3
+        },
+        {
+          "batch_id": "SUR",
+          "bearing_rad": 0.8999999999999998,
+          "defence_window_end_s": 67.0,
+          "defence_window_start_s": 59.0,
+          "protected_object_id": "SHIP-O0",
+          "reveal_time_s": 32.0,
+          "threat_id": "SHO-SUR-M6",
+          "threat_level": 2
+        }
+      ],
+      "uavs": [
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2400.0,
+            0.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1000.0,
+            0.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-1"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            550.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-2"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2300.0,
+            -900.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -850.0,
+            -550.0
+          ],
+          "remaining_bombs": 2,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-3"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            350.0
+          ],
+          "remaining_bombs": 1,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-4"
+        },
+        {
+          "available_time_s": 0.0,
+          "heading_rad": 0.0,
+          "home_reference_m": [
+            -2600.0,
+            -500.0
+          ],
+          "home_reference_source": "synthetic_scenario_assumption",
+          "maximum_operating_radius_m": 12000.0,
+          "position_m": [
+            -1200.0,
+            -350.0
+          ],
+          "remaining_bombs": 1,
+          "state_time_s": 0.0,
+          "uav_id": "UAV-5"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1
+}

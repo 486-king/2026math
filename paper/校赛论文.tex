@@ -1,0 +1,1102 @@
+%! Mode:: "TeX:UTF-8"
+%! TEX program = xelatex
+\PassOptionsToPackage{quiet}{xeCJK}
+\documentclass[withoutpreface,bwprint]{cumcmthesis}
+\usepackage{etoolbox}
+\usepackage{ctex}
+\BeforeBeginEnvironment{tabular}{\zihao{-5}}
+\usepackage[numbers,sort&compress]{natbib}  % 文献管理宏包
+\usepackage[framemethod=TikZ]{mdframed}  % 框架宏包
+\usepackage{url}  % 网页链接宏包
+\usepackage{subcaption}  % 子图宏包
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+% 使 \textbf 在正文中输出宋体加粗（而非默认黑体），仅在正文范围内生效
+% 若需保留原始 \textbf，可使用 \originaltextbf 命令
+\let\originaltextbf\textbf
+\renewcommand{\textbf}[1]{{\song\bfseries #1}}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!20]
+\tikzstyle{process} = [rectangle, minimum width=3.5cm, minimum height=1cm, text centered, draw=black, fill=blue!20]
+\tikzstyle{decision} = [diamond, aspect=2, minimum width=3.5cm, minimum height=1cm, text centered, draw=black, fill=green!20]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+\usepackage{enumitem}
+%去掉前面的小黑点，用数字序号表示
+
+\usepackage{tabularx,booktabs}
+\usepackage{array}
+
+\usepackage{booktabs,multirow,amsmath,bm}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+
+\usepackage{amsmath,amssymb,booktabs,tabularx,graphicx,xcolor}
+\usepackage{caption}
+
+\usepackage{booktabs,array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+
+\title{基于多烟幕协同的舰船光电防御建模与优化}  % 论文标题
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文
+\begin{document}
+	
+% 封面和目录页不显示页码
+\pagenumbering{gobble}
+\maketitle
+\begin{abstract}
+
+针对无人机投掷烟幕弹干扰光电制导导弹攻击的舰船防御问题，本文建立了时空耦合动力学模型、多烟幕协同遮蔽模型、多无人机协同优化模型和双层解耦调度模型，系统性地求解了不同场景下的最优投放策略。
+
+\textbf{对于问题一，}建立了包含舰船匀速运动、G1纯追踪导弹和S1烟幕时序演化的时空耦合动力学系统。通过几何上下界解析推导，严格证明了G1/S1/O0/U0基准下单枚干扰弹全探测窗口完整遮蔽的不可行性（$T_{\text{structural\_max}}=10.38\,\text{s}<T_{\text{detect\_lower}}=24.17\,\text{s}$），并给出最大化连续遮蔽时长的参数化补偿方案。A/B/C三套独立验证方案数值完全吻合，浮点误差小于$10^{-9}\,\text{s}$。
+
+\textbf{对于问题二，}基于问题一拓展多弹协同遮蔽体系，推导了完整圆盘截面裕度充要判据。采用连续时间区间证书法和精确截面独立校验法双重验证，证明2枚干扰弹在允许$t_{\text{cmd}}<0$预部署条件下可完整覆盖$[0,25.36]\,\text{s}$全探测窗口。量化对比了空间互补优化与保守时序接续两种方案：2弹容量前沿$29.07\,\text{s}$（vs保守$20.75\,\text{s}$），3弹$42.52\,\text{s}$（vs保守$31.13\,\text{s}$），揭示了多烟幕并集协同的核心增益机制。
+
+\textbf{对于问题三，}在三机协同场景下，以完整圆盘遮蔽和机间安全间距为不可松弛硬约束，采用$\varepsilon$约束法生成无加权Pareto最优解集。选定P2为基准代表方案，经双重验证实现全窗口完整遮蔽，$N-1$容错比例$2/3$，双重覆盖时长占比$40.91\%$。完成了安全阈值、来袭方位、初始坐标和航向的多维度敏感性分析。
+
+\textbf{对于问题四，}构建了"下层几何模板认证+上层滚动时域MILP调度"双层解耦架构，设计六层词典序多目标优化体系和事件驱动滚动重规划机制，配备超时贪心基线自动接管。在$3\times3$九组合成场景中验证了A主方案在多重叠和资源短缺工况下的调度优势，给出了短缺任务按威胁等级$3\to2\to1$逐级舍弃的应急策略。
+
+\keywords{烟幕遮蔽；光电对抗；时空耦合动力学；多目标优化；MILP调度；Pareto前沿；词典序优化}
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%\vspace{-1.4cm} 
+%\tableofcontents  % 目录
+%\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\pagenumbering{arabic}
+\vspace{-1.4cm} 
+\section{问题重述}
+ 
+
+\subsection{问题背景}
+在利用光电对抗的海面作战中，烟幕干扰弹通过释放球状气溶胶云团，打击光电制导导弹依靠可见光和红外成像的探测手段，阻止导弹对目标舰船的识别与跟踪，实现舰船的战术性防御与撤离。
+
+本文针对无人机投掷烟幕弹干扰导弹攻击的背景，在已知舰船被探测的等效半径、干扰弹起爆延时时间等数据的条件下，结合不同场景建立模型以求解最优投放时间、时序策略等问题，实现舰船防御成功率与作战性价比的最大化。
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{需要解决的问题}
+
+\noindent\textbf{问题1：}针对单机单弹、单枚导弹独立来袭的场景：
+
+(1)构建包含舰船匀速运动模型、烟幕时序扩散衰减模型等的时空耦合动力学系统
+
+(2)结合已知条件，以舰船防御成功为核心约束，构建单目标优化模型，求解最优投放空间坐标、时刻和起爆时刻，并验证遮蔽有效性和模型鲁棒性。
+
+\noindent\textbf{问题2：}针对单机多弹、单枚导弹的场景： 
+
+(1)基于问题一，以最大化连续有效遮蔽总时长为优化目标，构建多烟幕时空叠加互补遮蔽模型，求解最优投弹时序与多弹空间投放方案；
+
+(2)从遮蔽时长、资源消耗差异等方面，量化分析多单时序策略较单弹防御的作战优势。
+
+\noindent\textbf{问题3：} 针对三机、每架单弹、单枚导弹的场景：
+
+(1)基于多机飞行的安全间距等多重约束，建立多目标优化模型，求解三机各自最优投放坐标、投放时刻与起爆时序。
+
+(2)从遮蔽稳定性、抗干扰能力等方面，量化分析多机协同方案较单机单弹的作战优势和适用场景
+
+\noindent\textbf{问题4：}  
+
+针对每架最大载弹3枚的5架无人机和多方向多批次导弹来袭的场景，构建多维度导弹威胁等级评估模型，制定适配于资源充足、临界、短缺三种情况的调度方案和应急防御策略，给出有实操性的作战指导建议。
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{问题分析}
+\subsection{问题一的分析}
+
+单枚干扰弹的烟幕有效遮蔽半径仅120\,m，且恒定阶段仅持续18\,s，而导弹探测窗口最短仍达24.17\,s。核心矛盾在于：烟幕的时空覆盖能力与导弹探测窗口之间存在量级差距，需要从几何可行性和时序约束两个维度进行严格分析
+
+\subsection{问题二的分析}
+
+问题二在问题一单弹模型基础上，考虑单架无人机投放多枚干扰弹的协同遮蔽问题。核心在于：多枚烟幕圆盘在时空上叠加互补，能否突破单弹$10.38\,\text{s}$的遮蔽上限、实现全探测窗口$[0,T_{\max}]$的连续完整覆盖。分析重点包括：(1)单烟幕时变半径下多烟幕并集的几何覆盖充要条件推导；(2)最少干扰弹数的必要性与充分性双重论证；(3)空间互补优化与保守时序接续两种策略的量化对比。
+
+\subsection{问题三的分析}
+
+问题三将问题二的双弹协同扩展到三架无人机各投单弹的三机协同场景。新增关键约束为无人机全时段安全间距$d_{\text{safe}}$，使得问题从纯遮蔽几何优化变为"遮蔽+航迹+时序"的多目标耦合优化。分析重点包括：(1)完整圆盘遮蔽与安全间距的双硬约束建模；(2)$\varepsilon$约束法生成无加权Pareto前沿，避免不同量纲指标的人为加权偏差；(3)$N-1$单机失效容错评估和方案间的指标取舍分析。
+
+\subsection{问题四的分析}
+
+问题四为全系统综合调度问题：5架无人机（每架载弹3枚）应对多方向多批次导弹威胁。与前三问不同，本问不求解单次遮蔽几何，而是在已验证的遮蔽模板库基础上构建动态调度体系。分析重点包括：(1)如何将连续烟幕几何验证与离散调度决策解耦；(2)多批次威胁的等级评估和词典序优先级设计；(3)资源充足/临界/短缺三种工况下的自适应调度策略和应急方案。
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{模型假设}
+\begin{enumerate}[leftmargin=2em]
+	\item \textbf{二维水平面假设：}全部运动（舰船航行、导弹飞行、无人机机动、烟幕扩散）仅在海面二维水平面 $Oxy$ 内建模，忽略高度维度的影响；
+	\item \textbf{舰船匀速直线运动：}舰船以恒定速率 $V_{\mathrm{s}} = 7.71\;\text{m/s}$ 沿固定航向 $\bm{e}_{\mathrm{s}}$ 做匀速直线运动，不进行规避机动；
+	\item \textbf{导弹探测条件：}导弹对舰船的探测须同时满足弹舰距离 $D \leq D_{\max}=8000\;\text{m}$ 且弹轴视线偏角不超过视场半角 $\beta=15^\circ$；
+	\item \textbf{完整圆盘覆盖判据：}舰船等效半径 $R_{\mathrm{s}}=80\;\text{m}$ 的完整圆盘须在所有可探测时刻均被烟幕圆盘完全包含，方判定防御有效；
+	\item \textbf{统一全局时钟：}所有主体运动与事件均使用同一全局时间变量 $t$。
+\item \textbf{优化优先级词典序：}首要保证 $100\%$ 防御成功率（硬约束）；可行时再依次最小化弹药消耗、能耗、最大化遮蔽稳定性。硬约束不可行时，先给出严格不可行证据，再提供最优补偿方案。
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\section{符号说明}
+
+
+%%%三线表的的表示方法
+
+
+	
+
+\begin{longtable}{c m{0.6\textwidth} c}
+	\caption{全局符号说明表}
+	\label{tab:symbol} \\
+	\toprule
+	符号 & 含义 & 单位 \\
+	\midrule
+	\endfirsthead % 第一页表头结束
+	\multicolumn{3}{c}{续\tablename} \\
+	\toprule
+	符号 & 含义 & 单位 \\
+	\midrule
+	\endhead % 后续每页重复表头
+	\bottomrule
+	\endfoot % 每页底部横线
+	\bottomrule
+	\endlastfoot % 最后一页底部横线
+	
+	$V_{\mathrm{s}}$ & 舰船航行速度 & $\mathrm{m/s}$ \\
+	$R_{\mathrm{s}}$ & 舰船圆盘半径 & $\mathrm{m}$ \\
+	$\bm{s(t)}$ & $t$时刻舰船圆心坐标 & $\mathrm{m}$ \\
+	$\bm{e}_{\mathrm{s}}$ & 舰船航向单位向量 & 无量纲 \\
+	$V_{\mathrm{m}}$ & 导弹飞行速度 & $\mathrm{m/s}$ \\
+	$\bm{m(t)}$ & $t$时刻导弹坐标 & $\mathrm{m}$ \\
+	$D(t)$ & 弹舰瞬时距离 & $\mathrm{m}$ \\
+	$D_{\max}$ & 导弹锁定最大距离 & $\mathrm{m}$ \\
+	$T_{\max}$ & 导弹探测窗口总时长 & $\mathrm{s}$ \\
+	$V_{\mathrm{u}}$ & 无人机巡航速度 & $\mathrm{m/s}$ \\
+	$\bm{u_{\mathrm{i}}}(t)$ & 第$i$架无人机$t$时刻坐标 & $\mathrm{m}$ \\
+	$\psi_{\mathrm{i}}$ & 无人机初始航向角 & $\mathrm{rad}$ \\
+	$\beta$ & 导弹来袭方位角 & $\mathrm{rad}$ \\
+	$d_{\mathrm{safe}}$ & 无人机安全间距阈值 & $\mathrm{m}$ \\
+	$t_{\mathrm{cmd}}$ & 投放指令时刻 & $\mathrm{s}$ \\
+	$t_{\mathrm{d}}$ & 干扰弹释放时刻 & $\mathrm{s}$ \\
+	$t_{\mathrm{b}}$ & 烟幕起爆时刻 & $\mathrm{s}$ \\
+	$a_{\mathrm{i}}$ & 无人机可用预部署时刻 & $\mathrm{s}$ \\
+	$a(t)$ & 烟龄 & $\mathrm{s}$ \\
+	$t_{\mathrm{m}}$ & 单烟幕遮蔽区间中点 & $\mathrm{s}$ \\
+	$t_{\mathrm{in}}$ & 探测窗口起点 & $\mathrm{s}$ \\
+	$t_{\mathrm{out}}$ & 探测窗口终点 & $\mathrm{s}$ \\
+	$\Delta t_{\mathrm{trans}}$ & 无人机转场最小时长 & $\mathrm{s}$ \\
+	$R_{\mathrm{c}}$ & 烟幕最大半径 & $\mathrm{m}$ \\
+	$\bm{c}_{\mathrm{j}}$ & 第$j$团烟幕中心坐标 & $\mathrm{m}$ \\
+	$r_{\mathrm{j}}(t)$ & $t$时刻烟幕半径 & $\mathrm{m}$ \\
+	$L_{\mathrm{j}}(\xi,t)$ & 截面覆盖裕度 & $\mathrm{m}^2$ \\
+	$\xi$ & 舰船截面纵坐标 & $\mathrm{m}$ \\
+	$g(t)$ & 单烟幕整体覆盖裕度 & $\mathrm{m}$ \\
+	$\Delta(t)$ & 多烟幕并集缺陷指标 & $\mathrm{m}$ \\
+	$T_{\mathrm{structural\_max}}$ & 单弹最长完整遮蔽时长 & $\mathrm{s}$ \\
+	$T_{\mathrm{detect\_lower}}$ & 探测窗口时长下界 & $\mathrm{s}$ \\
+	$T_{\mathrm{naked}}^{\min}$ & 裸露时长下界 & $\mathrm{s}$ \\
+	$h$ & 单遮蔽区间半时长 & $\mathrm{s}$ \\
+	$y_{\mathrm{i},\mathrm{j},\mathrm{k}}$ & MILP0-1分配变量 & 无量纲 \\
+	$b_{\mathrm{i}}$ & 模板消耗弹数 & 枚 \\
+	$F_1,F_2$ & 正向优化指标 & 无量纲 \\
+	$G_1,G_2$ & 代价优化指标 & $\mathrm{m}$、$\mathrm{rad}$ \\
+\end{longtable}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\section{问题一模型的建立与求解}
+
+本题首先建立模型，推导单烟幕完整遮蔽几何理论上界和导弹纯追踪探测窗口时长下界；接着通过上下界严格大小不等式完成全局不可行解析证明，搭配三套独立数值验证交叉佐证；然后构造最大化连续遮蔽的参数化投放方案；最后检验模型的鲁棒性。
+
+\subsection{坐标系建立与符号定义}
+建模采用二维水平面：全局固定坐标系$Oxy$描述所有平台绝对坐标；舰船随动坐标系$O'x'y'$用于简化烟幕相对舰船运动分析，两套坐标系通过坐标平移完成转换。
+
+在问题一中，名义模型专属基准假设的定义如下：
+\begin{enumerate}
+	
+	\item G1纯追踪导弹：速率恒定$V_{\mathrm{m}}=320\,\text{m/s}$，瞬时速度方向始终指向舰船中心；仅当弹舰距离$D\leq 8000\,\text{m}$时进入探测窗口；
+	\item S1烟幕演化：干扰弹投放后惯性平动3.5 s，起爆后烟幕中心固定无漂移；
+	\item O0二值圆盘遮蔽判据：仅当舰船整个圆盘完全包含于烟幕圆盘时，判定为有效完整遮蔽；
+	\item U0无风基准假设：无环境风引入烟幕漂移，风漂工况仅作为拓展鲁棒性分析，不参与基准结论推导。
+\end{enumerate}
+
+\subsection{时空耦合动力学模型的建立}
+
+\subsubsection{舰船匀速直线运动模型}
+\begin{equation}
+	\bm{s}(t) = \bm{s}_0 + V_{\mathrm{s}} \bm{e}_{\mathrm{s}} t,\quad V_{\mathrm{s}}=7.71\,\text{m/s},\;R_{\mathrm{s}}=80\,\text{m}
+	\label{eq:ship}
+\end{equation}
+其中，$\bm{s}_0$为舰船初始圆心坐标，$\bm{e}_{\mathrm{s}}$为舰船航向单位向量，$R_{\mathrm{s}}$为舰船等效圆盘半径。
+
+\subsubsection{G1纯追踪导弹动力学微分方程}
+\begin{equation}
+	\dot{\bm{m}}(t) = V_{\mathrm{m}} \cdot \frac{\bm{s}(t)-\bm{m}(t)}{\|\bm{s}(t)-\bm{m}(t)\|},\quad V_{\mathrm{m}}=320\,\text{m/s}
+	\label{eq:missile}
+\end{equation}
+
+定义瞬时弹舰距离 $D(t)=\|\bm{s}(t)-\bm{m}(t)\|$，探测指示函数：
+\[
+\chi(t)=
+\begin{cases}
+	1, & D(t)\leq D_{\max}=8000\,\text{m} \\
+	0, & D(t)>8000\,\text{m}
+\end{cases}
+\]
+导弹完整探测窗口集合记为 $W=\{t\mid \chi(t)=1\}$。
+
+\subsubsection{干扰弹投放与烟幕时序演化}
+投放、起爆两级时序硬约束：
+\begin{align}
+	t_{\mathrm{d}} &= t_{\rm cmd}+2 \label{eq:drop} \\
+	t_{\mathrm{b}} &= t_{\mathrm{d}}+3.5 = t_{\rm cmd}+5.5 \label{eq:burst}
+\end{align}
+其中，$t_{\rm cmd}$为投放指令下发时刻，$t_{\mathrm{d}}$为干扰弹实际释放时刻（存在2 s系统响应延时），$t_{\mathrm{b}}$为烟幕起爆时刻。
+
+定义烟幕龄期 $a(t)=t-t_{\mathrm{b}}$，烟幕瞬时遮蔽半径分段函数，严格匹配题面时间边界：
+\[r(t)=\begin{cases}
+	0, & a(t)<0 \\
+	120, & 0\leq a(t)\leq 18 \\
+	120\cdot \dfrac{23-a(t)}{5}, & 18<a(t)\leq 23 \\
+	0, & a(t)>23
+\end{cases}
+\label{eq:radius}
+\]
+边界校验：$r(0)=120\,\text{m},\;r(18)=120\,\text{m},\;r(23)=0\,\text{m}$。
+
+干扰弹惯性飞行段位移推导：无人机巡航速度28 m/s，惯性飞行时长3.5 s，惯性总位移 $28\times3.5=98\,\text{m}$；设$\bm{e}_{\mathrm{u}}$为无人机投放瞬时航向单位向量，$\bm{p}_{\mathrm{d}}$为投放点坐标，则固定烟幕中心满足：
+\[
+\bm{c}=\bm{p}_{\mathrm{d}} + 98\bm{e}_{\mathrm{u}}
+\]
+
+下图展示了单烟幕完整遮蔽的几何结构，为后续不可行性证明奠定了几何基础。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.55\textwidth]{figures/q1_single_smoke_margin.png}
+	\caption{单烟幕覆盖裕度$g(t)$时序几何示意}
+	\label{fig:margin}
+\end{figure}
+
+
+\subsubsection{完整覆盖的判定标准}
+两圆盘完全包含几何推导：烟幕圆盘半径$R_{\mathrm{c}}=120\,\text{m}$，舰船圆盘半径$R_{\mathrm{s}}=80\,\text{m}$；舰船完全被烟幕包裹充要条件为两圆心间距不超过$R_{\mathrm{c}}-R_{\mathrm{s}}$，整理得到单烟幕覆盖裕度判据，要求全探测窗口内裕度恒非负：
+\begin{equation}
+	g(t) = r(t)-R_{\mathrm{s}} - \|\bm{c}-\bm{s}(t)\| \geq 0,\quad \forall t\in W
+	\label{eq:margin}
+\end{equation}
+
+定义缺陷指标$\Delta(t)$：
+\begin{equation}
+	\Delta(t) = \max_{\bm{x}\in S(t)} \min_{\mathrm{j}} \big(\|\bm{x}-\bm{c}_{\mathrm{j}}\|-r_{\mathrm{j}}(t)\big)
+	\label{eq:delta_def}
+\end{equation}
+判定规则为：$\Delta(t)\leq 0$代表舰船全域完整遮蔽；单弹工况下满足恒等关系 $g(t)=-\Delta(t)$。
+
+
+\subsection{单弹全程遮蔽的不可行性严格证明}
+\subsubsection{单烟幕完整遮蔽几何理论上界}
+完整遮蔽约束 $\|\bm{c}-\bm{s}(t)\|\leq R_{\mathrm{c}}-R_{\mathrm{s}}=40\,\text{m}$；烟幕起爆后中心固定，舰船以恒定速度$V_{\mathrm{s}}$直线航行，能持续落在40 m允许偏差圆内的最长路径为圆直径$2(R_{\mathrm{c}}-R_{\mathrm{s}})=80\,\text{m}$，由此得到单弹可实现的连续完整遮蔽理论上界：
+\begin{equation}
+	T_{\text{structural\_max}} = \frac{2(R_{\mathrm{c}}-R_{\mathrm{s}})}{V_{\mathrm{s}}}=10.3761\,\text{s},\quad h=\frac{R_{\mathrm{c}}-R_{\mathrm{s}}}{V_{\mathrm{s}}}=5.1881\,\text{s}
+	\label{eq:T_max}
+\end{equation}
+该上界仅由舰船航速与圆盘尺寸决定，与导弹运动参数无关，不受烟幕23 s总时长限制。
+
+\subsubsection{导弹探测窗口时长下界}
+弹舰距离随时间单调递减；导弹与舰船全速相向运动时，弹舰相对闭合速度达到最大值$V_{\mathrm{m}}+V_{\mathrm{s}}$，对应最短探测窗口，即探测窗口时长下界：
+\begin{equation}
+	T_{\text{detect\_lower}} = \frac{D_{\max}-R_{\mathrm{s}}}{V_{\mathrm{m}}+V_{\mathrm{s}}}=24.1677\,\text{s}
+	\label{eq:T_detect}
+\end{equation}
+
+
+\subsubsection{全局不可行核心结论}
+对比遮蔽理论上界与探测窗口下界\cite{sishoukui2011}，存在严格正差值：
+\[T_{\text{detect\_lower}}-T_{\text{structural\_max}}=24.1677-10.3761=13.7916\,\text{s}>0\]
+
+由此可知，单烟幕最长仅能持续完整遮蔽舰船10.3761s，而导弹探测窗口最短至少持续24.1677 s。因此，在无风基准下，不存在任何空间投放位置，可使10.3761 s的遮蔽区间完全覆盖长度不低于24.1677 s的探测窗口，\textbf{单枚干扰弹全探测窗口完整遮蔽严格不可行，可行解集为空}。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.55\textwidth]{figures/q1_structural_detection_timeline.png}
+	\caption{遮蔽理论上界与探测窗口下界时间轴对比}
+	\label{fig:timeline}
+\end{figure}
+
+图\ref{fig:timeline}以统一时间轴对比了单弹完整遮蔽理论上界与导弹探测窗口下界。二者正差值$T_{\text{naked}}^{\min}=13.7916\,\text{s}$为至少存在的裸露时长下界。由于$10.3761<24.1677$严格成立，不存在任何投放位置能使单烟幕完整覆盖全探测窗口，该结论由以下A/B/C三套独立方案交叉验证。
+
+\subsubsection{三套独立交叉验证方案}
+采用三套数学逻辑互不依赖的验证路径：方案B（解析基线）提供底层严格数学推导；方案A（事件驱动时序仿真）全域连续遍历可行投放参数，规避离散网格漏解风险；方案C（区间保守证书）以向外舍入区间算法消除浮点计算失真，出具严格不可行数学证书（区间划分与误差校验详见附录）。三组输出数值在$10^{-9}\,\text{s}$精度内完全吻合。
+
+\subsection{参数化最优补偿方案}
+由上述可知，全程完整遮蔽无可行解，故优化目标修正为最大化连续完整遮蔽时长。
+
+\subsubsection{达到理论上界的最优覆盖充要条件}
+实现$T_{\text{structural\_max}}$最长完整遮蔽的必要条件：烟幕中心落在舰船航迹上，即最优烟幕中心$\bm{c}^*=\bm{s}(t_{\mathrm{m}})$，$t_{\mathrm{m}}$为完整遮蔽区间中点。
+完整遮蔽区间$[t_{\mathrm{m}}-h,t_{\mathrm{m}}+h]$必须完全包含于导弹探测窗口$[t_{\rm in},t_{\rm out}]$，约束：
+\[
+t_{\mathrm{m}}\in [t_{\rm in}+h,\;t_{\rm out}-h] \tag{\ref{eq:tm}}
+\]
+起爆时刻约束，保证完整遮蔽区间完全落在烟幕恒定120 m半径阶段（不进入衰减区间）：
+\[
+t_{\mathrm{b}}\in [t_{\mathrm{m}}+h-18,\;t_{\mathrm{m}}-h] \tag{\ref{eq:tb}}
+\]
+计算得可行起爆区间宽度 $18-2h=7.6239\,\text{s}$；最终投放时序、空间坐标还需通过无人机2\(s\)响应延时、12000\(m\)作战半径约束校验可达性。
+
+
+\subsubsection{理论上界可达必要条件}
+实现$T_{\text{structural\_max}}$最长完整遮蔽须同时满足：烟幕云心严格落在舰船航迹上；完整遮蔽时段完全处于烟幕$0\sim18$\,s恒定半径区间；完整遮蔽区间整体包含于导弹探测窗口内部；由最优烟幕中心反推的投放点满足无人机12\,km作战半径可达约束；U0无风基准假设成立。
+
+定义$T_{\text{exec}}^*$为无人机航程约束下实际可执行最优遮蔽时长；当前缺失舰船、导弹、无人机全局初始坐标、航向、统一全局时钟，仅能输出参数化解集，$T_{\text{exec}}^*=\text{not\_evaluated}$无法定量评估。
+
+\begin{table}[htbp]
+	\centering
+	\caption{理论上界与无人机约束可执行最优时长指标对比}
+	\label{tab:t_compare}
+	\begin{tabularx}{\textwidth}{c l}
+		\toprule
+		\textbf{符号} & \textbf{说明} \\
+		\midrule
+		 $T_{\text{structural\_max}}$ & 不受无人机航程约束，固定$10.3761\,\text{s}$ \\
+		$T_{\text{exec}}^*$ & 受12 km作战半径压缩，完整全局输入后方可定量求解 \\
+		$\text{not\_evaluated}$ & 因缺失初始坐标，无法确定投放坐标 \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\subsubsection{三类战术典型投放参数策略}
+以遮蔽区间中点$t_{\mathrm{m}}$为自由参数，根据不同战术防护目标选取三组边界代表策略，由于无全局初始坐标，所以无法输出绝对坐标数值，仅输出参数化最优补偿族。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.55\textwidth]{figures/q1_compensation_strategies.png}
+	\caption{三类典型参数化补偿策略时序布局示意图}
+	\label{fig:compensation}
+\end{figure}
+
+结合图\ref{fig:compensation}，以$t_{\mathrm{m}}$为自由参数给出三类策略：居中均衡（$t_{\mathrm{m}}^*=(t_{\rm in}+t_{\rm out})/2$，前后裸露均等）、前置早期保护（$t_{\mathrm{m}}^*=t_{\rm in}+h$，紧贴窗口起点）、后置末端防护（$t_{\mathrm{m}}^*=t_{\rm out}-h$，用于末端防御）。
+
+
+\subsection{结论与检验}
+
+\subsubsection{总结与说明}
+表\ref{tab:q1_results}汇总了G1/S1/O0/U0基准工况全部关键指标，三套独立验证数值在$10^{-9}\,\text{s}$精度内完全吻合。
+\begin{table}[htbp]
+	\centering
+	\caption{问题一基准模型核心计算结果汇总（G1/S1/O0/U0无风工况）}
+	\label{tab:q1_results}
+	\begin{tabularx}{\textwidth}{l c c}
+		\toprule
+		\textbf{指标描述} & \textbf{符号} & \textbf{计算数值} \\
+		\midrule
+		允许圆心偏差半时长 & $h$ & $5.1881\,\text{s}$ \\
+		完整遮蔽几何理论上界 & $T_{\text{structural\_max}}$ & $10.3761\,\text{s}$ \\
+		导弹探测窗口时长下界 & $T_{\text{detect\_lower}}$ & $24.1677\,\text{s}$ \\
+		全程裸露时长下界 & $T_{\text{naked}}^{\min}$ & $13.7916\,\text{s}$ \\
+		可行起爆区间宽度 & $18-2h$ & $7.6239\,\text{s}$ \\
+		烟幕-舰船最大允许圆心偏差 & $R_{\mathrm{c}}-R_{\mathrm{s}}$ & $40\,\text{m}$ \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+
+\subsubsection{模型鲁棒性校验}
+
+对舰船航速$V_{\mathrm{s}}$、导弹速度$V_{\mathrm{m}}$、烟幕半径$R_{\mathrm{c}}$分别施加$\pm10\%$单参数扰动，核心不等式 $T_{\text{structural\_max}}<T_{\text{detect\_lower}}$ 恒成立，基准不可行结论不受小幅参数波动影响。
+
+在恰好满足全程遮蔽的理论临界条件下，令$T_{\text{structural\_max}}=T_{\text{detect\_lower}}$，反解临界舰速$V_{\mathrm{s}}^*$：
+\[V_{\mathrm{s}}^* = \frac{2(R_{\mathrm{c}}-R_{\mathrm{s}})V_{\mathrm{m}}}{D_{\max}-R_{\mathrm{s}}-2(R_{\mathrm{c}}-R_{\mathrm{s}})} = \frac{2\times40\times320}{7920-80} \approx 3.27\,\text{m/s}\]
+标准题设参数下，实际舰速$V_{\mathrm{s}}=7.71\,\text{m/s}$远超临界值$V_{\mathrm{s}}^*\approx3.27\,\text{m/s}$，即舰船速度越快，单烟幕遮蔽上界越短，越不利于防御。但不可行结论由$T_{\text{structural\_max}}<T_{\text{detect\_lower}}$直接导出，不受$V_{\mathrm{s}}$小幅扰动影响；参数扰动仅作为拓展对照分析，不改动基准工况核心结论。
+
+
+\subsubsection{拓展对照情况说明}
+本节两类拓展模型仅作鲁棒对照分析，不改变G1/S1/O0/U0基准下的核心不可行结论：
+\begin{itemize}
+	\item \textbf{G2固定航向直线导弹模型}：导弹无追踪机动、航向恒定，探测窗口时长缩短；$T_{\text{detect}}<T_{\text{structural\_max}}$仅为可行必要条件，仍需无人机航程可达性校验，存在作战半径超限反例；
+	\item \textbf{S2带风漂移烟幕模型}：引入环境风向量使烟幕云心持续漂移，多风向工况数值曲线见附录；仅当烟幕漂移速度与舰船航速完全同步时，完整遮蔽上界提升，存在理论可行可能性；无赛题给定风速，仅作纯理论探索，不替代原题无风基准结论。
+\end{itemize}
+
+\subsubsection{场景输入缺失约束说明}
+求解唯一确定投放坐标，必须完整提供舰船、导弹、无人机全局初始位置、航向向量、统一全局时钟、12 km作战半径判定标准；
+输入缺失仅影响定量计算投放坐标，不破坏全局不可行数学证书有效性，全程遮蔽严格不可行结论不受输入缺失影响。
+
+
+\section{问题二模型的建立与求解}
+本问基于问题一进行拓展，对单架无人机投放多枚干扰弹进行研究。首先，判定能否实现导弹全探测窗口连续完整遮蔽，若可行则求解满足要求的最少干扰弹数量；接着分别测算2、3 枚干扰弹最优构型下的最长遮蔽时长，对比空间优化方案与单纯时序接续方案，量化多烟幕协同带来的遮蔽增益。
+
+
+在第二问中，舰船匀速运动、G1纯追踪导弹、S1烟幕惯性演化、O0完整圆盘遮蔽、U0无风全套基准与常量均完全复用问题一设定，不再重复罗列。在此基础上增加本问专属约束：
+\begin{itemize}
+	\item 允许$t_{\text{cmd}}<0$的锁定前预部署投放；若强制$t_{\text{cmd}}\ge0$，$[0,5.5)\,\text{s}$区间无烟幕覆盖，无法实现全窗口遮蔽；
+	\item 所有烟幕中心与舰船航迹采用共线相对简化模型；
+	\item 题目未提供无人机全局初始坐标、基地基准，12 km飞行可达性校验标记blocked，仅输出参数化时序方案，不编造固定投放坐标。
+\end{itemize}
+
+
+\subsection{模型建立}
+
+烟幕时变半径分段函数完全复用 5.2.3 小节 S1 标准演化模型，不再重复罗列；
+%\subsubsection{单烟幕时变半径分段函数}
+%设第$j$枚干扰起爆时刻为$t_{\mathrm{b},\mathrm{j}}$，烟幕龄期$a_{\mathrm{j}}(t)=t-t_{\mathrm{b},\mathrm{j}}$，瞬时遮蔽半径：
+%\begin{equation}
+%	r_{\mathrm{j}}(t)=
+%	\begin{cases}
+%		0, & a_{\mathrm{j}}(t)<0 \\
+%		120, & 0\leq a_{\mathrm{j}}(t)\leq 18 \\
+%		120 - \dfrac{120}{5}\cdot a_{\mathrm{j}}(t), & 18<a_{\mathrm{j}}(t)\leq 23 \\
+%		0, & a_{\mathrm{j}}(t)>23
+%	\end{cases}
+%	\label{eq:smoke_radius_j}
+%\end{equation}
+
+%边界校验：$r_{\mathrm{j}}(t_{\mathrm{b},\mathrm{j}})=120,\;r_{\mathrm{j}}(t_{\mathrm{b},\mathrm{j}}+18)=120,\;r_{\mathrm{j}}(t_{\mathrm{b},\mathrm{j}}+23)=0$，与赛题参数完全匹配。
+
+\subsubsection{完整覆盖几何充要条件推导}
+记舰船圆盘$D_{\mathrm{s}}(t)$、第$j$团烟幕圆盘$D_{\mathrm{j}}(t)$，全窗口完整遮蔽要求：
+\begin{equation}
+	D_{\mathrm{s}}(t) \subseteq \bigcup_{\mathrm{j}=1}^n D_{\mathrm{j}}(t), \quad \forall t\in [0,T_{\max}]
+	\label{eq:union_cover}
+\end{equation}
+固定时刻$t$，舰船圆心$\bm{s}(t)=(V_{\mathrm{s}} t,0)$，第$j$团烟幕固定中心$\bm{c}_{\mathrm{j}}=(c_{\mathrm{j},\mathrm{x}},0)$（共线相对模型）。
+取舰船圆盘竖直截面参数$\xi\in[-R_{\mathrm{s}},R_{\mathrm{s}}]$，代表截面纵坐标；构造单烟幕截面平方裕度函数：
+\begin{equation}
+	L_{\mathrm{j}}(\xi,t) = r_{\mathrm{j}}^2(t) - R_{\mathrm{s}}^2 - \big(s_{\mathrm{x}}(t)-c_{\mathrm{j},\mathrm{x}}\big)^2 - 2\big(s_{\mathrm{x}}(t)-c_{\mathrm{j},\mathrm{x}}\big)\xi
+	\label{eq:L_j}
+\end{equation}
+对单一时刻，舰船圆盘完全被烟幕并集覆盖的充要条件：
+\begin{equation}
+	\min_{\xi\in[-80,80]} \max_{\mathrm{j}=1,2,\dots,n} L_{\mathrm{j}}(\xi,t) \ge 0
+	\label{eq:full_cover_criterion}
+\end{equation}
+性质：$L_{\mathrm{j}}(\xi,t)$关于$\xi$为一次线性函数，极值仅出现在区间端点$\xi=\pm80$与多烟幕交点，无需全域遍历即可完成精确判定。
+
+\subsection{模型验证}
+为规避离散网格漏判、浮点误差失真，采用两套数学逻辑完全独立的方案进行验证：
+\begin{enumerate}
+	\item \textbf{连续时间区间证书法（主证明）}
+	将探测窗口$[0,T_{\max}]$自适应划分为若干规范时间盒，每个盒内烟幕半径分段模式恒定（恒定半径/线性衰减/失效）；采用Lipschitz保守向外舍入计算盒内裕度全局下界，若所有盒下界均非负，则出具连续无空档遮蔽数学证书；记录未决盒、失败盒、时间空档数量作为判定指标。
+	\item \textbf{精确截面独立校验法（交叉复核）}
+	选取所有临界时刻（各弹起爆、18 s衰减起点、23 s失效点、窗口起止），在每一时刻对$\xi$端点、交点计算截面最小裕度，统计舰船边界最大未覆盖面积；仅作辅助验证，不可单独作为连续可行证明。
+\end{enumerate}
+
+\subsection{干扰弹最小数量论证}
+
+基于问题一的论述，易得：仅依靠单枚干扰弹无法完成全窗口完整遮蔽。
+
+若规定所有投放指令满足$t_{\text{cmd}}\ge0$，受系统时序延时约束，最早起爆时刻$t_{\mathrm{b}}\ge5.5\,\text{s}$，区间$[0,5.5)\,\text{s}$无任何烟幕覆盖，必然存在裸露时段，不存在全窗口遮蔽可行方案。
+
+在允许锁定前预部署的共线相对模型下，满足全窗口完整遮蔽的最少干扰弹数为2枚：
+\begin{enumerate}
+	\item 必要性：结合前文单弹遮蔽上界可知，单枚烟幕遮蔽时长不足以覆盖完整探测窗口，因此至少需要2枚干扰弹；
+	\item 充分性：两弹协同方案经连续时间区间证书、独立截面校验两套体系双重验证，全程无遮蔽空档，可完整覆盖$[0,25.36104262]\,\text{s}$全探测窗口。
+\end{enumerate}
+
+
+\subsection{最优协同方案}
+本方案依赖$t_{\text{cmd}}<0$的锁定前预投放指令，两团烟幕通过时序接力和空间互补消除全部裸露区间\cite{liu2026smoke}，核心参数如表\ref{tab:two_bomb_schedule}。
+
+\begin{table}[htbp]
+	\centering
+	\caption{两弹全窗口遮蔽方案时序与烟幕中心参数}
+	\label{tab:two_bomb_schedule}
+	\begin{tabular}{c|c|c|c|c|c|c}
+		\hline
+		\textbf{弹序号} & \textbf{烟幕中心$c_{\mathrm{x}}$/m} & $t_{\text{cmd}}$/s & $t_{\mathrm{d}}$/s & $t_{\mathrm{b}}$/s & 预部署标记 & 有效遮蔽区间/s \\
+		\hline
+		第1枚 & 33.73703319 & -7.88582566 & -5.88582566 & -2.38582566 & 是 & $[0, 20.61417434]$ \\
+		第2枚 & 161.83285766 & 2.94018905 & 4.94018905 & 8.44018905 & 否 & $[8.44018905, 25.36104262]$ \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\noindent\textbf{分析与结论：}
+	
+表\ref{tab:two_bomb_schedule}给出了两弹全窗口遮蔽方案的时序与空间参数。第1枚弹通过$t_{\mathrm{b}}<0$的锁定前起爆消除窗口前端裸露区间；第2枚弹在锁定后投放，负责中后段遮蔽；两弹重叠区间$[8.44,20.61]\,\text{s}$通过空间互补消除衔接空档，完整覆盖$[0,25.36]\,\text{s}$探测窗口。该方案依赖$t_{\text{cmd}}<0$预部署能力。
+
+两弹有效遮蔽区间重叠$[8.44018905,20.61417434]\,\text{s}$，通过空间互补消除衔接空档，完整覆盖$[0,25.36104262]\,\text{s}$导弹探测窗口。连续区间证书完整验证指标如表\ref{tab:two_bomb_cert}。
+
+\begin{table}[htbp]
+	\centering
+	\caption{两弹方案连续时间区间证书验证}
+	\label{tab:two_bomb_cert}
+	\begin{tabular}{c|l}
+		\hline
+		\textbf{验证指标} & \textbf{数值结果} \\
+		\hline
+		待覆盖总探测时长 & $25.3610426206\,\text{s}$ \\
+		规范划分时间盒总数 & 9 \\
+		内部细分校验子盒 & 12 \\
+		失效盒 / 未决盒 / 时间空档 & 0 / 0 / 0 \\
+		时间盒内最小保守裕度 & $259.25184430\,\text{m}^2$ \\
+		独立截面全局最小裕度 & $1463.88728025\,\text{m}^2$ \\
+		任意时刻舰船最大未覆盖面积 & $0\,\text{m}^2$ \\
+		综合验证状态 & $\text{PASS}$ \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+	
+表\ref{tab:two_bomb_cert}汇总了两弹方案的验证结果：9个时间盒、12个校验子盒中失效/未决/空档均为0，最小保守裕度$259.25\,\text{m}^2>0$，独立截面法全局最小裕度$1463.89\,\text{m}^2$，双重验证均通过。
+
+
+\subsection{方案对比}
+定义两套容量评估基准：
+\begin{itemize}
+	\item 方案A（共线空间互补优化）：多烟幕协同利用空间重叠互补，求解连续无空档最长遮蔽时长；2、3弹结果为当前最优已验证共线解，无全局最优数学上界；
+	\item 方案B（保守时序接续基线）：不利用空间互补，仅将$n$段独立单弹10.376 s遮蔽区间首尾相接，给出遮蔽时长保守下界，可解释性强但严重低估协同增益。
+\end{itemize}
+
+1、2、3枚干扰弹容量前沿汇总见表\ref{tab:capacity_frontier}，能力对比见图\ref{fig:capacity_frontier}。
+
+\begin{table}[htbp]
+	\centering
+	\caption{1~3枚干扰弹最大连续完整遮蔽容量前沿}
+	\label{tab:capacity_frontier}
+	\begin{tabular}{c|c|c|c}
+		\hline
+		\textbf{干扰弹数量} & \textbf{方案A：共线优化/s} & \textbf{方案B：保守接续/s} & 结论强度标注 \\
+		\hline
+		1 & 10.37613489 & 10.37613489 & 解析精确上界 \\
+		2 & 29.07187104 & 20.75226978 & 共线构型最优前沿 \\
+		3 & 42.52312987 & 31.12840467 & 当前最佳已验证共线解 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+表\ref{tab:capacity_frontier}汇总了1$\sim$3枚弹的容量前沿。单弹两方案重合（$10.38\,\text{s}$，解析精确上界）；两弹方案A（$29.07\,\text{s}$）超出探测窗口约$3.71\,\text{s}$，保守基线B（$20.75\,\text{s}$）无法覆盖窗口，差值体现空间互补的核心增益；三弹方案A（$42.52\,\text{s}$）为当前已验证共线最优解，无全局最优证明。
+
+
+图\ref{fig:capacity_frontier}对比了方案A（空间互补优化）与方案B（保守时序接续）在各弹数下的遮蔽容量（虚线标记$T_{\max}=25.36\,\text{s}$）。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{q2_capacity_frontier.png}
+	\caption{1-3枚弹容量前沿对比}
+	\label{fig:capacity_frontier}
+\end{figure}
+
+由图\ref{fig:capacity_frontier}可见：单弹两种方案均远低于门槛线；两弹仅方案A超过门槛；三弹两种方案均超过门槛但方案A的协同增益更为显著。该对比直观说明了多烟幕空间互补是提升遮蔽能力的核心机制。
+
+综上，两弹空间互补方案较保守接续方案的显著增益（$29.072\,\text{s}$ vs $20.752\,\text{s}$）直观验证了多烟幕并集协同的核心价值；三弹$42.523\,\text{s}$仅为局部最优验证解，不可作为全局最大值。
+
+
+\subsection{模型边界、鲁棒性约束与输入缺失说明}
+\subsubsection{方案裕度与参数扰动敏感性}
+1. 两弹全窗口方案时间盒最小保守裕度$259.25\,\text{m}^2$，存在正遮蔽余量，但余量偏小；对舰速、烟幕半径、起爆延时小幅扰动敏感；
+
+2. 两弹容量前沿29.072 s仅超出探测窗口3.71 s，参数波动下易出现裸露空档，实战规划需预留更大安全裕度。
+
+\subsubsection{结论适用严格边界}
+\begin{itemize}
+	\item 所有可行结论仅适用于G1纯追踪、S1固定烟幕、O0完整圆盘遮蔽、U0无风、舰船-烟幕共线相对模型；
+	\item 依赖锁定前预部署负时刻投放指令；若限制$t_{\text{cmd}}\ge0$，两弹方案失效；
+	\item 三弹42.523 s仅为共线构型内当前最优解，无全局上界证明，不得写作“全局最优”；
+	\item 缺少无人机初始位置、基地基准，12 km作战半径、飞行可达性校验状态$\text{blocked}$，不编造绝对投放坐标、飞行轨迹；
+	\item 未引入风漂移模型，风向风速仅作为后续鲁棒拓展，基准结论不考虑烟幕漂移。
+\end{itemize}
+
+
+%%\subsection{本章小结}
+%本章在问题一的基础上拓展多弹协同遮蔽体系，构建完整圆盘截面裕度判据，采用连续区间证书和精确截面双重独立验证，得到闭环核心结论：
+%\begin{enumerate}
+%	\item 单枚干扰弹最优连续完整遮蔽时长解析上界为$10.376\,\text{s}$，小于导弹最坏探测窗口$25.361\,\text{s}$，无法独立完成全窗口防御；
+%	\item 允许$t_{\text{cmd}}<0$锁定前预部署的共线相对模型中，2枚干扰弹可通过时序接力+空间互补实现$[0,25.36104262]\,\text{s}$无空档完整遮蔽，因此满足全窗口防御的最少弹药数为2枚；
+%	\item 1、2、3枚弹最优共线遮蔽容量分别为10.376 s、29.072 s、42.523 s；对比保守时序接续基线，空间互补可大幅提升遮蔽时长；
+%	\item 模型存在明确适用边界：禁止预部署、引入风漂、补充无人机全局坐标后，需重新校验方案可达性；三弹仅为局部最优验证解，无全局最优证明。
+%\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{问题三模型的建立与求解}
+
+本问在第二问的基础上进行拓展，研究三架无人机同步投放干扰弹的防御场。首先，明确两类不可突破的硬性约束；接着，列出无加权处理的多目标优化指标，如最大化双重遮蔽时长等防护指标、最小化无人机总飞行航程等飞行损耗指标；最后进行容错校验，并采用ε约束算法求解帕累托最优解集。
+
+%\subsubsection{重要前置口径声明}
+%本文全部无人机初始坐标、投放时刻、烟幕中心、安全距离阈值、扰动测试数值均为\texttt{SYNTHETIC\_SCENARIO\_ONLY}标准化测试场景数据；赛题未提供无人机真实初始位置与基地基准，所有定量结论不可直接套用于任意作战初态；风漂移、无人机最小转弯半径、燃油能耗未纳入基准模型，仅作为后续拓展分析。
+
+\subsection{模型准备}
+\subsubsection{坐标系建立与角度定义}
+全局二维水平面坐标系：舰船锁定时刻圆心$\bm{s}(0)=(0,0)$，$x$轴沿舰船匀速航向，$y$轴指向航向左侧；来袭方位角$\beta$从$x$轴正方向逆时针计量。舰船运动复用Q1统一方程：
+\[\bm{s}(t) = V_{\mathrm{s}} t \cdot\bm{e}_{\mathrm{x}},\quad V_{\mathrm{s}}=7.71\,\text{m/s},\;R_{\mathrm{s}}=80\,\text{m}\]
+烟幕最大恒定半径$R_{\mathrm{c}}=120\,\text{m}$，导弹最坏探测窗口终点$T_{\max}=25.3610426206\,\text{s}$。
+
+\subsubsection{任务时钟与预部署规则}
+\begin{itemize}
+	\item $t=0$：导弹抵达8000 m距离边界并完成锁定，防御考核窗口从$t=0$起始；
+	\item 无人机可用时刻$a_{\mathrm{i}}\in[-60,0]\,\text{s}$，允许锁定前预部署任务；仿真时序顺序：先计算$a_{\mathrm{i}}\to0$预部署航迹，再计算$t\ge0$锁定后防御动作；
+	\item 标准化事件时序链：5.5s仅为理论时序下界，实际需叠加无人机飞抵投放点的机动时长；$t_{\mathrm{b}}<0$代表锁定前预起爆烟幕，用于消除窗口前端裸露区间。
+\end{itemize}
+
+
+\subsubsection{符号定义}
+\begin{table}[htbp]
+	\centering
+	\caption{第三问模型全部变量与参数汇总}
+	\label{tab:q3_symbol_table}
+	\begin{tabularx}{\textwidth}{l l}
+		\toprule
+		\textbf{符号} & \textbf{物理含义与单位} \\
+		\midrule
+		$a_i$ & 第$i$架无人机可用预部署时刻，单位$\mathrm{s}$ \\
+		$\bm{u}_i(t)$ & $t$时刻第$i$架无人机位置矢量，单位$\mathrm{m}$ \\
+		$\psi_i$ & 第$i$架无人机初始航向角，单位$\mathrm{rad}$ \\
+		$d_{\text{safe}}$ & 无人机间最小安全间距阈值，单位$\mathrm{m}$ \\
+		$\beta$ & 导弹来袭方位角，取值区间$[0,\pi]\,\mathrm{rad}$ \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+
+\subsubsection{S1烟幕演化模型}
+本问直接沿用前文定义的多烟幕时变半径分段函数，各烟幕起爆后位置固定，采用无风基准假设；干扰弹惯性飞行总位移为98\(m\)，作为无人机投放点位计算依据。
+
+
+\subsection{核心硬约束数学建模}
+\subsubsection{完整圆盘遮蔽充要约束}
+烟幕演化模型、两级时序延时约束 $t_{\text{d}} = t_{\text{cmd}} + 2$、$t_{\text{b}} = t_{\text{d}} + 3.5$ 复用5.2.3节问题一统一标准，仅补充干扰弹惯性位移 $98\,\text{m}$ 用于投放点位计算；舰船完整遮蔽充要条件与截面裕度函数 $L_j(\xi,t)$ 复用6.1.2节问题二推导结论，采用连续时间包络法、圆盘差集校验两套独立方案完成遮蔽有效性验证。
+
+\subsubsection{无人机全时段安全间距约束}
+任意两架无人机$i<k$，全运动时域内欧氏距离不低于安全阈值$d_{\text{safe}}$：
+\begin{equation}
+	\|\bm{u}_{\mathrm{i}}(t)-\bm{u}_{\mathrm{k}}(t)\| \ge d_{\text{safe}},\quad \forall t
+	\label{eq:q3_safe_dist}
+\end{equation}
+为规避离散采样漏判，将无人机航迹分段线性解析求解间距极小值，获取全局最小飞行间距。
+
+
+\subsection{多目标优化模型（$\varepsilon$约束法）}
+以式\eqref{eq:q3_full_cover}、式\eqref{eq:q3_safe_dist}为不可松弛硬约束，构建多目标优化体系：
+\[
+\begin{cases}
+	\max \quad F_1(\cdot)=\text{双重覆盖时长占比},\quad \max \quad F_2(\cdot)=N-1\text{完整防御数量} \\
+	\min \quad G_1(\cdot)=\displaystyle\sum_{\mathrm{i}=1}^3 \text{UAV}_{\mathrm{i}}\text{总航程},\quad \min \quad G_2(\cdot)=\displaystyle\sum_{\mathrm{i}=1}^3 |\Delta\psi_{\mathrm{i}}|\text{总转向角} \\
+	\text{s.t.}\quad \eqref{eq:q3_full_cover},\;\eqref{eq:q3_safe_dist},\;a_{\mathrm{i}}\in[-60,0]
+\end{cases}
+\]
+采用$\varepsilon$约束法生成Pareto前沿：将极小化指标设置$\varepsilon$上界作为新增约束，依次最大化遮蔽冗余与容错指标，不人为加权融合多量纲指标，保证解集客观反映指标取舍关系\cite{liu2026smoke}。
+
+\subsection{标准化场景代表方案P2（A-00073）}
+经综合权衡，选定P2为基准代表方案；需明确：P2仅为合成场景局部最优解，不存在全局最优数学证明。
+\begin{table}[htbp]
+	\centering
+	\caption{P2三机预部署、投放与烟幕参数（仅标准化合成场景）}
+	\label{tab:p2_events}
+	\begin{tabularx}{\textwidth}{c c c c c c c}
+		\toprule
+		\textbf{无人机编号} & 初始位置与航向 & $a_{\mathrm{i}}$/s & 时序$t_{\text{cmd}}\to t_{\mathrm{d}}\to t_{\mathrm{b}}$/s & 投放点/m & 烟幕中心/m & 航程/m，总转向/rad \\
+		\midrule
+		UAV1 & $(-400,0),\psi=0$ & -17.8764 & $-7.8858\to-5.8858\to-2.3858$ & $(-64.263,0)$ & $(33.737,0)$ & 335.737，0 \\
+		UAV2 & $(-200,300),\psi=0$ & -8.3464 & $2.9402\to4.9402\to8.4402$ & $(86.391,62.550)$ & $(161.833,0)$ & 372.024，0.692 \\
+		UAV3 & $(-200,-300),\psi=0$ & -17.7210 & $-9.5000\to-7.5000\to-4.0000$ & $(-21.220,-76.525)$ & $(40,0)$ & 286.187，0.896 \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+表\ref{tab:p2_events}给出了P2方案三机完整参数：UAV1与UAV3在$t=0$前预部署起爆（$t_{\mathrm{b}}<0$），负责前端遮蔽；UAV2锁定后投放，负责中后段遮蔽与冗余覆盖。三机总航程$993.95\,\text{m}$，总转向$1.59\,\text{rad}$。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.65\textwidth]{q3_p2_trajectories.png}
+	\caption{P2三机完整预部署+防御航迹（合成场景专用）}
+	\label{fig:p2_trajectories}
+\end{figure}
+
+图\ref{fig:p2_trajectories}展示了P2方案三架无人机的完整运动轨迹：UAV1与UAV3航向无需调整，直飞投放点；UAV2经航向调整后抵达投放点$(86.39,62.55)$，烟幕中心投影至航迹$(161.83,0)$。全部轨迹满足安全间距约束，最小瞬时间距$46.38\,\text{m}$（$t=-3.08\,\text{s}$，UAV1-UAV3）。
+
+\noindent P2核心验证指标：全域遮蔽连续包络$\text{PASS}$，最大未覆盖面积$0\,\text{m}^2$；预警提前量$17.88\,\text{s}$；名义安全间距$[0,46.38]\,\text{m}$（\textbf{仅为本场景名义上限}）；全局最小瞬时间距$46.38\,\text{m}$（$t=-3.08\,\text{s}$，UAV1-UAV3）；全机总航程$993.95\,\text{m}$，总转向$1.59\,\text{rad}$；$N-1$容错$2/3$，单一失效最长遮蔽$10.38\,\text{s}$（与Q1上界一致）；双重覆盖占比$40.91\%$。
+
+\subsection{四类候选方案Pareto指标横向对比}
+保留P1、P2、P4、Q3-B基线方案用于指标取舍分析，无单一方案同时满足全部指标最优。
+\begin{table}[htbp]
+	\centering
+	\caption{P1/P2/P4/Q3-B多目标指标对比}
+	\label{tab:comparison}
+	\begin{tabularx}{\textwidth}{c c c c c c c}
+		\toprule
+		\textbf{方案} & 预警提前/s & 名义$d_{\text{safe}}$/m & $N-1$有效数 & 失效遮蔽上界/s & 双重覆盖/\% & 总航程/m \\
+		\midrule
+		P1 & 22.2857 & 83.7209 & 1/3 & 9.5591 & 24.89 & 956.331 \\
+		P2（选定） & 17.8764 & 46.3809 & 2/3 & 10.3761 & 40.91 & 993.949 \\
+		P4 & 15.9682 & 40.0344 & 1/3 & 9.5638 & 24.89 & 1008.694 \\
+		Q3-B基线 & 13.7210 & 189.7530 & 0/3 & 10.3761 & 0.00 & 1110.187 \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+由表\ref{tab:comparison}可见：无单一方案在全指标上同时最优。P1安全间距最大（$83.72\,\text{m}$）但$N-1$容错仅$1/3$；P2以增加$37.6\,\text{m}$航程换取$N-1$容错$2/3$与双重覆盖$40.91\%$的显著提升；P4预警最短（$15.97\,\text{s}$）；Q3-B为低冗余基线。综合选取P2为基准方案。
+
+\subsection{$N-1$单机失效容错分析}
+依次剔除单架无人机全部烟幕贡献，独立运行连续遮蔽验证，统计防御完整性：
+\begin{table}[htbp]
+	\centering
+	\caption{三机方案单机失效遮蔽测试结果}
+	\label{tab:failure}
+	\begin{tabularx}{\textwidth}{c c c c}
+		\toprule
+		\textbf{失效无人机} & 全窗口完整遮蔽 & 剩余最长连续遮蔽/s & 全域裸露起始时刻/s \\
+		\midrule
+		UAV1 & 可行 & 25.3610 & 无裸露区间 \\
+		UAV2 & 不可行 & 10.3761 & 10.3761 \\
+		UAV3 & 可行 & 25.3610 & 无裸露区间 \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+由表\ref{tab:failure}可见：UAV1或UAV3失效后剩余两机仍可维持全窗口完整遮蔽（$25.36\,\text{s}$），UAV2失效则仅保留单弹级能力（$10.38\,\text{s}$），因其中段衔接烟幕为防御核心。$N-1$完整防御比例为$2/3$。
+
+
+\subsection{敏感性分析}
+
+在安全阈值$d_{\text{safe}}$方面，P2方案安全保留率随$d_{\text{safe}}$增大递减，名义上限$46.38\,\text{m}$处骤降至$48.3\%$（表\ref{tab:safety_sensitivity}、图\ref{fig:safety_sensitivity}），允许方案切换可提升至$86.95\%$。2000组随机扰动中两机最小瞬时间距低至$0.234\,\text{m}$，\textbf{但不可解读为全工况鲁棒安全下限}。
+
+在初始位置与航向扰动方面，UAV1 X向偏移$-200\,\text{m}$使预警提前量增加$40.0\%$（表\ref{tab:position_sensitivity}）；航向偏转$-45^\circ$使总转向量增加$49.4\%$（表\ref{tab:heading_sensitivity}），但全部工况下完整遮蔽均恒成立。来袭方位$\beta\in[0,\pi]$全域扫描全部通过完整遮蔽验证。
+\subsection{Pareto最优解集可视化与模型边界约束}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{q3_pareto_front.png}
+	\caption{Pareto前沿解集}
+	\label{fig:pareto}
+\end{figure}
+
+图\ref{fig:pareto}展示了Pareto前沿：P4位于前沿左端（预警短但安全间距小），P1位于右端（安全间距大但预警长），P2位于中段取得均衡。该前沿清晰揭示了各指标间的客观取舍关系。
+
+\subsubsection{模型局限性与证据严格边界}
+\begin{enumerate}
+	\item 全部坐标、航程、安全阈值、扰动数值仅适配\texttt{SYNTHETIC\_SCENARIO\_ONLY}标准化测试场景，赛题无真实无人机初始坐标；
+	\item 46.381 m仅为本场景名义安全上限，任意初态扰动下无法保证该间距，2000组样本最小间距0.234 m仅作限制证据；
+	\item 96.05\%扰动保留率不可等价为实战防御成功概率；
+	\item 基准模型未引入风漂移、无人机最小转弯半径、燃油能耗约束；
+	\item P2仅为合成场景局部代表解，无全局最优数学证明；
+	\item $N-1$仅作容错评估，不设置为硬性防御标准。
+\end{enumerate}
+
+
+%\subsection{本章小结}
+%本章在Q2双机协同遮蔽几何体系基础上，构建三无人机协同多目标防御优化模型，以全域完整遮蔽、无人机全时段安全间距为不可松弛硬约束，采用$\varepsilon$约束法生成无加权Pareto最优解集。选取合成场景P2作为代表方案，通过连续时间包络、圆盘差集双重验证证明$[0,25.3610\,\text{s}]$全程完整遮蔽。
+%通过四方案横向对比量化预警时长、安全间距、容错、航程之间的客观取舍；$N-1$失效测试揭示中段烟幕UAV2为防御容错瓶颈；针对安全阈值、来袭方位、初始坐标、航向完成多维度敏感性扫描，明确模型适用边界与证据限制。
+%本章所有定量结论仅限定于标准化合成测试场景，补充真实无人机初始位置、风漂、转弯约束后需重新完整求解校验。本三机模型可向下兼容Q2双机两弹遮蔽基础构型，为多机多层防御提供拓展基础。
+
+
+\section{问题四模型的建立与求解}
+
+本问核心任务是复用Q1–Q3全部经双重验证的完整遮蔽方案，构建多批次导弹、多无人机时序动态作战调度体系。
+
+\subsection{双层解耦架构设计}
+为避免高维连续烟幕几何约束直接嵌入混合整数线性规划造成求解困难，采用「下层几何模板认证层 + 上层滚动时域MILP调度层」\cite{wei2025rollout}完全解耦架构，两层单向数据流通，几何预计算结果作为上层只读输入，架构流程见图\ref{fig:two_layer}。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{q4_two_layer_architecture.png}
+	\caption{双层调度架构}
+	\label{fig:two_layer}
+\end{figure}
+
+图\ref{fig:two_layer}展示了问题四的双层解耦调度架构。下层负责对Q1\symbol{126}Q3全部烟幕遮蔽方案进行连续时间与独立几何双重验证，仅双验证PASS的模板入库；上层滚动时域MILP从已认证模板库中选择\"模板-无人机-威胁\"匹配组合，不直接求解连续烟幕几何。A方案超时时B基线自动接管。该架构有效规避了高维连续几何约束直接嵌入整数规划的求解困难。
+
+\textbf{下层（模板认证层）：}将Q1$\sim$Q3全部遮蔽方案标准化为防御模板（含威胁类型、弹药数、预警提前量、时序、航程/转向、双重验证状态），经门禁审计（表\ref{tab:template_gate}）剔除不合格模板，仅双验证PASS者入库参与上层调度。
+	\begin{table}[htbp]
+		\centering
+		\caption{防御模板门禁审计（节选）}
+		\label{tab:template_gate}
+		\begin{tabular}{cccc}
+			\toprule
+			模板ID & 连续验证 & 独立验证 & 门禁判定 \\
+			\midrule
+			T-Q1-SINGLE & PASS & PASS & 准入入库 \\
+			T-Q2-TWO & PASS & PASS & 准入入库 \\
+			T-Q3-TRI & PASS & PASS & 准入入库 \\
+			T-Q3-BASELINE-REJECT & PASS & FAIL & 拦截剔除 \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	表\ref{tab:template_gate}展示了防御模板门禁审计结果（节选）。T-Q1-SINGLE、T-Q2-TWO、T-Q3-TRI三类核心模板连续验证与独立验证均为PASS，准予入库参与上层调度；T-Q3-BASELINE-REJECT因独立验证FAIL被拦截剔除。门禁机制确保进入调度层的全部模板均经双重几何验证，从源头杜绝了不可行遮蔽方案被调度器选用的风险。
+	
+\textbf{上层（MILP调度层）：}不直接求解连续几何，仅从入库模板中选择0-1匹配组合，构建带资源、时序、安全硬约束的MILP模型，采用六层词典序多目标优化。
+
+\subsection{MILP变量、硬约束与词典序优化体系}
+\subsubsection{核心0-1决策变量}
+$y_{\mathrm{i},\mathrm{j},\mathrm{k}}\in\{0,1\}$：1代表将第$i$号模板分配给第$j$架无人机，用于遮蔽第$k$组导弹威胁；$b_{\mathrm{i}}$为模板$i$消耗干扰弹枚数。
+
+\subsubsection{资源与时序硬约束}
+\begin{align}
+	&\sum_{\mathrm{i}}\sum_{\mathrm{k}} y_{\mathrm{i},\mathrm{j},\mathrm{k}} \cdot b_{\mathrm{i}} \le 3,\quad \forall j=1,2,\dots,5 \tag{单机载弹上限}\\
+	&\sum_{\mathrm{i}}\sum_{\mathrm{j}}\sum_{\mathrm{k}} y_{\mathrm{i},\mathrm{j},\mathrm{k}} \le 15 \tag{全系统弹药上限}\\
+	&t_{\text{start},a} \ge t_{\text{end},b} + \Delta t_{\text{trans}} \tag{无人机任务无时间冲突}
+\end{align}
+配套约束：无人机12km作战半径、机间最小安全间距$d_{\mathrm{safe}}$、威胁揭示前禁止生成预投放指令、已执行/承诺任务冻结。
+
+\subsubsection{六层词典序优化目标}
+不同指标量纲、战术重要性完全不同，人为加权会出现“牺牲高威胁换取航程”错误取舍；采用逐层锁定规则：当前层级最优值固定后，再优化下一层次指标，层级优先级由高至低如表\ref{tab:lexicographic}。
+\begin{table}[htbp]
+	\centering
+	\caption{词典序优化层级与优化方向}
+	\label{tab:lexicographic}
+	\begin{tabular}{c M{6cm}}
+		\toprule
+		层级 & 优化规则（上层最优值固定再求解下层） \\
+		\midrule
+		第1层 & 最大化等级3（高威胁）完整遮蔽批次数量 \\
+		第2层 & 最大化等级2（中威胁）完整遮蔽批次数量 \\
+		第3层 & 最大化等级1（低威胁）完整遮蔽批次数量 \\
+		第4层 & 同等遮蔽下优先选取剩余反应时间更短的威胁，最小化总未遮蔽风险窗口 \\
+		第5层 & 最小化全系统干扰弹总消耗；航程、转向分设Pareto非支配端点，不加权合并 \\
+		第6层 & 最小化滚动重规划任务变更数量，降低方案抖动 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+表\ref{tab:lexicographic}定义了六层词典序优化目标体系。采用逐层锁定而非加权求和的根本原因在于：防御成功率、弹药消耗和航程的单位与重要性完全不同，人为加权可能导致\"牺牲一个高威胁目标换取少许航程\"的错误取舍。每一层求得最优值后锁定为约束，再求解下一层，确保高层级目标的任何牺牲不会因低层级指标的改善而被补偿。
+
+以临界多重叠场景S2-CRI-OVR为例，逐层优化迭代日志见表\ref{tab:lexicographic_stages}，每一层最优解锁定后方可进入下层求解。
+
+\begin{table}[htbp]
+	\centering
+	\caption{S2-CRI-OVR词典序分层优化日志}
+	\label{tab:lexicographic_stages}
+	\begin{tabular}{cccc}
+		\toprule
+		优化层级 & 本层最优指标 & 选中威胁集合 & 累计消耗弹数 \\
+		\midrule
+		第1层 & 高威胁完整遮蔽=2批 & CRI-OVR-M1、CRI-OVR-M4 & 5 \\
+		第2层 & 保持高威胁2批，新增中威胁2批 & CRI-OVR-M1$\sim$M5 & 7 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+表\ref{tab:lexicographic_stages}以S2-CRI-OVR为例展示了逐层优化过程：第1层锁定高威胁完整遮蔽2批，第2层保持高威胁不变并新增中威胁2批（累计7枚弹），后续层级依次最小化剩余风险与资源消耗。
+
+
+\subsection{事件驱动滚动重规划机制}
+采用触发式滚动时域，仅新信息抵达时重新优化，无持续无效重计算；触发事件：新导弹批次揭示、无人机完成投弹、烟幕到期衰减、原有调度资源不可行。
+
+重规划三层刚性规则：(1)已执行动作永久冻结不可修改；(2)承诺区间内任务默认保留，仅极端短缺允许微调；(3)远期未锁定任务完全放开重新分配。
+滚动时序流程见图\ref{fig:replanning}，突发高紧迫场景单次重规划变更记录见表\ref{tab:rolling_changes}。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{q4_replanning_timeline.png}
+	\caption{滚动重规划时序}
+	\label{fig:replanning}
+\end{figure}
+
+图\ref{fig:replanning}展示了事件驱动的滚动重规划时序机制。新威胁揭示后，已执行投弹/起爆动作（红色区间）永久冻结不可修改；承诺区间内待执行任务（黄色区间）原则上保留，仅极端资源短缺时允许微调；远期未锁定任务（绿色区间）完全放开重新分配。该分层锁定规则兼顾了动态响应的灵活性与作战计划的稳定性，避免因频繁重规划导致的方案抖动。\cite{wei2025rollout}
+
+\begin{table}[htbp]
+	\centering
+	\caption{S2-CRI-SUR单次重规划任务变更记录}
+	\label{tab:rolling_changes}
+	\begin{tabular}{cccc}
+		\toprule
+		方案 & 新增可调远期任务 & 移除旧远期任务 & 执行/承诺任务变更量 \\
+		\midrule
+		Q4-A主方案 & 2 & 1 & 0/0 \\
+		Q4-B基线 & 3 & 1 & 0/0 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+表\ref{tab:rolling_changes}记录了S2-CRI-SUR场景单次重规划结果：A主方案新增2个远期任务、移除1个，执行/承诺区间变更量均为0，验证了分层锁定规则的有效性。
+
+\subsection{Q4-B贪心基线与超时自动接管机制}
+基线Q4-B采用固定贪心分配优先级：无人机可达性→剩余反应时长→威胁等级→弹药消耗→单机转向；优势求解速度快、逻辑透明，缺陷为局部最优易耗尽稀缺无人机，多重叠场景遮蔽能力大幅下降。
+设置多档求解时限测试，若Q4-A在给定时限内无可行整数解，自动切换Q4-B输出合规调度，全部基线方案满足全部资源与时序硬约束，测试结果见表\ref{tab:timeout}。
+\begin{table}[htbp]
+	\centering
+	\caption{求解时限与基线接管测试结果}
+	\label{tab:timeout}
+	\begin{tabular}{ccc}
+		\toprule
+		求解时限/s & Q4-A求解状态 & 是否触发B接管 \\
+		\midrule
+		$10^{-6}$ & 超时无可行解 & 是 \\
+		0.001 & 超时无可行解 & 是 \\
+		0.01 & 超时无可行解 & 是 \\
+		0.1 & 求得最优整数解 & 否 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+表\ref{tab:timeout}的测试表明：时限$\leq0.01\,\text{s}$时MILP无法获得可行整数解，自动触发B基线接管；$0.1\,\text{s}$时A求得最优整数解。$0.1\,\text{s}$为本组场景的临界阈值，不可推广为普适标准。
+
+\subsection{九组合成场景A/B方案指标对比}
+构建3（资源工况：SUF充足/CRI临界/SHO短缺）$\times$3（来袭结构：SEQ同向/OVR多重叠/SUR突发）标准化测试矩阵，全部场景仅用于方法验证，不代表真实作战工况，核心指标对比见表\ref{tab:regime_comparison}。
+核心规律：
+\begin{itemize}
+	\item 同向分批SEQ：A、完整遮蔽数量持平，A弹药、航程资源开销更低；
+	\item 多重叠OVR：A可选用覆盖多威胁大模板，B贪心抢占单机，遮蔽数量显著更低；
+	\item 资源短缺SHO：A严格按3→2→1舍弃低威胁，B易耗尽资源被迫放弃高等级目标。
+\end{itemize}
+\begin{table}[htbp]
+	\centering
+	\caption{九场景A/B完整指标对比（合成场景）}
+	\label{tab:regime_comparison}
+	\begin{tabular}{ccccc}
+		\toprule
+		场景编号 & 方案 & 完整遮蔽批 & 总耗弹 & 总航程/m \\
+		\midrule
+		S2-SUF-SEQ & A & 4/4 & 5 & 3741.48 \\
+		S2-SUF-SEQ & B & 4/4 & 6 & 4796.15 \\
+		S2-SUF-OVR & A & 4/4 & 2 & 1228.73 \\
+		S2-SUF-OVR & B & 2/4 & 2 & 2267.05 \\
+		S2-CRI-OVR & A & 5/5 & 2 & 1228.73 \\
+		S2-CRI-OVR & B & 2/5 & 2 & 2267.05 \\
+		S2-SHO-SEQ & A & 4/6 & 5 & 4135.78 \\
+		S2-SHO-SEQ & B & 3/6 & 4 & 3495.78 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+表\ref{tab:regime_comparison}对比了$3\times3$九组合成场景的核心指标。关键差异：(1)多重叠OVR场景中，A利用三弹大模板同时覆盖多批次，完整遮蔽数（SUF-OVR: 4/4 vs 2/4）远超B的贪心分配；(2)资源短缺SHO中，A严格按$3\to2\to1$词典序舍弃低威胁，B易因贪心耗尽关键无人机。同向SEQ场景A/B差距较小，主要体现为弹药与航程效率优势。
+
+\subsection{Pareto非支配端点与代表方案选取}
+第五层同时最小化总航程、总转向，二者量纲不同不做加权，保留全部非支配Pareto端点；选取S2-CRI-SEQ、S2-SUF-OVR两组解集如表\ref{tab:pareto}。选取规则：无端点同时在航程、转向双指标最优，仅综合战术消耗选取代表，备选端点全部保留，不宣称单一全局最优。
+\begin{table}[htbp]
+	\centering
+	\caption{航程-转向Pareto端点汇总}
+	\label{tab:pareto}
+	\begin{tabular}{ccccc}
+		\toprule
+		端点ID & 所属场景 & 总航程/m & 总转向/rad & 选取状态 \\
+		\midrule
+		P1\_L & S2-CRI-SEQ & 3741.48 & 5.15 & 正式代表 \\
+		P1\_T & S2-CRI-SEQ & 3741.48 & 5.15 & 备选保留 \\
+		P2\_L & S2-SUF-OVR & 1228.73 & 2.71 & 正式代表 \\
+		P2\_T & S2-SUF-OVR & 1300.38 & 1.42 & 备选保留 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+表\ref{tab:pareto}汇总了Pareto非支配端点。S2-CRI-SEQ场景P1\_L与P1\_T指标相同（$3741.48\,\text{m}$，$5.15\,\text{rad}$），选取P1\_L为代表；S2-SUF-OVR场景选取P2\_L（$1228.73\,\text{m}$，$2.71\,\text{rad}$），备选P2\_T以增加$71.65\,\text{m}$航程仅减少$1.29\,\text{rad}$转向，边际收益较低。
+
+\subsection{关键参数阈值敏感性分析}
+预警提前量切换区间为$(45,50]\,\text{s}$（45\,s仅$4/5$批次完整遮蔽，50\,s达全覆盖），承诺窗口多组扫描结论不变（不可推广），求解时限$0.1\,\text{s}$为稳定最优临界阈值。
+
+\subsection{资源短缺任务舍弃规则说明}
+弹药总量不足时严格遵循3→2→1优先级舍弃低等级威胁，同等级优先舍弃剩余遮蔽窗口更短目标，舍弃明细见表\ref{tab:rejected}；不将局部遮蔽视作防御成功。
+
+\begin{table}[htbp]
+	\centering
+	\caption{短缺场景舍弃威胁清单}
+	\label{tab:rejected}
+	\begin{tabular}{cccc}
+		\toprule
+		场景 & 舍弃威胁ID & 威胁等级 & 舍弃原因 \\
+		\midrule
+		S2-SHO-SEQ & SHO-SEQ-M3 & 1 & 高等级任务挤占资源 \\
+		S2-SHO-SEQ & SHO-SEQ-M6 & 1 & 高等级任务挤占资源 \\
+		S2-SHO-SUR & SHO-SUR-M2 & 1 & 高等级任务挤占资源 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+表\ref{tab:rejected}列出了短缺场景的舍弃清单：全部被舍弃威胁均为等级1（低威胁），验证了六层词典序对高等级威胁优先防御权的有效保障。A方案不将局部遮蔽判定为防御成功，确保了调度的保守可靠性。
+
+\subsection{模型局限性与证据边界}
+全部调度场景数据为\texttt{SYNTHETIC\_SCENARIO\_ONLY}合成数据，补充真实输入后需重新求解；MILP仅在有限模板集合内寻优，非全空间全局最优；Q4-C鲁棒调度未运行；扰动保留率不可解读为实战成功率；未引入风漂移、转弯半径、燃油能耗约束。
+
+%\subsection{本章小结}
+%本章搭建「下层几何模板预校验+上层滚动时域词典序MILP」双层动态调度框架，规避连续烟幕几何直接嵌入整数规划的高维求解难题。设计七层无加权词典序多目标体系，配套事件触发重规划、超时贪心兜底机制。基于3×3九组合成测试场景对比Q4-A主方案与Q4-B基线，验证主方案在多重叠、资源短缺工况下遮蔽优势；分析预警、求解时限关键阈值，给出短缺任务取舍逻辑。全部定量结论仅适用于当前模板库与标准化合成场景，真实作战输入补充后需重新完整求解。
+
+
+\section{模型的评价、改进与推广}
+
+\section{模型评价}
+\subsection{模型优势}
+\begin{enumerate}
+	\item 整体架构分层自洽，通用性强。整套求解框架不绑定单一情况，仅更换输入参数即可适配不同环境、装备约束场景，具备通用拓展能力。
+	\item 求解体系交叉验证，结果可信度高。融合解析递推算法与大规模随机仿真两套求解路径实现结果互校，同时引入全局敏感性分析量化各参数影响权重，避免单一求解方法带来的结果偏差。
+	\item 模型鲁棒性完备，完成参数扰动、单设备失效两类容错仿真测试。在外部条件小幅波动、局部装备故障场景下，模型整体输出仅出现小幅性能衰减，核心防护逻辑不受破坏。
+	\item 格式体系标准化，表述严谨统一。全文采用规范数学符号体系，图表、推导、分析模块划分清晰，符合学术建模规范。
+\end{enumerate}
+
+\subsection{模型局限性}
+\begin{enumerate}
+	\item 装备硬件约束覆盖维度有限，未补充能耗、通信延迟、载荷损耗等硬件层面限制；默认所有装备无故障、指令无延迟执行，忽略设备异常带来的时序偏差。
+	\item 偏好与筛选机制假设单一。采用标准分布刻画决策偏好，无法覆盖聚类、极端分化等非线性偏好特征；仅采用单轮固定投票规则，未对比加权打分等多元筛选方案。
+	\item 多目标优化维度存在拓展空间。当前仅选取两类装备调度指标构建优化目标，未同步纳入综合作战成本、装备损耗等评价维度，多目标权衡空间有待扩充。
+\end{enumerate}
+
+\subsection{模型的改进}
+
+(1)引入环境风场（风速、风向）到烟幕演化模型中，将固定烟幕中心替换为时变漂移轨迹，评估有风工况下的遮蔽方案鲁棒性；
+
+(2)将G1纯追踪导弹替换为末端机动等模型，使探测窗口长度更贴近实战；
+
+(3)在补充真实初始坐标后，将12\,km作战半径的可达性校验从$\text{blocked}$状态激活，输出完整的绝对投放坐标与无人机飞行航迹；
+
+\subsection{模型的推广}
+
+当前无人机集群动态调度领域已形成成熟的故障重分配技术体系，集群博弈分配机制可在单机失效场景下快速重构任务链路，大幅提升稳定性 \cite {jiang2025uavgame}。本文双层协同调度框架可借鉴该集群博弈容错思路，完善模型的滚动重规划能力，将整套调度体系拓展至应急救灾物资投送、多装备协同作业等易发生设备损耗的现实场景。
+
+\begin{thebibliography}{99}
+	\bibitem[1]{liu2026smoke}
+	刘灿, 周智涵, 熊灯, 等. 无人机烟幕遮蔽策略建模与优化研究[J]. 数学建模及其应用, 2026(1): 65-74.
+	
+	\bibitem[2]{wei2025rollout}
+	韦凌云, 罗林, 庄育锋. 考虑搜索收益平衡的多无人机运动目标协同搜索方法[J]. 控制理论与应用, 2025, 42(2): 385-394.
+	
+	\bibitem[3]{chen2024milschedule}
+	陈蔚. 带缓冲区的多车间汽车混流生产线联合调度问题研究[D]. 北京: 清华大学, 2024.
+	
+	\bibitem[4]{sishoukui2011}
+	司守奎, 孙玺菁. 数学建模算法与应用[M]. 北京: 国防工业出版社, 2011.
+	
+	\bibitem[5]{jiang2025uavgame}
+	姜斌, 马亚杰, 薛舒心. 无人飞行器集群自主控制: 基于联盟形成博弈的任务分配[J]. 自动化学报, 2025, 51(5): 942-959. (EI收录)
+\end{thebibliography}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 参考文献
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 附录
+\begin{appendices}
+	
+	
+	
+	
+\section{文件列表}
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{LL}
+\toprule
+文件名   & 功能描述 \\
+\midrule
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+q1\_single\_smoke\_analysis.py & 问题一：单烟幕几何不可行性证明与A/B/C三套验证 \\
+q2\_multi\_smoke\_coverage.py & 问题二：多烟幕协同截面裕度计算与区间证书验证 \\
+q3\_three\_uav\_pareto.py & 问题三：三机协同$\varepsilon$约束法Pareto前沿求解 \\
+q4\_milp\_scheduler.py & 问题四：双层解耦MILP调度与贪心基线实现 \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bottomrule
+\end{tabularx}
+\label{tab:文件列表}
+\end{table}
+
+
+\end{appendices}
+\end{document}
