@@ -1,0 +1,141 @@
+{
+  "detect_window_parameterisation": {
+    "t_in_s": 0.0,
+    "t_out_s": 24.167709255134113,
+    "duration_s": 24.167709255134113
+  },
+  "t_m_interval_s": [
+    5.188067444876784,
+    18.97964181025733
+  ],
+  "cloud_center_relation": "c_star = ship_position(t_m)",
+  "full_coverage_interval": "[t_m-h, t_m+h]",
+  "t_b_interval": "[t_m+h-18, t_m-h]",
+  "t_d_interval": "[t_m+h-21.5, t_m-h-3.5]",
+  "t_cmd_interval": "[t_m+h-23.5, t_m-h-5.5]",
+  "burst_interval_width_s": 7.623865110246433,
+  "front_strategy": {
+    "t_m_s": 5.188067444876784,
+    "cloud_center_relation": "c_star = ship_position(t_m)",
+    "full_coverage_interval_s": [
+      0.0,
+      10.376134889753567
+    ],
+    "t_b_interval_s": [
+      -7.623865110246433,
+      0.0
+    ],
+    "t_d_interval_s": [
+      -11.123865110246433,
+      -3.5
+    ],
+    "t_cmd_interval_s": [
+      -13.123865110246433,
+      -5.5
+    ],
+    "interval_widths_s": {
+      "full_coverage": 10.376134889753567,
+      "t_b": 7.623865110246433,
+      "t_d": 7.623865110246433,
+      "t_cmd": 7.623865110246433
+    },
+    "representative_only": {
+      "selection": "midpoint_of_admissible_t_b_interval",
+      "t_b_s": -3.8119325551232164,
+      "t_d_s": -7.311932555123216,
+      "t_cmd_s": -9.311932555123217,
+      "not_unique": true
+    }
+  },
+  "middle_strategy": {
+    "t_m_s": 12.083854627567057,
+    "cloud_center_relation": "c_star = ship_position(t_m)",
+    "full_coverage_interval_s": [
+      6.895787182690273,
+      17.27192207244384
+    ],
+    "t_b_interval_s": [
+      -0.7280779275561606,
+      6.895787182690273
+    ],
+    "t_d_interval_s": [
+      -4.228077927556161,
+      3.395787182690273
+    ],
+    "t_cmd_interval_s": [
+      -6.228077927556161,
+      1.395787182690273
+    ],
+    "interval_widths_s": {
+      "full_coverage": 10.376134889753565,
+      "t_b": 7.623865110246434,
+      "t_d": 7.623865110246434,
+      "t_cmd": 7.623865110246434
+    },
+    "representative_only": {
+      "selection": "midpoint_of_admissible_t_b_interval",
+      "t_b_s": 3.083854627567056,
+      "t_d_s": -0.4161453724329438,
+      "t_cmd_s": -2.416145372432944,
+      "not_unique": true
+    }
+  },
+  "rear_strategy": {
+    "t_m_s": 18.97964181025733,
+    "cloud_center_relation": "c_star = ship_position(t_m)",
+    "full_coverage_interval_s": [
+      13.791574365380548,
+      24.167709255134113
+    ],
+    "t_b_interval_s": [
+      6.167709255134113,
+      13.791574365380548
+    ],
+    "t_d_interval_s": [
+      2.6677092551341133,
+      10.291574365380548
+    ],
+    "t_cmd_interval_s": [
+      0.6677092551341133,
+      8.291574365380548
+    ],
+    "interval_widths_s": {
+      "full_coverage": 10.376134889753565,
+      "t_b": 7.6238651102464345,
+      "t_d": 7.6238651102464345,
+      "t_cmd": 7.6238651102464345
+    },
+    "representative_only": {
+      "selection": "midpoint_of_admissible_t_b_interval",
+      "t_b_s": 9.97964181025733,
+      "t_d_s": 6.4796418102573305,
+      "t_cmd_s": 4.4796418102573305,
+      "not_unique": true
+    }
+  },
+  "T_structural_max_s": 10.376134889753567,
+  "T_executable_star": "not_evaluated",
+  "input_status": "blocked_missing_scenario",
+  "attainment_conditions": [
+    "detect window duration is at least 2h",
+    "fixed cloud center equals ship_position(t_m)",
+    "the selected t_b keeps [t_m-h,t_m+h] inside [t_b,t_b+18]",
+    "all scenario execution constraints pass"
+  ],
+  "status": {
+    "execution_status": "completed",
+    "input_status": "blocked_missing_scenario",
+    "feasibility_status": "full_window_structurally_infeasible",
+    "certificate_status": "verified",
+    "T_executable_star": "not_evaluated"
+  },
+  "absolute_coordinates": "not_generated",
+  "release_point_relation": {
+    "formula": "p_d = c - 98 e_u",
+    "equivalent": "c = p_d + 98 e_u",
+    "e_u_constraint": "||e_u||_2 = 1",
+    "uniqueness": "parameterised_not_unique",
+    "source_type": "derived_quantity",
+    "derivation": "under S1 inertial-flight assumption: 28 m/s × 3.5 s = 98 m"
+  }
+}

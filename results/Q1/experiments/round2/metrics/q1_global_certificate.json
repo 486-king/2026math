@@ -1,0 +1,65 @@
+{
+  "model": "G1+S1+O0+U0",
+  "locked_at_8000m": true,
+  "lock_condition_note": "The 8000 m detection-window lower-bound certificate is active.",
+  "event_certificate_A": {
+    "method": "continuous_roots_scipy_brentq",
+    "scenario_type": "synthetic_validation",
+    "structural_scenario": {
+      "cloud_center": "reference_origin",
+      "ship_path": "diameter_through_cloud_center",
+      "entry_time_s": -5.188067444876784,
+      "exit_time_s": 5.188067444876784,
+      "duration_s": 10.376134889753567,
+      "root_residual_entry_m": 0.0,
+      "root_residual_exit_m": 0.0
+    },
+    "detection_scenario": {
+      "locked_distance_m": 8000.0,
+      "configuration": "collinear_head_on_maximum_radial_closing_speed",
+      "end_time_s": 24.167709255134113,
+      "root_residual_m": 0.0
+    },
+    "separation_s": 13.791574365380546,
+    "conclusion": "full_window_structurally_infeasible",
+    "verified": true
+  },
+  "analytic_certificate_B": {
+    "method": "closed_form_analytic",
+    "h_s": 5.188067444876784,
+    "T_structural_max_s": 10.376134889753567,
+    "T_detect_lower_s": 24.167709255134113,
+    "T_naked_lower_s": 13.791574365380546,
+    "formulae": {
+      "h": "(R_c-R_s)/V_s",
+      "T_structural_max": "2(R_c-R_s)/V_s",
+      "T_detect_lower": "(D_max-R_s)/(V_m+V_s)",
+      "T_naked_lower": "T_detect_lower-T_structural_max"
+    },
+    "conclusion": "full_window_structurally_infeasible",
+    "verified": true
+  },
+  "interval_certificate_C": {
+    "method": "IEEE-754_math.nextafter_outward_rounding",
+    "T_structural_max_interval_s": {
+      "lower": 10.376134889753565,
+      "upper": 10.376134889753569
+    },
+    "T_detect_lower_interval_s": {
+      "lower": 24.16770925513411,
+      "upper": 24.167709255134117
+    },
+    "T_naked_lower_interval_s": {
+      "lower": 13.791574365380539,
+      "upper": 13.791574365380553
+    },
+    "conservative_positive_separation_lower_s": 13.791574365380539,
+    "strict_check": "detect_lower_interval.lower - structural_interval.upper > 0",
+    "strict_check_value_s": 13.79157436538054,
+    "nondegenerate_intervals": true,
+    "conclusion": "full_window_structurally_infeasible",
+    "verified": true
+  },
+  "conclusion_consistency": true,
+  "certificate_status": "verified"
+}

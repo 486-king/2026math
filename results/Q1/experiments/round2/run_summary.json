@@ -1,0 +1,29 @@
+{
+  "question": "Q1",
+  "approved_model": "G1+S1+O0+U0",
+  "status": "completed",
+  "seed": 20260729,
+  "environment": {
+    "python": "3.12.13",
+    "operating_system": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.3.5",
+    "scipy": "1.18.0",
+    "pandas": "3.0.1",
+    "matplotlib": "3.11.1",
+    "pytest": "9.1.1",
+    "python_docx": "1.2.0"
+  },
+  "warnings": [
+    "Real absolute initial states are missing; no real absolute coordinate is reported."
+  ],
+  "fallback_trigger_state": "not_activated",
+  "round": 2,
+  "role": "ABC_global_certificate",
+  "outputs": [
+    "results/Q1/experiments/round2/metrics/q1_global_certificate.json"
+  ],
+  "metric_summary": {
+    "certificate_status": "verified",
+    "conservative_separation_lower_s": 13.791574365380539
+  }
+}

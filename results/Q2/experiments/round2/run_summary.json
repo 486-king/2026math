@@ -1,0 +1,36 @@
+{
+  "approved_methods": [
+    "Q2-A",
+    "B"
+  ],
+  "environment": {
+    "matplotlib": "3.11.1",
+    "mpmath": "not_installed",
+    "numpy": "2.3.5",
+    "operating_system": "Windows-11-10.0.26200-SP0",
+    "pandas": "3.0.1",
+    "pytest": "9.1.1",
+    "python": "3.12.13",
+    "scipy": "1.18.0"
+  },
+  "fallback_trigger_state": "C_not_activated",
+  "optimisation_runtime": {
+    "three_bomb_function_evaluations": 904,
+    "three_bomb_optimisation_runtime_seconds": 3.0238386999990325,
+    "three_bomb_optimiser_message": "Optimization terminated successfully."
+  },
+  "overall_runtime_seconds": 7.345221700001275,
+  "question": "Q2",
+  "round": 2,
+  "runtime_seconds": 5.06878890000371,
+  "seed": 2026,
+  "started_at": "2026-07-30T09:53:35+08:00",
+  "status": "passed",
+  "warnings": [
+    "A slightly longer three-bomb candidate is retained only as candidate_improvement awaiting human decision.",
+    "Two-bomb acceptance uses only continuous roots, Decimal residuals, and the continuous certificate; the work-guide reference value is read from OOXML, not hardcoded or used as a pass criterion. A positive reference gap downgrades the claim to best_verified_two_bomb_collinear_solution.",
+    "Robustness limits with no observed failure are exploratory scan-censored tested limits, not physical thresholds.",
+    "The former 1e-30 area guard was removed; exact zero is now attributed to the fixed-time analytic coverage proof.",
+    "The current tracked problem DOCX differs from the Q1 historical recorded hash; provenance is documented without modifying Q1."
+  ]
+}

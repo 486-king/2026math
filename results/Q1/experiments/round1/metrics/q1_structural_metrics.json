@@ -1,0 +1,189 @@
+{
+  "model_scope": "Q1 nominal G1+S1+O0+U0",
+  "parameters": {
+    "ship_speed_knots": {
+      "value": 15.0,
+      "unit": "kn",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "knot_conversion": {
+      "value": 0.514,
+      "unit": "m/s per kn",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "V_s": {
+      "value": 7.71,
+      "unit": "m/s",
+      "source_type": "derived_quantity",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": "15×0.514"
+    },
+    "R_s": {
+      "value": 80.0,
+      "unit": "m",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "V_u": {
+      "value": 28.0,
+      "unit": "m/s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "R_u_max": {
+      "value": 12000.0,
+      "unit": "m",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "uav_payload_max": {
+      "value": 3,
+      "unit": "round",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "tau_response": {
+      "value": 2.0,
+      "unit": "s",
+      "source_type": "adopted_interpretation",
+      "source_file": "Q1_编程手与论文手分工.docx",
+      "note": "command to actual release"
+    },
+    "minimum_same_uav_release_interval": {
+      "value": 1.0,
+      "unit": "s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "tau_burst": {
+      "value": 3.5,
+      "unit": "s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "R_c": {
+      "value": 120.0,
+      "unit": "m",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "tau_hold": {
+      "value": 18.0,
+      "unit": "s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "tau_decay": {
+      "value": 5.0,
+      "unit": "s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "smoke_lifetime": {
+      "value": 23.0,
+      "unit": "s",
+      "source_type": "derived_quantity",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "V_m": {
+      "value": 320.0,
+      "unit": "m/s",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "D_max": {
+      "value": 8000.0,
+      "unit": "m",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "fov_half_angle": {
+      "value": 15.0,
+      "unit": "degree",
+      "source_type": "problem_fact",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "inertial_displacement": {
+      "value": 98.0,
+      "unit": "m",
+      "source_type": "derived_quantity",
+      "source_file": "Q1_编程手与论文手分工.docx",
+      "note": "under S1 inertial-flight assumption: V_u×tau_burst"
+    },
+    "operating_radius_interpretation": {
+      "value": "distance from UAV initial launch reference point",
+      "unit": "text",
+      "source_type": "adopted_interpretation",
+      "source_file": "Q1_编程手与论文手分工.docx",
+      "note": ""
+    },
+    "turning_radius": {
+      "value": "not_provided",
+      "unit": "m",
+      "source_type": "missing_input",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    },
+    "absolute_initial_states": {
+      "value": "not_provided",
+      "unit": "mixed",
+      "source_type": "missing_input",
+      "source_file": "B题：舰船烟幕遮蔽干扰优化.docx",
+      "note": ""
+    }
+  },
+  "units": {
+    "length": "m",
+    "time": "s",
+    "speed": "m/s",
+    "angle": "degree"
+  },
+  "assumptions": [
+    "G1 pure pursuit missile",
+    "S1 fixed cloud center after burst",
+    "O0 full two-dimensional ship disk coverage",
+    "U0 no nominal wind drift",
+    "ship moves at constant velocity on a straight line",
+    "locked at 8000 m for the standard lower-bound certificate"
+  ],
+  "h_s": 5.188067444876784,
+  "T_structural_max_s": 10.376134889753567,
+  "T_detect_lower_s": 24.167709255134113,
+  "T_naked_lower_s": 13.791574365380546,
+  "comparison_gap_s": 13.791574365380546,
+  "burst_interval_width_s": 7.623865110246433,
+  "locked_at_8000m": true,
+  "status": {
+    "execution_status": "completed",
+    "input_status": "blocked_missing_scenario",
+    "feasibility_status": "full_window_structurally_infeasible",
+    "certificate_status": "verified",
+    "T_executable_star": "not_evaluated"
+  },
+  "floating_point": {
+    "type": "IEEE-754 binary64",
+    "formulae": {
+      "h": "(R_c-R_s)/V_s",
+      "T_structural_max": "2h",
+      "T_detect_lower": "(D_max-R_s)/(V_m+V_s)",
+      "T_naked_lower": "T_detect_lower-T_structural_max"
+    }
+  }
+}

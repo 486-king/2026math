@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "source_type": "human_work_guide_standardized_scenario",
+  "freeze_status": "unfrozen",
+  "ship_center_at_lock_m": [0.0, 0.0],
+  "coordinate_convention": {
+    "x_axis": "ship_heading",
+    "y_axis": "left_of_ship_heading",
+    "angle_direction": "counterclockwise"
+  },
+  "uav_staging_states": [
+    {"uav_id": 1, "position_m": [-400.0, 0.0], "initial_heading_rad": 0.0},
+    {"uav_id": 2, "position_m": [-200.0, 300.0], "initial_heading_rad": 0.0},
+    {"uav_id": 3, "position_m": [-200.0, -300.0], "initial_heading_rad": 0.0}
+  ],
+  "allowed_start_time_window_s": [-60.0, 0.0],
+  "nominal_wind_model": "U0_no_drift",
+  "real_uav_initial_states_available": false,
+  "real_base_reference_available": false,
+  "real_d_safe_available": false,
+  "real_energy_model_available": false,
+  "real_minimum_turn_radius_available": false
+}

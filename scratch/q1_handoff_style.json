@@ -1,0 +1,172 @@
+{
+  "input": "D:\\qq\\2026\u6570\u6a21\u6821\u8d5b\\Q1_\u7f16\u7a0b\u624b\u4e0e\u4e2d\u6587\u624b\u65b0\u624b\u4efb\u52a1\u6e05\u5355.docx",
+  "fonts_by_char_count": {
+    "Calibri": 5340,
+    "Cambria Math": 560,
+    "Consolas": 379
+  },
+  "direct_run_formatting_runs": 359,
+  "direct_paragraph_formatting_paragraphs": 350,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 1,
+      "text": "\u6570\u5b66\u5efa\u6a21\u6821\u8d5b \u00b7 B\u9898 \u00b7 \u95ee\u9898\u4e00",
+      "style": "Normal"
+    },
+    {
+      "para_index": 2,
+      "text": "\u7f16\u7a0b\u624b\u4e0e\u4e2d\u6587\u624b\n\u65b0\u624b\u4efb\u52a1\u6e05\u5355",
+      "style": "Normal"
+    },
+    {
+      "para_index": 36,
+      "text": "B\u9898\uff1a\u8230\u8239\u70df\u5e55\u906e\u853d\u5e72\u6270\u4f18\u5316.docx \u2014 \u9898\u76ee\u539f\u6587\uff1b\u53ea\u8bfb\uff0c\u4e0d\u8986\u76d6",
+      "style": "Normal"
+    },
+    {
+      "para_index": 37,
+      "text": "methods/Q1/q1_final_method_explanation.md \u2014 \u6700\u7ec8\u91c7\u7528\u7684\u6570\u5b66\u6a21\u578b\u4e0e\u6c42\u89e3\u903b\u8f91",
+      "style": "Normal"
+    },
+    {
+      "para_index": 38,
+      "text": "results/Q1/reports/q1_final_result_analysis.md \u2014 \u6b63\u5f0f\u6570\u503c\u3001\u8865\u507f\u65b9\u6848\u548c\u9650\u5236",
+      "style": "Normal"
+    },
+    {
+      "para_index": 39,
+      "text": "code/Q1/q1_code_plan.md \u2014 \u4ee3\u7801\u8f93\u5165\u3001\u8f93\u51fa\u3001\u6a21\u5757\u548c\u9a8c\u6536\u5408\u540c",
+      "style": "Normal"
+    },
+    {
+      "para_index": 40,
+      "text": "planning/symbol_table.md \u2014 \u5168\u961f\u7edf\u4e00\u7b26\u53f7\u4e0e\u5355\u4f4d",
+      "style": "Normal"
+    },
+    {
+      "para_index": 41,
+      "text": "methods/Q1/q1_decisions.jsonl \u2014 \u5efa\u6a21\u624b\u4eb2\u81ea\u786e\u8ba4\u7684\u9009\u62e9\u548c\u53e3\u5f84",
+      "style": "Normal"
+    },
+    {
+      "para_index": 68,
+      "text": "B\u9898\uff1a\u8230\u8239\u70df\u5e55\u906e\u853d\u5e72\u6270\u4f18\u5316.docx \u2014 \u5148\u7406\u89e3\u9898\u76ee\u95ee\u7684\u5bf9\u8c61\u4e0e\u9650\u5236",
+      "style": "Normal"
+    },
+    {
+      "para_index": 69,
+      "text": "methods/Q1/q1_final_method_explanation.md \u2014 \u8bba\u6587\u65b9\u6cd5\u90e8\u5206\u7684\u552f\u4e00\u4e3b\u53e3\u5f84",
+      "style": "Normal"
+    },
+    {
+      "para_index": 70,
+      "text": "results/Q1/reports/q1_final_result_analysis.md \u2014 \u7ed3\u679c\u3001\u8865\u507f\u65cf\u3001\u8fbe\u5230\u6761\u4ef6\u548c\u9002\u7528\u8303\u56f4",
+      "style": "Normal"
+    },
+    {
+      "para_index": 71,
+      "text": "planning/symbol_table.md \u2014 \u7b26\u53f7\u3001\u542b\u4e49\u548c\u5355\u4f4d",
+      "style": "Normal"
+    },
+    {
+      "para_index": 72,
+      "text": "planning/model_assumptions.md \u2014 \u54ea\u4e9b\u662f\u9898\u9762\u6761\u4ef6\uff0c\u54ea\u4e9b\u662f\u6a21\u578b\u5047\u8bbe",
+      "style": "Normal"
+    },
+    {
+      "para_index": 73,
+      "text": "robustness/Q1/q1_robustness_summary.json \u2014 \u7a33\u5065\u6027\u8fb9\u754c\uff1b\u53ea\u53d6\u5df2\u9a8c\u8bc1\u5185\u5bb9",
+      "style": "Normal"
+    },
+    {
+      "para_index": 112,
+      "text": "\u2014 \u95ee\u9898\u4e00\u4ea4\u63a5\u624b\u518c\u7ed3\u675f \u2014",
+      "style": "Normal"
+    },
+    {
+      "para_index": 113,
+      "text": "\u5f53\u524d\u7ed3\u8bba",
+      "style": "Normal"
+    },
+    {
+      "para_index": 115,
+      "text": "\u6700\u5bb9\u6613\u8bef\u89e3\u7684\u5730\u65b9",
+      "style": "Normal"
+    },
+    {
+      "para_index": 117,
+      "text": "\u5bf9\u8c61",
+      "style": "Normal"
+    },
+    {
+      "para_index": 118,
+      "text": "\u5b83\u600e\u4e48\u8fd0\u52a8",
+      "style": "Normal"
+    },
+    {
+      "para_index": 119,
+      "text": "\u95ee\u9898\u4e00\u91cc\u8981\u5173\u6ce8\u4ec0\u4e48",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 1,
+        "text": "\u6570\u5b66\u5efa\u6a21\u6821\u8d5b \u00b7 B\u9898 \u00b7 \u95ee\u9898\u4e00",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "text": "\u7f16\u7a0b\u624b\u4e0e\u4e2d\u6587\u624b\n\u65b0\u624b\u4efb\u52a1\u6e05\u5355",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "text": "\u5047\u8bbe\u961f\u53cb\u4ece\u672a\u770b\u8fc7\u9898\u76ee\uff0c\u4e5f\u80fd\u6309\u6b65\u9aa4\u5b8c\u6210\u4ea4\u4ed8",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 5,
+        "text": "\u7248\u672c\u65e5\u671f\uff1a2026-07-29  |  \u4f7f\u7528\u72b6\u6001\uff1aQ1 \u5df2\u5b8c\u6210\u5e76\u53ef\u4ea4\u63a5",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "\u6570\u5b66\u5efa\u6a21\u6821\u8d5b \u00b7 B\u9898 \u00b7 \u95ee\u9898\u4e00",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "run_text": "\u7f16\u7a0b\u624b\u4e0e\u4e2d\u6587\u624b\n\u65b0\u624b\u4efb\u52a1\u6e05\u5355",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "\u5047\u8bbe\u961f\u53cb\u4ece\u672a\u770b\u8fc7\u9898\u76ee\uff0c\u4e5f\u80fd\u6309\u6b65\u9aa4\u5b8c\u6210\u4ea4\u4ed8",
+        "style": "Normal"
+      },
+      {
+        "para_index": 5,
+        "run_text": "\u7248\u672c\u65e5\u671f\uff1a2026-07-29  |  \u4f7f\u7528\u72b6\u6001\uff1aQ1 \u5df2\u5b8c\u6210\u5e76\u53ef\u4ea4\u63a5",
+        "style": "Normal"
+      },
+      {
+        "para_index": 19,
+        "run_text": "\u5b8c\u6574\u906e\u853d\u6761\u4ef6\uff1a\u2016s(t) \u2212 c\u2016 + R\u209b \u2264 r(t)",
+        "style": "CodeBlock"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

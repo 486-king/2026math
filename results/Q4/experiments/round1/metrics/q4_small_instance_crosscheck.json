@@ -1,0 +1,165 @@
+{
+  "all_fixtures_pass": true,
+  "candidate_validation_status": "PASS",
+  "comparison_method": "complete_subset_enumeration_with_identical_lexicographic_key",
+  "continuous_global_optimality_status": "not_claimed",
+  "dependency_status": "matched",
+  "finite_candidate_optimality_status": "proved_within_current_finite_network",
+  "fixture_count": 12,
+  "fixtures": [
+    {
+      "actual_selected_ids": [
+        "H",
+        "L"
+      ],
+      "enumerated_subset_count": 4,
+      "expected_selected_ids": [
+        "H",
+        "L"
+      ],
+      "fixture_id": "resource_sufficient",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "H"
+      ],
+      "enumerated_subset_count": 4,
+      "expected_selected_ids": [
+        "H"
+      ],
+      "fixture_id": "level3_beats_level1",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "E"
+      ],
+      "enumerated_subset_count": 4,
+      "expected_selected_ids": [
+        "E"
+      ],
+      "fixture_id": "earlier_same_level",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "SHARED"
+      ],
+      "enumerated_subset_count": 4,
+      "expected_selected_ids": [
+        "SHARED"
+      ],
+      "fixture_id": "sharing_dominates_separate",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "GLOBAL"
+      ],
+      "enumerated_subset_count": 4,
+      "expected_selected_ids": [
+        "GLOBAL"
+      ],
+      "fixture_id": "greedy_regret_fixture",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "EXEC"
+      ],
+      "enumerated_subset_count": 2,
+      "expected_selected_ids": [
+        "EXEC"
+      ],
+      "fixture_id": "executed_frozen",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "COMMIT"
+      ],
+      "enumerated_subset_count": 2,
+      "expected_selected_ids": [
+        "COMMIT"
+      ],
+      "fixture_id": "committed_frozen",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "VISIBLE"
+      ],
+      "enumerated_subset_count": 2,
+      "expected_selected_ids": [
+        "VISIBLE"
+      ],
+      "fixture_id": "unrevealed_invisible",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "A"
+      ],
+      "enumerated_subset_count": 4,
+      "expected_selected_ids": [
+        "A"
+      ],
+      "fixture_id": "inventory_exhaustion",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "REACHABLE"
+      ],
+      "enumerated_subset_count": 2,
+      "expected_selected_ids": [
+        "REACHABLE"
+      ],
+      "fixture_id": "transition_unreachable_filtered",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "SAFE"
+      ],
+      "enumerated_subset_count": 2,
+      "expected_selected_ids": [
+        "SAFE"
+      ],
+      "fixture_id": "cross_safety_conflict_filtered",
+      "status": "PASS"
+    },
+    {
+      "actual_selected_ids": [
+        "CHAIN",
+        "NEXT"
+      ],
+      "enumerated_subset_count": 4,
+      "expected_selected_ids": [
+        "CHAIN",
+        "NEXT"
+      ],
+      "fixture_id": "route_dependent_cost",
+      "status": "PASS"
+    }
+  ],
+  "formal_scenario_crosscheck": "solver_optimal_status_plus_independent_selected_network_validation",
+  "formal_scenario_exhaustive_enumeration_count": 0,
+  "formal_scenario_exhaustive_limit_reason": "candidate-route networks exceed transparent complete-subset enumeration scale",
+  "freeze_status": "unfrozen",
+  "input_provenance": "transparent_reconstructed_synthetic_inputs",
+  "limitations": [
+    "No real missile-batch table or real five-UAV state was supplied.",
+    "The optimization is over a finite verified template-route network.",
+    "Continuous-space and all-possible-template global optimality are not claimed.",
+    "Q3 dependencies are accepted only at their recorded unfrozen hashes."
+  ],
+  "paper_writing_allowed": false,
+  "reference_comparison_status": "not_directly_comparable_missing_complete_legacy_inputs",
+  "route_network_status": "PASS",
+  "scenario_identity": "Q4_S2_RECONSTRUCTED_SYNTHETIC",
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "solver_status": "completed",
+  "template_gate_status": "PASS"
+}

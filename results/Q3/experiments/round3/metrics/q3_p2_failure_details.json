@@ -1,0 +1,88 @@
+{
+  "N_minus_1_is_hard_constraint": false,
+  "coverage_certificate_status": "verified",
+  "execution_status": "completed",
+  "failed_failed_uav_ids": [
+    2
+  ],
+  "failure_cases": [
+    {
+      "certificate_status": "verified",
+      "failed_uav_id": 1,
+      "failure_intervals": [],
+      "first_failure_time_s": null,
+      "full_window_coverage": true,
+      "longest_continuous_full_coverage_s": 25.36104262064107,
+      "minimum_coverage_margin_m2": 0.0,
+      "remaining_double_coverage_fraction": 0.0,
+      "remaining_double_coverage_percent": 0.0,
+      "remaining_smoke_ids": [
+        "P2_2",
+        "P2_3"
+      ],
+      "total_full_coverage_duration_s": 25.36104262064107,
+      "worst_time_s": 0.0
+    },
+    {
+      "certificate_status": "verified",
+      "failed_uav_id": 2,
+      "failure_intervals": [
+        [
+          10.376134889753567,
+          25.36104262064107
+        ]
+      ],
+      "first_failure_time_s": 10.376134889753567,
+      "full_window_coverage": false,
+      "longest_continuous_full_coverage_s": 10.376134889753567,
+      "minimum_coverage_margin_m2": -1000000000000.0,
+      "remaining_double_coverage_fraction": 0.37710663861221005,
+      "remaining_double_coverage_percent": 37.71066386122101,
+      "remaining_smoke_ids": [
+        "P2_1",
+        "P2_3"
+      ],
+      "total_full_coverage_duration_s": 10.376134889753567,
+      "worst_time_s": 25.36104262064107
+    },
+    {
+      "certificate_status": "verified",
+      "failed_uav_id": 3,
+      "failure_intervals": [],
+      "first_failure_time_s": null,
+      "full_window_coverage": true,
+      "longest_continuous_full_coverage_s": 25.36104262064107,
+      "minimum_coverage_margin_m2": 1463.8872811368383,
+      "remaining_double_coverage_fraction": 0.0,
+      "remaining_double_coverage_percent": 0.0,
+      "remaining_smoke_ids": [
+        "P2_1",
+        "P2_2"
+      ],
+      "total_full_coverage_duration_s": 25.36104262064107,
+      "worst_time_s": 0.0
+    }
+  ],
+  "fixed_plan_no_reoptimization": true,
+  "freeze_status": "unfrozen",
+  "full_window_success_count": 2,
+  "full_window_success_fraction": 0.6666666666666666,
+  "full_window_success_percent": 66.66666666666666,
+  "global_optimality_status": "not_proved",
+  "input_status": "validated_synthetic_input",
+  "limitations": [
+    "Synthetic staging states only.",
+    "No real d_safe, energy model, turn radius, wind, or base reference."
+  ],
+  "paper_writing_allowed": false,
+  "reference_comparison_status": "matched_with_source_precision_after_computation",
+  "result_strength": "fixed_plan_three_case_N_minus_1_review",
+  "safety_certificate_status": "verified",
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "structural_feasibility_claimed": false,
+  "successful_failed_uav_ids": [
+    1,
+    3
+  ],
+  "worst_failure_continuous_coverage_s": 10.376134889753567
+}

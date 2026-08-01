@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "plan_id": "P2_REFERENCE",
+  "source_document": "Q3_编程手与论文手任务清单.docx",
+  "source_sha256": "364225ffb5aaa640b743b62590f2f20d985faac40057be86bb8e35305721255f",
+  "source_precision": {
+    "smoke_center_decimal_places": 8,
+    "event_time_decimal_places": 8,
+    "comparison_values_are_reference_only": true
+  },
+  "reference_only": true,
+  "scenario_scope": "SYNTHETIC_SCENARIO_ONLY",
+  "freeze_status": "unfrozen",
+  "used_in_optimizer_objective": false,
+  "used_in_optimizer_constraints": false,
+  "used_in_candidate_acceptance": false,
+  "used_as_human_selected_fixed_candidate": true,
+  "uav_plans": [
+    {
+      "uav_id": 1,
+      "staging_position_m": [-400.0, 0.0],
+      "initial_heading_rad": 0.0,
+      "smoke_center_m": 33.73703319,
+      "t_cmd_s": -7.88582566,
+      "t_d_s": -5.88582566,
+      "t_b_s": -2.38582566
+    },
+    {
+      "uav_id": 2,
+      "staging_position_m": [-200.0, 300.0],
+      "initial_heading_rad": 0.0,
+      "smoke_center_m": 161.83285766,
+      "t_cmd_s": 2.94018905,
+      "t_d_s": 4.94018905,
+      "t_b_s": 8.44018905
+    },
+    {
+      "uav_id": 3,
+      "staging_position_m": [-200.0, -300.0],
+      "initial_heading_rad": 0.0,
+      "smoke_center_m": 40.0,
+      "t_cmd_s": -9.5,
+      "t_d_s": -7.5,
+      "t_b_s": -4.0
+    }
+  ],
+  "post_computation_reference_values": {
+    "release_points_m": [
+      [-64.262967, 0.0],
+      [86.390788, 62.549933],
+      [-21.220115, -76.525143]
+    ],
+    "required_start_times_s": [-17.876434, -8.3464, -17.720981],
+    "pre_release_path_lengths_m": [335.737, 372.024, 286.187],
+    "turn_proxies_rad": [0.0, 0.692242, 0.896055],
+    "common_warning_lead_s": 17.8764339884,
+    "total_pre_release_path_length_m": 993.9489728502,
+    "total_turn_proxy_rad": 1.5882972629,
+    "nominal_minimum_pairwise_distance_m": 46.3809278362,
+    "minimum_distance_time_s": -3.081074137,
+    "minimum_distance_uav_pair": [1, 3],
+    "N_minus_1_full_window_success_count": 2,
+    "N_minus_1_case_count": 3,
+    "worst_failure_continuous_coverage_s": 10.3761348897,
+    "strict_double_coverage_fraction": 0.4091367632,
+    "legacy_combined_perturbation_retention_fraction": 0.9605,
+    "legacy_combined_perturbation_minimum_distance_m": 0.2337720332
+  },
+  "legacy_scheme_metric_references": {
+    "metric_table_provenance": "human_work_guide_metric_table",
+    "configuration_provenance": {
+      "git_commit": "36b874664ad9b814e5768c7c6c1e008f01374a54",
+      "artifact_path": "results/Q3/experiments/round2/metrics/q3_baseline.json",
+      "retrieval_mode": "read_only_git_object_inspection_without_branch_switch"
+    },
+    "reference_only": true,
+    "used_in_optimizer_objective": false,
+    "used_in_optimizer_constraints": false,
+    "used_in_candidate_acceptance": false,
+    "P1": {
+      "historical_candidate_id": "A-00017",
+      "current_scheme_id": "P1_LEGACY_REFERENCE_VERIFIED",
+      "complete_plan_configuration_available": true,
+      "smoke_centers_m": [33.737033193900004, 161.8328576639, 0.0],
+      "burst_times_s": [-2.38582566, 8.44018905, -8.0],
+      "uav_assignment": [2, 0, 1],
+      "independent_current_model_verification_status": "verified",
+      "common_warning_lead_s": 22.2857,
+      "nominal_minimum_pairwise_distance_m": 83.7209,
+      "N_minus_1_full_window_success_count": 1,
+      "worst_failure_continuous_coverage_s": 9.5591,
+      "double_coverage_fraction": 0.2489,
+      "total_deployment_path_length_m": 956.331,
+      "total_turn_proxy_rad": 1.601
+    },
+    "P4": {
+      "historical_candidate_id": "A-00033",
+      "current_scheme_id": "P4_LEGACY_REFERENCE_VERIFIED",
+      "complete_plan_configuration_available": true,
+      "smoke_centers_m": [33.737033193900004, 161.8328576639, 0.0],
+      "burst_times_s": [-2.38582566, 8.44018905, -2.0],
+      "uav_assignment": [1, 0, 2],
+      "independent_current_model_verification_status": "verified",
+      "common_warning_lead_s": 15.9682,
+      "nominal_minimum_pairwise_distance_m": 40.0344,
+      "N_minus_1_full_window_success_count": 1,
+      "worst_failure_continuous_coverage_s": 9.5638,
+      "double_coverage_fraction": 0.2489,
+      "total_deployment_path_length_m": 1008.694,
+      "total_turn_proxy_rad": 1.892
+    },
+    "Q3_B": {
+      "historical_candidate_id": "B-3",
+      "current_scheme_id": "Q3_B_LEGACY_REFERENCE_ONLY",
+      "complete_plan_configuration_available": true,
+      "smoke_centers_m": [40.0, 120.0, 200.0],
+      "burst_times_s": [0.0, 10.376134889753565, 20.752269779507134],
+      "uav_assignment": [1, 0, 2],
+      "independent_current_model_verification_status": "failed_current_start_time_window",
+      "used_in_model_comparison_as_verified_candidate": false,
+      "common_warning_lead_s": 13.721,
+      "nominal_minimum_pairwise_distance_m": 189.753,
+      "N_minus_1_full_window_success_count": 0,
+      "worst_failure_continuous_coverage_s": 10.3761,
+      "double_coverage_fraction": 0.0,
+      "total_deployment_path_length_m": 1110.187,
+      "total_turn_proxy_rad": 1.54
+    }
+  }
+}
