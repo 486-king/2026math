@@ -1,4 +1,0 @@
-﻿scenario_id,rolling_event_id,threat_id,threat_level,reveal_time_s,defence_window_start_s,defence_window_end_s,remaining_reaction_time_s,remaining_window_duration_s,minimum_required_bombs,feasible_candidate_count,rejection_reason,higher_priority_tasks_served,lexicographic_stage_evidence
-S2-SHO-SEQ,S2-SHO-SEQ@final,SHO-SEQ-M3,1,0,90,98,80.0318,8,1,6,displaced_by_higher_level,"[""SHO-SEQ-M1"",""SHO-SEQ-M2"",""SHO-SEQ-M4"",""SHO-SEQ-M5""]",level_3_then_2_then_1_count_and_urgency_locked
-S2-SHO-SEQ,S2-SHO-SEQ@final,SHO-SEQ-M6,1,0,156,164,146.0318,8,1,6,displaced_by_higher_level,"[""SHO-SEQ-M1"",""SHO-SEQ-M2"",""SHO-SEQ-M4"",""SHO-SEQ-M5""]",level_3_then_2_then_1_count_and_urgency_locked
-S2-SHO-SUR,S2-SHO-SUR@final,SHO-SUR-M2,1,0,68,76,58.0318,8,1,8,displaced_by_higher_level,"[""SHO-SUR-M1"",""SHO-SUR-M3"",""SHO-SUR-M4"",""SHO-SUR-M5"",""SHO-SUR-M6""]",level_3_then_2_then_1_count_and_urgency_locked

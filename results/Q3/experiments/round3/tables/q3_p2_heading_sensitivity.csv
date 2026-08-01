@@ -1,8 +1,0 @@
-﻿case_id,headings_rad,execution_status,total_turn_proxy_rad,geometry_unchanged,coverage_unchanged
-HEAD-NOMINAL,"[0.0, 0.0, 0.0]",feasible,1.5882972629506886,True,True
-HEAD-U1--45,"[-0.7853981633974483, 0.0, 0.0]",feasible,2.373695426348137,True,True
-HEAD-U1-+45,"[0.7853981633974483, 0.0, 0.0]",feasible,2.373695426348137,True,True
-HEAD-U2--45,"[0.0, -0.7853981633974483, 0.0]",feasible,0.989211669589448,True,True
-HEAD-U2-+45,"[0.0, 0.7853981633974483, 0.0]",feasible,2.373695426348137,True,True
-HEAD-U3--45,"[0.0, 0.0, -0.7853981633974483]",feasible,2.373695426348137,True,True
-HEAD-U3-+45,"[0.0, 0.0, 0.7853981633974483]",feasible,0.8028990995532403,True,True
